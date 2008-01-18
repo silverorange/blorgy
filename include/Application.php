@@ -144,7 +144,7 @@ class Application extends SiteWebApplication
 		$this->default_time_zone =
 			new Date_TimeZone($config->date->time_zone);
 
-		setlocale($this->config->locale);
+		setlocale(LC_ALL, $this->config->i18n->locale);
 	}
 
 	// }}}
