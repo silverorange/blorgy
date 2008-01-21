@@ -11,7 +11,6 @@ require_once 'Site/SiteMultipleInstanceModule.php';
 require_once 'Site/SiteExceptionLogger.php';
 require_once 'Site/SiteErrorLogger.php';
 require_once 'Blorg/Blorg.php';
-require_once 'Blorg/layouts/BlorgLayout.php';
 
 SwatDBClassMap::addPath(dirname(__FILE__).'/dataobjects');
 
@@ -52,30 +51,37 @@ class Application extends SiteWebApplication
 		$path = $this->explodeSource($source);
 
 		if (count($path) == 0)
-			$this->relocate('tag');
+			$this->relocate('front');
 		else
 			$tag = $path[0];
 
 		switch ($tag) {
 		case 'httperror':
 			require_once 'Site/pages/SiteHttpErrorPage.php';
-			$layout = new BlorgLayout($this,
-				'Blorg/layouts/xhtml/default.php');
+			$layout = new SiteLayout($this,
+				'Site/layouts/xhtml/default.php');
 
 			$page = new SiteHttpErrorPage($this, $layout);
 			break;
 
 		case 'exception':
 			require_once 'pages/ExceptionPage.php';
-			$layout = new BlorgLayout($this,
-				'Blorg/layouts/xhtml/default.php');
+			$layout = new SiteLayout($this,
+				'Site/layouts/xhtml/default.php');
 
 			$page = new ExceptionPage($this, $layout);
 			break;
 
-		default:
+		case 'archive':
+		case 'author':
 			require_once 'Blorg/BlorgPageFactory.php';
 			$factory = BlorgPageFactory::instance();
+			$page = $factory->resolvePage($this, $source);
+			break;
+
+		default:
+			require_once 'Site/SiteArticlePageFactory.php';
+			$factory = SiteArticlePageFactory::instance();
 			$page = $factory->resolvePage($this, $source);
 			break;
 		}

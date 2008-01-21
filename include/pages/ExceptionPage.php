@@ -1,13 +1,13 @@
 <?php
 
 require_once 'SwatDB/SwatDB.php';
-require_once 'Blorg/pages/BlorgExceptionPage.php';
+require_once 'Site/pages/SiteExceptionPage.php';
 
 /**
  * @package   Blorgy
  * @copyright 2008 silverorange
  */
-class ExceptionPage extends BlorgExceptionPage
+class ExceptionPage extends SiteExceptionPage
 {
 	// init phase
 	// {{{ public function init()
