@@ -75,13 +75,13 @@ class Application extends SiteWebApplication
 		case 'archive':
 		case 'author':
 			require_once 'Blorg/BlorgPageFactory.php';
-			$factory = BlorgPageFactory::instance();
+			$factory = new BlorgPageFactory();
 			$page = $factory->resolvePage($this, $source);
 			break;
 
 		default:
 			require_once 'Site/SiteArticlePageFactory.php';
-			$factory = SiteArticlePageFactory::instance();
+			$factory = new SiteArticlePageFactory();
 			$page = $factory->resolvePage($this, $source);
 			break;
 		}
