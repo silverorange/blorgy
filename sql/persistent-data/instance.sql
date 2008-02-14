@@ -12,7 +12,7 @@ SET search_path = public, pg_catalog;
 -- Name: instance_id_seq; Type: SEQUENCE SET; Schema: public; Owner: php
 --
 
-SELECT pg_catalog.setval(pg_catalog.pg_get_serial_sequence('instance', 'id'), 1, false);
+SELECT pg_catalog.setval(pg_catalog.pg_get_serial_sequence('instance', 'id'), 1, true);
 
 
 --
@@ -21,6 +21,7 @@ SELECT pg_catalog.setval(pg_catalog.pg_get_serial_sequence('instance', 'id'), 1,
 
 ALTER TABLE instance DISABLE TRIGGER ALL;
 
+INSERT INTO instance (id, shortname) VALUES (1, 'aov');
 
 
 ALTER TABLE instance ENABLE TRIGGER ALL;
