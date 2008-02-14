@@ -6,6 +6,7 @@ require_once 'Swat/SwatForm.php';
 require_once 'SwatDB/SwatDBClassMap.php';
 require_once 'Site/SiteWebApplication.php';
 require_once 'Site/SiteConfigModule.php';
+require_once 'Site/SiteCookieModule.php';
 require_once 'Site/SiteDatabaseModule.php';
 require_once 'Site/SiteMultipleInstanceModule.php';
 require_once 'Site/SiteExceptionLogger.php';
@@ -51,7 +52,7 @@ class Application extends SiteWebApplication
 		$path = $this->explodeSource($source);
 
 		if (count($path) == 0)
-			$this->relocate('front');
+			$tag = 'front';
 		else
 			$tag = $path[0];
 
@@ -72,11 +73,13 @@ class Application extends SiteWebApplication
 			$page = new ExceptionPage($this, $layout);
 			break;
 
+		case 'front':
 		case 'archive':
 		case 'author':
 			require_once 'Blorg/BlorgPageFactory.php';
 			$factory = new BlorgPageFactory();
-			$page = $factory->resolvePage($this, $source);
+			$layout = $this->resolveLayout($tag, $source);
+			$page = $factory->resolvePage($this, $source, $layout);
 			break;
 
 		default:
@@ -91,12 +94,37 @@ class Application extends SiteWebApplication
 	}
 
 	// }}}
+	// {{{ protected function resolveLayout()
+
+	protected function resolveLayout($tag, $source)
+	{
+		switch ($tag) {
+		case 'httperror':
+			require_once 'Site/layouts/SiteLayout.php';
+			$layout = new SiteLayout($this,
+				'../include/layouts/xhtml/http-error.php');
+
+			break;
+
+		default:
+			require_once '../include/layouts/BlorgyLayout.php';
+			$layout = new BlorgyLayout($this,
+				'../include/layouts/xhtml/default.php');
+
+			break;
+		}
+
+		return $layout;
+	}
+
+	// }}}
 	// {{{ protected function getDefaultModuleList()
 
 	protected function getDefaultModuleList()
 	{
 		return array(
 			'config'   => 'SiteConfigModule',
+			'cookie'   => 'SiteCookieModule',
 			'database' => 'SiteDatabaseModule',
 			'instance' => 'SiteMultipleInstanceModule',
 		);
