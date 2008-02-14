@@ -73,19 +73,18 @@ class Application extends SiteWebApplication
 			$page = new ExceptionPage($this, $layout);
 			break;
 
-		case 'front':
-		case 'archive':
-		case 'author':
+		case 'article':
+			array_shift($path);
+			require_once 'Site/SiteArticlePageFactory.php';
+			$factory = new SiteArticlePageFactory();
+			$page = $factory->resolvePage($this, implode('/', $path), $layout);
+			break;
+
+		default:
 			require_once 'Blorg/BlorgPageFactory.php';
 			$factory = new BlorgPageFactory();
 			$layout = $this->resolveLayout($tag, $source);
 			$page = $factory->resolvePage($this, $source, $layout);
-			break;
-
-		default:
-			require_once 'Site/SiteArticlePageFactory.php';
-			$factory = new SiteArticlePageFactory();
-			$page = $factory->resolvePage($this, $source);
 			break;
 		}
 
