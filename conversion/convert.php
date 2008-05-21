@@ -19,7 +19,7 @@ require_once 'Conversion/ConversionProcess.php';
 
 $process = new ConversionProcess();
 $process->src_dsn = 'pgsql://php@dancy/blogs';
-$process->dst_dsn = 'pgsql://php@zest/Blorgy';
+$process->dst_dsn = 'pgsql://php@zest/BlorgyNew';
 $process->instance = 1;
 
 if ($_SERVER['argc'] < 1)
