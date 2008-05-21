@@ -1,7 +1,7 @@
 #!/bin/sh
 
 WHOAMI=`whoami`
-DB="Blorgy"
+DB="BlorgyNew"
 HOST="zest"
 DSN="pgsql://php@$HOST/$DB"
 WD="/so/sites/blorgy/work-${WHOAMI}/sql"
@@ -10,10 +10,10 @@ cd $WD
 
 # Clear any old database, and create a fresh one.
 echo "Dropping the old database"
-dropdb -h $HOST -U php $DB
+dropdb -h $HOST -U postgres $DB
 
 echo "Creating the new database"
-createdb -h $HOST -U php -E UTF8 $DB
+createdb -h $HOST -U postgres -E UTF8 $DB
 createlang -h $HOST -U postgres plpgsql $DB
 
 # Create all database objects.
