@@ -46,7 +46,7 @@ class BlorgPostTable extends ConversionTable
 
 		$field = new ConversionDateField();
 		$field->src_field = 'postdate';
-		$field->dst_field = 'post_date';
+		$field->dst_field = 'publish_date';
 		$field->src_tz_id = 'America/Halifax';
 		$this->addField($field);
 
@@ -55,8 +55,7 @@ class BlorgPostTable extends ConversionTable
 		$field->dst_field = 'integer:reply_status';
 		$this->addField($field);
 
-		$field = new BlorgPostAuthorField('integer:author');
-		$field->src_charset = 'UTF-8';
+		$field = new ConversionField('integer:author');
 		$this->addField($field);
 
 		$field = new ConversionBooleanField();
@@ -126,21 +125,6 @@ class BlorgPostShortnameField extends ConversionTextField
 			return $shortname;
 		else
 			return $this->generateShortname($text, $iteration + 1);
-	}
-
-	// }}}
-}
-
-class BlorgPostAuthorField extends ConversionTextField
-{
-	// {{{ public function convertData()
-
-	public function convertData($data)
-	{
-		$data = parent::convertData($data);
-
-		// TODO: map users
-		return 8;
 	}
 
 	// }}}

@@ -1,6 +1,5 @@
 <?php
 
-require_once 'BlorgPostTable.php';
 require_once 'Blorg/dataobjects/BlorgReply.php';
 
 class BlorgReplyTable extends ConversionTable
@@ -23,7 +22,7 @@ class BlorgReplyTable extends ConversionTable
 		$field = new ConversionField('integer:post');
 		$this->addField($field);
 
-		$field = new BlorgPostAuthorField();
+		$field = new ConversionField();
 		$field->src_field = 'integer:owner';
 		$field->dst_field = 'integer:author';
 		$this->addField($field);
