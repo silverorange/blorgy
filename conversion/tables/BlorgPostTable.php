@@ -11,6 +11,8 @@ class BlorgPostTable extends ConversionTable
 		$this->src_table = 'posts';
 		$this->dst_table = 'BlorgPost';
 
+		$this->addDep('Instance');
+
 		$field = new ConversionField();
 		$field->src_field = 'integer:postid';
 		$field->dst_field = 'integer:id';
@@ -85,8 +87,7 @@ class BlorgPostTable extends ConversionTable
 			implode(', ', $select_list),
 			$this->src_table);
 
-		// TODO: import all sites, not just aov
-		$sql.= ' and site = 1';
+		$sql.= ' and site in (select siteid from sites where keep = true)';
 
 		return $sql;
 	}

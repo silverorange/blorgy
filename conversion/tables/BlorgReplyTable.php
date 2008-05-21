@@ -85,8 +85,8 @@ class BlorgReplyTable extends ConversionTable
 
 		$sql.= ' and spam = \'0\'';
 
-		// TODO: import all sites, not just aov
-		$sql.= ' and post in (select postid from posts where site = 1)';
+		$sql.= ' and post in (select postid from posts
+			where site in (select siteid from sites where keep = true))';
 
 		return $sql;
 	}

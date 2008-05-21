@@ -11,6 +11,7 @@ class BlorgPostTagBindingTable extends ConversionTable
 
 		$this->addDep('BlorgPost');
 		$this->addDep('BlorgTag');
+		$this->addDep('Instance');
 
 		$field = new ConversionField('integer:post');
 		$this->addField($field);
@@ -27,8 +28,9 @@ class BlorgPostTagBindingTable extends ConversionTable
 	protected function getSourceSQL()
 	{
 		$sql = parent::getSourceSQL();
-		// TODO: import all sites, not just aov
-		$sql.= ' and attribute in (select attributeid from attributes where site = 1)';
+
+		$sql.= ' and attribute in (select attributeid from attributes
+			where site in (select siteid from sites where keep = true))';
 
 		return $sql;
 	}

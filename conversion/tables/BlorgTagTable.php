@@ -9,6 +9,8 @@ class BlorgTagTable extends ConversionTable
 		$this->src_table = 'attributes';
 		$this->dst_table = 'BlorgTag';
 
+		$this->addDep('Instance');
+
 		$field = new ConversionField();
 		$field->src_field = 'integer:attributeid';
 		$field->dst_field = 'integer:id';
@@ -39,8 +41,7 @@ class BlorgTagTable extends ConversionTable
 	protected function getSourceSQL()
 	{
 		$sql = parent::getSourceSQL();
-		// TODO: import all sites, not just aov
-		$sql.= ' and site = 1';
+		$sql.= ' and site in (select siteid from sites where keep = true)';
 
 		return $sql;
 	}
