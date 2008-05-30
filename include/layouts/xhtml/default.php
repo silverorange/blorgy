@@ -14,12 +14,14 @@
 	<div id="bd">
 
 		<?= $this->navbar ?>
+		<h2 id="page_title"><?= $this->title ?></h2>
 
-		<div id="yui-main">
-			<div class="yui-b">
-				<h2 id="page_title"><?= $this->title ?></h2>
-				<?= $this->content ?>
-			</div>
+		<div id="content">
+			<?= $this->content ?>
+		</div>
+
+		<div id="sidebar">
+			<?= $this->sidebar ?>
 		</div>
 
 	</div>
