@@ -6,8 +6,9 @@ require_once 'Swat/SwatStyleSheetHtmlHeadEntry.php';
 require_once 'Site/layouts/SiteLayout.php';
 
 /**
- * @package   Blorgy
+ * @package   Blörgy
  * @copyright 2008 silverorange
+ * @license   http://www.gnu.org/copyleft/lesser.html LGPL License 2.1
  */
 class BlorgyLayout extends SiteLayout
 {
@@ -28,12 +29,19 @@ class BlorgyLayout extends SiteLayout
 	public function init()
 	{
 		parent::init();
+		$this->initNavBar();
+	}
 
+	// }}}
+	// {{{ protected function initNavBar()
+
+	protected function initNavBar()
+	{
 		$this->navbar = new SwatNavBar();
 		$this->navbar->link_last_entry = false;
 		$this->navbar->separator = ' › ';
 		$this->navbar->id = 'nav_bar';
-		$this->navbar->createEntry('Home', '.');
+		$this->navbar->createEntry(Blorg::_('Home'), '.');
 	}
 
 	// }}}
@@ -85,7 +93,15 @@ class BlorgyLayout extends SiteLayout
 	public function finalize()
 	{
 		parent::finalize();
+		$this->finalizeNavBar();
+		$this->finalizeTitle();
+	}
 
+	// }}}
+	// {{{ protected function finalizeNavBar()
+
+	protected function finalizeNavBar()
+	{
 		if ($this->navbar->getCount() > 1) {
 			$this->startCapture('navbar');
 			$this->navbar->display();
@@ -94,18 +110,16 @@ class BlorgyLayout extends SiteLayout
 		} else {
 			$this->data->navbar = '';
 		}
+	}
 
-		$yui = new SwatYUI(array('fonts', 'grids', 'reset', 'base'));
-		$this->addHtmlHeadEntrySet($yui->getHtmlHeadEntrySet());
+	// }}}
+	// {{{ protected function finalizeTitle()
 
-		$this->addHtmlHeadEntry(
-			new SwatStyleSheetHtmlHeadEntry('styles/swat-local.css'));
-
-		$this->addHtmlHeadEntry(
-			new SwatStyleSheetHtmlHeadEntry('styles/blorgy-layout.css'));
-
+	protected function finalizeTitle()
+	{
 		$site_title = $this->app->config->site->title;
 		$page_title = SwatString::stripXHTMLTags($this->data->title);
+
 		if (strlen($page_title) > 0) {
 			$this->data->html_title = sprintf('%s - %s',
 				SwatString::minimizeEntities($page_title),
