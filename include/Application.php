@@ -143,6 +143,7 @@ class Application extends SiteWebApplication
 	{
 		parent::addConfigDefinitions($config);
 		$config->addDefinitions(Blorg::getConfigDefinitions());
+		$config->addDefinitions(Blorgy::getConfigDefinitions());
 	}
 
 	// }}}
