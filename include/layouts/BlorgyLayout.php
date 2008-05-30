@@ -95,6 +95,7 @@ class BlorgyLayout extends SiteLayout
 		parent::finalize();
 		$this->finalizeNavBar();
 		$this->finalizeTitle();
+		$this->finalizeTheme();
 	}
 
 	// }}}
@@ -130,6 +131,22 @@ class BlorgyLayout extends SiteLayout
 		} else {
 			$this->data->html_title =
 				SwatString::minimizeEntities($site_title);
+		}
+	}
+
+	// }}}
+	// {{{ protected function finalizeTheme()
+
+	protected function finalizeTheme()
+	{
+		$theme = $this->app->config->site->theme;
+		$theme_file = dirname(__FILE__).'/../../themes/'.$theme.
+			'/www/styles/theme.css';
+
+		if (file_exists($theme_file)) {
+			$theme_css = 'themes/'.$theme.'/styles/theme.css';
+			$this->addHtmlHeadEntry(
+				new SwatStyleSheetHtmlHeadEntry($theme_css));
 		}
 	}
 
