@@ -9,7 +9,6 @@
 
 	<div id="hd" class="clearfix">
 		<h1><?= $this->site_title ?></h1>
-		<p>Parva Sub Ingenti</p>
 	</div>
 
 	<div id="bd">
