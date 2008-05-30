@@ -4,6 +4,9 @@ require_once 'Swat/SwatNavBar.php';
 require_once 'Swat/SwatHtmlTag.php';
 require_once 'Swat/SwatStyleSheetHtmlHeadEntry.php';
 require_once 'Site/layouts/SiteLayout.php';
+require_once 'Blorg/BlorgSidebar.php';
+require_once 'Blorg/BlorgGadgetFactory.php';
+require_once 'Blorg/dataobjects/BlorgGadgetInstanceWrapper.php';
 
 /**
  * @package   Blörgy
@@ -22,6 +25,14 @@ class BlorgyLayout extends SiteLayout
 	public $navbar;
 
 	// }}}
+	// {{{ protected properties
+
+	/**
+	 * @var BlorgSidebar
+	 */
+	protected $sidebar;
+
+	// }}}
 
 	// init phase
 	// {{{ public function init()
@@ -30,6 +41,7 @@ class BlorgyLayout extends SiteLayout
 	{
 		parent::init();
 		$this->initNavBar();
+		$this->initSideBar();
 	}
 
 	// }}}
@@ -42,6 +54,49 @@ class BlorgyLayout extends SiteLayout
 		$this->navbar->separator = ' › ';
 		$this->navbar->id = 'nav_bar';
 		$this->navbar->createEntry(Blorg::_('Home'), '.');
+	}
+
+	// }}}
+	// {{{ protected function initSideBar()
+
+	protected function initSideBar()
+	{
+		$this->sidebar = new BlorgSidebar();
+
+		$sql = sprintf('select * from BlorgGadgetInstance
+			where instance %s %s
+			order by displayorder',
+			SwatDB::equalityOperator($this->app->getInstanceId()),
+			$this->app->db->quote($this->app->getInstanceId(), 'integer'));
+
+		$gadget_instances = SwatDB::query($this->app->db, $sql,
+			SwatDBClassMap::get('BlorgGadgetInstanceWrapper'));
+
+		foreach ($gadget_instances as $gadget_instance) {
+			$gadget = BlorgGadgetFactory::get($this->app, $gadget_instance);
+			$this->sidebar->add($gadget);
+		}
+
+		$this->sidebar->init();
+	}
+
+	// }}}
+
+	// process phase
+	// {{{ public function process()
+
+	public function process()
+	{
+		parent::process();
+		$this->processSideBar();
+	}
+
+	// }}}
+	// {{{ protected function processSideBar()
+
+	protected function processSideBar()
+	{
+		$this->sidebar->process();
 	}
 
 	// }}}
@@ -111,6 +166,18 @@ class BlorgyLayout extends SiteLayout
 		} else {
 			$this->data->navbar = '';
 		}
+	}
+
+	// }}}
+	// {{{ protected function finalizeSideBar()
+
+	protected function finalizeSideBar()
+	{
+		$this->startCapture('sidebar');
+		$this->sidebar->display();
+		$this->endCapture();
+
+		$this->addHtmlHeadEntrySet($this->sidebar->getHtmlHeadEntrySet());
 	}
 
 	// }}}
