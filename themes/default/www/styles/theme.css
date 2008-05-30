@@ -2,3 +2,23 @@ body {
 	color: #666;
 	background: #ccc;
 }
+
+/* {{{ Layout */
+
+#bd {
+	position: relative;
+}
+
+#content {
+	float: left;
+	margin-right: 250px;
+}
+
+#sidebar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 200px;
+}
+
+/* }}} */
