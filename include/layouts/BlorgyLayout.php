@@ -120,6 +120,7 @@ class BlorgyLayout extends SiteLayout
 	{
 		$site_title = $this->app->config->site->title;
 		$page_title = SwatString::stripXHTMLTags($this->data->title);
+		$this->data->site_title = $site_title;
 
 		if (strlen($page_title) > 0) {
 			$this->data->html_title = sprintf('%s - %s',
