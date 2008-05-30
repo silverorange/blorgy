@@ -8,6 +8,8 @@
 <div id="doc">
 
 	<div id="hd" class="clearfix">
+		<h1><?= $this->title ?></h1>
+		<p>Parva Sub Ingenti</p>
 	</div>
 
 	<div id="bd">
