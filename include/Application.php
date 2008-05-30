@@ -12,13 +12,14 @@ require_once 'Site/SiteMultipleInstanceModule.php';
 require_once 'Site/SiteExceptionLogger.php';
 require_once 'Site/SiteErrorLogger.php';
 require_once 'Blorg/Blorg.php';
+require_once 'Blorgy.php';
 
 SwatDBClassMap::addPath(dirname(__FILE__).'/dataobjects');
 
 /**
- * Blorgy web application
+ * Blörgy web application
  *
- * @package   Blorgy
+ * @package   Blörgy
  * @copyright 2008 silverorange
  */
 class Application extends SiteWebApplication
