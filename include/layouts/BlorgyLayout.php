@@ -149,6 +149,7 @@ class BlorgyLayout extends SiteLayout
 	{
 		parent::finalize();
 		$this->finalizeNavBar();
+		$this->finalizeSideBar();
 		$this->finalizeTitle();
 		$this->finalizeTheme();
 	}
