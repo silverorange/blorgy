@@ -71,6 +71,10 @@ a:active  { color: #333333; }
 	color: #666;
 }
 
+.entry .entry-subtitle a:hover,
+.entry .entry-subtitle a:active {
+	color: #333;
+}
 .entry .entry-subtitle abbr { border: 0; }
 
 /* }}} */
@@ -78,6 +82,10 @@ a:active  { color: #333333; }
 
 .entry {
 	margin: 1em 0 4em 0;
+}
+
+.entry-content {
+	line-height: 1.5;
 }
 
 /* }}} */
@@ -94,13 +102,23 @@ a:active  { color: #333333; }
 	color: #666;
 }
 
+.blorg-sidebar-gadget a:link,
+.blorg-sidebar-gadget a:visited {
+	color: #666;
+}
+
+.blorg-sidebar-gadget a:hover,
+.blorg-sidebar-gadget a:active {
+	color: #333;
+}
+
 .blorg-active-conversations-gadget ul {
 	margin: 0;
 }
 
 .blorg-active-conversations-gadget ul li {
 	list-style-type: none;
-	margin: 0.3em 0;
+	margin: 0.5em 0;
 	padding: 0;
 	font-size: 85%;
 }
