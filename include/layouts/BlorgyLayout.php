@@ -152,6 +152,10 @@ class BlorgyLayout extends SiteLayout
 		$this->finalizeSideBar();
 		$this->finalizeTitle();
 		$this->finalizeTheme();
+
+		$yui = new SwatYUI(array('reset', 'fonts', 'base'));
+		$this->addHtmlHeadEntrySet($yui->getHtmlHeadEntrySet());
+
 	}
 
 	// }}}

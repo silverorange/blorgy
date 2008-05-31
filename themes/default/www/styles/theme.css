@@ -1,16 +1,22 @@
 body {
-	color: #666;
-	background: #ccc;
+	color: #333;
+	background: #fff;
+	margin: 0;
+	padding: 0 0 2em 0;
+	font-family: trebuchet ms;
 }
 
 /* {{{ Layout */
+
+#doc {
+	margin: 0 5%;
+}
 
 #bd {
 	position: relative;
 }
 
 #content {
-	float: left;
 	margin-right: 250px;
 }
 
@@ -20,5 +26,87 @@ body {
 	right: 0;
 	width: 200px;
 }
+
+/* }}} */
+/* {{{ Links */
+
+a:link    { color: #204a87; }
+a:visited { color: #5c3466; }
+a:hover   { color: #3465a4; }
+a:active  { color: #333333; }
+
+/* }}} */
+/* {{{ Header */
+
+#hd h1 {
+	font-size: 182%;
+}
+
+/* }}} */
+/* {{{ Post Header */
+
+.entry .entry-title {
+	font-size: 131%;
+	margin: 1em 0 0.2em 0;
+}
+
+.entry .entry-title a:link,
+.entry .entry-title a:visited {
+	text-decoration: none;
+}
+
+.entry .entry-title a:hover,
+.entry .entry-title a:active {
+	text-decoration: underline;
+}
+
+.entry .entry-subtitle {
+	font-size: 85%;
+	color: #666;
+	margin-bottom: 0.5em;
+}
+
+.entry .entry-subtitle a:link,
+.entry .entry-subtitle a:visited {
+	color: #666;
+}
+
+.entry .entry-subtitle abbr { border: 0; }
+
+/* }}} */
+/* {{{ Post */
+
+.entry {
+	margin: 1em 0 4em 0;
+}
+
+/* }}} */
+/* {{{ Sidebar Gadgets */
+
+.blorg-sidebar-gadget {
+	margin: 0 0 2em 0;
+	color: #666;
+}
+
+.blorg-sidebar-gadget .blorg-gadget-title {
+	font-size: 100%;
+	font-weight: bold;
+	color: #666;
+}
+
+.blorg-active-conversations-gadget ul {
+	margin: 0;
+}
+
+.blorg-active-conversations-gadget ul li {
+	list-style-type: none;
+	margin: 0.3em 0;
+	padding: 0;
+	font-size: 85%;
+}
+
+.blorg-active-conversations-gadget ul li span { color: #999; }
+
+.blorg-active-conversations-gadget ul li.new span { color: #ef2929; }
 
 /* }}} */
