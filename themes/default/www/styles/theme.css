@@ -48,7 +48,7 @@ a:active  { color: #333333; }
 
 .entry .entry-title {
 	font-size: 153.9%;
-	margin: 1em 0 0 0;
+	margin: 0;
 }
 
 .entry .entry-title a:link,
@@ -81,12 +81,9 @@ a:active  { color: #333333; }
 /* }}} */
 /* {{{ Post */
 
-.entry {
-	margin: 1em 0 4em 0;
-}
-
 .entry-content {
 	line-height: 1.5;
+	margin-bottom: 4em;
 }
 
 /* }}} */
