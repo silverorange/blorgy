@@ -93,11 +93,12 @@ a:active  { color: #333333; }
 
 .reply {
 	margin: 0 0 2em 0;
+	font-size: 85%;
 }
 
 .reply .reply-title {
 	font-weight: bold;
-	font-size: 85%;
+	font-size: 100%;
 	color: #999;
 }
 
@@ -123,10 +124,6 @@ a:active  { color: #333333; }
 
 .reply .reply-title abbr { border-bottom: 0; }
 
-.reply div.reply-link {
-	font-size: 85%;
-}
-
 .reply .reply-link a:link,
 .reply .reply-link a:visited {
 	color: #999;
@@ -138,7 +135,8 @@ a:active  { color: #333333; }
 }
 
 .reply .reply-content {
-	margin: 0.5em;
+	margin: 0.5em 0;
+	line-height: 1.5;
 }
 
 /* }}} */
