@@ -89,6 +89,15 @@ a:active  { color: #333333; }
 }
 
 /* }}} */
+/* {{{ Reset */
+
+input[type="text"],
+input[type="password"],
+textarea {
+	width: auto;
+}
+
+/* }}} */
 /* {{{ Sidebar Gadgets */
 
 .blorg-sidebar-gadget {
@@ -126,5 +135,23 @@ a:active  { color: #333333; }
 .blorg-active-conversations-gadget ul li span { color: #999; }
 
 .blorg-active-conversations-gadget ul li.new span { color: #ef2929; }
+
+/* }}} */
+/* {{{ Swat Widgets */
+
+.swat-frame,
+.swat-frame .swat-frame-title,
+.swat-frame .swat-frame-contents,
+.swat-frame .swat-footer-form-field {
+	background: none;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.swat-frame .swat-frame-title {
+	color: #666;
+	margin: 1em 0;
+}
 
 /* }}} */
