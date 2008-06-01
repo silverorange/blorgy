@@ -89,6 +89,59 @@ a:active  { color: #333333; }
 }
 
 /* }}} */
+/* {{{ Post Replies */
+
+.reply {
+	margin: 0 0 2em 0;
+}
+
+.reply .reply-title {
+	font-weight: bold;
+	font-size: 85%;
+	color: #999;
+}
+
+.reply .reply-title .reply-author {
+	color: #666;
+}
+
+.reply .reply-title .permalink {
+	font-weight: normal;
+}
+
+.reply .reply-title a.permalink:link,
+.reply .reply-title a.permalink:visited {
+	color: #999;
+	text-decoration: none;
+}
+
+.reply .reply-title a.permalink:hover,
+.reply .reply-title a.permalink:active {
+	color: #666;
+	text-decoration: underline;
+}
+
+.reply .reply-title abbr { border-bottom: 0; }
+
+.reply div.reply-link {
+	font-size: 85%;
+}
+
+.reply .reply-link a:link,
+.reply .reply-link a:visited {
+	color: #999;
+}
+
+.reply .reply-link a:hover,
+.reply .reply-link a:active {
+	color: #666;
+}
+
+.reply .reply-content {
+	margin: 0.5em;
+}
+
+/* }}} */
 /* {{{ Reset */
 
 input[type="text"],
