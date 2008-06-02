@@ -18,6 +18,11 @@ class BlorgAuthorTable extends ConversionTable
 		$this->setIDField($field);
 
 		$field = new ConversionField();
+		$field->src_field = 'integer:feature';
+		$field->dst_field = 'integer:show';
+		$this->addField($field);
+
+		$field = new ConversionField();
 		$field->src_field = 'integer:site';
 		$field->dst_field = 'integer:instance';
 		$this->addField($field);
