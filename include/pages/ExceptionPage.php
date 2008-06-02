@@ -19,21 +19,44 @@ class ExceptionPage extends SiteExceptionPage
 		if (!isset($_GET['source']))
 			return;
 
-		if (substr($_GET['source'], 0, 9) == 'archives/')
-			$this->relocateOldUrl();
+		$source_exp = explode('/', $_GET['source']);
+
+		if ($source_exp[0] == 'archives')
+			$this->relocateArchive();
+		elseif ($source_exp[0] == 'authors')
+			$this->relocateAuthor();
 	}
 
 	// }}}
-	// {{{ private function relocateOldUrl()
+	// {{{ private function relocateArchive()
 
-	private function relocateOldUrl()
+	private function relocateArchive()
 	{
 		$source = explode('/', $_GET['source']);
 
 		//remove "archives" from the start of the array
 		array_shift($source);
 
-		// TODO: Relocate old URLs.  See this file in Gallery.
+		if (count($source) == 0)
+			$this->app->relocate('archive');
+		else
+			$this->app->relocate('archive/'.implode('/', $source));
+	}
+
+	// }}}
+	// {{{ private function relocateAuthor()
+
+	private function relocateAuthor()
+	{
+		$source = explode('/', $_GET['source']);
+
+		//remove "authors" from the start of the array
+		array_shift($source);
+
+		if (count($source) == 0)
+			$this->app->relocate('author');
+		else
+			$this->app->relocate('author/'.implode('/', $source));
 	}
 
 	// }}}
