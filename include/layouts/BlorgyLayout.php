@@ -208,14 +208,10 @@ class BlorgyLayout extends SiteLayout
 
 	protected function finalizeTheme()
 	{
-		$theme = $this->app->config->site->theme;
-		$theme_file = dirname(__FILE__).'/../../themes/'.$theme.
-			'/www/styles/theme.css';
-
-		if (file_exists($theme_file)) {
-			$theme_css = 'themes/'.$theme.'/styles/theme.css';
+		$css_file = $this->app->theme->getCssFile();
+		if ($css_file !== null) {
 			$this->addHtmlHeadEntry(
-				new SwatStyleSheetHtmlHeadEntry($theme_css));
+				new SwatStyleSheetHtmlHeadEntry($css_file));
 		}
 	}
 

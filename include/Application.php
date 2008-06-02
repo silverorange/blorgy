@@ -9,6 +9,7 @@ require_once 'Site/SiteConfigModule.php';
 require_once 'Site/SiteCookieModule.php';
 require_once 'Site/SiteDatabaseModule.php';
 require_once 'Site/SiteMultipleInstanceModule.php';
+require_once 'Site/SiteThemeModule.php';
 require_once 'Site/SiteExceptionLogger.php';
 require_once 'Site/SiteErrorLogger.php';
 require_once 'Blorg/Blorg.php';
@@ -107,60 +108,18 @@ class Application extends SiteWebApplication
 			break;
 
 		default:
-			$layout = $this->resolveThemeLayout();
+			require_once '../include/layouts/BlorgyLayout.php';
+
+			$class_name = $this->theme->getLayoutClass('BlorgyLayout');
+			$file_name  = $this->theme->getTemplateFile(
+				'../include/layouts/xhtml/default.php');
+
+			$layout = new $class_name($this, $file_name);
+
 			break;
 		}
 
 		return $layout;
-	}
-
-	// }}}
-	// {{{ protected function resolveThemeLayout()
-
-	protected function resolveThemeLayout()
-	{
-		require_once '../include/layouts/BlorgyLayout.php';
-
-		$theme = $this->config->site->theme;
-
-		$layout_class = 'BlorgyLayout';
-
-		// get camel-case version of theme shortname
-		$class_name = str_replace(' ', '',
-			ucwords(str_replace('_', ' ', $theme))).'Layout';
-
-		// check if theme layout exists
-		$theme_layout_file = dirname(__FILE__).'/../themes/'.$theme.
-			'/layouts/'.$class_name.'.php';
-
-		if (file_exists($theme_layout_file)) {
-			require_once $theme_layout_file;
-			if (!class_exists($class_name)) {
-				throw new SiteException(sprintf('Layout file "%s" must '.
-					'contain a class named "%s"',
-					$theme_layout_file, $class_name));
-			}
-
-			if (!is_subclass_of($class_name, 'BlorgyLayout')) {
-				throw new SiteException(sprintf('Layout class "%s" must '.
-					'be a subclass of BlorgyLayout.',
-					$class_name));
-			}
-
-			$layout_class = $class_name;
-		}
-
-		$template_file = '../include/layouts/xhtml/default.php';
-
-		// check if theme template exists
-		$theme_template_file = dirname(__FILE__).'/../themes/'.$theme.
-			'/layouts/xhtml/template.php';
-
-		if (file_exists($theme_template_file)) {
-			$template_file = $theme_template_file;
-		}
-
-		return new $layout_class($this, $template_file);
 	}
 
 	// }}}
@@ -173,6 +132,7 @@ class Application extends SiteWebApplication
 			'cookie'   => 'SiteCookieModule',
 			'database' => 'SiteDatabaseModule',
 			'instance' => 'SiteMultipleInstanceModule',
+			'theme'    => 'SiteThemeModule',
 		);
 	}
 
@@ -226,6 +186,8 @@ class Application extends SiteWebApplication
 			new Date_TimeZone($config->date->time_zone);
 
 		setlocale(LC_ALL, $this->config->i18n->locale);
+
+		$this->theme->set($config->site->theme);
 	}
 
 	// }}}
