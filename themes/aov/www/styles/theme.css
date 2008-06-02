@@ -112,7 +112,7 @@ a:active { color: #000; }
 	color: #999;
 	font-size: 85%;
 	margin: 0.25em 0.5em 0.5em 0.5em;
-	font-family: helvetica, arial, sans-serif;
+	font-family: segoe ui, verdana, sans-serif;
 }
 
 .entry-subtitle a,
@@ -226,8 +226,11 @@ textarea {
 
 #nav_bar {
 	font-size: 85%;
+	font-family: segoe ui, verdana, sans-serif;
 	color: #999;
 }
+
+#nav_bar .swat-navbar-first { font-weight: bold; }
 
 #nav_bar a:link,
 #nav_bar a:visited {
@@ -239,12 +242,16 @@ textarea {
 	color: #666;
 }
 
+#nav_bar span { display: none; }
+
 /* }}} */
 /* {{{ Sidebar Gadgets */
 
 .blorg-sidebar-gadget {
 	margin: 0 0 2em 0;
 	color: #666;
+	font-family: segoe ui, verdana, sans-serif;
+	font-size: 85%;
 }
 
 .blorg-sidebar-gadget .blorg-gadget-title {
@@ -256,6 +263,7 @@ textarea {
 .blorg-sidebar-gadget a:link,
 .blorg-sidebar-gadget a:visited {
 	color: #666;
+	text-decoration: none;
 }
 
 .blorg-sidebar-gadget a:hover,
@@ -271,12 +279,14 @@ textarea {
 	list-style-type: none;
 	margin: 0.5em 0;
 	padding: 0;
-	font-size: 85%;
 }
 
-.blorg-active-conversations-gadget ul li span { color: #999; }
+.blorg-active-conversations-gadget ul li span {
+	color: #999;
+	white-space: nowrap;
+}
 
-.blorg-active-conversations-gadget ul li.new span { color: #ef2929; }
+.blorg-active-conversations-gadget ul li.new span { color: #930; }
 
 /* }}} */
 /* {{{ Swat Widgets */
