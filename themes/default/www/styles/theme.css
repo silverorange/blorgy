@@ -192,11 +192,11 @@ textarea {
 	color: #333;
 }
 
-.blorg-active-conversations-gadget ul {
+.blorg-sidebar-gadget ul {
 	margin: 0;
 }
 
-.blorg-active-conversations-gadget ul li {
+.blorg-sidebar-gadget ul li {
 	list-style-type: none;
 	margin: 0.5em 0;
 	padding: 0;
@@ -206,6 +206,14 @@ textarea {
 .blorg-active-conversations-gadget ul li span { color: #999; }
 
 .blorg-active-conversations-gadget ul li.new span { color: #ef2929; }
+
+.blorg-feed-gadget li a {
+	padding-left: 16px;
+	background: url('../images/feed-icon.png') left 50% no-repeat;
+	min-height: 18px;
+	line-height: 18px;
+	margin-left: 4px;
+}
 
 /* }}} */
 /* {{{ Swat Widgets */
