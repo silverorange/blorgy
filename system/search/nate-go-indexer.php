@@ -20,13 +20,14 @@ if (class_exists('PackageConfig')) {
 	PackageConfig::addPackage('swat');
 	PackageConfig::addPackage('site');
 	PackageConfig::addPackage('blorg');
+	PackageConfig::addPackage('nate-go-search');
 }
 
 ini_set('memory_limit', -1);
-set_time_limit(300);
+set_time_limit(9000);
 proc_nice(19);
 
-require_once 'Blorg/BlorgNateGoSearchIndexer';
+require_once 'Blorg/BlorgNateGoSearchIndexer.php';
 
 $config_filename = dirname(__FILE__).'/../../blorgy.ini';
 $indexer = new BlorgNateGoSearchIndexer('blorgy_search_indexer',
