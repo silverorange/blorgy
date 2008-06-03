@@ -257,6 +257,8 @@ textarea {
 
 .blorg-active-conversations-gadget ul li.new span { color: #ef2929; }
 
+/* {{{ Sidebar Feeds Gadget */
+
 .blorg-feed-gadget ul li {
 	margin: 0.2em 0;
 }
@@ -269,6 +271,21 @@ textarea {
 	margin-left: 4px;
 }
 
+/* }}} */
+/* {{{ Sidebar Search Gadget */
+
+.blorg-search-gadget .swat-entry {
+	width: 120px;
+}
+
+.blorg-search-gadget .swat-form-field,
+.blorg-search-gadget .swat-form-field-contents {
+	display: inline;
+}
+
+.blorg-search-gadget .swat-button { vertical-align: baseline; }
+
+/* }}} */
 /* }}} */
 /* {{{ Swat Widgets */
 
