@@ -9,11 +9,11 @@ require_once 'Site/SiteConfigModule.php';
 require_once 'Site/SiteCookieModule.php';
 require_once 'Site/SiteDatabaseModule.php';
 require_once 'Site/SiteMultipleInstanceModule.php';
-require_once 'Site/SiteThemeModule.php';
 require_once 'Site/SiteExceptionLogger.php';
 require_once 'Site/SiteErrorLogger.php';
 require_once 'Blorg/Blorg.php';
 require_once 'Blorgy.php';
+require_once '../include/ThemeModule.php';
 
 SwatDBClassMap::addPath(dirname(__FILE__).'/dataobjects');
 
@@ -132,7 +132,7 @@ class Application extends SiteWebApplication
 			'cookie'   => 'SiteCookieModule',
 			'database' => 'SiteDatabaseModule',
 			'instance' => 'SiteMultipleInstanceModule',
-			'theme'    => 'SiteThemeModule',
+			'theme'    => 'ThemeModule',
 		);
 	}
 
