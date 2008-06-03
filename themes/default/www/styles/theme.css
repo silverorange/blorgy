@@ -1,6 +1,6 @@
 body {
 	color: #333;
-	background: #fff;
+	background: #fff url('../images/top-down-gradient.png') top left repeat-x;
 	margin: 0;
 	padding: 0 0 2em 0;
 	font-family: trebuchet ms;
@@ -40,7 +40,8 @@ a:active  { color: #333333; }
 
 #hd h1 {
 	font-size: 300%;
-	margin: 0.5em 0 0 0;
+	margin: 0 0 0 0;
+	padding: 0.5em 0 0 0;
 }
 
 /* }}} */
@@ -94,7 +95,7 @@ a:active  { color: #333333; }
 }
 
 .reply {
-	margin: 1em 1em 2em 1em;
+	margin: 1.5em;
 	font-size: 85%;
 }
 
@@ -144,6 +145,10 @@ a:active  { color: #333333; }
 /* }}} */
 /* {{{ Reply Form */
 
+#reply_edit_form {
+	margin-top: 2em;
+}
+
 #reply_edit_frame .swat-frame-title {
 	margin-bottom: 0;
 	border-bottom: 1px solid #ccc;
@@ -151,6 +156,7 @@ a:active  { color: #333333; }
 
 #reply_edit_frame .swat-frame-contents {
 	background: #f3f3f3;
+	background: #fff url('../images/top-down-gradient.png') top left repeat-x;
 	padding: 1em;
 }
 
