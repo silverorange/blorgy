@@ -142,6 +142,40 @@ a:active  { color: #333333; }
 }
 
 /* }}} */
+/* {{{ Reply Form */
+
+#reply_edit_frame .swat-frame-title {
+	margin-bottom: 0;
+	border-bottom: 1px solid #ccc;
+}
+
+#reply_edit_frame .swat-frame-contents {
+	background: #f3f3f3;
+	padding: 1em;
+}
+
+#reply_edit_form .swat-entry,
+#reply_edit_form .swat-textarea {
+	width: 98%;
+}
+
+#reply_edit_details {
+	width: 35%;
+	float: left;
+	position: relative;
+}
+
+#reply_bodytext_field {
+	width: 62%;
+	float: right;
+	position: relative;
+}
+
+#reply_edit_frame .swat-footer-form-field {
+	clear: both;
+}
+
+/* }}} */
 /* {{{ Reset */
 
 input[type="text"],
@@ -204,6 +238,12 @@ textarea {
 	font-size: 85%;
 }
 
+.blorg-sidebar-gadget ul li ul li {
+	margin-left: 0.5em;
+}
+
+.blorg-tag-gadget ul li span,
+.blorg-archive-gadget ul li span,
 .blorg-active-conversations-gadget ul li span {
 	color: #999;
 	white-space: nowrap;
@@ -239,6 +279,15 @@ textarea {
 .swat-frame .swat-frame-title {
 	color: #666;
 	margin: 1em 0;
+}
+
+.swat-form label {
+	color: #666;
+	font-size: 85%;
+}
+
+.swat-note {
+	color: #999;
 }
 
 /* }}} */
