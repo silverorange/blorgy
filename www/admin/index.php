@@ -11,7 +11,7 @@ if (class_exists('PackageConfig')) {
 require_once '../../include/admin/BlorgyAdminApplication.php';
 
 $config_filename = dirname(__FILE__).'/../../blorgy.ini';
-$app = new GalleryAdminApplication('blorgyadmin', $config_filename);
+$app = new BlorgyAdminApplication('blorgyadmin', $config_filename);
 $app->run();
 
 ?>
