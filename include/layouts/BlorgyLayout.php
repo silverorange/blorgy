@@ -151,13 +151,20 @@ class BlorgyLayout extends SiteLayout
 		$this->finalizeNavBar();
 		$this->finalizeSideBar();
 		$this->finalizeTitle();
+		$this->finalizeBaseCss();
 		$this->finalizeTheme();
+	}
 
+	// }}}
+	// {{{ protected function finalizeBaseCss()
+
+	protected function finalizeBaseCss()
+	{
 		$yui = new SwatYUI(array('reset', 'fonts', 'base'));
 		$this->addHtmlHeadEntrySet($yui->getHtmlHeadEntrySet());
 
-		$this->addHtmlHeadEntry(
-			new SwatStyleSheetHtmlHeadEntry('styles/default.css'));
+		$this->addHtmlHeadEntry(new SwatStyleSheetHtmlHeadEntry(
+			'styles/base.css'));
 	}
 
 	// }}}
