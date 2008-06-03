@@ -14,11 +14,11 @@ require_once 'Blorg/BlorgViewFactory.php';
  */
 class ThemeModule extends SiteThemeModule
 {
-	// {{{ public function init()
+	// {{{ public function setTheme()
 
-	public function init()
+	public function setTheme($theme)
 	{
-		parent::init();
+		parent::setTheme($theme);
 		$this->registerAuthorView();
 		$this->registerPostView();
 		$this->registerReplyView();

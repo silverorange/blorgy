@@ -40,6 +40,8 @@ class Application extends SiteWebApplication
 				'/blorgy-'.$this->instance->getInstance()->shortname.'/',
 				$this->secure_base_uri);
 		}
+
+		$this->theme->set($this->config->site->theme);
 	}
 
 	// }}}
@@ -186,8 +188,6 @@ class Application extends SiteWebApplication
 			new Date_TimeZone($config->date->time_zone);
 
 		setlocale(LC_ALL, $this->config->i18n->locale);
-
-		$this->theme->set($config->site->theme);
 	}
 
 	// }}}
