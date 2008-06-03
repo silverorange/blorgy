@@ -6,6 +6,7 @@ if (class_exists('PackageConfig')) {
 	PackageConfig::addPackage('site');
 	PackageConfig::addPackage('admin');
 	PackageConfig::addPackage('blorg');
+	PackageConfig::addPackage('nate-go-search');
 }
 
 require_once '../include/Application.php';
