@@ -204,7 +204,7 @@ class BlorgyLayout extends SiteLayout
 
 		$source = $this->app->getPage()->getSource();
 		if ($source === '') {
-			$this->data->site_title = $site_title;
+			$this->data->site_title = (string)$site_title;
 		} else {
 			$a_tag = new SwatHtmlTag('a');
 			$a_tag->accesskey = '1';
