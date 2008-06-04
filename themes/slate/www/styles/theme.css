@@ -4,25 +4,36 @@ body {
 	font-family: gill sans, trebuchet ms, verdana, sans-serif;
 	margin: 0;
 	padding: 0;
+	color: #eee;
 }
+
+a,
+a:link,
+a:visited {
+	color: #999;
+}
+
+a:hover { color: #eee; }
 
 #doc {
 	margin: 0;
-	padding: 0;
+	padding: 0 0 2em 0;
 }
 
+#bd { margin-left: 28px; }
+
+#content { margin-right: 350px; }
+
+
+/* Header */
 #hd h1 {
 	color: #fff;
 	margin-left: 20px;
 	font-size: 246.2%;
 }
 
-#bd {
-	margin-left: 28px;
-}
-
-#content {
-	margin-right: 350px;
+#hd h1 a {
+	color: #fff;
 }
 
 
@@ -34,10 +45,6 @@ body {
 .entry .entry-subtitle a:link,
 .entry .entry-subtitle a:visited {
 	color: #999;
-}
-
-.entry .entry-content {
-	color: #eee;
 }
 
 
@@ -56,4 +63,71 @@ body {
 	font-size: 123.1%;
 	padding: 0;
 	margin: 0;
+}
+
+
+/* Pagination */
+.swat-pagination span,
+.swat-pagination span.swat-pagination-current {
+	border-color: #555;
+	
+}
+
+.swat-pagination a,
+.swat-pagination a:visited {
+	border-color: #666;
+	color: #999;
+}
+
+.swat-pagination a:hover {
+	background: #444;
+	border-color: #666;
+}
+
+
+/* Replies */
+.reply {
+	font-size: 100%;
+}
+
+
+/* Reply Form */
+#reply_edit_form .swat-frame-contents {
+	background: transparent;
+}
+
+#reply_edit_form .swat-required {
+	color: #aaa;
+}
+
+#reply_edit_form .swat-entry,
+#reply_edit_form .swat-textarea {
+	background: #444;
+	border-top: 1px solid #222;
+	border-left: 1px solid #222;
+	border-right: 1px solid #888;
+	border-bottom: 1px solid #888;
+	padding: 2px;
+	color: #eee;
+}
+
+#reply_edit_form .swat-button {
+	background: #ccc;
+	border-top: 1px solid #eee;
+	border-left: 1px solid #eee;
+	border-bottom: 1px solid #777;
+	border-right: 1px solid #777;
+	padding: 2px;
+}
+
+
+/* General SWAT */
+.swat-form-field-with-messages {
+	background: #4f1414;
+	border-color: #7f1f1f;
+}
+
+.swat-form-field-messages .swat-message,
+.swat-table-view-input-row-messages .swat-message {
+	color: #fff;
 }
