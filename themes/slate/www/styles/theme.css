@@ -47,6 +47,10 @@ a:hover { color: #eee; }
 	color: #999;
 }
 
+.entry .entry-subtitle a:hover {
+	color: #eee;
+}
+
 
 /* Sidebar */
 #sidebar {
