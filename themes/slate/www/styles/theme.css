@@ -1,5 +1,5 @@
 body {
-	background: #333 url('../images/sry-back.png') right top repeat-y;
+	background: #333 url('../images/slate-back.png') right top repeat-y;
 	border-top: 6px solid #666;
 	font-family: gill sans, trebuchet ms, verdana, sans-serif;
 	margin: 0;
@@ -74,7 +74,6 @@ a:hover { color: #eee; }
 .swat-pagination span,
 .swat-pagination span.swat-pagination-current {
 	border-color: #555;
-	
 }
 
 .swat-pagination a,
