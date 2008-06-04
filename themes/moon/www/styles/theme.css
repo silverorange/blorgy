@@ -191,4 +191,19 @@ span.swat-required {
 	color: #fff;
 }
 
+.swat-pagination a,
+.swat-pagination span,
+.swat-pagination span.swat-pagination-current {
+	border-color: #444;
+}
+
+.swat-pagination a:hover {
+	background-color: transparent;
+	border-color: #777;
+}
+
+.swat-pagination span.swat-pagination-nextprev {
+	color: #444;
+}
+
 /* }}} */
