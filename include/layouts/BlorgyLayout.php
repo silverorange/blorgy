@@ -201,7 +201,17 @@ class BlorgyLayout extends SiteLayout
 	{
 		$site_title = $this->app->config->site->title;
 		$page_title = SwatString::stripXHTMLTags($this->data->title);
-		$this->data->site_title = (string)$site_title;
+
+		$source = $this->app->getPage()->getSource();
+		if ($source === '') {
+			$this->data->site_title = $site_title;
+		} else {
+			$a_tag = new SwatHtmlTag('a');
+			$a_tag->accesskey = '1';
+			$a_tag->href = '.';
+			$a_tag->setContent($site_title);
+			$this->data->site_title = $a_tag->__toString();
+		}
 
 		if (strlen($page_title) > 0) {
 			$this->data->html_title = sprintf('%s - %s',
