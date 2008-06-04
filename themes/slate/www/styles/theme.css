@@ -46,6 +46,11 @@ body {
 	width: 275px;
 }
 
+#sidebar .blorg-sidebar {
+	position: relative;
+	top: -45px;
+}
+
 #sidebar .blorg-sidebar .blorg-gadget-title {
 	color: #666;
 	font-size: 123.1%;
