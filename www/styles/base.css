@@ -45,6 +45,13 @@ a:active  { color: #333333; }
 }
 
 /* }}} */
+/* {{{ Footer */
+
+.footer {
+	text-align: center;
+}
+
+/* }}} */
 /* {{{ Post Header */
 
 .entry .entry-title {
