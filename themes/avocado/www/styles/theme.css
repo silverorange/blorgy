@@ -1,3 +1,55 @@
 body {
-	background: #0f0;
+	background: #a9ce68 url('../images/top-stripes.gif') left top repeat-x;
+	padding-top: 1em;
+}
+
+#hd h1 {
+	font-family: georgia, serif;
+	font-size: 375%;
+	color: #fff;
+	font-weight: normal;
+}
+
+#doc { margin: 0 2em; }
+
+#content { margin-right: 30%; }
+
+a,
+a:link,
+.entry .entry-title a:visited,
+.entry .entry-subtitle a,
+.entry .entry-subtitle a:link,
+.entry .entry-subtitle a:visited,
+.blorg-sidebar-gadget a:link,
+.blorg-sidebar-gadget a:visited {
+	color: #166086;
+}
+
+a:hover,
+.entry .entry-title a:hover {
+	color: #4e9a26;
+}
+
+.entry .entry-subtitle a:hover {	color: #2a001a; }
+
+a:visited { color: #477053; }
+
+
+/* Sidebar */
+#sidebar {
+	width: 25%;
+	top: -60px;
+}
+
+.blorg-sidebar .blorg-gadget-title { 	font-size: 123.1%; }
+
+.blorg-sidebar .blorg-gadget-title,
+.blorg-sidebar .blorg-gadget-title a {
+	color: #477053;
+}
+
+.blorg-tag-gadget ul li span,
+.blorg-archive-gadget ul li span,
+.blorg-active-conversations-gadget ul li span {
+	color: #586f30;
 }
