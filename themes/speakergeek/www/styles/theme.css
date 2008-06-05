@@ -1,3 +1,87 @@
 body {
-	background: #f0f;
+	background: #2f5a99;
+	font-family: verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+#bd {
+	background: url('../images/footer.jpg') center bottom repeat-x;
+	padding: 45px 30px;
+}
+
+#doc {
+	background: #fff url('../images/title.jpg') left top repeat-x;
+	border-left: 2px solid #0a2e70;
+	border-right: 2px solid #0a2e70;
+}
+
+#content { margin-right: 30%; }
+
+#hd h1 {
+	padding-left: 30px;
+	padding-top: 30px;
+}
+
+#hd h1,
+#hd h1 a {
+	color: #09227f;
+	font-style: italic;
+}
+
+a,
+a:link,
+a:hover,
+.entry .entry-title a:visited,
+.entry .entry-subtitle a,
+.entry .entry-subtitle a:link,
+.entry .entry-subtitle a:hover {
+	color: #003399;
+}
+
+a:visited,
+.entry .entry-subtitle a:visited {
+	color: #666;
+}
+
+
+/* Entries */
+.entry .entry-title {
+	font-size: 130%;
+}
+
+.entry .entry-subtitle {
+	background: url('../images/speakerbullet.jpg') left top no-repeat;
+	padding-left: 18px;
+	height: 15px;
+}
+
+.entry .entry-subtitle {
+	color: #666;
+}
+
+.entry .entry-content {
+	padding-left: 18px;
+}
+
+
+/* Sidebar */
+#sidebar {
+	width: 25%;
+	top: 50px;
+}
+
+.blorg-sidebar .blorg-gadget-title {
+	color: #666;
+	padding: 2px;
+	border-bottom: 1px solid #ccc;
+	margin-right: 30px;
+}
+
+.blorg-sidebar .blorg-gadget-title a {
+	text-decoration: none;
+}
+
+.blorg-sidebar .blorg-search-gadget form {
+	margin-top: 6px;
 }
