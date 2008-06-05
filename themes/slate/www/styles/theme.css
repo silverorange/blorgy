@@ -1,5 +1,9 @@
+html,
 body {
 	background: #333 url('../images/slate-back.png') right top repeat-y;
+}
+
+body {
 	border-top: 6px solid #666;
 	font-family: gill sans, trebuchet ms, verdana, sans-serif;
 	margin: 0;
