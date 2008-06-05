@@ -7,7 +7,7 @@ body {
 
 #bd {
 	background: url('../images/footer.jpg') center bottom repeat-x;
-	padding: 45px 30px;
+	padding: 45px 30px 65px 30px;
 }
 
 #doc {
@@ -27,6 +27,10 @@ body {
 #hd h1 a {
 	color: #09227f;
 	font-style: italic;
+}
+
+#nav_bar {
+	margin-top: 10px;
 }
 
 a,
@@ -84,4 +88,68 @@ a:visited,
 
 .blorg-sidebar .blorg-search-gadget form {
 	margin-top: 6px;
+}
+
+
+/* Pagination */
+.swat-pagination {
+	padding: 0.5em;
+}
+
+.swat-pagination span.swat-pagination-current {
+	border: 1px solid #2f5a99;
+	background: #bfd9ff;
+	color: #333;
+}
+
+.swat-pagination span {
+	border: none;
+	color: #999;
+}
+
+.swat-pagination a,
+.swat-pagination a:visited {
+	color: #333;
+	border: 1px solid transparent;
+}
+
+.swat-pagination a:hover {
+	border: 1px solid #2f5a99;
+	background: #bfd9ff;
+	color: #333;
+}
+
+.footer .results-message,
+.footer .archive-link {
+	font-size: 85%;
+}
+
+
+/* Reply Form */
+#reply_edit_form .swat-frame-contents {
+	background: transparent;
+}
+
+#reply_edit_form .swat-required {
+	color: #aaa;
+}
+
+#reply_edit_form .swat-entry,
+#reply_edit_form .swat-textarea {
+	background: #fff;
+	border-top: 1px solid #777;
+	border-left: 1px solid #777;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding: 2px;
+	color: #eee;
+}
+
+#reply_edit_form .swat-button {
+	background: #eee;
+	border-top: 1px solid #eee;
+	border-left: 1px solid #eee;
+	border-bottom: 1px solid #777;
+	border-right: 1px solid #777;
+	padding: 2px;
 }
