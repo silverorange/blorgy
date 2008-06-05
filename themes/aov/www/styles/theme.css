@@ -8,20 +8,17 @@ body {
 
 #doc {
 	width: auto;
-	margin: 0 8%;
+	margin: 4em 8%;
 	min-width: 650px;
 	position: relative;
 }
 
-#bd {
-	margin: 4em 275px 4em 0;
+#content {
+	margin-right: 275px;
 }
 
 #sidebar {
-	position: absolute;
 	top: 100px;
-	right: 0;
-	width: 225px;
 }
 
 /* }}} */
@@ -37,7 +34,7 @@ a:active { color: #000; }
 /* {{{ Header */
 
 #hd {
-	width: 225px;
+	width: 200px;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -248,16 +245,7 @@ textarea {
 /* {{{ Sidebar Gadgets */
 
 .blorg-sidebar-gadget {
-	margin: 0 0 2em 0;
-	color: #666;
 	font-family: segoe ui, verdana, sans-serif;
-	font-size: 85%;
-}
-
-.blorg-sidebar-gadget .blorg-gadget-title {
-	font-size: 100%;
-	font-weight: bold;
-	color: #666;
 }
 
 .blorg-sidebar-gadget a:link,
@@ -269,21 +257,6 @@ textarea {
 .blorg-sidebar-gadget a:hover,
 .blorg-sidebar-gadget a:active {
 	color: #333;
-}
-
-.blorg-active-conversations-gadget ul {
-	margin: 0;
-}
-
-.blorg-active-conversations-gadget ul li {
-	list-style-type: none;
-	margin: 0.5em 0;
-	padding: 0;
-}
-
-.blorg-active-conversations-gadget ul li span {
-	color: #999;
-	white-space: nowrap;
 }
 
 .blorg-active-conversations-gadget ul li.new span { color: #930; }
