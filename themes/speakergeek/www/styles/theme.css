@@ -34,9 +34,7 @@ body {
 	overflow: hidden;
 }
 
-#nav_bar {
-	margin-top: 10px;
-}
+#nav_bar { margin-top: 10px; }
 
 a,
 a:link,
@@ -55,9 +53,7 @@ a:visited,
 
 
 /* Entries */
-.entry .entry-title {
-	font-size: 130%;
-}
+.entry .entry-title { font-size: 130%; }
 
 .entry .entry-subtitle {
 	background: url('../images/speakerbullet.jpg') left top no-repeat;
@@ -65,20 +61,13 @@ a:visited,
 	height: 15px;
 }
 
-.entry .entry-subtitle {
-	color: #666;
-}
+.entry .entry-subtitle { color: #666; }
 
-.entry .entry-content {
-	padding-left: 18px;
-}
+.entry .entry-content { padding-left: 18px; }
 
 
 /* Sidebar */
-#sidebar {
-	width: 25%;
-	top: 50px;
-}
+#sidebar { width: 25%; }
 
 .blorg-sidebar .blorg-gadget-title {
 	color: #666;
@@ -97,9 +86,7 @@ a:visited,
 
 
 /* Pagination */
-.swat-pagination {
-	padding: 0.5em;
-}
+.swat-pagination { padding: 0.5em; }
 
 .swat-pagination span.swat-pagination-current {
 	border: 1px solid #2f5a99;
@@ -135,9 +122,7 @@ a:visited,
 	background: transparent;
 }
 
-#reply_edit_form .swat-required {
-	color: #aaa;
-}
+#reply_edit_form .swat-required { color: #aaa; }
 
 #reply_edit_form .swat-entry,
 #reply_edit_form .swat-textarea {
