@@ -7,7 +7,7 @@ body {
 
 #bd {
 	background: url('../images/footer.jpg') center bottom repeat-x;
-	padding: 45px 30px 65px 30px;
+	padding: 0px 30px 65px 30px;
 }
 
 #doc {
@@ -25,8 +25,13 @@ body {
 
 #hd h1,
 #hd h1 a {
+	background: url('../images/logo.jpg') left top no-repeat;
 	color: #09227f;
 	font-style: italic;
+	width: 340px;
+	height: 110px;
+	line-height: 2000px;
+	overflow: hidden;
 }
 
 #nav_bar {
