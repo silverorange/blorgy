@@ -18,7 +18,11 @@ body {
 }
 
 #sidebar {
-	top: 100px;
+	top: 150px;
+}
+
+#bd {
+	position: static;
 }
 
 /* }}} */
@@ -34,7 +38,7 @@ a:active { color: #000; }
 /* {{{ Header */
 
 #hd {
-	width: 200px;
+	width: 220px;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -46,6 +50,11 @@ a:active { color: #000; }
 	color: #555;
 	position: relative;
 	line-height: 40px;
+}
+
+#hd h1 a {
+	text-decoration: none;
+	display: block;
 }
 
 #hd h1 span.title-1 {
@@ -73,6 +82,16 @@ a:active { color: #000; }
 	display: block;
 	font-size: 50px;
 }
+
+#hd h1 a:hover span.title-1,
+#hd h1 a:hover span.title-3 {
+	color: #444;
+}
+
+#hd h1 a:hover span.title-2 {
+	color: #666;
+}
+
 
 #hd p {
 	margin: 0;

@@ -28,7 +28,7 @@ class AovLayout extends BlorgyLayout
 			$word = trim($word);
 			if (strlen($word) > 0) {
 				$count++;
-				$word_span->class = sprintf('word%s', $count);
+				$word_span->class = sprintf('title-%s', $count);
 				$word_span->open();
 				$letter_span->open();
 				echo substr($word, 0, 1);
