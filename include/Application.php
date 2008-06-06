@@ -49,7 +49,8 @@ class Application extends SiteWebApplication
 
 	/**
 	 * Resolves page from a source string
-	 * @return SwatPage A subclass of SwatPage is returned.
+	 *
+	 * @return SitePage the appropriate page for the given source string.
 	 */
 	protected function resolvePage($source)
 	{
@@ -60,20 +61,16 @@ class Application extends SiteWebApplication
 		else
 			$tag = $path[0];
 
+		$layout  = $this->resolveLayout($tag, $source);
+
 		switch ($tag) {
 		case 'httperror':
 			require_once 'Site/pages/SiteHttpErrorPage.php';
-			$layout = new SiteLayout($this,
-				'Site/layouts/xhtml/default.php');
-
 			$page = new SiteHttpErrorPage($this, $layout);
 			break;
 
 		case 'exception':
 			require_once 'pages/ExceptionPage.php';
-			$layout = new SiteLayout($this,
-				'Site/layouts/xhtml/default.php');
-
 			$page = new ExceptionPage($this, $layout);
 			break;
 
@@ -81,14 +78,15 @@ class Application extends SiteWebApplication
 			array_shift($path);
 			require_once 'Site/SiteArticlePageFactory.php';
 			$factory = new SiteArticlePageFactory();
-			$page = $factory->resolvePage($this, implode('/', $path), $layout);
+			$page    = $factory->resolvePage($this, implode('/', $path),
+				$layout);
+
 			break;
 
 		default:
 			require_once 'Blorg/BlorgPageFactory.php';
 			$factory = new BlorgPageFactory();
-			$layout = $this->resolveLayout($tag, $source);
-			$page = $factory->resolvePage($this, $source, $layout);
+			$page    = $factory->resolvePage($this, $source, $layout);
 			break;
 		}
 
@@ -99,6 +97,9 @@ class Application extends SiteWebApplication
 	// }}}
 	// {{{ protected function resolveLayout()
 
+	/**
+	 * @return SiteLayout
+	 */
 	protected function resolveLayout($tag, $source)
 	{
 		switch ($tag) {
@@ -109,14 +110,15 @@ class Application extends SiteWebApplication
 
 			break;
 
+		case 'exception':
 		default:
 			require_once '../include/layouts/BlorgyLayout.php';
 
-			$class_name = $this->theme->getLayoutClass('BlorgyLayout');
-			$file_name  = $this->theme->getTemplateFile(
-				'../include/layouts/xhtml/default.php');
+			$class_name    = $this->theme->getLayoutClass('BlorgyLayout');
+			$template_file = $this->theme->getTemplateFile(
+				'../include/layouts/xhtml/template.php');
 
-			$layout = new $class_name($this, $file_name);
+			$layout = new $class_name($this, $template_file);
 
 			break;
 		}
