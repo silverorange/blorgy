@@ -117,15 +117,15 @@ a:visited,
 }
 
 
-/* Reply Form */
-#reply_edit_form .swat-frame-contents {
+/* Comment Form */
+#comment_edit_form .swat-frame-contents {
 	background: transparent;
 }
 
-#reply_edit_form .swat-required { color: #aaa; }
+#comment_edit_form .swat-required { color: #aaa; }
 
-#reply_edit_form .swat-entry,
-#reply_edit_form .swat-textarea {
+#comment_edit_form .swat-entry,
+#comment_edit_form .swat-textarea {
 	background: #fff;
 	border-top: 1px solid #777;
 	border-left: 1px solid #777;
@@ -135,7 +135,7 @@ a:visited,
 	color: #eee;
 }
 
-#reply_edit_form .swat-button {
+#comment_edit_form .swat-button {
 	background: #eee;
 	border-top: 1px solid #eee;
 	border-left: 1px solid #eee;

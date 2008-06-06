@@ -174,57 +174,57 @@ img.right { float: right; margin: 0.2em 0 1em 1em; }
 img.left  { float: left;  margin: 0.2em 1em 0 1em; }
 
 /* }}} */
-/* {{{ Post Replies */
+/* {{{ Post Comments */
 
-.replies-title {
+.comments-title {
 	border-bottom: 1px solid #ccc;
 }
 
-.reply {
+.comment {
 	margin: 1em 1em 2em 1em;
 	font-size: 85%;
 	font-family: segoe ui,verdana,sans-serif;
 }
 
-.reply .reply-title {
+.comment .comment-title {
 	font-weight: bold;
 	font-size: 100%;
 	color: #999;
 }
 
-.reply .reply-title span.reply-author {
+.comment .comment-title span.comment-author {
 	color: #666;
 }
 
-.reply .reply-title .permalink {
+.comment .comment-title .permalink {
 	font-weight: normal;
 }
 
-.reply .reply-title a.permalink:link,
-.reply .reply-title a.permalink:visited {
+.comment .comment-title a.permalink:link,
+.comment .comment-title a.permalink:visited {
 	color: #999;
 	text-decoration: none;
 }
 
-.reply .reply-title a.permalink:hover,
-.reply .reply-title a.permalink:active {
+.comment .comment-title a.permalink:hover,
+.comment .comment-title a.permalink:active {
 	color: #666;
 	text-decoration: underline;
 }
 
-.reply .reply-title abbr { border-bottom: 0; }
+.comment .comment-title abbr { border-bottom: 0; }
 
-.reply .reply-link a:link,
-.reply .reply-link a:visited {
+.comment .comment-link a:link,
+.comment .comment-link a:visited {
 	color: #999;
 }
 
-.reply .reply-link a:hover,
-.reply .reply-link a:active {
+.comment .comment-link a:hover,
+.comment .comment-link a:active {
 	color: #666;
 }
 
-.reply .reply-content {
+.comment .comment-content {
 	margin: 0.5em 0;
 	line-height: 1.5;
 }

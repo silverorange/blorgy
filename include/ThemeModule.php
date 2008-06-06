@@ -21,7 +21,7 @@ class ThemeModule extends SiteThemeModule
 		parent::set($theme);
 		$this->registerAuthorView();
 		$this->registerPostView();
-		$this->registerReplyView();
+		$this->registerCommentView();
 	}
 
 	// }}}
@@ -79,29 +79,29 @@ class ThemeModule extends SiteThemeModule
 	}
 
 	// }}}
-	// {{{ protected function registerReplyView()
+	// {{{ protected function registerCommentView()
 
-	protected function registerReplyView()
+	protected function registerCommentView()
 	{
-		$class_name = $this->getCamelCaseShortname().'ReplyView';
+		$class_name = $this->getCamelCaseShortname().'CommentView';
 		$file_name = $this->getFile('views/'.$class_name.'.php');
 
 		if ($file_name !== null) {
 			require_once $file_name;
 
 			if (!class_exists($class_name)) {
-				throw new SiteException(sprintf('Reply view file "%s" must '.
+				throw new SiteException(sprintf('Comment view file "%s" must '.
 					'contain a class named "%s"',
 					$file_name, $class_name));
 			}
 
-			if (!is_subclass_of($class_name, 'BlorgReplyView')) {
-				throw new SiteException(sprintf('Reply view class "%s" must '.
-					'be a subclass of BlorgReplyView.',
+			if (!is_subclass_of($class_name, 'BlorgCommentView')) {
+				throw new SiteException(sprintf('Comment view class "%s" must '.
+					'be a subclass of BlorgCommentView.',
 					$class_name));
 			}
 
-			BlorgViewFactory::registerView('reply', $class_name);
+			BlorgViewFactory::registerView('comment', $class_name);
 		}
 	}
 

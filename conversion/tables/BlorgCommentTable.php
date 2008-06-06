@@ -1,15 +1,15 @@
 <?php
 
-require_once 'Blorg/dataobjects/BlorgReply.php';
+require_once 'Blorg/dataobjects/BlorgComment.php';
 
-class BlorgReplyTable extends ConversionTable
+class BlorgCommentTable extends ConversionTable
 {
 	// {{{ public function init()
 
 	public function init()
 	{
 		$this->src_table = 'replies';
-		$this->dst_table = 'BlorgReply';
+		$this->dst_table = 'BlorgComment';
 
 		$this->addDep('BlorgPost');
 
@@ -49,7 +49,7 @@ class BlorgReplyTable extends ConversionTable
 		$field->src_tz_id = 'America/Halifax';
 		$this->addField($field);
 
-		$field = new BlorgReplyStatusField();
+		$field = new BlorgCommentStatusField();
 		$field->src_field = 'boolean:hidden';
 		$field->dst_field = 'integer:status';
 		$this->addField($field);
@@ -94,7 +94,7 @@ class BlorgReplyTable extends ConversionTable
 	// }}}
 }
 
-class BlorgReplyStatusField extends ConversionField
+class BlorgCommentStatusField extends ConversionField
 {
 	// {{{ public function convertData()
 
@@ -102,10 +102,10 @@ class BlorgReplyStatusField extends ConversionField
 	{
 		$data = parent::convertData($data);
 
-		$status = BlorgReply::STATUS_PUBLISHED;
+		$status = BlorgComment::STATUS_PUBLISHED;
 
 		if ($data === true)
-			$status = BlorgReply::STATUS_UNPUBLISHED;
+			$status = BlorgComment::STATUS_UNPUBLISHED;
 
 		return $status;
 	}

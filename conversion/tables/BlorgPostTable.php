@@ -54,7 +54,7 @@ class BlorgPostTable extends ConversionTable
 
 		$field = new ConversionField();
 		$field->src_field = 'integer:replystatus';
-		$field->dst_field = 'integer:reply_status';
+		$field->dst_field = 'integer:comment_status';
 		$this->addField($field);
 
 		$field = new ConversionField('integer:author');

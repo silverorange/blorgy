@@ -48,36 +48,6 @@ abstract class Blorgy
 	}
 
 	// }}}
-	// {{{ public static function getHtmlHeadEntrySet()
-
-	/**
-	 * Gets site-wide HTML head entries for sites using Blörg
-	 *
-	 * Applications may add these head entries to their layout.
-	 *
-	 * @return SwatHtmlHeadEntrySet the HTML head entries used by Blörg.
-	 */
-	public static function getHtmlHeadEntrySet(SiteApplication $app)
-	{
-		$set = new SwatHtmlHeadEntrySet();
-
-		$blorg_base_href = $app->config->blorg->path;
-
-		$recent_posts = new SwatLinkHtmlHeadEntry(
-			$blorg_base_href.'atom', 'alternate',
-			'application/atom+xml', Blorg::_('Recent Posts'));
-
-		$recent_replies = new SwatLinkHtmlHeadEntry(
-			$blorg_base_href.'atom/replies', 'alternate',
-			'application/atom+xml', Blorg::_('Recent Replies'));
-
-		$set->addEntry($recent_posts);
-		$set->addEntry($recent_replies);
-
-		return $set;
-	}
-
-	// }}}
 	// {{{ private function __construct()
 
 	/**

@@ -40,35 +40,35 @@ class MoonPostView extends BlorgPostView
 		$permalink = ob_get_clean();
 
 		ob_start();
-		$this->displayReplyCount($post);
-		$reply_count = ob_get_clean();
+		$this->displayCommentCount($post);
+		$comment_count = ob_get_clean();
 
 		echo '<div class="entry-subtitle">';
 
 		/*
-		 * Reply count is shown if and only if reply_count element is shown AND
-		 * the following:
-		 * - replies are locked AND there is one or more visible reply OR
-		 * - replies are open OR
-		 * - replies are moderated.
+		 * Comment count is shown if and only if comment_count element is shown
+		 * AND the following:
+		 * - comments are locked AND there is one or more visible comment OR
+		 * - comments are open OR
+		 * - comments are moderated.
 		 */
-		$show_reply_count =
-			(strlen($reply_count) > 0 &&
-				(($post->reply_status == BlorgPost::REPLY_STATUS_LOCKED &&
-					count($post->getVisibleReplies()) > 0) ||
-				$post->reply_status == BlorgPost::REPLY_STATUS_OPEN ||
-				$post->reply_status == BlorgPost::REPLY_STATUS_MODERATED));
+		$show_comment_count =
+			(strlen($comment_count) > 0 &&
+				(($post->comment_status == BlorgPost::COMMENT_STATUS_LOCKED &&
+					count($post->getVisibleComments()) > 0) ||
+				$post->comment_status == BlorgPost::COMMENT_STATUS_OPEN ||
+				$post->comment_status == BlorgPost::COMMENT_STATUS_MODERATED));
 
 		if (strlen($author) > 0) {
-			if ($show_reply_count) {
+			if ($show_comment_count) {
 				printf(Blorg::_('Posted by %s on %s | %s'),
-					$author, $permalink, $reply_count);
+					$author, $permalink, $comment_count);
 			} else {
 				printf(Blorg::_('Posted by %s on %s'), $author, $permalink);
 			}
 		} else {
-			if ($show_reply_count) {
-				printf('%s | %s', $permalink, $reply_count);
+			if ($show_comment_count) {
+				printf('%s | %s', $permalink, $comment_count);
 			} else {
 				echo $permalink;
 			}

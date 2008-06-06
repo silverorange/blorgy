@@ -1,6 +1,6 @@
 <?php
 
-require_once 'Blorg/views/BlorgReplyView.php';
+require_once 'Blorg/views/BlorgCommentView.php';
 
 /**
  *
@@ -8,24 +8,24 @@ require_once 'Blorg/views/BlorgReplyView.php';
  * @copyright 2008 silverorange
  * @license   http://www.gnu.org/copyleft/lesser.html LGPL License 2.1
  */
-class MoonReplyView extends BlorgReplyView
+class MoonCommentView extends BlorgCommentView
 {
 	// general display methods
 	// {{{ protected function displayHeader()
 
-	protected function displayHeader(BlorgReply $reply)
+	protected function displayHeader(BlorgComment $comment)
 	{
 		$heading_tag = new SwatHtmlTag('h4');
-		$heading_tag->class = 'reply-title';
+		$heading_tag->class = 'comment-title';
 
 		$heading_tag->open();
 
-		$this->displayPermalink($reply);
-		$this->displayAuthor($reply);
+		$this->displayPermalink($comment);
+		$this->displayAuthor($comment);
 
 		$heading_tag->close();
 
-		$this->displayLink($reply);
+		$this->displayLink($comment);
 	}
 
 	// }}}
@@ -33,7 +33,7 @@ class MoonReplyView extends BlorgReplyView
 	// part display methods
 	// {{{ protected function displayPermalink()
 
-	protected function displayPermalink(BlorgReply $reply)
+	protected function displayPermalink(BlorgComment $comment)
 	{
 		if ($this->getMode('permalink') > BlorgView::MODE_NONE) {
 			$link = $this->getLink('permalink');
@@ -42,7 +42,8 @@ class MoonReplyView extends BlorgReplyView
 			} else {
 				$permalink_tag = new SwatHtmlTag('a');
 				if ($link === true) {
-					$permalink_tag->href = $this->getReplyRelativeUri($reply);
+					$permalink_tag->href =
+						$this->getCommentRelativeUri($comment);
 				} else {
 					$permalink_tag->href = $link;
 				}
@@ -52,12 +53,12 @@ class MoonReplyView extends BlorgReplyView
 
 			// display machine-readable date in UTC
 			$abbr_tag = new SwatHtmlTag('abbr');
-			$abbr_tag->class = 'reply-published';
+			$abbr_tag->class = 'comment-published';
 			$abbr_tag->title =
-				$reply->createdate->getDate(DATE_FORMAT_ISO_EXTENDED);
+				$comment->createdate->getDate(DATE_FORMAT_ISO_EXTENDED);
 
 			// display human-readable date in local time
-			$date = clone $reply->createdate;
+			$date = clone $comment->createdate;
 			$date->convertTZ($this->app->default_time_zone);
 			$abbr_tag->setContent($date->format('%i:%M %p | %e %B %Y'));
 			$abbr_tag->display();

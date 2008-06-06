@@ -92,23 +92,23 @@ a:hover { color: #eee; }
 }
 
 
-/* Replies */
-.reply {
+/* Comments */
+.comment {
 	font-size: 100%;
 }
 
 
-/* Reply Form */
-#reply_edit_form .swat-frame-contents {
+/* Comment Form */
+#comment_edit_form .swat-frame-contents {
 	background: transparent;
 }
 
-#reply_edit_form .swat-required {
+#comment_edit_form .swat-required {
 	color: #aaa;
 }
 
-#reply_edit_form .swat-entry,
-#reply_edit_form .swat-textarea {
+#comment_edit_form .swat-entry,
+#comment_edit_form .swat-textarea {
 	background: #444;
 	border-top: 1px solid #222;
 	border-left: 1px solid #222;
@@ -118,7 +118,7 @@ a:hover { color: #eee; }
 	color: #eee;
 }
 
-#reply_edit_form .swat-button {
+#comment_edit_form .swat-button {
 	background: #ccc;
 	border-top: 1px solid #eee;
 	border-left: 1px solid #eee;

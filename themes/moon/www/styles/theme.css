@@ -64,35 +64,35 @@ a:active  { color: #fff; }
 }
 
 /* }}} */
-/* {{{ Replies */
+/* {{{ Comments */
 
-.replies-title {
+.comments-title {
 	border: 0;
 	color: #fff;
 	font-weight: normal;
 	font-size: 116%;
 }
 
-.reply {
+.comment {
 	font-size: 100%;
 	margin: 1.5em 1em;
 }
 
-.reply-content {
+.comment-content {
 	font-family: sans-serif;
 	clear: both;
 }
 
-.reply-title .reply-author {
+.comment-title .comment-author {
 	float: left;
 	font-size: 116%;
 }
-.reply-title .permalink {
+.comment-title .permalink {
 	float: right;
 	font-size: 116%;
 }
 
-.reply-title {
+.comment-title {
 	float: left;
 	font-size: 100%;
 	width: 100%;
@@ -100,18 +100,18 @@ a:active  { color: #fff; }
 	line-height: 1.5;
 }
 
-.reply-link {
+.comment-link {
 	line-height: 1.5;
 }
 
 /* }}} */
-/* {{{ Reply Form */
+/* {{{ Comment Form */
 
-#reply_edit_frame .swat-frame-title {
+#comment_edit_frame .swat-frame-title {
 	border-color: #777;
 }
 
-#reply_edit_frame .swat-frame-contents {
+#comment_edit_frame .swat-frame-contents {
 	background: #111;
 }
 

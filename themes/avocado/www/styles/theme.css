@@ -27,8 +27,8 @@ a:link,
 .entry .entry-subtitle a:visited,
 .blorg-sidebar-gadget a:link,
 .blorg-sidebar-gadget a:visited,
-.reply .reply-link a:link,
-.reply .reply-link a:visited {
+.comment .comment-link a:link,
+.comment .comment-link a:visited {
 	color: #166086;
 }
 
@@ -76,8 +76,8 @@ img.border {	background: #c7e98c none repeat scroll 0%;	border: 1px solid #4e9
 }
 
 
-/* Replies */
-.entry-replies .reply {
+/* Comments */
+.entry-comments .comment {
 	background: #badc7f;
 	padding: 1em;
 	margin: 1em;
@@ -85,15 +85,15 @@ img.border {	background: #c7e98c none repeat scroll 0%;	border: 1px solid #4e9
 	font-size: 85%;
 }
 
-.reply .reply-title,
-.reply .reply-title span.reply-author,
-.reply .reply-title a.permalink:link,
-.reply .reply-title a.permalink:visited {
+.comment .comment-title,
+.comment .comment-title span.comment-author,
+.comment .comment-title a.permalink:link,
+.comment .comment-title a.permalink:visited {
 	color: #477053;
 }
 
-.reply .reply-link a:hover,
-.reply .reply-title a.permalink:hover {
+.comment .comment-link a:hover,
+.comment .comment-title a.permalink:hover {
 	color: #5e9a15;
 }
 
@@ -125,21 +125,21 @@ img.border {	background: #c7e98c none repeat scroll 0%;	border: 1px solid #4e9
 
 
 /* Reply Form */
-#reply_edit_frame .swat-frame-title,
-#reply_edit_frame label {
+#comment_edit_frame .swat-frame-title,
+#comment_edit_frame label {
 	color: #477053;
 }
 
-#reply_edit_frame .swat-frame-title {
+#comment_edit_frame .swat-frame-title {
 	border-bottom: 1px solid #4e9a15;
 	font-size: 123.1%;
 }
 
-#reply_edit_form .swat-frame-contents {
+#comment_edit_form .swat-frame-contents {
 	background: transparent;
 }
 
-#reply_edit_form .swat-required,
-#reply_edit_form .swat-note {
+#comment_edit_form .swat-required,
+#comment_edit_form .swat-note {
 	color: #fff;
 }
