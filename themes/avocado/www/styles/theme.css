@@ -6,8 +6,12 @@ body {
 #hd h1 {
 	font-family: georgia, serif;
 	font-size: 375%;
-	color: #fff;
 	font-weight: normal;
+}
+
+#hd h1,
+#hd h1 a {
+	color: #fff;
 }
 
 #doc { margin: 0 2em; }
@@ -16,12 +20,15 @@ body {
 
 a,
 a:link,
+#nav_bar a:link,
 .entry .entry-title a:visited,
 .entry .entry-subtitle a,
 .entry .entry-subtitle a:link,
 .entry .entry-subtitle a:visited,
 .blorg-sidebar-gadget a:link,
-.blorg-sidebar-gadget a:visited {
+.blorg-sidebar-gadget a:visited,
+.reply .reply-link a:link,
+.reply .reply-link a:visited {
 	color: #166086;
 }
 
@@ -32,7 +39,21 @@ a:hover,
 
 .entry .entry-subtitle a:hover {	color: #2a001a; }
 
-a:visited { color: #477053; }
+a:visited,
+#nav_bar a:visited,
+#nav_bar {
+	color: #477053;
+}
+
+#nav_bar { padding-top: 2em; }
+
+img.border {	background: #c7e98c none repeat scroll 0%;	border: 1px solid #4e9a15;	padding: 2px;}
+
+
+/* Entries */
+.entry .entry-title { color: #166086; }
+.entry .entry-subtitle { color: #477053; }
+.entry .entry-content { font-family: georgia, serif; }
 
 
 /* Sidebar */
@@ -52,4 +73,73 @@ a:visited { color: #477053; }
 .blorg-archive-gadget ul li span,
 .blorg-active-conversations-gadget ul li span {
 	color: #586f30;
+}
+
+
+/* Replies */
+.entry-replies .reply {
+	background: #badc7f;
+	padding: 1em;
+	margin: 1em;
+	font-family: verdana, sans-serif;
+	font-size: 85%;
+}
+
+.reply .reply-title,
+.reply .reply-title span.reply-author,
+.reply .reply-title a.permalink:link,
+.reply .reply-title a.permalink:visited {
+	color: #477053;
+}
+
+.reply .reply-link a:hover,
+.reply .reply-title a.permalink:hover {
+	color: #5e9a15;
+}
+
+
+/* Pagination */
+.swat-pagination span.swat-pagination-current,
+.swat-pagination a:hover {
+	border: 1px solid #4e9a15;
+	background: #c7e98c;
+	color: #2f5f0c;
+}
+
+.swat-pagination span,
+.swat-pagination span.swat-pagination-nextprev {
+	border: none;
+	color: #758f47;
+}
+
+.swat-pagination a,
+.swat-pagination a:visited {
+	color: #333;
+	border: 1px solid transparent;
+}
+
+.footer .results-message,
+.footer .archive-link {
+	font-size: 85%;
+}
+
+
+/* Reply Form */
+#reply_edit_frame .swat-frame-title,
+#reply_edit_frame label {
+	color: #477053;
+}
+
+#reply_edit_frame .swat-frame-title {
+	border-bottom: 1px solid #4e9a15;
+	font-size: 123.1%;
+}
+
+#reply_edit_form .swat-frame-contents {
+	background: transparent;
+}
+
+#reply_edit_form .swat-required,
+#reply_edit_form .swat-note {
+	color: #fff;
 }
