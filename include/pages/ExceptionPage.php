@@ -25,6 +25,8 @@ class ExceptionPage extends SiteExceptionPage
 			$this->relocateArchive();
 		elseif ($source_exp[0] == 'authors')
 			$this->relocateAuthor();
+		elseif ($source_exp[0] == 'rss')
+			$this->relocateFeed();
 	}
 
 	// }}}
@@ -57,6 +59,27 @@ class ExceptionPage extends SiteExceptionPage
 			$this->app->relocate('author');
 		else
 			$this->app->relocate('author/'.implode('/', $source));
+	}
+
+	// }}}
+	// {{{ private function relocateFeed()
+
+	private function relocateFeed()
+	{
+		$source = explode('/', $_GET['source']);
+
+		//remove "rss" from the start of the array
+		array_shift($source);
+
+		if (count($source) == 0)
+			$this->app->relocate('feed');
+		elseif ($source[0] == 'replies')
+			$this->app->relocate('feed/replies');
+		elseif ($source[0] == 'sideblog')
+			$this->app->relocate('feed');
+		elseif ($source[0] == 'categories' && count($source) == 2) {
+			$this->app->relocate('tag/'.$source[1].'/feed');
+		}
 	}
 
 	// }}}
