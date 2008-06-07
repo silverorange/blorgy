@@ -74,7 +74,7 @@ class ExceptionPage extends SiteExceptionPage
 		if (count($source) == 0)
 			$this->app->relocate('feed');
 		elseif ($source[0] == 'replies')
-			$this->app->relocate('feed/replies');
+			$this->app->relocate('feed/comments');
 		elseif ($source[0] == 'sideblog')
 			$this->app->relocate('feed');
 		elseif ($source[0] == 'categories' && count($source) == 2) {
