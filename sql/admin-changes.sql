@@ -9,7 +9,7 @@ INSERT INTO AdminComponent (id, shortname, title, description, displayorder, sec
 	VALUES (12, 'Tag',     'Tags',    NULL, 20, 10, true, true);
 
 INSERT INTO AdminSubComponent (id, component, shortname, title, show, displayorder)
-	VALUES (11, 11, 'Replies', 'Manage Replies', true, 10);
+	VALUES (11, 11, 'Comments', 'Manage Comments', true, 10);
 
 -- section for adding and editing authors
 INSERT INTO AdminSection (id, title, description, displayorder, show)
