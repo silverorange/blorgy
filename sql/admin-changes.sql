@@ -1,6 +1,6 @@
 -- section for creating and managing content
 INSERT INTO AdminSection (id, title, description, displayorder, show)
-	VALUES (10, 'Posts', null, 0, true);
+	VALUES (10, 'Content', null, 0, true);
 
 INSERT INTO AdminComponent (id, shortname, title, description, displayorder, section, enabled, show)
 	VALUES (11, 'Post',    'Posts',   NULL, 10, 10, true, true);
