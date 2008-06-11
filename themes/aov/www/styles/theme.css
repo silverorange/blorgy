@@ -151,6 +151,12 @@ a:active { color: #000; }
 /* }}} */
 /* {{{ Post Content */
 
+.entry-no-title {
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	padding: 0.5em;
+}
+
 .entry .entry-content {
 	font-size: 123.1%;
 	line-height: 1.4;
