@@ -152,10 +152,6 @@ a:active { color: #000; }
 /* }}} */
 /* {{{ Post Content */
 
-.entry {
-	margin: 0.5em 0 4em 0;
-}
-
 .entry .entry-content {
 	font-size: 123.1%;
 	line-height: 1.4;
