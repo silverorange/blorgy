@@ -103,7 +103,7 @@ a:active { color: #000; }
 /* }}} */
 /* {{{ Post Header */
 
-.entry-title {
+.entry .entry-title {
 	font-size: 174%;
 	font-weight: normal;
 	margin-bottom: 0;
@@ -126,7 +126,6 @@ a:active { color: #000; }
 
 .entry-subtitle {
 	color: #999;
-	font-size: 85%;
 	margin: 0.25em 0.5em 0.5em 0.5em;
 	font-family: segoe ui, verdana, sans-serif;
 }
