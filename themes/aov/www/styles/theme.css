@@ -68,6 +68,7 @@ a:active { color: #000; }
 	margin-left: 10px;
 	position: relative;
 	bottom: 3px;
+	padding-right: 0.5em;
 }
 
 #hd h1 span.title-1 span.first-letter,
