@@ -10,10 +10,8 @@ body {
 
 #doc {
 	margin: 0 5%;
-}
-
-#bd {
-	position: relative;
+	_height: 1%;
+	.height: 1%;
 }
 
 #content {
