@@ -47,7 +47,19 @@ class BlorgAuthorTable extends ConversionTable
 
 	protected function getSourceSQL()
 	{
-		$sql = parent::getSourceSQL();
+		$select_list = array();
+
+		foreach ($this->fields as $field) {
+			if ($field->src_field->name == 'feature')
+				$select_list[] = 'cast(feature as integer)';
+			else
+				$select_list[] = $field->src_field->name;
+		}
+
+		$sql = sprintf('select %s from %s where 1=1',
+			implode(', ', $select_list),
+			$this->src_table);
+
 		$sql.= ' and site in (select siteid from sites where keep = true)';
 
 		return $sql;
