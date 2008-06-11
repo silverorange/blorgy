@@ -266,7 +266,7 @@ class BlorgyLayout extends SiteLayout
 			echo '<span>';
 
 			$source = $this->app->getPage()->getSource();
-			if ($source === '') {
+			if ($source == '') {
 				echo SwatString::minimizeEntities($site_title);
 			} else {
 				$a_tag = new SwatHtmlTag('a');
@@ -276,7 +276,7 @@ class BlorgyLayout extends SiteLayout
 				$a_tag->display();
 			}
 
-			echo '</spam>';
+			echo '</span>';
 
 			$h1_tag->close();
 		}
