@@ -277,6 +277,13 @@ textarea {
 
 .blorg-active-conversations-gadget ul li.new span { color: #ef2929; }
 
+/* {{{ Sidebar Authors Gadget */
+
+.blorg-authors-gadget .author {
+	margin: 0.5em 0;
+}
+
+/* }}} */
 /* {{{ Sidebar Feeds Gadget */
 
 .blorg-feed-gadget ul li {
