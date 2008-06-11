@@ -92,7 +92,6 @@ a:active { color: #000; }
 	color: #666;
 }
 
-
 #hd p {
 	margin: 0;
 	color: #999;
@@ -269,10 +268,6 @@ textarea {
 	font-family: segoe ui, verdana, sans-serif;
 }
 
-.blorg-sidebar-gadget .blorg-gadget-title {
-	font-size: 85%;
-}
-
 .blorg-sidebar-gadget a:link,
 .blorg-sidebar-gadget a:visited {
 	color: #666;
@@ -285,11 +280,6 @@ textarea {
 }
 
 .blorg-active-conversations-gadget ul li.new span { color: #930; }
-
-.blorg-content-gadget,
-.blorg-search-gadget form {
-	font-size: 85%;
-}
 
 /* }}} */
 /* {{{ Swat Widgets */
