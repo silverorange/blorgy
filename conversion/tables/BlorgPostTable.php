@@ -1,6 +1,7 @@
 <?php
 
 require_once 'Swat/SwatString.php';
+require_once 'Blorg/dataobjects/BlorgPost.php';
 
 class BlorgPostTable extends ConversionTable
 {
@@ -68,9 +69,43 @@ class BlorgPostTable extends ConversionTable
 	}
 
 	// }}}
-	// {{{ protected function getSourceSQL()
+	// {{{ protected function getSourceRecordset()
 
-	protected function getSourceSQL()
+	protected function getSourceRecordset($start_above = null)
+	{
+		$rows = new ArrayObject();
+
+		$sql = $this->getPostsSourceSQL();
+		$rs = SwatDB::query($this->process->src_db, $sql, null);
+		while ($row = $rs->fetchRow())
+			$rows[] = $row;
+
+		$sql = $this->getSideBlogSourceSQL();
+		$rs = SwatDB::query($this->process->src_db, $sql, null);
+		while ($row = $rs->fetchRow())
+			$rows[] = $row;
+
+		return $rows;
+	}
+
+	// }}}
+	// {{{ protected function getSourceRow()
+
+	protected function getSourceRow($rows)
+	{
+		$row = current($rows);
+		next($rows);
+
+		if (!is_array($row))
+			$row = null;
+
+		return $row;
+	}
+
+	// }}}
+	// {{{ protected function getPostsSourceSQL()
+
+	protected function getPostsSourceSQL()
 	{
 		$select_list = array();
 
@@ -79,6 +114,8 @@ class BlorgPostTable extends ConversionTable
 				$select_list[] = '0';
 			elseif ($field->src_field->name == 'hidden')
 				$select_list[] = 'cast(hidden as integer)';
+			elseif ($field->src_field->name == 'shortname')
+				$select_list[] = 'title';
 			else
 				$select_list[] = $field->src_field->name;
 		}
@@ -86,6 +123,40 @@ class BlorgPostTable extends ConversionTable
 		$sql = sprintf('select %s from %s where 1=1',
 			implode(', ', $select_list),
 			$this->src_table);
+
+		$sql.= ' and site in (select siteid from sites where keep = true)';
+
+		return $sql;
+	}
+
+	// }}}
+	// {{{ protected function getSideBlogSourceSQL()
+
+	protected function getSideBlogSourceSQL()
+	{
+		$select_list = array();
+
+		foreach ($this->fields as $field) {
+			if ($field->src_field === null)
+				$select_list[] = '0';
+			elseif ($field->src_field->name == 'postid')
+				$select_list[] = 'postid + 10000';
+			elseif ($field->src_field->name == 'hidden')
+				$select_list[] = 'cast(hidden as integer)';
+			elseif ($field->src_field->name == 'shortname')
+				$select_list[] = 'bodytext';
+			elseif ($field->src_field->name == 'title')
+				$select_list[] = 'null';
+			elseif ($field->src_field->name == 'moretext')
+				$select_list[] = 'null';
+			elseif ($field->src_field->name == 'replystatus')
+				$select_list[] = BlorgPost::COMMENT_STATUS_CLOSED;
+			else
+				$select_list[] = $field->src_field->name;
+		}
+
+		$sql = sprintf('select %s from sideblogposts where 1=1',
+			implode(', ', $select_list));
 
 		$sql.= ' and site in (select siteid from sites where keep = true)';
 
