@@ -199,23 +199,26 @@ class BlorgyLayout extends SiteLayout
 
 	protected function finalizeTitle()
 	{
-		$this->finalizeSiteTitle();
+		$this->finalizeHeaderTitle();
 		$this->finalizeHtmlTitle();
 	}
 
 	// }}}
 	// {{{ protected function finalizeHtmlTitle()
 
+	/**
+	 * Finalizes the page title displayed in the HTML head
+	 */
 	protected function finalizeHtmlTitle()
 	{
 		$site_title = $this->app->config->site->title;
 		$page_title = SwatString::stripXHTMLTags($this->data->title);
 
-		if (strlen($page_title) > 0) {
+		if ($page_title != '') {
 			$this->data->html_title = sprintf('%s - %s',
 				SwatString::minimizeEntities($page_title),
 				SwatString::minimizeEntities($site_title));
-		} elseif (strlen($this->data->html_title) > 0) {
+		} elseif ($this->data->html_title != '') {
 			$this->data->html_title.= sprintf(' - %s',
 				SwatString::minimizeEntities($site_title));
 		} else {
@@ -225,22 +228,16 @@ class BlorgyLayout extends SiteLayout
 	}
 
 	// }}}
-	// {{{ protected function finalizeSiteTitle()
+	// {{{ protected function finalizeHeaderTitle()
 
-	protected function finalizeSiteTitle()
+	/**
+	 * Finalizes the title displayed in the page header
+	 */
+	protected function finalizeHeaderTitle()
 	{
-		$site_title = $this->app->config->site->title;
-
-		$source = $this->app->getPage()->getSource();
-		if ($source === '') {
-			$this->data->site_title = (string)$site_title;
-		} else {
-			$a_tag = new SwatHtmlTag('a');
-			$a_tag->accesskey = '1';
-			$a_tag->href = '.';
-			$a_tag->setContent($site_title);
-			$this->data->site_title = $a_tag->__toString();
-		}
+		$this->startCapture('header_title');
+		$this->displayHeaderTitle();
+		$this->endCapture();
 	}
 
 	// }}}
@@ -252,6 +249,36 @@ class BlorgyLayout extends SiteLayout
 		if ($css_file !== null) {
 			$this->addHtmlHeadEntry(
 				new SwatStyleSheetHtmlHeadEntry($css_file));
+		}
+	}
+
+	// }}}
+	// {{{ protected function displayHeaderTitle()
+
+	protected function displayHeaderTitle()
+	{
+		$site_title = $this->app->config->site->title;
+		if ($site_title != '') {
+			$h1_tag = new SwatHtmlTag('h1');
+			$h1_tag->title = $site_title;
+			$h1_tag->open();
+
+			echo '<span>';
+
+			$source = $this->app->getPage()->getSource();
+			if ($source === '') {
+				echo SwatString::minimizeEntities($site_title);
+			} else {
+				$a_tag = new SwatHtmlTag('a');
+				$a_tag->accesskey = '1';
+				$a_tag->href = '.';
+				$a_tag->setContent($site_title);
+				$a_tag->display();
+			}
+
+			echo '</spam>';
+
+			$h1_tag->close();
 		}
 	}
 
