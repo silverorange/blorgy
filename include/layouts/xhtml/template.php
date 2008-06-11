@@ -16,7 +16,7 @@
 <div id="doc">
 
 	<div id="hd" class="clearfix">
-		<h1 title="<?= $this->site_title ?>">
+		<h1 title="<?= strip_tags($this->site_title) ?>">
 			<span><?= $this->site_title ?></span>
 		</h1>
 	</div>
