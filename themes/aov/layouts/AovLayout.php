@@ -11,45 +11,57 @@ require_once '../include/layouts/BlorgyLayout.php';
  */
 class AovLayout extends BlorgyLayout
 {
-	// {{{ protected function finalizeSiteTitle()
+	// {{{ protected function displayHeaderTitle()
 
-	protected function finalizeSiteTitle()
+	protected function displayHeaderTitle()
 	{
-		$words = explode(' ', $this->app->config->site->title);
-		$count = 0;
+		$site_title = $this->app->config->site->title;
 
+		$h1_tag = new SwatHtmlTag('h1');
+		$h1_tag->title = $site_title;
+		$h1_tag->open();
+
+		echo '<span>';
+
+		$source = $this->app->getPage()->getSource();
+		if ($source != '') {
+			$a_tag = new SwatHtmlTag('a');
+			$a_tag->accesskey = '1';
+			$a_tag->href = '.';
+			$a_tag->open();
+		}
+
+		$words = explode(' ', $site_title);
+		$count = 0;
 
 		$word_span = new SwatHtmlTag('span');
 		$letter_span = new SwatHtmlTag('span');
 		$letter_span->class = 'first-letter';
 
-		ob_start();
 		foreach ($words as $word) {
 			$word = trim($word);
-			if (strlen($word) > 0) {
+			if ($word != '') {
 				$count++;
+
 				$word_span->class = sprintf('title-%s', $count);
 				$word_span->open();
-				$letter_span->open();
-				echo substr($word, 0, 1);
-				$letter_span->close();
-				echo substr($word, 1);
+
+				$letter_span->setContent(substr($word, 0, 1));
+				$letter_span->display();
+				echo SwatString::minimizeEntities(substr($word, 1));
+
 				$word_span->close();
 				echo ' ';
 			}
 		}
-		$site_title = ob_get_clean();
 
-		$source = $this->app->getPage()->getSource();
-		if ($source === '') {
-			$this->data->site_title = (string)$site_title;
-		} else {
-			$a_tag = new SwatHtmlTag('a');
-			$a_tag->accesskey = '1';
-			$a_tag->href = '.';
-			$a_tag->setContent($site_title, 'text/xml');
-			$this->data->site_title = $a_tag->__toString();
+		if ($source != '') {
+			$a_tag->close();
 		}
+
+		echo '</span>';
+
+		$h1_tag->close();
 	}
 
 	// }}}
