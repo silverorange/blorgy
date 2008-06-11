@@ -14,7 +14,7 @@ SET search_path = public, pg_catalog;
 -- Name: admingroup_id_seq; Type: SEQUENCE SET; Schema: public; Owner: php
 --
 
-SELECT pg_catalog.setval('admingroup_id_seq', 1, false);
+SELECT pg_catalog.setval('admingroup_id_seq', 1, true);
 
 
 --
@@ -23,6 +23,7 @@ SELECT pg_catalog.setval('admingroup_id_seq', 1, false);
 
 ALTER TABLE admingroup DISABLE TRIGGER ALL;
 
+INSERT INTO admingroup (id, title) VALUES (1, 'Default Group');
 
 
 ALTER TABLE admingroup ENABLE TRIGGER ALL;

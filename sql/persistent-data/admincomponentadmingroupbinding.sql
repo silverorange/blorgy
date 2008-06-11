@@ -16,6 +16,17 @@ SET search_path = public, pg_catalog;
 
 ALTER TABLE admincomponentadmingroupbinding DISABLE TRIGGER ALL;
 
+INSERT INTO admincomponentadmingroupbinding (component, groupnum) VALUES (1, 1);
+INSERT INTO admincomponentadmingroupbinding (component, groupnum) VALUES (2, 1);
+INSERT INTO admincomponentadmingroupbinding (component, groupnum) VALUES (3, 1);
+INSERT INTO admincomponentadmingroupbinding (component, groupnum) VALUES (4, 1);
+INSERT INTO admincomponentadmingroupbinding (component, groupnum) VALUES (5, 1);
+INSERT INTO admincomponentadmingroupbinding (component, groupnum) VALUES (6, 1);
+INSERT INTO admincomponentadmingroupbinding (component, groupnum) VALUES (11, 1);
+INSERT INTO admincomponentadmingroupbinding (component, groupnum) VALUES (12, 1);
+INSERT INTO admincomponentadmingroupbinding (component, groupnum) VALUES (13, 1);
+INSERT INTO admincomponentadmingroupbinding (component, groupnum) VALUES (14, 1);
+INSERT INTO admincomponentadmingroupbinding (component, groupnum) VALUES (15, 1);
 
 
 ALTER TABLE admincomponentadmingroupbinding ENABLE TRIGGER ALL;

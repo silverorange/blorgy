@@ -14,7 +14,7 @@ SET search_path = public, pg_catalog;
 -- Name: adminsection_id_seq; Type: SEQUENCE SET; Schema: public; Owner: php
 --
 
-SELECT pg_catalog.setval('adminsection_id_seq', 1, false);
+SELECT pg_catalog.setval('adminsection_id_seq', 30, true);
 
 
 --
@@ -23,6 +23,10 @@ SELECT pg_catalog.setval('adminsection_id_seq', 1, false);
 
 ALTER TABLE adminsection DISABLE TRIGGER ALL;
 
+INSERT INTO adminsection (id, title, description, displayorder, "show") VALUES (1, 'Admin Settings', NULL, 100, true);
+INSERT INTO adminsection (id, title, description, displayorder, "show") VALUES (20, 'Authors', NULL, 10, true);
+INSERT INTO adminsection (id, title, description, displayorder, "show") VALUES (30, 'Configuration', NULL, 20, true);
+INSERT INTO adminsection (id, title, description, displayorder, "show") VALUES (10, 'Content', NULL, 0, true);
 
 
 ALTER TABLE adminsection ENABLE TRIGGER ALL;

@@ -14,7 +14,7 @@ SET search_path = public, pg_catalog;
 -- Name: instance_id_seq; Type: SEQUENCE SET; Schema: public; Owner: php
 --
 
-SELECT pg_catalog.setval('instance_id_seq', 1, true);
+SELECT pg_catalog.setval('instance_id_seq', 29, true);
 
 
 --
@@ -24,6 +24,22 @@ SELECT pg_catalog.setval('instance_id_seq', 1, true);
 ALTER TABLE instance DISABLE TRIGGER ALL;
 
 INSERT INTO instance (id, shortname) VALUES (1, 'aov');
+INSERT INTO instance (id, shortname) VALUES (2, 'ceoblues');
+INSERT INTO instance (id, shortname) VALUES (4, 'newrecruit');
+INSERT INTO instance (id, shortname) VALUES (7, 'genx40');
+INSERT INTO instance (id, shortname) VALUES (11, 'solabs');
+INSERT INTO instance (id, shortname) VALUES (12, 'myway');
+INSERT INTO instance (id, shortname) VALUES (13, 'melda');
+INSERT INTO instance (id, shortname) VALUES (16, 'maria');
+INSERT INTO instance (id, shortname) VALUES (17, 'delta');
+INSERT INTO instance (id, shortname) VALUES (18, 'lanparty');
+INSERT INTO instance (id, shortname) VALUES (22, 'stuff');
+INSERT INTO instance (id, shortname) VALUES (23, 'beerblog');
+INSERT INTO instance (id, shortname) VALUES (25, 'ceobluestravel');
+INSERT INTO instance (id, shortname) VALUES (26, 'speakergeek');
+INSERT INTO instance (id, shortname) VALUES (27, 'horton');
+INSERT INTO instance (id, shortname) VALUES (28, 'triangletimes');
+INSERT INTO instance (id, shortname) VALUES (29, 'sry');
 
 
 ALTER TABLE instance ENABLE TRIGGER ALL;

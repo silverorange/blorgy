@@ -14,7 +14,7 @@ SET search_path = public, pg_catalog;
 -- Name: adminsubcomponent_id_seq; Type: SEQUENCE SET; Schema: public; Owner: php
 --
 
-SELECT pg_catalog.setval('adminsubcomponent_id_seq', 1, false);
+SELECT pg_catalog.setval('adminsubcomponent_id_seq', 11, true);
 
 
 --
@@ -23,6 +23,8 @@ SELECT pg_catalog.setval('adminsubcomponent_id_seq', 1, false);
 
 ALTER TABLE adminsubcomponent DISABLE TRIGGER ALL;
 
+INSERT INTO adminsubcomponent (id, component, title, shortname, "show", displayorder) VALUES (1, 1, 'Login History', 'LoginHistory', true, 0);
+INSERT INTO adminsubcomponent (id, component, title, shortname, "show", displayorder) VALUES (11, 11, 'Manage Comments', 'Comments', true, 10);
 
 
 ALTER TABLE adminsubcomponent ENABLE TRIGGER ALL;

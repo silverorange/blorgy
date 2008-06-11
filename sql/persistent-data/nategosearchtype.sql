@@ -14,7 +14,7 @@ SET search_path = public, pg_catalog;
 -- Name: nategosearchtype_id_seq; Type: SEQUENCE SET; Schema: public; Owner: php
 --
 
-SELECT pg_catalog.setval('nategosearchtype_id_seq', 1, false);
+SELECT pg_catalog.setval('nategosearchtype_id_seq', 3, true);
 
 
 --
@@ -23,6 +23,8 @@ SELECT pg_catalog.setval('nategosearchtype_id_seq', 1, false);
 
 ALTER TABLE nategosearchtype DISABLE TRIGGER ALL;
 
+INSERT INTO nategosearchtype (id, shortname) VALUES (1, 'post');
+INSERT INTO nategosearchtype (id, shortname) VALUES (3, 'article');
 
 
 ALTER TABLE nategosearchtype ENABLE TRIGGER ALL;
