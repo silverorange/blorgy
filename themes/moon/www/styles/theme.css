@@ -21,6 +21,14 @@ body {
 	border-bottom: 1px solid #777;
 }
 
+#hd h1 a {
+	text-decoration: none;
+}
+
+#hd h1 a:hover {
+	text-decoration: underline;
+}
+
 /* }}} */
 /* {{{ Links */
 
