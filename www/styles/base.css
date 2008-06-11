@@ -301,7 +301,11 @@ textarea {
 	display: inline;
 }
 
-.blorg-search-gadget .swat-button { vertical-align: baseline; }
+.blorg-search-gadget .swat-entry,
+.blorg-search-gadget .swat-button {
+	vertical-align: middle;
+	font-size: 85%;
+}
 
 /* }}} */
 /* }}} */
