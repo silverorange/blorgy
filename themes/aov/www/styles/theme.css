@@ -162,7 +162,8 @@ a:active { color: #000; }
 	padding: 0.5em;
 }
 
-.entry .entry-content {
+.entry .entry-content,
+#content .author-content {
 	font-size: 123.1%;
 	line-height: 1.4;
 }
@@ -280,6 +281,19 @@ textarea {
 }
 
 .blorg-active-conversations-gadget ul li.new span { color: #930; }
+
+/* }}} */
+/* {{{ Author */
+
+#content .author-name {
+	font-weight: normal;
+	font-size: 174%;
+	margin: 0.2em 0;
+}
+
+#content .author-content {
+
+}
 
 /* }}} */
 /* {{{ Swat Widgets */
