@@ -29,6 +29,13 @@ body {
 	text-decoration: underline;
 }
 
+#hd .tagline {
+	font-family: sans-serif;
+	color: #ddd;
+	font-size: 116%;
+	margin-top: 0.1em;
+}
+
 /* }}} */
 /* {{{ Links */
 
