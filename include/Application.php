@@ -78,15 +78,14 @@ class Application extends SiteWebApplication
 			array_shift($path);
 			require_once 'Site/SiteArticlePageFactory.php';
 			$factory = new SiteArticlePageFactory();
-			$page    = $factory->resolvePage($this, implode('/', $path),
-				$layout);
+			$page = $factory->resolvePage($this, implode('/', $path), $layout);
 
 			break;
 
 		default:
 			require_once 'Blorg/BlorgPageFactory.php';
 			$factory = new BlorgPageFactory();
-			$page    = $factory->resolvePage($this, $source, $layout);
+			$page = $factory->resolvePage($this, $source, $layout);
 			break;
 		}
 
