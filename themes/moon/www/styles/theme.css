@@ -167,6 +167,10 @@ a:active  { color: #fff; }
 	margin: 0.5em 0;
 }
 
+.blorg-search-gadget form input#search_button {
+	margin-left: 0.5em;
+}
+
 
 /* }}} */
 /* {{{ Swat Widgets */
