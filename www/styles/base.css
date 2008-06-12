@@ -1,6 +1,6 @@
 body {
 	color: #333;
-	background: #fff url('../images/top-down-gradient.png') top left repeat-x;
+	background: #fff;
 	margin: 0;
 	padding: 0 0 2em 0;
 	font-family: trebuchet ms;
@@ -174,7 +174,7 @@ a:active  { color: #333333; }
 
 #comment_edit_frame .swat-frame-contents {
 	background: #f3f3f3;
-	background: #fff url('../images/top-down-gradient.png') top left repeat-x;
+	background: #fff;
 	padding: 1em;
 }
 
