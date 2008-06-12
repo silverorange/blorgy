@@ -25,7 +25,7 @@ ul li {
 
 #hd {
 	width: 750px;
-	margin: 0 auto -25px auto;
+	margin: 0 auto;
 	padding: 0 0 10px 0;
 	border-bottom: 1px #ddd solid;
 }
@@ -62,31 +62,55 @@ ul li {
 }
 
 #weblog #nav_bar { /* breadcrumb trail */
-	display: none;
+	/*display: none;*/
+	background-color: #f9f9f9;
+	font-size: 11px;
+	color: #aaa;
 }
+#weblog #nav_bar a { color: #aaa; }
 
-#weblog .entry {
+#weblog .entry,
+#weblog div.author {
 	clear: both;
 	width: 520px;
-	padding: 30px 20px 50px 210px;
+	padding: 40px 20px 40px 210px;
 	border-bottom: 1px #ddd solid;
 }
+#weblog ul.entries .entry { /* archive list exception */
+	padding: 0;
+	border: none; 
+} 
 
 #weblog .entry-no-title {
+	background: url("link.png") no-repeat center left;
 	padding: 30px 20px 30px 210px;
+}
+#weblog ul.entries .entry-no-title { /* archive list exception */
+	background: none;
+}
+
+#weblog h2#page_title {
+	font-size: 28px;
+	margin: 20px 0;
 }
 
 #weblog h3 {
 	font-size: 28px;
 	line-height: 1em; 
 	color: #4a4a4a;
-	margin: 20px 0 15px 0;
+	margin: 0 0 15px 0;
 }
+#weblog ul.entries .entry h3 { font-size: 14px; font-weight: bold; } /* archive list exception */
+#weblog ul.entries .entry-no-title h3 { font-size: 14px; font-weight: normal; } /* archive list exception */
 
 #weblog h3.entry-title a {
 	color: #4a4a4a;
 	text-decoration: none;
 }
+#weblog ul.entries .entry h3.entry-title a { color: #003366; } /* archive list exception */
+#weblog ul.entries .entry-no-title h3.entry-title a { color: #4a4a4a; } /* archive list exception */
+#weblog ul.entries .entry h3.entry-title a:hover { text-decoration: underline; } /* archive list exception */
+#weblog ul.entries .entry-no-title h3.entry-title a:hover { text-decoration: underline; } /* archive list exception */
 
 /*#weblog h3.contenttitle {  
 	margin: 50px 0 16px 0;
@@ -100,11 +124,13 @@ ul li {
 	border-bottom: 1px #ddd solid;
 }
 
-#weblog .entry p {
+#weblog .entry p,
+#weblog div.author p {
 	margin: 16px 0;
 }
 
-#weblog .entry p.nomargin {
+#weblog .entry p.nomargin,
+#weblog div.author p.nomargin {
 	margin-top: 0;
 }
 
@@ -119,7 +145,7 @@ ul li {
 
 #weblog .entry-subtitle a.permalink { /* permalink date link */
 	color: #7a7a7a;
-	text-decoration: none;
+	text-decoration: underline;
 }
 #weblog .entry-subtitle a.permalink:hover { text-decoration: underline; }
 
@@ -129,20 +155,23 @@ ul li {
 }
 #weblog .entry-subtitle a.comment-count:hover { color: #000; }
 
-/* post formatting */
+/* post/author formatting */
 
-#weblog .entry .entry-content {
+#weblog .entry .entry-content,
+#weblog div.author .author-content {
 	position: relative;
 }
 
-#weblog .entry .entry-content img.feature {
+#weblog .entry .entry-content img.feature,
+#weblog div.author .author-content img.feature {
 	position: absolute;
 	top: -50px;
 	left: -195px;
 	padding: 6px;
 }
 
-#weblog .entry .entry-content img.frame {
+#weblog .entry .entry-content img.frame,
+#weblog div.author .author-content img.frame {
 	background-color: #eee;
 	padding: 5px;
 	border: 1px #ddd solid;
@@ -197,8 +226,48 @@ ul li {
 }
 
 
+/* archives */
 
-/* footer */
+#weblog ul.months li {
+	list-style-type: disc;
+	margin: 20px 30px;
+}
+
+#weblog ul.months li ul.entries li {
+	margin: 5px 30px;
+}
+
+#weblog ul.months li ul.entries li div.entry {
+	margin: 20px 0;
+}
+
+#weblog ul.months li ul.entries li div.entry-no-title {
+	margin: 20px 0;
+}
+
+/* content footer */
+
+#weblog .footer .swat-pagination {
+	text-align: right;
+}
+
+#weblog .footer #SwatPagination1 a,
+#weblog .footer #SwatPagination1 span {
+	display: none;
+}
+
+#weblog .footer #SwatPagination1 a.swat-pagination-nextprev,
+#weblog .footer #SwatPagination1 span.swat-pagination-nextprev {
+	display: inline;
+}
+
+#weblog .footer .results-message,
+#weblog .footer .archive-link {
+	display: none;
+}
+
+
+/* site footer */
 
 #weblog #ft { /* forward and back page links */
 	font-size: 12px;
@@ -231,16 +300,22 @@ ul li {
 }
 
 .blorg-sidebar input.swat-entry { 
-	width: 250px;
-	margin: 4px 0;
+	width: 200px;
+	margin: 0 5px 0 0;
 	padding: 4px;
 	border: 1px #ccc solid;
+}
+
+.blorg-sidebar input.swat-button {
+	vertical-align: top;
 }
 
 .blorg-sidebar input.swat-button-submit { 
 	padding: 3px 8px;
 	border-right: 1px #888 solid;
 	border-bottom: 1px #888 solid;
+	border-left: 1px #ccc solid;
+	border-top: 1px #ccc solid;
 }
 
 /* reviews - articles page */

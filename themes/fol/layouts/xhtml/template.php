@@ -26,8 +26,12 @@
 
 <div id="weblog">
 
-	<?= $this->navbar ?>
-	<h2 id="page_title"><?= $this->title ?></h2>
+	<?PHP
+		if($this->title) { 
+			echo $this->navbar;
+			echo '<h2 id="page_title">'.$this->title.'</h2>'; 
+		}
+	?>
 
 	<div id="content">
 		<?= $this->content ?>
