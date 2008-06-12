@@ -335,6 +335,55 @@ img.left  { float: left;  margin: 0.2em 1em 0 1em; }
 }
 
 /* }}} */
+/* {{{ Archive */
+
+ul.blorg-archive-years,
+ul.blorg-archive-years ul,
+ul.blorg-archive-months,
+ul.blorg-archive-months ul {
+	margin: 0.5em 0 1em 1em;
+}
+
+ul.blorg-archive-years li,
+ul.blorg-archive-months li {
+	list-style-type: none;
+	margin-bottom: 0.2em;
+}
+
+ul.blorg-archive-years li span,
+ul.blorg-archive-months li span {
+	color: #999;
+}
+
+.blorg-archive-year-title span {
+	font-weight: normal;
+}
+
+.blorg-archive-months .entry {
+	margin-bottom: 1em;
+}
+
+.blorg-archive-month-title {
+	margin-bottom: 1em;
+}
+
+.blorg-archive-months .entry .entry-title {
+	font-size: 131%;
+}
+
+.blorg-archive-months .entry-no-title {
+	padding-left: 0;
+	padding-top: 0;
+	padding-right: 0;
+	border: 0;
+}
+
+.blorg-archive-months .entry-no-title .entry-title {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+/* }}} */
 /* {{{ Swat Widgets */
 
 .swat-frame,
