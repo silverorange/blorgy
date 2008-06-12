@@ -18,6 +18,7 @@ body {
 	position: relative;
 }
 
+#page_title,
 #content {
 	margin-right: 250px;
 }

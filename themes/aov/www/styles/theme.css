@@ -38,6 +38,7 @@ a:active { color: #000; }
 	position: absolute;
 	top: 0;
 	right: 0;
+	z-index: 9;
 }
 
 #hd h1 {
@@ -97,6 +98,11 @@ a:active { color: #000; }
 	color: #999;
 	font-size: 85%;
 	text-align: center;
+}
+
+#page_title {
+	font-size: 174%;
+	font-weight: normal;
 }
 
 /* }}} */
