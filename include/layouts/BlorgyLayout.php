@@ -247,8 +247,14 @@ class BlorgyLayout extends SiteLayout
 	{
 		$css_file = $this->app->theme->getCssFile();
 		if ($css_file !== null) {
-			$this->addHtmlHeadEntry(
-				new SwatStyleSheetHtmlHeadEntry($css_file));
+			$this->addHtmlHeadEntry(new SwatStyleSheetHtmlHeadEntry(
+				$css_file));
+		}
+
+		$favicon_file = $this->app->theme->getFaviconFile();
+		if ($favicon_file !== null) {
+			$this->addHtmlHeadEntry(new SwatLinkHtmlHeadEntry(
+				$favicon_file, 'shortcut icon', 'image/x-icon'));
 		}
 	}
 
