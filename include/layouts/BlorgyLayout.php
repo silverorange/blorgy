@@ -150,7 +150,7 @@ class BlorgyLayout extends SiteLayout
 	protected function displayTagLine()
 	{
 		$tagline = $this->app->config->site->tagline;
-		if ($site_title != '') {
+		if ($tagline != '') {
 			$tagline_div = new SwatHtmlTag('div');
 			$tagline_div->class = 'tagline';
 			$tagline_div->setContent($tagline);
