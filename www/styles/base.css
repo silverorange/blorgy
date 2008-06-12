@@ -47,6 +47,11 @@ a:active  { color: #333333; }
 	padding: 0.5em 0 0 0;
 }
 
+#hd .tagline {
+	color: #666;
+	font-size: 85%;
+}
+
 /* }}} */
 /* {{{ Footer */
 
