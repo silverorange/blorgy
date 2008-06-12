@@ -61,8 +61,10 @@ class BlorgAuthorTable extends ConversionTable
 			$this->src_table);
 
 		$sql.= ' and site in (select siteid from sites where keep = true)
-			and userid in (select author from posts where site in
-			(select siteid from sites where keep = true))';
+			and (userid in (select author from posts where site in
+			(select siteid from sites where keep = true)) or userid in
+			(select owner from replies where site in
+			(select siteid from sites where keep = true)))';
 
 		return $sql;
 	}
