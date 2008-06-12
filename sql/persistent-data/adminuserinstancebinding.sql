@@ -22,7 +22,6 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (4, 1, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (7, 1, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (14, 1, NULL);
-INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (9, 1, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (10, 1, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (11, 1, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (13, 1, NULL);
@@ -36,7 +35,6 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (4, 2, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (7, 2, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (14, 2, NULL);
-INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (9, 2, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (10, 2, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (11, 2, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (13, 2, NULL);
@@ -50,7 +48,6 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (4, 4, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (7, 4, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (14, 4, NULL);
-INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (9, 4, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (10, 4, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (11, 4, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (13, 4, NULL);
@@ -64,7 +61,6 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (4, 7, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (7, 7, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (14, 7, NULL);
-INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (9, 7, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (10, 7, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (11, 7, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (13, 7, NULL);
@@ -78,7 +74,6 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (4, 11, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (7, 11, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (14, 11, NULL);
-INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (9, 11, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (10, 11, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (11, 11, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (13, 11, NULL);
@@ -92,7 +87,6 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (4, 12, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (7, 12, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (14, 12, NULL);
-INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (9, 12, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (10, 12, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (11, 12, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (13, 12, NULL);
@@ -106,7 +100,6 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (4, 13, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (7, 13, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (14, 13, NULL);
-INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (9, 13, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (10, 13, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (11, 13, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (13, 13, NULL);
@@ -120,7 +113,6 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (4, 16, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (7, 16, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (14, 16, NULL);
-INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (9, 16, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (10, 16, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (11, 16, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (13, 16, NULL);
@@ -133,7 +125,6 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (4, 17, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (7, 17, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (14, 17, NULL);
-INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (9, 17, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (10, 17, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (11, 17, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (13, 17, NULL);
@@ -147,7 +138,6 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (4, 18, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (7, 18, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (14, 18, NULL);
-INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (9, 18, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (10, 18, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (11, 18, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (13, 18, NULL);
@@ -161,7 +151,6 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (4, 22, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (7, 22, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (14, 22, NULL);
-INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (9, 22, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (10, 22, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (11, 22, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (13, 22, NULL);
@@ -175,7 +164,6 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (4, 23, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (7, 23, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (14, 23, NULL);
-INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (9, 23, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (10, 23, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (11, 23, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (13, 23, NULL);
@@ -189,7 +177,6 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (4, 25, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (7, 25, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (14, 25, NULL);
-INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (9, 25, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (10, 25, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (11, 25, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (13, 25, NULL);
@@ -203,7 +190,6 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (4, 26, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (7, 26, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (14, 26, NULL);
-INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (9, 26, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (10, 26, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (11, 26, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (13, 26, NULL);
@@ -217,7 +203,6 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (4, 27, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (7, 27, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (14, 27, NULL);
-INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (9, 27, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (10, 27, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (11, 27, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (13, 27, NULL);
@@ -231,7 +216,6 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (4, 28, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (7, 28, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (14, 28, NULL);
-INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (9, 28, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (10, 28, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (11, 28, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (13, 28, NULL);
@@ -245,7 +229,6 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (4, 29, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (7, 29, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (14, 29, NULL);
-INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (9, 29, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (10, 29, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (11, 29, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (13, 29, NULL);
@@ -254,6 +237,22 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (12, 29, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (8, 29, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (6, 16, 84);
+INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (16, 13, NULL);
+INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (18, 17, NULL);
+INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (30, 18, NULL);
+INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (31, 18, NULL);
+INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (18, 22, NULL);
+INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (18, 11, NULL);
+INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (21, 27, NULL);
+INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (22, 27, NULL);
+INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (23, 27, NULL);
+INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (24, 28, NULL);
+INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (25, 28, NULL);
+INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (26, 28, NULL);
+INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (25, 16, NULL);
+INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (17, 29, NULL);
+INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (28, 29, NULL);
+INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (19, 25, NULL);
 
 
 ALTER TABLE adminuserinstancebinding ENABLE TRIGGER ALL;
