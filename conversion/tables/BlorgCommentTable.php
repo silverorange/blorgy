@@ -50,7 +50,7 @@ class BlorgCommentTable extends ConversionTable
 		$this->addField($field);
 
 		$field = new BlorgCommentStatusField();
-		$field->src_field = 'boolean:hidden';
+		$field->src_field = 'integer:hidden';
 		$field->dst_field = 'integer:status';
 		$this->addField($field);
 
