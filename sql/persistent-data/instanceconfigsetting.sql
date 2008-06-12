@@ -14,7 +14,7 @@ SET search_path = public, pg_catalog;
 -- Name: instanceconfigsetting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: php
 --
 
-SELECT pg_catalog.setval('instanceconfigsetting_id_seq', 7, true);
+SELECT pg_catalog.setval('instanceconfigsetting_id_seq', 11, true);
 
 
 --
@@ -30,6 +30,10 @@ INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (5, 13, 'si
 INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (6, 16, 'site.theme', 'moon');
 INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (7, 16, 'site.title', 'Peas On The Moon');
 INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (1, 1, 'site.theme', 'aov');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (8, 4, 'site.theme', 'fol');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (9, 4, 'site.title', 'Focused on Light');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (10, 25, 'site.theme', 'blues');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (11, 25, 'site.title', 'CEO Blues Travel');
 
 
 ALTER TABLE instanceconfigsetting ENABLE TRIGGER ALL;

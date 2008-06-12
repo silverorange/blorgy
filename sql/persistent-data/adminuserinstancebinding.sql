@@ -125,7 +125,6 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (11, 16, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (13, 16, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (5, 16, NULL);
-INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (6, 16, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (12, 16, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (8, 16, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (1, 17, NULL);
@@ -254,6 +253,7 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (6, 29, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (12, 29, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (8, 29, NULL);
+INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (6, 16, 84);
 
 
 ALTER TABLE adminuserinstancebinding ENABLE TRIGGER ALL;
