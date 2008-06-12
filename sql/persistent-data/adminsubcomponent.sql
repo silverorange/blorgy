@@ -23,8 +23,8 @@ SELECT pg_catalog.setval('adminsubcomponent_id_seq', 11, true);
 
 ALTER TABLE adminsubcomponent DISABLE TRIGGER ALL;
 
-INSERT INTO adminsubcomponent (id, component, title, shortname, "show", displayorder) VALUES (1, 1, 'Login History', 'LoginHistory', true, 0);
-INSERT INTO adminsubcomponent (id, component, title, shortname, "show", displayorder) VALUES (11, 11, 'Manage Comments', 'Comments', true, 10);
+INSERT INTO adminsubcomponent (id, component, title, shortname, "show", displayorder, visible) VALUES (1, 1, 'Login History', 'LoginHistory', true, 0, true);
+INSERT INTO adminsubcomponent (id, component, title, shortname, "show", displayorder, visible) VALUES (11, 11, 'Manage Comments', 'Comments', true, 10, true);
 
 
 ALTER TABLE adminsubcomponent ENABLE TRIGGER ALL;

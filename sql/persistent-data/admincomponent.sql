@@ -23,17 +23,17 @@ SELECT pg_catalog.setval('admincomponent_id_seq', 15, true);
 
 ALTER TABLE admincomponent DISABLE TRIGGER ALL;
 
-INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show") VALUES (1, 'AdminUser', 'Admin Users', NULL, 4, 1, true, true);
-INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show") VALUES (2, 'AdminGroup', 'Admin Groups', NULL, 5, 1, true, true);
-INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show") VALUES (3, 'AdminSection', 'Admin Sections', NULL, 3, 1, true, true);
-INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show") VALUES (4, 'AdminComponent', 'Admin Components', NULL, 1, 1, true, true);
-INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show") VALUES (5, 'AdminSubComponent', 'Admin Sub-Components', NULL, 2, 1, true, false);
-INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show") VALUES (6, 'Front', 'Front Page', NULL, 0, 1, true, false);
-INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show") VALUES (11, 'Post', 'Posts', NULL, 10, 10, true, true);
-INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show") VALUES (12, 'Tag', 'Tags', NULL, 20, 10, true, true);
-INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show") VALUES (13, 'Author', 'Authors', NULL, 10, 20, true, true);
-INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show") VALUES (14, 'Sidebar', 'Sidebar', NULL, 10, 30, true, true);
-INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show") VALUES (15, 'Config', 'Site Settings', NULL, 0, 30, true, true);
+INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show", visible) VALUES (1, 'AdminUser', 'Admin Users', NULL, 4, 1, true, true, true);
+INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show", visible) VALUES (2, 'AdminGroup', 'Admin Groups', NULL, 5, 1, true, true, true);
+INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show", visible) VALUES (3, 'AdminSection', 'Admin Sections', NULL, 3, 1, true, true, true);
+INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show", visible) VALUES (4, 'AdminComponent', 'Admin Components', NULL, 1, 1, true, true, true);
+INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show", visible) VALUES (5, 'AdminSubComponent', 'Admin Sub-Components', NULL, 2, 1, true, false, false);
+INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show", visible) VALUES (6, 'Front', 'Front Page', NULL, 0, 1, true, false, false);
+INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show", visible) VALUES (11, 'Post', 'Posts', NULL, 10, 10, true, true, true);
+INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show", visible) VALUES (12, 'Tag', 'Tags', NULL, 20, 10, true, true, true);
+INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show", visible) VALUES (13, 'Author', 'Authors', NULL, 10, 20, true, true, true);
+INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show", visible) VALUES (14, 'Sidebar', 'Sidebar', NULL, 10, 30, true, true, true);
+INSERT INTO admincomponent (id, shortname, title, description, displayorder, section, enabled, "show", visible) VALUES (15, 'Config', 'Site Settings', NULL, 0, 30, true, true, true);
 
 
 ALTER TABLE admincomponent ENABLE TRIGGER ALL;

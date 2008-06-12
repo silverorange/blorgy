@@ -23,10 +23,10 @@ SELECT pg_catalog.setval('adminsection_id_seq', 30, true);
 
 ALTER TABLE adminsection DISABLE TRIGGER ALL;
 
-INSERT INTO adminsection (id, title, description, displayorder, "show") VALUES (1, 'Admin Settings', NULL, 100, true);
-INSERT INTO adminsection (id, title, description, displayorder, "show") VALUES (20, 'Authors', NULL, 10, true);
-INSERT INTO adminsection (id, title, description, displayorder, "show") VALUES (30, 'Configuration', NULL, 20, true);
-INSERT INTO adminsection (id, title, description, displayorder, "show") VALUES (10, 'Content', NULL, 0, true);
+INSERT INTO adminsection (id, title, description, displayorder, "show", visible) VALUES (1, 'Admin Settings', NULL, 100, true, true);
+INSERT INTO adminsection (id, title, description, displayorder, "show", visible) VALUES (20, 'Authors', NULL, 10, true, true);
+INSERT INTO adminsection (id, title, description, displayorder, "show", visible) VALUES (30, 'Configuration', NULL, 20, true, true);
+INSERT INTO adminsection (id, title, description, displayorder, "show", visible) VALUES (10, 'Content', NULL, 0, true, true);
 
 
 ALTER TABLE adminsection ENABLE TRIGGER ALL;
