@@ -19,7 +19,7 @@ class BlorgAuthorTable extends ConversionTable
 
 		$field = new ConversionBooleanField();
 		$field->src_field = 'feature';
-		$field->dst_field = 'show';
+		$field->dst_field = 'visible';
 		$this->addField($field);
 
 		$field = new ConversionField();
@@ -27,7 +27,7 @@ class BlorgAuthorTable extends ConversionTable
 		$field->dst_field = 'integer:instance';
 		$this->addField($field);
 
-		$field = new ConversionTextField();
+		$field = new BlorgAuthorShortnameField();
 		$field->src_field = 'username';
 		$field->dst_field = 'shortname';
 		$this->addField($field);
@@ -67,6 +67,49 @@ class BlorgAuthorTable extends ConversionTable
 			(select siteid from sites where keep = true)))';
 
 		return $sql;
+	}
+
+	// }}}
+}
+
+class BlorgAuthorShortnameField extends ConversionTextField
+{
+	// {{{ public function convertData()
+
+	public function convertData($data)
+	{
+		$data = parent::convertData($data);
+
+		$row = &$this->table->getCurrentRow();
+		$instance = $row[$this->table->getFieldIndexByDestinationName('instance')];
+
+		// generate a shortname
+		return $this->generateShortname($instance, $data);
+	}
+
+	// }}}
+	// {{{ private function generateShortname()
+
+	private function generateShortname($instance, $text, $iteration = 0)
+	{
+		$shortname = SwatString::condenseToName($text);
+
+		if ($iteration != 0)
+			$shortname = $shortname.((string) $iteration);
+
+		$sql = 'select id from BlorgAuthor
+			where shortname = %s and instance = %s';
+
+		$sql = sprintf($sql,
+			$this->table->process->dst_db->quote($shortname, 'text'),
+			$this->table->process->dst_db->quote($instance, 'integer'));
+
+		$rs = SwatDB::query($this->table->process->dst_db, $sql);
+
+		if (count($rs) == 0)
+			return $shortname;
+		else
+			return $this->generateShortname($instance, $text, $iteration + 1);
 	}
 
 	// }}}
