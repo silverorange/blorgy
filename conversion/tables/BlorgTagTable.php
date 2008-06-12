@@ -41,7 +41,7 @@ class BlorgTagTable extends ConversionTable
 	protected function getSourceSQL()
 	{
 		$sql = parent::getSourceSQL();
-		$sql.= ' and site in (select siteid from sites where keep = true) and hidden != \'0\'';
+		$sql.= ' and site in (select siteid from sites where keep = true) and hidden = \'0\'';
 
 		return $sql;
 	}
