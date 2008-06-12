@@ -372,9 +372,7 @@ ul.blorg-archive-months li span {
 }
 
 .blorg-archive-months .entry-no-title {
-	padding-left: 0;
-	padding-top: 0;
-	padding-right: 0;
+	padding: 0;
 	border: 0;
 }
 
