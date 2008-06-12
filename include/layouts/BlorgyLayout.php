@@ -111,6 +111,10 @@ class BlorgyLayout extends SiteLayout
 		$this->startCapture('google_analytics');
 		$this->displayGoogleAnalytics();
 		$this->endCapture();
+
+		$this->startCapture('tagline');
+		$this->displayTagLine();
+		$this->endCapture();
 	}
 
 	// }}}
@@ -137,6 +141,20 @@ class BlorgyLayout extends SiteLayout
 				$google_account);
 
 			Swat::displayInlineJavaScript($javascript);
+		}
+	}
+
+	// }}}
+	// {{{ protected function displayTagLine()
+
+	protected function displayTagLine()
+	{
+		$tagline = $this->app->config->site->tagline;
+		if ($site_title != '') {
+			$tagline_div = new SwatHtmlTag('div');
+			$tagline_div->class = 'tagline';
+			$tagline_div->setContent($tagline);
+			$tagline_div->display();
 		}
 	}
 

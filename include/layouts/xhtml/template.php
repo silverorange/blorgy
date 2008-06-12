@@ -16,6 +16,7 @@
 
 	<div id="hd" class="clearfix">
 		<?= $this->header_title ?>
+		<?= $this->tagline ?>
 	</div>
 
 	<div id="bd">
