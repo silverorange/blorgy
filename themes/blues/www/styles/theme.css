@@ -26,6 +26,14 @@ body {
 	overflow: hidden;
 }
 
+#hd .tagline {
+	color: #90b5dc;
+	position: absolute;
+	top: 63px;
+	width: 235px;
+	text-align: right;
+}
+
 #bd {
 	padding-left: 3em;
 }
