@@ -45,7 +45,7 @@ class ArticleTable extends ConversionTable
 
 		$field = new ConversionBooleanField();
         $field->src_field = 'hidden';
-        $field->dst_field = 'show';
+        $field->dst_field = 'visible';
         $field->inverse = true;
         $this->addField($field);
 
