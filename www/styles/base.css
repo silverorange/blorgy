@@ -293,7 +293,7 @@ textarea {
 
 .blorg-feed-gadget li a {
 	padding-left: 16px;
-	background: url('../images/feed-icon.png') left 50% no-repeat;
+	background: url('../packages/blorg/images/feed-icon.png') left 50% no-repeat;
 	min-height: 18px;
 	line-height: 18px;
 	margin-left: 4px;
