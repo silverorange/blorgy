@@ -1,0 +1,420 @@
+body {
+	font-family: Palatino, times, Times New Roman, times-roman, georgia, serif;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 1.5em; 
+	color: #4a4a4a;
+	margin: 25px 0 50px 0;
+	padding: 0px;
+}
+
+a { color: #003366; }
+a:visited { color: #7a7a7a; }
+a:link { color: #003366; }
+a:hover { color: #000; }
+a:active { color: #003366; }
+
+strong { font-weight: bold; }
+em { font-style: italic; }
+ul li { 
+	list-style-type: disc; 
+	margin: 4px 15px;
+}
+
+/* header */
+
+#header {
+	width: 750px;
+	margin: 0 auto -25px auto;
+	padding: 0 0 10px 0;
+	border-bottom: 1px #ddd solid;
+}
+
+#header h1,
+#header h1 a {
+	background: url("focusedonlight.png") no-repeat;
+	position: relative;
+	display: block;
+	width: 190px;
+	height: 22px;
+	text-indent: -2000px;
+}
+
+#header ul {
+	float: right;
+	margin-top: -20px;
+}
+
+#header ul li {
+	font-size: 12px;
+	display: inline;
+	margin: 0 10px;
+}
+
+#header ul li a { text-decoration: none; }
+#header ul li a:hover { text-decoration: underline; }
+
+/* weblog */
+
+#weblog {
+	width: 750px;
+	margin: auto;
+}
+
+#weblog #navbar { /* breadcrumb trail */
+	display: none;
+}
+
+#weblog .post {
+	clear: both;
+	width: 520px;
+	padding: 30px 20px 50px 210px;
+	border-bottom: 1px #ddd solid;
+}
+
+#weblog h3 {
+	font-size: 28px;
+	line-height: 1em; 
+	color: #4a4a4a;
+	margin: 20px 0 15px 0;
+}
+
+#weblog h3 a.posttitlelink {
+	color: #4a4a4a;
+	text-decoration: none;
+}
+
+#weblog h3.contenttitle {
+	margin: 50px 0 16px 0;
+}
+
+#weblog h4, #weblog h5, #weblog h6 {
+	color: #777;
+	font-size: 16px;
+	margin: 0 0 5px 0;
+	padding: 15px 0 0 0;
+	border-bottom: 1px #ddd solid;
+}
+
+#weblog .post p {
+	margin: 16px 0;
+}
+
+#weblog .post p.nomargin {
+	margin-top: 0;
+}
+
+#weblog .postsubtitle {
+	font-size: 12px;
+	color: #7a7a7a;
+	margin: -15px 0 0 0;
+}
+
+#weblog .postsubtitle a.permalink { /* permalink date link */
+	color: #7a7a7a;
+	text-decoration: none;
+}
+#weblog .postsubtitle a.permalink:hover { text-decoration: underline; }
+
+#weblog .postsubtitle a.subtitlelink { /* author and reply link */
+	color: #7a7a7a;
+	text-decoration: underline;
+}
+#weblog .postsubtitle a.subtitlelink:hover { color: #000; }
+
+/* post formatting */
+
+#weblog .postbody {
+	position: relative;
+}
+
+#weblog .postbody img.feature {
+	position: absolute;
+	top: -50px;
+	left: -195px;
+	padding: 6px;
+}
+
+#weblog .postbody img.frame {
+	background-color: #eee;
+	padding: 5px;
+	border: 1px #ddd solid;
+}
+
+#weblog .postbody img.border {
+	background-color: #eee;
+	padding: 9px;
+	border: 1px #ccc solid;
+}
+
+#weblog .postbody img.noborder { border: 0px; }
+
+#weblog .postbody ul { list-style-type: disc; }
+#weblog .postbody ol { list-style-type: decimal; }
+
+#weblog .postbody ol, 
+#weblog .postbody ul {
+	margin: 0;
+	padding: 0;
+}
+
+#weblog .postbody ol li, 
+#weblog .postbody ul li {
+	margin: 0.5em 0;
+	padding: 0;
+}
+
+#weblog .postbody ol li ol li, 
+#weblog .postbody ul li ul li {
+	margin: 0.2em 1.5em;
+}
+
+#weblog .postbody table { margin-left: auto; margin-right: auto; }
+#weblog .postbody table.grey { background-color: #f1f1f1; }
+
+#weblog .postbody  th, td {
+	padding: 5px;
+	text-align: left;
+	vertical-align: top;
+}
+
+#weblog .postbody th { background-color: #f7f7f7; }
+#weblog .postbody td { background-color: #fff; }
+#weblog .postbody td.greyback { background-color: #f7f7f7; font-weight: 500; }
+
+#weblog .postbody  blockquote	{
+	margin: 0; 
+	padding: 0 5px 0 30px; 
+	color: #818181;
+	background: url("leftquote.gif") top left no-repeat; 
+}
+
+/* replies */
+
+#weblog #replies {
+
+}
+
+#weblog #replies .contenttitle {
+	font-weight: bold;
+	margin-top: 50px;
+	border-bottom: 1px #ddd solid;
+}
+
+#weblog #replies .reply {
+	margin: 25px 0;
+}
+
+#weblog #replies .replytitle {
+	font-size: 12px;
+	line-height: 1.2em;
+	color: #7a7a7a;
+}
+
+#weblog #replies .replyname {
+	font-weight: bold;
+	color: #7a7a7a;
+}
+
+#weblog #replies a.permalink {
+	color: #7a7a7a;
+	text-decoration: none;
+}
+
+#weblog #replies .replyemail { /* used when custom php is not */
+	display: none;
+}
+
+#weblog #replies .replyhref {
+	font-size: 12px;
+	line-height: 1.2em;
+	margin: 0;
+	padding: 0;
+}
+
+#weblog #replies .replybody {
+	margin-top: 0.5em;
+}
+
+#weblog .postreply { /* input form container */
+	background-color: #f9f9f9;
+	width: 520px;
+	padding: 20px 20px 20px 210px;
+	border-bottom: 1px #ddd solid;
+}
+
+#weblog .postreply .contenttitle { /* post a reply title */
+	font-weight: bold;
+	margin: 0 0 20px 0;
+}
+
+#weblog .postreply .fieldname { 
+	font-size: 11px;
+	line-height: 1em;
+	vertical-align: top;
+	padding: 6px 20px 0 0;
+}
+
+#weblog .postreply input,
+#weblog .postreply textarea { 
+	margin: 4px 0;
+	padding: 4px;
+	border: 1px #ccc solid;
+}
+
+#weblog .postreply .note { 
+	display: none;
+}
+
+#weblog .postreply .button,
+#weblog .postreply .button2 { 
+	padding: 4px 8px;
+	border-right: 1px #888 solid;
+	border-bottom: 1px #888 solid;
+}
+
+/* archives */
+
+#weblog #archive {
+	float: left;
+	margin: 0 150px 0 0;
+	padding-bottom: 50px;
+}
+
+#weblog #archive h3 {
+	font-size: 20px;
+}
+
+#weblog #categories {
+	float: left;
+	padding-bottom: 50px;
+}
+
+#weblog #categories a.light {
+	font-size: 12px;
+	color: #7a7a7a;
+}
+
+#weblog #sideblogarchive {
+	clear: both;
+	padding-bottom: 50px;
+}
+
+#weblog #sideblogarchive h4 {
+	font-size: 20px;
+	margin: 0 0 16px 0;
+}
+
+#weblog #archive ul li,
+#weblog #categories ul li,
+#weblog #sideblogarchive ul li {
+	list-style-type: disc;
+	margin: 4px 30px;
+}
+
+/* weblog footer */
+#weblog #footer { /* forward and back page links */
+	font-size: 12px;
+	margin: 0;
+	padding: 20px 0;
+	text-transform: lowercase;
+}
+
+#weblog #footer a {
+	text-decoration: none;
+}
+
+#weblog #footer a:hover {	text-decoration: underline; }
+
+#weblog #footer .subheading {
+
+}
+
+/* search */
+#search { 
+	clear: both;
+	text-align: center;
+	margin: 25px auto 0 auto;
+	padding: 0 0 10px 0;
+}
+
+#search input { 
+	margin: 4px 0;
+	padding: 4px;
+	border: 1px #ccc solid;
+}
+
+#search input.searchbutton { 
+	padding: 3px 8px;
+	border-right: 1px #888 solid;
+	border-bottom: 1px #888 solid;
+}
+
+/* links */
+
+#weblog #recommended-links,
+#weblog #blogged-links {
+	width: 350px;
+	margin-bottom: 50px;
+}
+
+#weblog #recommended-links { float: left; }
+#weblog #blogged-links { float: right; }
+
+#weblog #blogged-links h5 span {
+	font-size: 12px;
+	color: #aaa;
+}
+
+#weblog #recommended-links ul li,
+#weblog #blogged-links ul li {
+	margin-bottom: 1em;
+}
+
+/* reviews */
+
+#weblog .product {
+	float: left;
+	width: 350px;
+	height: 200px;
+}
+
+#weblog .left {	margin-right: 20px; }
+#weblog .right {	margin-left: 20px; }
+
+#weblog .product h5 {
+	border: 0;
+}
+
+#weblog .product img {
+	float: right;
+	margin-left: 10px;
+}
+
+/* google ads */
+
+#google {
+	margin: 40px auto 0 auto;
+}
+
+/* extras */
+
+.first { margin: 0; }
+.hide { display: none; }
+.strike { text-decoration: line-through; }
+
+.center { text-align: center; }
+
+.right {
+	float: right;
+	background: #fff;
+	padding: 1px;
+	margin: 0.2em 0em 0.5em 0.5em;
+}
+
+.left {
+	float: left;
+	background: #fff;
+	padding: 1px;
+	margin: 0.2em 0.5em 0.5em 0em;
+}
