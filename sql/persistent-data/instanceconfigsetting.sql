@@ -23,13 +23,13 @@ SELECT pg_catalog.setval('instanceconfigsetting_id_seq', 7, true);
 
 ALTER TABLE instanceconfigsetting DISABLE TRIGGER ALL;
 
-INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (1, 1, 'site.theme', 'aov');
 INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (2, 1, 'site.title', 'Acts of Volition');
 INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (3, 2, 'site.title', 'CEO Blues');
 INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (4, 2, 'site.theme', 'blues');
 INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (5, 13, 'site.theme', 'avocado');
 INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (6, 16, 'site.theme', 'moon');
 INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (7, 16, 'site.title', 'Peas On The Moon');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (1, 1, 'site.theme', 'aov');
 
 
 ALTER TABLE instanceconfigsetting ENABLE TRIGGER ALL;
