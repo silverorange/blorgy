@@ -11,6 +11,8 @@ class BlorgPostTable extends ConversionTable
 	{
 		$this->src_table = 'posts';
 		$this->dst_table = 'BlorgPost';
+		$this->trim = true;
+		$this->empty_to_null = true;
 
 		$this->addDep('Instance');
 
