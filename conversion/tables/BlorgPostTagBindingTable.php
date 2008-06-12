@@ -30,7 +30,8 @@ class BlorgPostTagBindingTable extends ConversionTable
 		$sql = parent::getSourceSQL();
 
 		$sql.= ' and attribute in (select attributeid from attributes
-			where site in (select siteid from sites where keep = true))';
+			where site in (select siteid from sites where keep = true)
+				and hidden != \'0\')';
 
 		return $sql;
 	}
