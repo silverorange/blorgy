@@ -59,6 +59,7 @@ body {
 	left: 0;
 	width: 310px;
 	padding-top: 150px;
+	background: transparent url('../images/beerbackground.png') repeat-y top left;
 }
 
 #sidebar .blorg-sidebar {
@@ -109,5 +110,30 @@ body {
 }
 
 .entry-no-title {
+	border-color: #dcd1ab;
+}
+
+
+/* Pagination */
+
+.swat-pagination {
+	color: #666;
+}
+
+.swat-pagination a,
+.swat-pagination span,
+.swat-pagination span.swat-pagination-current {
+	border-color: #dcd1ab;
+}
+
+.swat-pagination span.swat-pagination-nextprev {
+	color: #dcd1ab;
+}
+
+.swat-pagination a:hover {
+	background: #dcd1ab;
+}
+
+.swat-pagination a {
 	border-color: #dcd1ab;
 }
