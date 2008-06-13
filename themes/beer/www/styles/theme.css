@@ -10,12 +10,23 @@ body {
 	background: transparent url('../images/beerbackground.png') repeat-y top left;
 }
 
+a:link,
+a:visited {
+	color: #039;
+}
+
+a:hover,
+a:active {
+	color: #9C0000;
+}
 
 /* Layout */
 #doc {
 	margin: 0;
 	padding: 0 0 2em 0;
 }
+
+#bd { position: absolute; }
 
 #content {
 	margin-left: 316px;
@@ -66,6 +77,16 @@ body {
 	padding: 62px;
 }
 
+#nav_bar,
+#nav_bar a:link,
+#nav_bar a:visited {
+	color: #918250;
+}
+
+#nav_bar a:hover,
+#nav_bar a:active {
+	color: #333;
+}
 
 /* Sidebar */
 
@@ -94,6 +115,10 @@ body {
 }
 
 /* Posts */
+
+.entry .entry-title {
+	font-family: trebuchet ms,verdana,sans-serif;
+}
 
 .entry .entry-subtitle {
 	color: #774111;
