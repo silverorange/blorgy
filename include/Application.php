@@ -65,8 +65,8 @@ class Application extends SiteWebApplication
 
 		switch ($tag) {
 		case 'httperror':
-			require_once 'Site/pages/SiteHttpErrorPage.php';
-			$page = new SiteHttpErrorPage($this, $layout);
+			require_once '../include/pages/HttpErrorPage.php';
+			$page = new HttpErrorPage($this, $layout);
 			break;
 
 		case 'exception':
