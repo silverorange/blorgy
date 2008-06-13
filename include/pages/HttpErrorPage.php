@@ -8,13 +8,20 @@ require_once 'Site/pages/SiteHttpErrorPage.php';
  */
 class HttpErrorPage extends SiteHttpErrorPage
 {
-	// init phase
-	// {{{ public function init()
+	// build phase
+	// {{{ public function build()
 
-	public function init()
+	public function build()
 	{
-		parent::init();
+		parent::build();
 
+		/*
+		echo '<pre>';
+		echo $this->app->config->site;
+		echo '</pre>';
+		exit;
+		$this->layout->data->site_title = $this->app->config->site->title;
+		*/
 		$this->layout->data->site_title = 'Site Title';
 	}
 
