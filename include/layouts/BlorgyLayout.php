@@ -166,6 +166,9 @@ class BlorgyLayout extends SiteLayout
 	public function finalize()
 	{
 		parent::finalize();
+
+		$this->addHtmlHeadEntrySet(Blorg::getHtmlHeadEntrySet($this->app));
+
 		$this->finalizeNavBar();
 		$this->finalizeSideBar();
 		$this->finalizeTitle();
