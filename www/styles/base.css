@@ -1,0 +1,416 @@
+body {
+	color: #333;
+	background: #fff;
+	margin: 0;
+	padding: 0 0 2em 0;
+	font-family: trebuchet ms;
+}
+
+/* {{{ Layout */
+
+#doc {
+	margin: 0 5%;
+	_height: 1%;
+	.height: 1%;
+}
+
+#bd {
+	position: relative;
+}
+
+#page_title,
+#content {
+	margin-right: 250px;
+}
+
+#sidebar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 200px;
+}
+
+/* }}} */
+/* {{{ Links */
+
+a:link    { color: #204a87; }
+a:visited { color: #5c3466; }
+a:hover   { color: #3465a4; }
+a:active  { color: #333333; }
+
+/* }}} */
+/* {{{ Header */
+
+#hd h1 {
+	font-size: 300%;
+	margin: 0 0 0 0;
+	padding: 0.5em 0 0 0;
+}
+
+#hd .tagline {
+	color: #666;
+	font-size: 85%;
+}
+
+/* }}} */
+/* {{{ Footer */
+
+.footer {
+	text-align: center;
+}
+
+/* }}} */
+/* {{{ Post Header */
+
+.entry .entry-title {
+	font-size: 153.9%;
+	margin: 0;
+}
+
+.entry .entry-title a:link,
+.entry .entry-title a:visited {
+	text-decoration: none;
+}
+
+.entry .entry-title a:hover,
+.entry .entry-title a:active {
+	text-decoration: underline;
+}
+
+.entry .entry-subtitle {
+	font-size: 85%;
+	color: #666;
+	margin-bottom: 0.5em;
+}
+
+.entry .entry-subtitle a:link,
+.entry .entry-subtitle a:visited {
+	color: #666;
+}
+
+.entry .entry-subtitle a:hover,
+.entry .entry-subtitle a:active {
+	color: #333;
+}
+.entry .entry-subtitle abbr { border: 0; }
+
+/* }}} */
+/* {{{ Post */
+
+.entry {
+	margin-bottom: 2em;
+}
+
+.entry-content {
+	line-height: 1.5;
+}
+
+.entry-no-title {
+	border-top: 1px solid #eee;
+	padding: 0.5em 1em;
+}
+
+/* }}} */
+/* {{{ Post Comments */
+
+.comments-title {
+	border-bottom: 1px solid #ccc;
+}
+
+.comment {
+	margin: 1.5em;
+	font-size: 85%;
+}
+
+.comment .comment-title {
+	font-weight: bold;
+	font-size: 100%;
+	color: #999;
+}
+
+.comment .comment-title span.comment-author {
+	color: #666;
+}
+
+.comment .comment-title .permalink {
+	font-weight: normal;
+}
+
+.comment .comment-title a.permalink:link,
+.comment .comment-title a.permalink:visited {
+	color: #999;
+	text-decoration: none;
+}
+
+.comment .comment-title a.permalink:hover,
+.comment .comment-title a.permalink:active {
+	color: #666;
+	text-decoration: underline;
+}
+
+.comment .comment-title abbr { border-bottom: 0; }
+
+.comment .comment-link a:link,
+.comment .comment-link a:visited {
+	color: #999;
+}
+
+.comment .comment-link a:hover,
+.comment .comment-link a:active {
+	color: #666;
+}
+
+.comment .comment-content {
+	margin: 0.5em 0;
+	line-height: 1.5;
+}
+
+/* }}} */
+/* {{{ Comment Form */
+
+#comment_edit_form {
+	margin-top: 2em;
+}
+
+#comment_edit_frame .swat-frame-title {
+	margin-bottom: 0;
+	border-bottom: 1px solid #ccc;
+}
+
+#comment_edit_frame .swat-frame-contents {
+	background: #f3f3f3;
+	background: #fff;
+	padding: 1em;
+}
+
+#comment_edit_form .swat-entry,
+#comment_edit_form .swat-textarea {
+	width: 98%;
+}
+
+#comment_edit_details {
+	width: 35%;
+	float: left;
+	position: relative;
+}
+
+#comment_bodytext_field {
+	width: 62%;
+	float: right;
+	position: relative;
+}
+
+#comment_edit_frame .swat-footer-form-field {
+	clear: both;
+}
+
+/* }}} */
+/* {{{ Reset */
+
+input[type="text"],
+input[type="password"],
+textarea {
+	width: auto;
+}
+
+/* }}} */
+/* {{{ Navbar */
+
+#nav_bar {
+	font-size: 85%;
+	color: #999;
+}
+
+#nav_bar a:link,
+#nav_bar a:visited {
+	color: #999;
+}
+
+#nav_bar a:hover,
+#nav_bar a:active {
+	color: #666;
+}
+
+/* }}} */
+/* {{{ Sidebar Gadgets */
+
+.blorg-sidebar-gadget {
+	margin: 0 0 2em 0;
+	color: #666;
+}
+
+.blorg-gadget-content {
+	font-size: 85%;
+}
+
+.blorg-gadget-title {
+	font-size: 100%;
+	font-weight: bold;
+	color: #666;
+	margin-bottom: 0;
+}
+
+.blorg-sidebar-gadget a:link,
+.blorg-sidebar-gadget a:visited {
+	color: #666;
+}
+
+.blorg-sidebar-gadget a:hover,
+.blorg-sidebar-gadget a:active {
+	color: #333;
+}
+
+.blorg-sidebar-gadget ul {
+	margin: 0;
+}
+
+.blorg-sidebar-gadget ul li {
+	list-style-type: none;
+	margin: 0.5em 0;
+	padding: 0;
+}
+
+.blorg-sidebar-gadget ul li ul li {
+	margin-left: 0.5em;
+}
+
+.blorg-tag-gadget ul li span,
+.blorg-archive-gadget ul li span,
+.blorg-active-conversations-gadget ul li span {
+	color: #999;
+	white-space: nowrap;
+}
+
+.blorg-active-conversations-gadget ul li.new span { color: #ef2929; }
+
+/* {{{ Sidebar Authors Gadget */
+
+.blorg-authors-gadget .author {
+	margin: 0.5em 0;
+}
+
+/* }}} */
+/* {{{ Sidebar Feeds Gadget */
+
+.blorg-feed-gadget ul li {
+	margin: 0.2em 0;
+}
+
+.blorg-feed-gadget li a {
+	padding-left: 16px;
+	background: url('../packages/blorg/images/feed-icon.png') left 50% no-repeat;
+	min-height: 18px;
+	line-height: 18px;
+	margin-left: 4px;
+}
+
+/* }}} */
+/* {{{ Sidebar Search Gadget */
+
+.blorg-search-gadget .swat-entry {
+	width: 120px;
+}
+
+.blorg-search-gadget .swat-form-field,
+.blorg-search-gadget .swat-form-field-contents {
+	display: inline;
+}
+
+.blorg-search-gadget .swat-entry,
+.blorg-search-gadget .swat-button {
+	vertical-align: middle;
+}
+
+/* }}} */
+/* }}} */
+/* {{{ Content */
+
+img { border: 0px; }
+
+img.border { border: 1px solid #999; padding: 2px; background: #fff; }
+
+img.right { float: right; margin: 0.2em 0 1em 1em; }
+img.left  { float: left;  margin: 0.2em 1em 0 1em; }
+
+/* }}} */
+/* {{{ Authors */
+
+.author {
+	margin-bottom: 1em;
+}
+
+/* }}} */
+/* {{{ Archive */
+
+#content ul.blorg-archive-years,
+#content ul.blorg-archive-years ul,
+#content ul.blorg-archive-months,
+#content ul.blorg-archive-months ul {
+	margin: 0.5em 0 1em 1em;
+}
+
+#content ul.blorg-archive-years li,
+#content ul.blorg-archive-months li {
+	list-style-type: none;
+	margin-bottom: 0.2em;
+}
+
+#content ul.blorg-archive-years li span,
+#content ul.blorg-archive-months li span {
+	color: #999;
+}
+
+#content .blorg-archive-year-title span {
+	font-weight: normal;
+}
+
+#content .blorg-archive-months .entry {
+	margin-bottom: 1em;
+}
+
+#content .blorg-archive-month-title {
+	margin-bottom: 1em;
+}
+
+#content .blorg-archive-months .entry .entry-title {
+	font-size: 131%;
+}
+
+#content .blorg-archive-months .entry-no-title {
+	padding: 0;
+	border: 0;
+}
+
+#content .blorg-archive-months .entry-no-title .entry-title {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+/* }}} */
+/* {{{ Swat Widgets */
+
+.swat-frame,
+.swat-frame .swat-frame-title,
+.swat-frame .swat-frame-contents,
+.swat-frame .swat-footer-form-field {
+	background: none;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.swat-frame .swat-frame-title {
+	color: #666;
+	margin: 1em 0;
+}
+
+.swat-form label {
+	color: #666;
+	font-size: 85%;
+}
+
+.swat-note {
+	color: #999;
+}
+
+/* }}} */
