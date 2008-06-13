@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <theme>
  <title>Slate</title>
+ <shortname>slate</shortname>
  <description>A grey on grey theme.</description>
  <author>Steven Gärrity</author>
  <!-- email field is optional -->

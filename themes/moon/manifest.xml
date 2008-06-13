@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <theme>
  <title>Over the Moon</title>
+ <shortname>moon</shortname>
  <description>Theme for the quirky Peas on the Moon weblog.</description>
  <author>Steven Gärrity</author>
  <!-- email field is optional -->

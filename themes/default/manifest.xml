@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <theme>
  <title>Default Theme</title>
+ <shortname>default</shortname>
  <description>The default blorgy theme. It's discretely distinguished.</description>
  <author>Steven Gärrity</author>
  <!-- email field is optional -->

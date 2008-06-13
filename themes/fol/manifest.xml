@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <theme>
  <title>Theme of Focused on Light</title>
+ <shortname>fol</shortname>
  <description>Theme for the Focused on Light weblog.</description>
  <author>Stephen DesRoches</author>
  <!-- email field is optional -->

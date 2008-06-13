@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <theme>
  <title>Blues</title>
+ <shortname>blues</shortname>
  <description>A blue-centric theme</description>
  <author>Steven Gärrity / Charles Pritchett</author>
  <!-- email field is optional -->

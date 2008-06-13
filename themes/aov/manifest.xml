@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <theme>
  <title>Theme of Volition</title>
+ <shortname>aov</shortname>
  <description>Theme for the venerable Acts of Volition weblog.</description>
  <author>Steven Gärrity</author>
  <!-- email field is optional -->
