@@ -15,14 +15,7 @@ class HttpErrorPage extends SiteHttpErrorPage
 	{
 		parent::build();
 
-		/*
-		echo '<pre>';
-		echo $this->app->config->site;
-		echo '</pre>';
-		exit;
 		$this->layout->data->site_title = $this->app->config->site->title;
-		*/
-		$this->layout->data->site_title = 'Site Title';
 	}
 
 	// }}}
