@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <theme>
  <title>Beer Theme</title>
+ <shortname>beer</shortname>
  <description>A theme for the Beer Blog.</description>
  <author>Steven Gärrity</author>
  <!-- email field is optional -->
