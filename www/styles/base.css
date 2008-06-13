@@ -178,8 +178,7 @@ a:active  { color: #333333; }
 }
 
 #comment_edit_frame .swat-frame-contents {
-	background: #f3f3f3;
-	background: #fff;
+	background: transparent;
 	padding: 1em;
 }
 
