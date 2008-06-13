@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<theme>
+ <title>Avocado</title>
+ <description>A green theme.</description>
+ <author>Steven Gärrity</author>
+ <!-- email field is optional -->
+ <email>steven@silverorange.com</email>
+ <license>Copyright 2008, Steven Garrity</license>
+</theme>

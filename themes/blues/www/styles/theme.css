@@ -1,0 +1,100 @@
+body {
+	background: #fff url('../images/header-back.png') repeat-x;
+	font-family: verdana, sans-serif;
+}
+
+#doc {
+	margin: 0;
+}
+
+#hd { height: 110px; }
+
+#hd h1 {
+	background: url('../images/logo.png') 0 0 no-repeat;
+	padding: 0;
+	height: 97px;
+	width: 375px;
+	color: #fff;
+	line-height: 4000px;
+	overflow: hidden;
+}
+
+#hd h1 a {
+	display: block;
+	line-height: 4000px;
+	margin: 0;
+	overflow: hidden;
+}
+
+#hd .tagline {
+	color: #90b5dc;
+	position: absolute;
+	top: 63px;
+	width: 235px;
+	text-align: right;
+}
+
+#bd {
+	padding-left: 3em;
+}
+
+#content,
+#nav_bar {
+	margin-right: 25%;
+}
+
+#nav_bar { margin: 10px 0; }
+
+a,
+a:link,
+a:hover,
+.entry .entry-title a:visited,
+.entry .entry-title {
+	color: #2261a2;
+}
+
+a:visited { color: #666; }
+
+
+/* Entries */
+.entry .entry-title { font-size: 138.5%; }
+
+.entry .entry-subtitle a,
+.entry .entry-subtitle a:link,
+.entry .entry-subtitle a:visited {
+	color: #4d7095;
+	text-decoration: none;
+}
+
+.entry .entry-subtitle a:hover {	text-decoration: underline; }
+
+.entry img {
+	padding: 3px;
+	border: 1px solid #ddd;
+	margin-bottom: 1em;
+}
+
+.entry blockquote {
+	background: url('../images/blockquote.png') left top no-repeat;
+	padding: 5px 0 0 50px;
+}
+
+
+/* Sidebar */
+#sidebar {
+	width: 20%;
+	padding-right: 2em;
+}
+
+#sidebar .blorg-gadget-title,
+#sidebar .blorg-gadget-title a {
+	color: #2261a2;
+	margin-bottom: 6px;
+}
+
+
+/* Footer */
+.footer .results-message,
+.footer .archive-link {
+	font-size: 85%;
+}

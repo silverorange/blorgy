@@ -1,0 +1,228 @@
+html,
+body {
+	background: #080808;
+	color: #999;
+	font-family: Georgia,'Times New Roman',serif;
+}
+
+/* {{{ Header */
+
+#hd {
+	text-align: center;
+	padding: 20px 0 90px 0;
+	background: url('../images/moon-small.png') 50% 100% no-repeat;
+	margin-bottom: 20px;
+}
+
+#hd h1 {
+	font-weight: normal;
+	color: #ddd;
+	letter-spacing: 0.1em;
+	border-bottom: 1px solid #777;
+}
+
+#hd h1 a {
+	text-decoration: none;
+}
+
+#hd h1 a:hover {
+	text-decoration: underline;
+}
+
+#hd .tagline {
+	font-family: sans-serif;
+	color: #ddd;
+	font-size: 116%;
+	margin-top: 0.1em;
+}
+
+/* }}} */
+/* {{{ Links */
+
+a:link    { color: #ddd; }
+a:visited { color: #ddd; }
+a:hover   { color: #fff; }
+a:active  { color: #fff; }
+
+/* }}} */
+/* {{{ Post Header */
+
+.entry .entry-title {
+	font-weight: normal;
+	border-bottom: 1px solid #777;
+	letter-spacing: 0.1em;
+	font-size: 185%;
+}
+
+.entry .entry-subtitle {
+	font-size: 100%;
+	padding: 0.4em 0;
+	color: inherit;
+}
+
+.entry .entry-subtitle a:link,
+.entry .entry-subtitle a:visited {
+	color: #ddd;
+}
+
+.entry .entry-subtitle a:hover,
+.entry .entry-subtitle a:active {
+	color: #fff;
+}
+
+/* }}} */
+/* {{{ Post */
+
+.entry-content {
+	font-size: 116%;
+	line-height: 1.6;
+}
+
+/* }}} */
+/* {{{ Comments */
+
+.comments-title {
+	border: 0;
+	color: #fff;
+	font-weight: normal;
+	font-size: 116%;
+}
+
+.comment {
+	font-size: 100%;
+	margin: 1.5em 1em;
+}
+
+.comment-content {
+	font-family: sans-serif;
+	clear: both;
+}
+
+.comment-title .comment-author {
+	float: left;
+	font-size: 116%;
+}
+.comment-title .permalink {
+	float: right;
+	font-size: 116%;
+}
+
+.comment-title {
+	float: left;
+	font-size: 100%;
+	width: 100%;
+	border-bottom: 1px solid #777;
+	line-height: 1.5;
+}
+
+.comment-link {
+	line-height: 1.5;
+}
+
+/* }}} */
+/* {{{ Comment Form */
+
+#comment_edit_frame .swat-frame-title {
+	border-color: #777;
+}
+
+#comment_edit_frame .swat-frame-contents {
+	background: #111;
+}
+
+/* }}} */
+/* {{{ Sidebar Gadgets */
+
+.blorg-sidebar-gadget {
+	font-family: sans-serif;
+	color: #999;
+}
+
+.blorg-sidebar-gadget ul li {
+	font-size: 100%;
+}
+
+.blorg-sidebar-gadget .blorg-gadget-title {
+	font-weight: normal;
+	font-family: Georgia,'Times New Roman',serif;
+	font-size: 131%;
+	border-bottom: 1px solid #777;
+	color: #ddd;
+	letter-spacing: 0.1em;
+	margin-bottom: 0.25em;
+}
+
+.blorg-sidebar-gadget a:link,
+.blorg-sidebar-gadget a:visited {
+	color: #ddd;
+	text-decoration: none;
+}
+
+.blorg-sidebar-gadget a:hover,
+.blorg-sidebar-gadget a:active {
+	color: #fff;
+}
+
+.blorg-search-gadget form {
+	margin: 0.5em 0;
+}
+
+.blorg-search-gadget form input#search_button {
+	margin-left: 0.5em;
+}
+
+
+/* }}} */
+/* {{{ Swat Widgets */
+
+.swat-entry,
+.swat-textarea {
+	background: #333;
+	border-top:    1px solid #000;
+	border-left:   1px solid #000;
+	border-right:  1px solid #555;
+	border-bottom: 1px solid #555;
+	padding: 3px;
+	color: #fff;
+}
+
+span.swat-required {
+	color: #555;
+}
+
+.swat-button {
+	background: #333;
+	border-bottom: 1px solid #000;
+	border-right:  1px solid #000;
+	border-left:   1px solid #555;
+	border-top :   1px solid #555;
+	padding: 3px;
+	color: #fff;
+}
+
+.swat-header-form-field .swat-button,
+.swat-footer-form-field .swat-button {
+	color: #ddd;
+}
+
+.swat-header-form-field input.swat-primary,
+.swat-footer-form-field input.swat-primary {
+	color: #fff;
+}
+
+.swat-pagination a,
+.swat-pagination span,
+.swat-pagination span.swat-pagination-current {
+	border-color: #444;
+}
+
+.swat-pagination a:hover {
+	background-color: transparent;
+	border-color: #777;
+}
+
+.swat-pagination span.swat-pagination-nextprev {
+	color: #444;
+}
+
+/* }}} */

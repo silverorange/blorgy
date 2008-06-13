@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<theme>
+ <title>Default Theme</title>
+ <description>The default blorgy theme. It's discretely distinguished.</description>
+ <author>Steven Gärrity</author>
+ <!-- email field is optional -->
+ <email>steven@silverorange.com</email>
+ <license>http://www.gnu.org/copyleft/lesser.html LGPL License 2.1</license>
+</theme>

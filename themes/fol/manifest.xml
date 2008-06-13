@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<theme>
+ <title>Theme of Focused on Light</title>
+ <description>Theme for the Focused on Light weblog.</description>
+ <author>Stephen DesRoches</author>
+ <!-- email field is optional -->
+ <email>stephen@silverorange.com</email>
+ <license>Copyright 2008, Stephen DesRoches</license>
+</theme>

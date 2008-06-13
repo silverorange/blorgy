@@ -1,0 +1,140 @@
+html,
+body {
+	background: #333 url('../images/slate-back.png') right top repeat-y;
+}
+
+body {
+	border-top: 6px solid #666;
+	font-family: gill sans, trebuchet ms, verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #eee;
+}
+
+a,
+a:link,
+a:visited {
+	color: #999;
+}
+
+a:hover { color: #eee; }
+
+#doc {
+	margin: 0;
+	padding: 0 0 2em 0;
+}
+
+#bd { margin-left: 28px; }
+
+#content { margin-right: 350px; }
+
+
+/* Header */
+#hd h1 {
+	color: #fff;
+	margin-left: 20px;
+	font-size: 246.2%;
+}
+
+#hd h1 a {
+	color: #fff;
+}
+
+
+/* Entries */
+.entry .entry-title a { color: #fff; }
+.entry .entry-title a:hover { color: #999; }
+
+.entry .entry-subtitle,
+.entry .entry-subtitle a:link,
+.entry .entry-subtitle a:visited {
+	color: #999;
+}
+
+.entry .entry-subtitle a:hover {
+	color: #eee;
+}
+
+
+/* Sidebar */
+#sidebar {
+	width: 275px;
+}
+
+#sidebar .blorg-sidebar {
+	position: relative;
+	top: -45px;
+}
+
+#sidebar .blorg-sidebar .blorg-gadget-title {
+	color: #666;
+	font-size: 123.1%;
+	padding: 0;
+	margin: 0;
+}
+
+
+/* Pagination */
+.swat-pagination span,
+.swat-pagination span.swat-pagination-current {
+	border-color: #555;
+}
+
+.swat-pagination a,
+.swat-pagination a:visited {
+	border-color: #666;
+	color: #999;
+}
+
+.swat-pagination a:hover {
+	background: #444;
+	border-color: #666;
+}
+
+
+/* Comments */
+.comment {
+	font-size: 100%;
+}
+
+
+/* Comment Form */
+#comment_edit_form .swat-frame-contents {
+	background: transparent;
+}
+
+#comment_edit_form .swat-required {
+	color: #aaa;
+}
+
+#comment_edit_form .swat-entry,
+#comment_edit_form .swat-textarea {
+	background: #444;
+	border-top: 1px solid #222;
+	border-left: 1px solid #222;
+	border-right: 1px solid #888;
+	border-bottom: 1px solid #888;
+	padding: 2px;
+	color: #eee;
+}
+
+#comment_edit_form .swat-button {
+	background: #ccc;
+	border-top: 1px solid #eee;
+	border-left: 1px solid #eee;
+	border-bottom: 1px solid #777;
+	border-right: 1px solid #777;
+	padding: 2px;
+}
+
+
+/* General SWAT */
+.swat-form-field-with-messages {
+	background: #4f1414;
+	border-color: #7f1f1f;
+}
+
+.swat-form-field-messages .swat-message,
+.swat-table-view-input-row-messages .swat-message {
+	color: #fff;
+}
