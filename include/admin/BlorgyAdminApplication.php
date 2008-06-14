@@ -5,6 +5,7 @@ require_once 'Site/SiteMultipleInstanceModule.php';
 require_once 'Admin/AdminApplication.php';
 require_once 'Blorg/Blorg.php';
 require_once '../../include/Blorgy.php';
+require_once '../../include/ThemeModule.php';
 
 SwatDBClassMap::addPath(dirname(__FILE__).'/../dataobjects');
 
@@ -36,7 +37,9 @@ class BlorgyAdminApplication extends AdminApplication
 	protected function getDefaultModuleList()
 	{
 		$modules = parent::getDefaultModuleList();
+
 		$modules['instance'] = 'SiteMultipleInstanceModule';
+		$modules['theme']    = 'ThemeModule';
 
 		return $modules;
 	}
@@ -115,6 +118,9 @@ class BlorgyAdminApplication extends AdminApplication
                 '/blorgy-'.$this->instance->getInstance()->shortname.'/',
                 $this->secure_base_uri);
 		}
+
+		$this->theme->removePath('../themes');
+		$this->theme->addPath('../../themes');
 	}
 
 	// }}}
