@@ -2,10 +2,7 @@
 <theme>
  <title>Over the Moon</title>
  <shortname>moon</shortname>
- <description>
-  Theme for the quirky Peas on the Moon weblog.
-
-  Yep, it's quirky. Here is http://google.com/.</description>
+ <description>Theme for the quirky Peas on the Moon weblog.</description>
  <author>Steven Gärrity / Michael Gauthier</author>
  <!-- email field is optional -->
  <email>steven@silverorange.com</email>
