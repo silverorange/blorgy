@@ -2,7 +2,7 @@
 <theme>
  <title>Default Theme</title>
  <shortname>default</shortname>
- <description>The default blorgy theme. It's discretely distinguished.</description>
+ <description>The default Blörgy theme. It's discretely distinguished.</description>
  <author>Steven Gärrity</author>
  <!-- email field is optional -->
  <email>steven@silverorange.com</email>
