@@ -17,7 +17,6 @@ SET search_path = public, pg_catalog;
 ALTER TABLE blorggadgetinstancesettingvalue DISABLE TRIGGER ALL;
 
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (1, 'display_full', true, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (3, 'title', NULL, NULL, NULL, NULL, 'Who is CEO Blues?', NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (4, 'limit', NULL, NULL, NULL, 6, NULL, NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (6, 'show_empty', false, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (7, 'display_full', true, NULL, NULL, NULL, NULL, NULL);
@@ -46,9 +45,7 @@ INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolea
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (47, 'display_full', true, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (53, 'title', NULL, NULL, NULL, NULL, 'About Me', NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (54, 'limit', NULL, NULL, NULL, 5, NULL, NULL);
-INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (55, 'username', NULL, NULL, NULL, NULL, 'peasonthemoon', NULL);
-INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (56, 'username', NULL, NULL, NULL, NULL, 'peasonthemoon', NULL);
-INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (56, 'invert', true, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (3, 'title', NULL, NULL, NULL, NULL, 'Who is CEO Blues?', NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (58, 'display_full', true, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (63, 'limit', NULL, NULL, NULL, 6, NULL, NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (57, 'title', NULL, NULL, NULL, NULL, 'Links', NULL);
@@ -81,6 +78,9 @@ INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolea
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (82, 'display_full', true, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (85, 'limit', NULL, NULL, NULL, 6, NULL, NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (87, 'display_full', true, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (56, 'username', NULL, NULL, NULL, NULL, 'mariamaund', NULL);
+INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (56, 'invert', true, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (55, 'username', NULL, NULL, NULL, NULL, 'moonmonster', NULL);
 
 
 ALTER TABLE blorggadgetinstancesettingvalue ENABLE TRIGGER ALL;

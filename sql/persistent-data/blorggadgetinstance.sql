@@ -14,7 +14,7 @@ SET search_path = public, pg_catalog;
 -- Name: blorggadgetinstance_id_seq; Type: SEQUENCE SET; Schema: public; Owner: php
 --
 
-SELECT pg_catalog.setval('blorggadgetinstance_id_seq', 89, true);
+SELECT pg_catalog.setval('blorggadgetinstance_id_seq', 91, true);
 
 
 --

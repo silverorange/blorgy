@@ -27,6 +27,8 @@ INSERT INTO admincomponentadmingroupbinding (component, groupnum) VALUES (12, 1)
 INSERT INTO admincomponentadmingroupbinding (component, groupnum) VALUES (13, 1);
 INSERT INTO admincomponentadmingroupbinding (component, groupnum) VALUES (14, 1);
 INSERT INTO admincomponentadmingroupbinding (component, groupnum) VALUES (15, 1);
+INSERT INTO admincomponentadmingroupbinding (component, groupnum) VALUES (16, 1);
+INSERT INTO admincomponentadmingroupbinding (component, groupnum) VALUES (17, 1);
 
 
 ALTER TABLE admincomponentadmingroupbinding ENABLE TRIGGER ALL;
