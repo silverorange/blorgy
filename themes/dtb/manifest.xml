@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<theme>
+ <title>Delta Tango Bravo</title>
+ <shortname>dtb</shortname>
+ <description>A theme for the Delta Tango Bravo weblog.</description>
+ <author>Daniel Burka</author>
+ <!-- email field is optional -->
+ <email>daniel@silverorange.com</email>
+ <license>Copyright 2008, Daniel Burka</license>
+</theme>
