@@ -162,3 +162,9 @@ a:active {
 .swat-pagination a {
 	border-color: #dcd1ab;
 }
+
+.entry-content img {
+	background: #cbc7a9;
+	border: 1px solid #AF8441;
+	padding: 2px;
+}
