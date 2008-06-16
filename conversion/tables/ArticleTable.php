@@ -25,6 +25,11 @@ class ArticleTable extends ConversionTable
 		$this->addField($field);
 		$this->setIDField($field);
 
+		$field = new ConversionField();
+		$field->src_field = 'integer:site';
+		$field->dst_field = 'integer:instance';
+		$this->addField($field);
+
 		$field = new ArticleParentField('integer:parent');
 		$this->addField($field);
 
