@@ -60,4 +60,7 @@ abstract class Blorgy
 	// }}}
 }
 
+SwatDBClassMap::addPath(dirname(__FILE__).'/dataobjects');
+SwatDBClassMap::add('SiteArticle', 'Article');
+
 ?>
