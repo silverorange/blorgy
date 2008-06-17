@@ -20,7 +20,7 @@ body {
 /* {{{ Header */
 
 #hd {
-	background: #505050 url("back-header.png") bottom center repeat-x;
+	background: #505050 url("background-header.png") bottom center repeat-x;
 	height: 85px;
 }
 
@@ -47,6 +47,40 @@ body {
 	color: #ddd;
 	text-decoration: none;
 	border-bottom: 1px solid #666;
+}
+
+/* }}} */
+/* {{{ Post Entries */
+
+#content .entry {
+	padding: 10px 10px 10px 170px;
+}
+
+#content .entry .entry-content {
+	position: relative;
+}
+
+/* }}} */
+/* {{{ Post Summary */
+
+#content .entry .entry-content .summary img {
+	background: #505050 url("background-product.png") top center repeat-x;
+	position: absolute;
+	top: -50px;
+	left: -150px;
+	width: 114px;
+	height: 114px; /* temp */
+	padding: 8px 8px 55px 8px;
+}
+
+#content .entry .entry-content .summary dl {
+	margin-left: 0;
+}
+
+#content .entry .entry-content .summary dl dt {
+	font-weight: bold;
+	float: left;
+	margin-right: 5px;
 }
 
 /* }}} */
