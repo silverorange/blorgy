@@ -1,10 +1,52 @@
-/* General CSS */
-
 body {
-	margin: 0;
+	background: #F5F5F5;
 	font-family: "Lucida Grande",Verdana,sans-serif;
 	font-size: 80%;
 	color: #444;
-	text-align: center;
-	background: #F5F5F5;
+	margin: 0;
 }
+
+/* {{{ Layout */
+
+#page_title, #content {
+	margin-right: 400px;
+}
+
+#sidebar {
+	width: 365px;
+}
+
+/* }}} */
+/* {{{ Header */
+
+#hd {
+	background: #505050 url("back-header.png") bottom center repeat-x;
+	height: 85px;
+}
+
+#hd h1{
+	background: transparent url("logo.png") top center no-repeat;
+	float: left;
+	display: block;
+	height: 70px;
+	width: 350px;
+	text-indent: -9999px;
+}
+
+#hd div.tagline {
+	background: #333;
+	float: right;
+	position: relative;
+	top: 28px;
+	color: #979797;
+	margin-right: 20px;
+	padding: 7px 12px 7px 12px;
+}
+
+#hd div.tagline a {
+	color: #ddd;
+	text-decoration: none;
+	border-bottom: 1px solid #666;
+}
+
+/* }}} */
