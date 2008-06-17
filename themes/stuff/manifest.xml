@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<theme>
+ <title>silverorange Stuff</title>
+ <shortname>stuff</shortname>
+ <description>Theme for the silverorange Stuff weblog.</description>
+ <author>Stephen DesRoches</author>
+ <!-- email field is optional -->
+ <email>stephen@silverorange.com</email>
+ <license>Copyright 2008, silverorange</license>
+</theme>

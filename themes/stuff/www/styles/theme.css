@@ -1,0 +1,10 @@
+/* General CSS */
+
+body {
+	margin: 0;
+	font-family: "Lucida Grande",Verdana,sans-serif;
+	font-size: 80%;
+	color: #444;
+	text-align: center;
+	background: #F5F5F5;
+}
