@@ -386,6 +386,17 @@ img.left  { float: left;  margin: 0.2em 1em 0 1em; }
 }
 
 /* }}} */
+/* {{{ Articles */
+
+dl.sub-articles {
+	margin: 1em 1em 1em 0;
+}
+
+dl.sub-articles dd {
+	margin: 0.3em 0 0.5em 0.5em;
+}
+
+/* }}} */
 /* {{{ Swat Widgets */
 
 .swat-frame,
