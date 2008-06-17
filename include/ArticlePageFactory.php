@@ -1,6 +1,7 @@
 <?php
 
 require_once 'Site/SiteArticlePageFactory.php';
+require_once '../include/pages/ArticlePage.php';
 
 /**
  * Instance-aware article page factory
@@ -11,6 +12,14 @@ require_once 'Site/SiteArticlePageFactory.php';
  */
 class ArticlePageFactory extends SiteArticlePageFactory
 {
+	// {{{ public function __construct()
+
+	public function __construct()
+	{
+		$this->default_page_class = 'ArticlePage';
+	}
+
+	// }}}
 	// {{{ protected function findArticle()
 
 	/**
