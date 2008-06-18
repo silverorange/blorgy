@@ -43,7 +43,6 @@ class BlorgyLayout extends SiteLayout
 		parent::init();
 		$this->initNavBar();
 		$this->initSideBar();
-		$this->initHeaderImage();
 	}
 
 	// }}}
@@ -80,31 +79,6 @@ class BlorgyLayout extends SiteLayout
 		}
 
 		$this->sidebar->init();
-	}
-
-	// }}}
-	// {{{ protectec function initHeaderImage()
-
-	protected function initHeaderImage()
-	{
-		$this->data->header_image = '';
-
-		if ($this->app->config->blorg->header_image != null) {
-			$class = SwatDBClassMap::get('BlorgFile');
-			$blorg_file = new $class();
-			$blorg_file->setDatabase($this->app->db);
-			$blorg_file->load(intval($this->app->config->blorg->header_image));
-
-			$shortname =
-				BlorgFileImage::getHeaderDirectory($blorg_file->mime_type);
-
-			$tag = $blorg_file->image->getImgTag($shortname);
-			$tag->class = 'header-image';
-
-			ob_start();
-			$tag->display();
-			$this->data->header_image = ob_get_clean();
-		}
 	}
 
 	// }}}
@@ -284,7 +258,7 @@ class BlorgyLayout extends SiteLayout
 	protected function finalizeHeaderTitle()
 	{
 		$this->startCapture('header_title');
-		$this->displayHeaderTitle();
+		$this->displayHeader();
 		$this->endCapture();
 	}
 
@@ -307,33 +281,77 @@ class BlorgyLayout extends SiteLayout
 	}
 
 	// }}}
-	// {{{ protected function displayHeaderTitle()
+	// {{{ protected function displayHeader()
 
-	protected function displayHeaderTitle()
+	protected function displayHeader()
 	{
 		$site_title = $this->app->config->site->title;
+
 		if ($site_title != '') {
 			$h1_tag = new SwatHtmlTag('h1');
 			$h1_tag->title = $site_title;
 			$h1_tag->open();
 
-			echo '<span>';
-
-			$source = $this->app->getPage()->getSource();
-			if ($source == '') {
-				echo SwatString::minimizeEntities($site_title);
-			} else {
-				$a_tag = new SwatHtmlTag('a');
-				$a_tag->accesskey = '1';
-				$a_tag->href = '.';
-				$a_tag->setContent($site_title);
-				$a_tag->display();
-			}
-
-			echo '</span>';
+			if ($this->app->config->blorg->header_image != null)
+				$this->displayHeaderImage();
+			else
+				$this->displayHeaderTitle();
 
 			$h1_tag->close();
 		}
+	}
+
+	// }}}
+	// {{{ protected function displayHeaderImage()
+
+	protected function displayHeaderImage()
+	{
+		$source = $this->app->getPage()->getSource();
+		$site_title = $this->app->config->site->title;
+
+		if ($source != '') {
+			$a_tag = new SwatHtmlTag('a');
+			$a_tag->accesskey = '1';
+			$a_tag->href = '.';
+			$a_tag->open();
+		}
+
+		$class = SwatDBClassMap::get('BlorgFile');
+		$blorg_file = new $class();
+		$blorg_file->setDatabase($this->app->db);
+		$blorg_file->load(intval($this->app->config->blorg->header_image));
+		$shortname =
+			BlorgFileImage::getHeaderDirectory($blorg_file->mime_type);
+
+		$tag = $blorg_file->image->getImgTag($shortname);
+		$tag->class = 'header-image';
+		$tag->alt = $site_title;
+		$tag->display();
+
+		if ($source != '') {
+			$a_tag->close();
+		}
+	}
+
+	// }}}
+	// {{{ protected function displayHeaderTitle()
+
+	protected function displayHeaderTitle()
+	{
+		$source = $this->app->getPage()->getSource();
+		$site_title = $this->app->config->site->title;
+
+		echo '<span>';
+		if ($source == '') {
+			echo SwatString::minimizeEntities($site_title);
+		} else {
+			$a_tag = new SwatHtmlTag('a');
+			$a_tag->accesskey = '1';
+			$a_tag->href = '.';
+			$a_tag->setContent($site_title);
+			$a_tag->display();
+		}
+		echo '</span>';
 	}
 
 	// }}}
