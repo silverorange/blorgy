@@ -1,0 +1,42 @@
+html,
+body {
+	background: #FDFDFB url('../images/back-gradient.png') repeat-x left top;
+}
+
+body {
+	color: #504E45;
+}
+
+#doc {
+	margin: 0;
+	padding: 0 0 2em 0;
+}
+
+#content {
+	margin-right: 350px;
+	padding: 20px 50px;
+}
+
+#hd h1 span {
+	margin: 0 0 0 50px;
+	display: block;
+}
+
+/* Sidebar */
+#sidebar {
+	width: 275px;
+}
+
+#sidebar .blorg-sidebar .blorg-gadget-title {
+	color: #7b745e;
+	font-family: georgia,serif;
+	font-weight: normal;
+	font-size: 131%;
+}
+
+/* Comments */
+.comment {
+	font-size: 100%;
+}
+
+
