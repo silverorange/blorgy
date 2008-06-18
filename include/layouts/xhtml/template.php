@@ -15,6 +15,7 @@
 <div id="doc">
 
 	<div id="hd" class="clearfix">
+		<?= $this->header_image ?>
 		<?= $this->header_title ?>
 		<?= $this->tagline ?>
 	</div>

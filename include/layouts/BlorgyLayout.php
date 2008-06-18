@@ -7,6 +7,7 @@ require_once 'Site/layouts/SiteLayout.php';
 require_once 'Blorg/BlorgSidebar.php';
 require_once 'Blorg/BlorgGadgetFactory.php';
 require_once 'Blorg/dataobjects/BlorgGadgetInstanceWrapper.php';
+require_once 'Blorg/dataobjects/BlorgFileImage.php';
 
 /**
  * @package   Blörgy
@@ -42,6 +43,7 @@ class BlorgyLayout extends SiteLayout
 		parent::init();
 		$this->initNavBar();
 		$this->initSideBar();
+		$this->initHeaderImage();
 	}
 
 	// }}}
@@ -78,6 +80,31 @@ class BlorgyLayout extends SiteLayout
 		}
 
 		$this->sidebar->init();
+	}
+
+	// }}}
+	// {{{ protectec function initHeaderImage()
+
+	protected function initHeaderImage()
+	{
+		$this->data->header_image = '';
+
+		if ($this->app->config->blorg->header_image != null) {
+			$class = SwatDBClassMap::get('BlorgFile');
+			$blorg_file = new $class();
+			$blorg_file->setDatabase($this->app->db);
+			$blorg_file->load(intval($this->app->config->blorg->header_image));
+
+			$shortname =
+				BlorgFileImage::getHeaderDirectory($blorg_file->mime_type);
+
+			$tag = $blorg_file->image->getImgTag($shortname);
+			$tag->class = 'header-image';
+
+			ob_start();
+			$tag->display();
+			$this->data->header_image = ob_get_clean();
+		}
 	}
 
 	// }}}
