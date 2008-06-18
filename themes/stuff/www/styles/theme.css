@@ -1,5 +1,5 @@
 body {
-	background: #F5F5F5;
+	background: #f9f8f4;
 	font-family: "Lucida Grande",Verdana,sans-serif;
 	font-size: 80%;
 	color: #444;
@@ -13,7 +13,9 @@ body {
 }
 
 #sidebar {
-	width: 365px;
+	background: #ecebe9 url("background-sidebar.png") bottom right no-repeat;
+	width: 325px;
+	padding: 20px;
 }
 
 /* }}} */
@@ -56,6 +58,10 @@ body {
 	padding: 10px 10px 10px 170px;
 }
 
+#content .first-entry {
+	width: 1000px;
+}
+
 #content .entry .entry-content {
 	position: relative;
 }
@@ -84,3 +90,34 @@ body {
 }
 
 /* }}} */
+/* {{{ Gadgets */
+
+.blorg-sidebar-gadget {
+	clear: both;
+	padding: 10px 0;
+}
+
+.blorg-tag-gadget ul li {
+	width: 162px;
+	display: block;
+	float: left;
+}
+
+.blorg-tag-gadget h3 {
+	background: transparent url("title-tags.png") top center no-repeat;
+	display: block;
+	width: 255px;
+	height: 40px;
+	text-indent: -9999px;
+}
+
+.blorg-authors-gadget h3 {
+	background: transparent url("title-authors.png") top center no-repeat;
+	display: block;
+	width: 270px;
+	height: 40px;
+	text-indent: -9999px;
+}
+
+/* }}} */
+
