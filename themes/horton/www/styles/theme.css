@@ -14,17 +14,32 @@ body {
 
 #content {
 	margin-right: 350px;
-	padding: 20px 50px;
+	padding: 10px 50px;
+}
+
+#hd h1 {
+	margin: 0;
+	padding: 0;
 }
 
 #hd h1 span {
-	margin: 0 0 0 50px;
+	margin: 10px 0 10px 50px;
 	display: block;
+}
+
+#hd .tagline {
+	position: relative;
+	top: -25px;
+	left: 100px;
 }
 
 /* Sidebar */
 #sidebar {
 	width: 275px;
+}
+
+#sidebar .blorg-sidebar {
+	margin-right: 50px;
 }
 
 #sidebar .blorg-sidebar .blorg-gadget-title {
