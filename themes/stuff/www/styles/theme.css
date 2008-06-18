@@ -13,7 +13,7 @@ body {
 }
 
 #sidebar {
-	background: #ecebe9 url("background-sidebar.png") bottom right no-repeat;
+	background: #ecebe9 url("images/background-sidebar.png") bottom right no-repeat;
 	width: 325px;
 	padding: 20px;
 }
@@ -22,12 +22,12 @@ body {
 /* {{{ Header */
 
 #hd {
-	background: #505050 url("background-header.png") bottom center repeat-x;
+	background: #505050 url("images/background-header.png") bottom center repeat-x;
 	height: 85px;
 }
 
 #hd h1{
-	background: transparent url("logo.png") top center no-repeat;
+	background: transparent url("images/logo.png") top center no-repeat;
 	float: left;
 	display: block;
 	height: 70px;
@@ -70,7 +70,7 @@ body {
 /* {{{ Post Summary */
 
 #content .entry .entry-content .summary img {
-	background: #505050 url("background-product.png") top center repeat-x;
+	background: #505050 url("images/background-product.png") top center repeat-x;
 	position: absolute;
 	top: -50px;
 	left: -150px;
@@ -104,7 +104,7 @@ body {
 }
 
 .blorg-tag-gadget h3 {
-	background: transparent url("title-tags.png") top center no-repeat;
+	background: transparent url("images/title-tags.png") top center no-repeat;
 	display: block;
 	width: 255px;
 	height: 40px;
@@ -112,12 +112,33 @@ body {
 }
 
 .blorg-authors-gadget h3 {
-	background: transparent url("title-authors.png") top center no-repeat;
+	background: transparent url("images/title-authors.png") top center no-repeat;
 	display: block;
 	width: 270px;
 	height: 40px;
 	text-indent: -9999px;
 }
+
+.blorg-authors-gadget h4 a {
+	background: transparent url("images/author.png") top center no-repeat;
+	float: left;
+	display: block;
+	width: 50px;
+	height: 50px;
+	text-indent: -9999px;
+	margin: 5px;
+}
+.blorg-authors-gadget h4#author_nick a { background: transparent url("images/author-nick.png") top center no-repeat; }
+.blorg-authors-gadget h4#author_dburka a { background: transparent url("images/author-daniel.png") top center no-repeat; }
+.blorg-authors-gadget h4#author_dan a { background: transparent url("images/author-dan.png") top center no-repeat; }
+.blorg-authors-gadget h4#author_steven a { background: transparent url("images/author-steven.png") top center no-repeat; }
+.blorg-authors-gadget h4#author_isaac a { background: transparent url("images/author-isaac.png") top center no-repeat; }
+.blorg-authors-gadget h4#author_nathan a { background: transparent url("images/author-nathan.png") top center no-repeat; }
+.blorg-authors-gadget h4#author_gauthierm a { background: transparent url("images/author-mike.png") top center no-repeat; }
+.blorg-authors-gadget h4#author_stephen a { background: transparent url("images/author-stephen.png") top center no-repeat; }
+.blorg-authors-gadget h4#author_dave a { background: transparent url("images/author-dave.png") top center no-repeat; }
+.blorg-authors-gadget h4#author_dennis a { background: transparent url("images/author-dennis.png") top center no-repeat; }
+.blorg-authors-gadget h4#author_kelly a { background: transparent url("images/author-kelly.png") top center no-repeat; }
 
 /* }}} */
 
