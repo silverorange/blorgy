@@ -27,7 +27,6 @@
 		<div id="container">
 			<?PHP
 				if($this->title) { 
-					echo $this->navbar;
 					echo '<h2 id="page_title">'.$this->title.'</h2>'; 
 				}
 			?>
@@ -45,7 +44,7 @@
 
 	<div id="ft">
 		<p>Copyright &copy; 2004-<?=date('Y')?> <a href="http://www.silverorange.com">silverorange</a>. All rights reserved.</p>
-		<p>Our reviews will consist mostly of things we research, bought, and have used ourslves.<br />The more stuff you have the less happy you are.</p>
+		<p class="second-line">Our reviews will consist mostly of things we research, bought, and have used ourselves.<br />The more stuff you have the less happy you are.</p>
 	</div>
 
 </div>

@@ -8,14 +8,23 @@ body {
 
 /* {{{ Layout */
 
+#doc {
+	width: 1000px;
+	margin: 0 auto;
+}
+
 #page_title, #content {
-	margin-right: 400px;
+	width: 630px;
+	float: left;
+	margin: 0;
 }
 
 #sidebar {
 	background: #ecebe9 url("images/background-sidebar.png") bottom right no-repeat;
-	width: 325px;
-	padding: 20px;
+	position: static;
+	float: right;
+	width: 360px;
+	padding: 20px 0;
 }
 
 /* }}} */
@@ -58,6 +67,7 @@ body {
 
 #bd #nav_bar {
 	background: #e2e1dc;
+	padding: 10px;
 }
 
 #container {
@@ -100,6 +110,10 @@ body {
 	position: relative;
 }
 
+#content .entry .entry-read-more {
+	padding: 0 10px 0 140px;
+}
+
 #content .entry .entry-content-extended {
 	padding: 0 10px 10px 10px;
 }
@@ -113,8 +127,7 @@ body {
 	top: 0;
 	left: -140px;
 	width: 100px;
-	height: 100px; /* temp */
-	padding: 8px 8px 45px 8px;
+	padding: 8px;
 }
 
 #content .entry .entry-content .summary dl {
@@ -138,6 +151,7 @@ body {
 .inset {
 	background: #595959 url("images/background-product.png") bottom center repeat-x;
 	font-size: 80%;
+	width: 206px;
 	color: #fff;
 	padding: 8px;
 }
@@ -167,22 +181,59 @@ body {
 
 .blorg-sidebar-gadget {
 	clear: both;
-	padding: 10px 0;
+	float: left;
+	width: 360px;
+	margin: 0;
+	padding-bottom: 1em;
+}
+
+.blorg-content-gadget-first {
+
+}
+
+.blorg-search-gadget {
+	background: #d2d3ce;
+	padding: 10px 20px;
+}
+
+.blorg-search-gadget h3 {
+	display: none;
+}
+
+.blorg-search-gadget input {
+	margin-right: 10px;
+	padding: 5px 10px;
+}
+
+.blorg-content-gadget {
+	font-size: 110%;
+	border-bottom: 10px #fff solid;
+}
+
+.blorg-content-gadget a {	color: #f16400; }
+.blorg-content-gadget a:link {	color: #f16400; }
+.blorg-content-gadget a:hover {	color: #000; }
+.blorg-content-gadget a:visited {	color: #f16400; }
+
+.blorg-tag-gadget {
+	border-bottom: 10px #fff solid;
 }
 
 .blorg-tag-gadget ul li {
 	width: 160px;
 	display: block;
 	float: left;
+	font-weight: bold;
 	height: 10px;
-	padding: 10px 0;
+	padding: 0 0 10px 0;
 }
+.blorg-tag-gadget ul li span { font-weight: normal; }
 
 .blorg-content-gadget h3 {
 	background: transparent url("images/title-about.png") top center no-repeat;
 	display: block;
 	width: 272px;
-	height: 40px;
+	height: 50px;
 	text-indent: -9999px;
 }
 
@@ -190,15 +241,19 @@ body {
 	background: transparent url("images/title-tags.png") top center no-repeat;
 	display: block;
 	width: 255px;
-	height: 40px;
+	height: 50px;
 	text-indent: -9999px;
+}
+
+.blorg-authors-gadget {
+	border-bottom: 10px #fff solid;
 }
 
 .blorg-authors-gadget h3 {
 	background: transparent url("images/title-authors.png") top center no-repeat;
 	display: block;
 	width: 270px;
-	height: 40px;
+	height: 50px;
 	text-indent: -9999px;
 }
 
@@ -214,6 +269,7 @@ body {
 	height: 50px;
 	text-indent: -9999px;
 	margin: 5px;
+	outline: none;
 }
 .blorg-authors-gadget h4#author_nick a { background: transparent url("images/author-nick.png") top center no-repeat; }
 .blorg-authors-gadget h4#author_dburka a { background: transparent url("images/author-daniel.png") top center no-repeat; }
@@ -231,9 +287,14 @@ body {
 /* {{{ Header */
 
 #ft {
+	clear: both;
 	background: #ecebe9 url("images/background-footer.png") 20px 20px no-repeat;
-	padding: 25px 30px 25px 80px;
+	padding: 15px 30px 10px 80px;
 }
 
+#ft p.second-line {
+	color: #aeacad;
+	font-style: italic;
+}
 
 /* }}} */
