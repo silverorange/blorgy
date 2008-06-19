@@ -10,13 +10,11 @@ body {
 #hd { height: 110px; }
 
 #hd h1 {
-	background: url('../images/logo.png') 0 0 no-repeat;
 	padding: 0;
 	height: 97px;
 	width: 375px;
 	color: #fff;
-	line-height: 4000px;
-	overflow: hidden;
+	line-height: 97px;
 }
 
 #hd h1 a {
