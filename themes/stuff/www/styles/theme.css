@@ -20,11 +20,10 @@ body {
 }
 
 #sidebar {
-	background: #ecebe9 url("images/background-sidebar.png") bottom right no-repeat;
 	position: static;
 	float: right;
 	width: 360px;
-	padding: 20px 0;
+	padding: 0;
 }
 
 /* }}} */
@@ -181,9 +180,10 @@ body {
 
 .blorg-sidebar-gadget {
 	clear: both;
-	float: left;
+	background: #ecebe9;
 	width: 360px;
-	margin: 0;
+	margin: 0 0 20px 0;
+	padding: 5px 0 20px 0;
 	padding-bottom: 1em;
 }
 
@@ -196,11 +196,11 @@ body {
 }
 
 .blorg-sidebar-gadget .blorg-gadget-content {
-	margin: 0 20px 10px 20px;
+	margin: 0 20px 0 20px;
 }
 
 .blorg-search-gadget {
-	border-bottom: 10px #f9f8f4 solid;
+	padding: 20px 0;
 }
 
 .blorg-search-gadget form {
@@ -226,7 +226,6 @@ body {
 
 .blorg-content-gadget {
 	font-size: 110%;
-	border-bottom: 10px #f9f8f4 solid;
 }
 
 .blorg-content-gadget a {	color: #f16400; }
@@ -236,10 +235,6 @@ body {
 
 .blorg-ad-gadget {
 	background: #f9f8f4;
-}
-
-.blorg-tag-gadget {
-	border-bottom: 10px #f9f8f4 solid;
 }
 
 .blorg-tag-gadget ul li {
@@ -253,29 +248,25 @@ body {
 .blorg-tag-gadget ul li span { font-weight: normal; }
 
 .blorg-content-gadget h3 {
-	background: transparent url("images/title-about.png") top center no-repeat;
+	background: transparent url("images/title-about.png") top left no-repeat;
 	display: block;
-	width: 225px;
+	width: 250px;
 	height: 35px;
 	text-indent: -9999px;
 }
 
 .blorg-tag-gadget h3 {
-	background: transparent url("images/title-tags.png") top center no-repeat;
+	background: transparent url("images/title-tags.png") top left no-repeat;
 	display: block;
-	width: 225px;
+	width: 250px;
 	height: 35px;
 	text-indent: -9999px;
 }
 
-.blorg-authors-gadget {
-	border-bottom: 10px #f9f8f4 solid;
-}
-
 .blorg-authors-gadget h3 {
-	background: transparent url("images/title-authors.png") top center no-repeat;
+	background: transparent url("images/title-authors.png") top left no-repeat;
 	display: block;
-	width: 225px;
+	width: 250px;
 	height: 35px;
 	text-indent: -9999px;
 }
@@ -305,6 +296,10 @@ body {
 .blorg-authors-gadget h4#author_dave a { background: transparent url("images/author-dave.png") top center no-repeat; }
 .blorg-authors-gadget h4#author_dennis a { background: transparent url("images/author-dennis.png") top center no-repeat; }
 .blorg-authors-gadget h4#author_kelly a { background: transparent url("images/author-kelly.png") top center no-repeat; }
+
+.blorg-feed-gadget {
+	background: #ecebe9 url("images/background-sidebar.png") bottom right no-repeat
+}
 
 /* }}} */
 /* {{{ Header */
