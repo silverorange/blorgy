@@ -8,6 +8,11 @@ body {
 
 /* {{{ Layout */
 
+#doc {
+	width: 1000px;
+	margin: 0 auto;
+}
+
 #page_title, #content {
 	margin-right: 400px;
 }
@@ -58,6 +63,7 @@ body {
 
 #bd #nav_bar {
 	background: #e2e1dc;
+	padding: 10px;
 }
 
 #container {
@@ -167,8 +173,17 @@ body {
 
 .blorg-sidebar-gadget {
 	clear: both;
-	padding: 10px 0;
+	margin: 1em 0 2em 0;
 }
+
+.blorg-content-gadget {
+	font-size: 110%;
+}
+
+.blorg-content-gadget a {	color: #f16400; }
+.blorg-content-gadget a:link {	color: #f16400; }
+.blorg-content-gadget a:hover {	color: #000; }
+.blorg-content-gadget a:visited {	color: #f16400; }
 
 .blorg-tag-gadget ul li {
 	width: 160px;
@@ -182,7 +197,7 @@ body {
 	background: transparent url("images/title-about.png") top center no-repeat;
 	display: block;
 	width: 272px;
-	height: 40px;
+	height: 50px;
 	text-indent: -9999px;
 }
 
@@ -190,7 +205,7 @@ body {
 	background: transparent url("images/title-tags.png") top center no-repeat;
 	display: block;
 	width: 255px;
-	height: 40px;
+	height: 50px;
 	text-indent: -9999px;
 }
 
@@ -198,7 +213,7 @@ body {
 	background: transparent url("images/title-authors.png") top center no-repeat;
 	display: block;
 	width: 270px;
-	height: 40px;
+	height: 50px;
 	text-indent: -9999px;
 }
 
