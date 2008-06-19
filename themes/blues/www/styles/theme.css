@@ -1,5 +1,5 @@
 body {
-	background: #fff url('../images/header-back.png') repeat-x;
+	background: #fff url('../images/body-back.png') repeat-x;
 	font-family: verdana, sans-serif;
 }
 
@@ -10,20 +10,15 @@ body {
 #hd { height: 110px; }
 
 #hd h1 {
+	background: url('../images/header-back.png') left top no-repeat;
 	padding: 0;
 	height: 97px;
-	width: 375px;
 	color: #fff;
-	line-height: 97px;
-}
-
-#hd h1 span {
-	position: relative;
-	left: 15px;
+	line-height: 85px;
+	padding-left: 24px;
 }
 
 #hd h1 a {
-	display: block;
 	color: #fff;
 	text-decoration: none;
 }
