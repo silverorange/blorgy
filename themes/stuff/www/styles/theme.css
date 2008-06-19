@@ -14,12 +14,16 @@ body {
 }
 
 #page_title, #content {
-	margin-right: 400px;
+	width: 630px;
+	float: left;
+	margin: 0;
 }
 
 #sidebar {
 	background: #ecebe9 url("images/background-sidebar.png") bottom right no-repeat;
-	width: 325px;
+	position: static;
+	float: right;
+	width: 320px;
 	padding: 20px;
 }
 
@@ -106,6 +110,10 @@ body {
 	position: relative;
 }
 
+#content .entry .entry-read-more {
+	padding: 0 10px 0 140px;
+}
+
 #content .entry .entry-content-extended {
 	padding: 0 10px 10px 10px;
 }
@@ -119,7 +127,6 @@ body {
 	top: 0;
 	left: -140px;
 	width: 100px;
-	height: 100px; /* temp */
 	padding: 8px 8px 45px 8px;
 }
 
@@ -144,6 +151,7 @@ body {
 .inset {
 	background: #595959 url("images/background-product.png") bottom center repeat-x;
 	font-size: 80%;
+	width: 206px;
 	color: #fff;
 	padding: 8px;
 }
@@ -246,6 +254,7 @@ body {
 /* {{{ Header */
 
 #ft {
+	clear: both;
 	background: #ecebe9 url("images/background-footer.png") 20px 20px no-repeat;
 	padding: 25px 30px 25px 80px;
 }
