@@ -56,11 +56,20 @@ body {
 	border-bottom: 1px solid #666;
 }
 
+#bd #nav_bar {
+	background: #e2e1dc;
+}
+
+#container {
+	position: relative;
+	margin-top: 20px;
+}
+
 /* }}} */
 /* {{{ Post Entries */
 
 #content .entry {
-	padding: 10px 10px 10px 170px;
+	padding: 0 10px 10px 10px;
 }
 
 #content .entry a {	color: #f16400; }
@@ -68,30 +77,44 @@ body {
 #content .entry a:hover {	color: #000; }
 #content .entry a:visited {	color: #f16400; }
 
-#content .entry .entry-content {
-	position: relative;
+#content .entry h3.entry-title {
+	font-size: 180%;
+	font-weight: normal;
 }
 
-#content .entry h3.entry-title,
 #content .entry h3.entry-title a,
 #content .entry h3.entry-title a:link,
 #content .entry h3.entry-title a:visited {
-	font-size: 140%;
-	font-weight: normal;
 	color: #333;
+}
+
+#content .entry .entry-subtitle {
+	color: #969b97;
+}
+
+#content .entry .entry-content {
+	padding: 0 10px 0 140px;
+}
+
+#content .entry .entry-content .summary {
+	position: relative;
+}
+
+#content .entry .entry-content-extended {
+	padding: 0 10px 10px 10px;
 }
 
 /* }}} */
 /* {{{ Post Summary */
 
 #content .entry .entry-content .summary img {
-	background: #505050 url("images/background-product.png") top center repeat-x;
+	background: #595959 url("images/background-product.png") bottom center repeat-x;
 	position: absolute;
-	top: -50px;
-	left: -150px;
-	width: 114px;
-	height: 114px; /* temp */
-	padding: 8px 8px 55px 8px;
+	top: 0;
+	left: -140px;
+	width: 100px;
+	height: 100px; /* temp */
+	padding: 8px 8px 45px 8px;
 }
 
 #content .entry .entry-content .summary dl {
@@ -102,6 +125,41 @@ body {
 	font-weight: bold;
 	float: left;
 	margin-right: 5px;
+}
+
+/* }}} */
+/* {{{ Post Formatting */
+
+#content .entry .entry-content-extended h3 {
+	font-size: 130%;
+	font-weight: normal;
+}
+
+.inset {
+	background: #595959 url("images/background-product.png") bottom center repeat-x;
+	font-size: 80%;
+	color: #fff;
+	padding: 8px;
+}
+
+.inset img {
+	background: #fff;
+	padding: 2px;
+}
+
+.inset span {
+	display: block;
+	padding: 15px 0;
+}
+
+.right {
+	float: right;
+	margin: 0 0 1em 1em;
+}
+
+.left {
+	float: left;
+	margin: 0	1em 1em 0;
 }
 
 /* }}} */
