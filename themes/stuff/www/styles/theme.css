@@ -187,6 +187,8 @@ body {
 	padding-bottom: 1em;
 }
 
+.blorg-sidebar-gadget:after {	content:".";	display:block;	height:0;	clear:both;	visibility:hidden;}.blorg-sidebar-gadget {display:inline-block;}/* Hide from IE Mac \*/.blorg-sidebar-gadget {display:block;}/* End hide from IE Mac */
+
 .blorg-content-gadget-first {
 
 }
