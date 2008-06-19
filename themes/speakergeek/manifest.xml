@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <theme>
  <title>Speakergeek</title>
+ <shortname>speakergeek</shortname>
  <description>A heavenly music-fan theme.</description>
  <author>Steven Gärrity</author>
  <!-- email field is optional -->

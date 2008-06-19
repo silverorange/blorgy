@@ -1,0 +1,170 @@
+html {
+	background: #eeeac6 url('../images/background.png') no-repeat top left;
+}
+
+body {
+	font-family: verdana,sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #333;
+	background: transparent url('../images/beerbackground.png') repeat-y top left;
+}
+
+a:link,
+a:visited {
+	color: #039;
+}
+
+a:hover,
+a:active {
+	color: #9C0000;
+}
+
+/* Layout */
+#doc {
+	margin: 0;
+	padding: 0 0 2em 0;
+}
+
+#bd { position: absolute; }
+
+#content {
+	margin-left: 316px;
+	margin-right: 40px;
+	padding: 40px 50px;
+}
+
+#hd {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	height: 189px;
+	width: 316px;
+}
+
+#hd h1 {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#hd h1 span,
+#hd h1 a:link,
+#hd h1 a:hover {
+	color: #eeeac6;
+}
+
+#hd h1 a:visited,
+#hd h1 a:active {
+	color: #eeeac6;
+}
+
+#hd h1 span {
+	padding: 10px 62px;
+	display: block;
+}
+
+#sidebar {
+	top: 0;
+	left: 0;
+	width: 310px;
+	padding-top: 150px;
+	background: transparent url('../images/beerbackground.png') repeat-y top left;
+}
+
+#sidebar .blorg-sidebar {
+	padding: 62px;
+}
+
+#nav_bar,
+#nav_bar a:link,
+#nav_bar a:visited {
+	color: #918250;
+}
+
+#nav_bar a:hover,
+#nav_bar a:active {
+	color: #333;
+}
+
+/* Sidebar */
+
+.blorg-sidebar-gadget {
+	color: #d9b566;
+}
+
+.blorg-gadget-title {
+	color: #eeeac6;
+}
+
+.blorg-sidebar-gadget a:link,
+.blorg-sidebar-gadget a:visited {
+	color: #d9b566;
+}
+
+.blorg-sidebar-gadget a:hover,
+.blorg-sidebar-gadget a:active {
+	color: #eeeac6;
+}
+
+.blorg-tag-gadget ul li span,
+.blorg-archive-gadget ul li span,
+.blorg-active-conversations-gadget ul li span {
+	color: #c3ad84;
+}
+
+/* Posts */
+
+.entry .entry-title {
+	font-family: trebuchet ms,verdana,sans-serif;
+}
+
+.entry .entry-subtitle {
+	color: #774111;
+}
+
+.entry .entry-subtitle a:link,
+.entry .entry-subtitle a:visited {
+	color: #774111;
+}
+
+.entry .entry-subtitle a:hover,
+.entry .entry-subtitle a:active {
+	color: #333;
+}
+
+.entry-no-title {
+	border-color: #dcd1ab;
+}
+
+
+/* Pagination */
+
+.swat-pagination {
+	color: #666;
+}
+
+.swat-pagination a,
+.swat-pagination span,
+.swat-pagination span.swat-pagination-current {
+	border-color: #dcd1ab;
+}
+
+.swat-pagination span.swat-pagination-nextprev {
+	color: #dcd1ab;
+}
+
+.swat-pagination a:hover {
+	background: #dcd1ab;
+}
+
+.swat-pagination a {
+	border-color: #dcd1ab;
+}
+
+.entry-content img {
+	background: #cbc7a9;
+	border: 1px solid #AF8441;
+	padding: 2px;
+}

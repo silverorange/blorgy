@@ -1,0 +1,58 @@
+html,
+body {
+	background: #FDFDFB url('../images/back-gradient.png') repeat-x left top;
+}
+
+body {
+	color: #504E45;
+}
+
+#doc {
+	margin: 0;
+	padding: 0 0 2em 0;
+}
+
+#content {
+	margin-right: 300px;
+	padding: 10px 50px;
+}
+
+#hd h1 {
+	margin: 0;
+	padding: 0;
+}
+
+#hd h1 span {
+	margin: 10px 0 10px 50px;
+	display: block;
+}
+
+#hd .tagline {
+	position: relative;
+	top: -25px;
+	left: 100px;
+	width: 500px;
+}
+
+/* Sidebar */
+#sidebar {
+	width: 275px;
+}
+
+#sidebar .blorg-sidebar {
+	margin-right: 50px;
+}
+
+#sidebar .blorg-sidebar .blorg-gadget-title {
+	color: #7b745e;
+	font-family: georgia,serif;
+	font-weight: normal;
+	font-size: 131%;
+}
+
+/* Comments */
+.comment {
+	font-size: 100%;
+}
+
+

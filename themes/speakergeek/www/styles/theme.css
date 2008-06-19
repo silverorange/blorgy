@@ -56,8 +56,8 @@ a:visited,
 .entry .entry-title { font-size: 130%; }
 
 .entry .entry-subtitle {
-	background: url('../images/speakerbullet.jpg') left top no-repeat;
-	padding-left: 18px;
+	background: url('../images/speakerbullet.jpg') 0 50% no-repeat;
+	padding: 2px 0 2px 18px;
 	height: 15px;
 }
 
@@ -65,6 +65,12 @@ a:visited,
 
 .entry .entry-content { padding-left: 18px; }
 
+.entry-no-title .entry-content { padding-left: 0; }
+
+.entry-no-title .entry-subtitle {
+	background: none;
+	padding-left: 0;
+}
 
 /* Sidebar */
 #sidebar { width: 25%; }

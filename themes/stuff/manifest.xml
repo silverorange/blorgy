@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <theme>
- <title>Focused on Light</title>
- <shortname>fol</shortname>
- <description>Theme for the Focused on Light weblog.</description>
+ <title>silverorange Stuff</title>
+ <shortname>stuff</shortname>
+ <description>Theme for the silverorange Stuff weblog.</description>
  <author>Stephen DesRoches</author>
  <!-- email field is optional -->
  <email>stephen@silverorange.com</email>
- <license>Copyright 2008, Stephen DesRoches</license>
+ <license>Copyright 2008, silverorange</license>
 </theme>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <theme>
- <title>Blues</title>
- <shortname>blues</shortname>
- <description>A blue-centric theme</description>
- <author>Steven Gärrity / Charles Pritchett</author>
+ <title>Brass</title>
+ <shortname>horton</shortname>
+ <description>A theme for the Horton Brasses company weblog</description>
+ <author>Steven Gärrity</author>
  <!-- email field is optional -->
  <email>steven@silverorange.com</email>
  <license>Copyright 2008, Steven Garrity</license>

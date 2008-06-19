@@ -1,0 +1,245 @@
+html,
+body {
+	background: #373737;
+}
+
+body {
+	font-family: verdana, sans-serif;
+	margin: 40px 50px 50px;
+	padding: 0;
+	color: #fff;
+}
+
+a { color: #fff; }
+a:link { color: #ddd; }
+a:visited { color: #ddd; }
+a:hover { color: #aaa; }
+a:active { color: #ccc; }
+
+#doc {
+	margin: 0;
+	padding: 0 0 2em 0;
+}
+
+#content {
+	width: 60%;
+}
+
+
+/* {{{ Header */
+
+#hd {
+	background: url('../images/title_back.gif') bottom left repeat-x;
+}
+
+#hd h1 {
+	color: #fff;
+	margin: 0;
+	font-size: 246.2%;
+	background: url('../images/title_right.gif') bottom right no-repeat;
+}
+
+#hd h1 a {
+	color: #fff;
+}
+
+#nav_bar {
+	margin-top: 1em;
+}
+
+/* }}} */
+/* {{{ Entries */
+
+.entry .entry-title {
+	background: url('../images/dotted.gif') bottom left repeat-x;
+}
+
+.entry .entry-title a { color: #fff; }
+.entry .entry-title a:hover { color: #999; }
+
+.entry .entry-subtitle {
+	padding: 3px 0 0 10px;
+}
+
+.entry .entry-subtitle,
+.entry .entry-subtitle a:link,
+.entry .entry-subtitle a:visited {
+	color: #ddd;
+	text-decoration: none;
+}
+
+.entry .entry-subtitle a:hover {
+	color: #aaa;
+	text-decoration: underline;
+}
+
+.entry .entry-subtitle a.permalink {
+	float: left;
+}
+
+.entry .entry-subtitle a.comment-count {
+	float: right;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.entry .entry-content {
+	clear: both;
+	padding: 0.5em 0 0 10px;
+}
+/* }}} */
+/* {{{ Sidebar */
+
+#sidebar {
+	width: 35%;
+}
+
+#sidebar .blorg-sidebar {
+	position: relative;
+}
+
+#sidebar .blorg-sidebar .blorg-gadget-title {
+	color: #fff;
+	font-size: 123.1%;
+	padding: 0 0 0 1px;
+	margin: 0;
+	background: url('../images/dotted.gif') bottom left repeat-x;
+}
+
+.blorg-sidebar-gadget a { color: #fff; }
+.blorg-sidebar-gadget a:link { color: #ddd; }
+.blorg-sidebar-gadget a:visited { color: #ddd; }
+.blorg-sidebar-gadget a:hover { color: #aaa; }
+.blorg-sidebar-gadget a:active { color: #ccc; }
+
+.blorg-sidebar-gadget {
+	color: #fff;
+}
+
+.blorg-gadget-content {
+	padding: 5px;
+	line-height: 1.5;
+}
+
+.blorg-gadget-content ul li {
+	background: url('../images/list.gif') 0 7px no-repeat;
+	padding: 5px 0 5px 20px;
+	margin: 0;
+}
+
+/* }}} */
+/* {{{ Pagination */
+.swat-pagination span,
+.swat-pagination span.swat-pagination-current {
+	border-color: #555;
+}
+
+.swat-pagination a,
+.swat-pagination a:visited {
+	border-color: #666;
+	color: #999;
+}
+
+.swat-pagination a:hover {
+	background: #444;
+	border-color: #666;
+}
+/* }}} */
+/* {{{ Comments */
+
+.comment {
+	font-size: 100%;
+	background: url('../images/list_reply.gif') top left no-repeat;
+	margin: 1em 0 3em 5px;
+	padding-left: 20px;
+}
+
+.comment .comment-title,
+.comment div.comment-link {
+	font-size: 85%;
+}
+
+.comment .comment-link a:link { color: #ddd; }
+.comment .comment-link a:visited { color: #ddd; }
+.comment .comment-link a:hover { color: #aaa; }
+.comment .comment-link a:active { color: #ccc; }
+
+
+.comment .comment-title span.comment-author {
+	color: #fff;
+}
+
+.comments-title,
+#comment_edit_frame .swat-frame-title {
+	background: url('../images/dotted.gif') bottom left repeat-x;
+	padding-bottom: 3px;
+	border: 0;
+	font-size: 100%;
+	color: #fff;
+}
+
+/* }}} */
+/* {{{ Comment Form */
+
+#comment_edit_form .swat-frame-contents {
+	background: transparent;
+	padding: 1em 5px;
+}
+
+#comment_edit_form .swat-required {
+	color: #aaa;
+}
+/* }}} */
+
+/* General SWAT */
+
+input,textarea {
+	font-family: verdana,sans-serif;
+	font-size: 100%;
+	color: #ccc;
+	border-right: 1px solid #747474;
+	border-bottom: 1px solid #747474;
+	border-top: 1px solid #2d2d2d;
+	border-left: 1px solid #2d2d2d;
+	background: #3c3c3c url(input_back.gif) top repeat-x;
+}
+
+textarea { padding: 6px 0 6px 6px; }
+
+input:focus { background: #505050 url(input_back_active.gif) top repeat-x; color: #fff; }
+
+.swat-button {
+	font-family: verdana,sans-serif;
+	color: #ccc;
+	border-right: 1px solid #2d2d2d;
+	border-bottom: 1px solid #2d2d2d;
+	border-top: 1px solid #747474;
+	border-left: 1px solid #747474;
+	background: #666 url(button_back.gif);
+}
+
+.swat-form-field input.swat-primary,
+.swat-header-form-field input.swat-primary,
+.swat-footer-form-field input.swat-primary {
+	color: #ccc;
+	font-weight: bold;
+}
+
+.swat-header-form-field .swat-button,
+.swat-footer-form-field .swat-button {
+	color: #ccc;
+}
+
+.swat-form label {
+	color: #fff;
+	font-size: 100%;
+}
+.swat-form-field-with-messages {
+	background: #4f1414;
+	border-color: #7f1f1f;
+}
+
+.swat-form-field-messages .swat-message,
+.swat-table-view-input-row-messages .swat-message {
+	color: #fff;
+}

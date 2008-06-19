@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <theme>
  <title>Over the Moon</title>
+ <shortname>moon</shortname>
  <description>Theme for the quirky Peas on the Moon weblog.</description>
- <author>Steven Gärrity</author>
+ <author>Steven Gärrity / Michael Gauthier</author>
  <!-- email field is optional -->
  <email>steven@silverorange.com</email>
  <license>Copyright 2008, Steven Garrity</license>
