@@ -23,6 +23,8 @@ class ExceptionPage extends SiteExceptionPage
 
 		if ($source_exp[0] == 'archives')
 			$this->relocateArchive();
+		if ($source_exp[0] == 'a')
+			$this->relocateArticle();
 		elseif ($source_exp[0] == 'authors')
 			$this->relocateAuthor();
 		elseif ($source_exp[0] == 'rss')
@@ -43,6 +45,22 @@ class ExceptionPage extends SiteExceptionPage
 			$this->app->relocate('archive');
 		else
 			$this->app->relocate('archive/'.implode('/', $source));
+	}
+
+	// }}}
+	// {{{ private function relocateArticle()
+
+	private function relocateArticle()
+	{
+		$source = explode('/', $_GET['source']);
+
+		//remove "a" from the start of the array
+		array_shift($source);
+
+		if (count($source) == 0)
+			$this->app->relocate('article');
+		else
+			$this->app->relocate('article/'.implode('/', $source));
 	}
 
 	// }}}
