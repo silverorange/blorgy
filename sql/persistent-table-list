@@ -1,6 +1,7 @@
 nategosearchtype
 instance
 instanceconfigsetting
+configsetting
 adminuser
 admingroup
 adminsection
