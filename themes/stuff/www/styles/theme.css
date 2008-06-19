@@ -304,7 +304,14 @@ body {
 }
 
 /* }}} */
-/* {{{ Header */
+/* {{{ Comments */
+
+#comments {
+	clear: both;
+}
+
+/* }}} */
+/* {{{ Footer */
 
 #ft {
 	clear: both;
