@@ -89,6 +89,10 @@ INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolea
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (71, 'show_empty', false, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (100, 'title', NULL, NULL, NULL, NULL, 'Things I tag my posts with', NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (100, 'show_empty', true, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (109, 'title', NULL, NULL, NULL, NULL, 'About Us', NULL);
+INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (109, 'content', NULL, NULL, NULL, NULL, NULL, '<p>The Horton Brasses Weblog is the company, travel, and general weblog of Horton Brasses Inc of Cromwell, Connecticut.</p>
+<p>Visit our company website at <a href="http://www.hortonbrasses.com">HortonBrasses.com</a>.</p>');
+INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (109, 'allow_markup', true, NULL, NULL, NULL, NULL, NULL);
 
 
 ALTER TABLE blorggadgetinstancesettingvalue ENABLE TRIGGER ALL;

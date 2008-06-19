@@ -14,7 +14,7 @@ SET search_path = public, pg_catalog;
 -- Name: instanceconfigsetting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: php
 --
 
-SELECT pg_catalog.setval('instanceconfigsetting_id_seq', 411, true);
+SELECT pg_catalog.setval('instanceconfigsetting_id_seq', 493, true);
 
 
 --
@@ -23,22 +23,6 @@ SELECT pg_catalog.setval('instanceconfigsetting_id_seq', 411, true);
 
 ALTER TABLE instanceconfigsetting DISABLE TRIGGER ALL;
 
-INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (382, 1, 'database.dsn', 'pgsql://php@zest/Blorgy?sslmode=disable');
-INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (383, 1, 'uri.base', '/blorgy/trunk/www/');
-INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (384, 1, 'uri.secure_base', '/blorgy/trunk/www/');
-INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (385, 1, 'cookies.salt', 'erjlkjlkjekwlrj3k5j4j5435');
-INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (386, 1, 'swat.form_salt', 'kjljt4lkjy596uoytjy098ytr');
-INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (387, 1, 'date.time_zone', 'America/Halifax');
-INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (388, 1, 'session.name', 'blorgyadmin');
-INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (389, 1, 'session.path', '/so/phpsessions');
-INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (390, 1, 'admin.allow_reset_password', '1');
-INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (391, 1, 'site.title', 'Acts of Volition');
-INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (392, 1, 'site.theme', 'aov');
-INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (393, 1, 'i18n.locale', 'en_CA.UTF8');
-INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (394, 1, 'analytics.tracking_id', 'utm_source');
-INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (395, 1, 'analytics.save_referer', '1');
-INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (396, 1, 'blorg.default_comment_status', '0');
-INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (397, 1, 'blorg.header_image', '40');
 INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (398, 17, 'database.dsn', 'pgsql://php@zest/Blorgy?sslmode=disable');
 INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (399, 17, 'uri.base', '/blorgy/trunk/www/');
 INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (400, 17, 'uri.secure_base', '/blorgy/trunk/www/');
@@ -102,6 +86,23 @@ INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (173, 22, '
 INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (154, 4, 'site.theme', 'fol');
 INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (163, 2, 'site.theme', 'blues');
 INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (250, 27, 'site.theme', 'horton');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (477, 1, 'database.dsn', 'pgsql://php@zest/Blorgy?sslmode=disable');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (478, 1, 'uri.base', '/blorgy/trunk/www/');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (479, 1, 'uri.secure_base', '/blorgy/trunk/www/');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (480, 1, 'cookies.salt', 'erjlkjlkjekwlrj3k5j4j5435');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (481, 1, 'swat.form_salt', 'kjljt4lkjy596uoytjy098ytr');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (482, 1, 'date.time_zone', 'America/Halifax');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (483, 1, 'session.name', 'blorgyadmin');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (484, 1, 'session.path', '/so/phpsessions');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (485, 1, 'admin.allow_reset_password', '1');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (486, 1, 'site.title', 'Acts of Volition');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (487, 1, 'site.theme', 'aov');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (488, 1, 'i18n.locale', 'en_CA.UTF8');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (489, 1, 'analytics.tracking_id', 'utm_source');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (490, 1, 'analytics.save_referer', '1');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (491, 1, 'blorg.default_comment_status', '0');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (492, 1, 'blorg.header_image', '45');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (493, 25, 'site.tagline', 'Reviews of places we’ve been… honest…');
 
 
 ALTER TABLE instanceconfigsetting ENABLE TRIGGER ALL;
