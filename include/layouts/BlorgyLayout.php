@@ -322,8 +322,7 @@ class BlorgyLayout extends SiteLayout
 		$blorg_file->load(intval($this->app->config->blorg->header_image));
 
 		$tag = new SwatHtmlTag('img');
-		$tag->src = $blorg_file->getRelativeUri('../');
-		$tag->title = $blorg_file->description;
+		$tag->src = $blorg_file->getRelativeUri();
 		$tag->alt = $site_title;
 		$tag->class = 'header-image';
 		$tag->display();
