@@ -320,12 +320,12 @@ class BlorgyLayout extends SiteLayout
 		$blorg_file = new $class();
 		$blorg_file->setDatabase($this->app->db);
 		$blorg_file->load(intval($this->app->config->blorg->header_image));
-		$shortname =
-			BlorgFileImage::getHeaderDirectory($blorg_file->mime_type);
 
-		$tag = $blorg_file->image->getImgTag($shortname);
-		$tag->class = 'header-image';
+		$tag = new SwatHtmlTag('img');
+		$tag->src = $blorg_file->getRelativeUri('../');
+		$tag->title = $blorg_file->description;
 		$tag->alt = $site_title;
+		$tag->class = 'header-image';
 		$tag->display();
 
 		if ($source != '') {
