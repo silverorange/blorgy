@@ -198,7 +198,7 @@ body {
 	display: block;
 	float: left;
 	height: 10px;
-	padding: 10px 0;
+	padding: 0 0 10px 0;
 }
 
 .blorg-content-gadget h3 {
@@ -256,8 +256,12 @@ body {
 #ft {
 	clear: both;
 	background: #ecebe9 url("images/background-footer.png") 20px 20px no-repeat;
-	padding: 25px 30px 25px 80px;
+	padding: 15px 30px 10px 80px;
 }
 
+#ft p.second-line {
+	color: #aeacad;
+	font-style: italic;
+}
 
 /* }}} */
