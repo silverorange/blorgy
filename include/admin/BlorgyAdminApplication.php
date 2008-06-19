@@ -17,15 +17,6 @@ SwatDBClassMap::addPath(dirname(__FILE__).'/../dataobjects');
  */
 class BlorgyAdminApplication extends AdminApplication
 {
-	// {{{ public function __construct()
-
-	public function __construct($id, $filename)
-	{
-		parent::__construct($id, $filename);
-		$this->config->session->name.= 'admin';
-	}
-
-	// }}}
 	// {{{ protected function getDefaultModuleList()
 
 	/**
@@ -95,6 +86,7 @@ class BlorgyAdminApplication extends AdminApplication
 			new Date_TimeZone($config->date->time_zone);
 
 		$this->default_locale = $config->i18n->locale;
+		$this->config->session->name.= '-'.$_GET['instance'];
 	}
 
 	// }}}
