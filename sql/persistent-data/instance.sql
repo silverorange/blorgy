@@ -25,7 +25,6 @@ ALTER TABLE instance DISABLE TRIGGER ALL;
 
 INSERT INTO instance (id, shortname) VALUES (1, 'aov');
 INSERT INTO instance (id, shortname) VALUES (2, 'ceoblues');
-INSERT INTO instance (id, shortname) VALUES (4, 'newrecruit');
 INSERT INTO instance (id, shortname) VALUES (7, 'genx40');
 INSERT INTO instance (id, shortname) VALUES (11, 'solabs');
 INSERT INTO instance (id, shortname) VALUES (12, 'myway');
@@ -40,6 +39,7 @@ INSERT INTO instance (id, shortname) VALUES (26, 'speakergeek');
 INSERT INTO instance (id, shortname) VALUES (27, 'horton');
 INSERT INTO instance (id, shortname) VALUES (28, 'triangletimes');
 INSERT INTO instance (id, shortname) VALUES (29, 'sry');
+INSERT INTO instance (id, shortname) VALUES (4, 'fol');
 
 
 ALTER TABLE instance ENABLE TRIGGER ALL;
