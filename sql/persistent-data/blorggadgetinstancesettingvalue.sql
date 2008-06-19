@@ -64,10 +64,7 @@ INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolea
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (60, 'allow_markup', true, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (61, 'content', NULL, NULL, NULL, NULL, NULL, 'The <a href="http://swat.silverorange.com"><strong>Swat Web Application Toolkit</strong></a> is an object-oriented open-source web application toolkit built with PHP5.');
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (61, 'allow_markup', true, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (69, 'content', NULL, NULL, NULL, NULL, NULL, 'The silverorange stuff website is a collection of product reviews by the people of <a href="http://www.silverorange.com">silverorange</a>. (<a href="a/about">more</a>)');
-INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (69, 'allow_markup', true, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (70, 'title', NULL, NULL, NULL, NULL, 'Search Reviews', NULL);
-INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (71, 'show_empty', false, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (72, 'display_full', true, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (73, 'limit', NULL, NULL, NULL, 6, NULL, NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (75, 'limit', NULL, NULL, NULL, 5, NULL, NULL);
@@ -81,6 +78,17 @@ INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolea
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (56, 'username', NULL, NULL, NULL, NULL, 'mariamaund', NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (56, 'invert', true, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (55, 'username', NULL, NULL, NULL, NULL, 'moonmonster', NULL);
+INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (94, 'title', NULL, NULL, NULL, NULL, 'Stuff Authors', NULL);
+INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (69, 'title', NULL, NULL, NULL, NULL, 'About this site', NULL);
+INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (69, 'content', NULL, NULL, NULL, NULL, NULL, 'The silverorange stuff website is a collection of product reviews by the people of silverorange
+
+Our reviews will consist mostly of things we research, bought, and have used ourselves. The more stuff you own, the less happy you will be - so be sure and own good stuff!
+');
+INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (69, 'allow_markup', true, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (71, 'title', NULL, NULL, NULL, NULL, 'Stuff Categories', NULL);
+INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (71, 'show_empty', false, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (100, 'title', NULL, NULL, NULL, NULL, 'Things I tag my posts with', NULL);
+INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (100, 'show_empty', true, NULL, NULL, NULL, NULL, NULL);
 
 
 ALTER TABLE blorggadgetinstancesettingvalue ENABLE TRIGGER ALL;

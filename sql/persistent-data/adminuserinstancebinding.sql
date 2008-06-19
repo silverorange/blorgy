@@ -27,7 +27,7 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (13, 1, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (5, 1, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (6, 1, NULL);
-INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (12, 1, NULL);
+INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (6, 28, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (8, 1, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (1, 2, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (2, 2, NULL);
@@ -220,7 +220,6 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (11, 28, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (13, 28, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (5, 28, NULL);
-INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (6, 28, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (12, 28, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (8, 28, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (1, 29, NULL);
@@ -253,6 +252,7 @@ INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES 
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (17, 29, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (28, 29, NULL);
 INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (19, 25, NULL);
+INSERT INTO adminuserinstancebinding (usernum, instance, default_author) VALUES (12, 1, 8);
 
 
 ALTER TABLE adminuserinstancebinding ENABLE TRIGGER ALL;
