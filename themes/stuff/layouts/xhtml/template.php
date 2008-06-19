@@ -25,13 +25,12 @@
 		<?= $this->navbar ?>
 
 		<div id="container">
-			<?PHP
-				if($this->title) { 
-					echo '<h2 id="page_title">'.$this->title.'</h2>'; 
-				}
-			?>
-
 			<div id="content">
+				<?PHP
+					if($this->title) { 
+						echo '<h2 id="page_title">'.$this->title.'</h2>'; 
+					}
+				?>
 				<?= $this->content ?>
 			</div>
 

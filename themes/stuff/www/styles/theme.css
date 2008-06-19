@@ -13,7 +13,7 @@ body {
 	margin: 0 auto;
 }
 
-#page_title, #content {
+#content {
 	width: 630px;
 	float: left;
 	margin: 0;
@@ -24,6 +24,10 @@ body {
 	float: right;
 	width: 360px;
 	padding: 0;
+}
+
+#page_title {
+	margin-top: 0;
 }
 
 /* }}} */
@@ -308,7 +312,22 @@ body {
 
 #comments {
 	clear: both;
+	margin-right: 20px;
 }
+
+#comments .comment {
+	margin: 1em 0 3em 0;
+}
+
+#comments .comment .comment-title {
+	padding-left: 20px;
+}
+
+#comments .comment .comment-content {
+	background: #ecebe9;
+	padding: 20px;
+}
+
 
 /* }}} */
 /* {{{ Footer */
