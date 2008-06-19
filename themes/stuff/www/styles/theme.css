@@ -191,8 +191,20 @@ body {
 
 }
 
+.blorg-sidebar-gadget .blorg-gadget-title {
+	margin: 10px 20px 0 20px;
+}
+
+.blorg-sidebar-gadget .blorg-gadget-content {
+	margin: 0 20px 10px 20px;
+}
+
 .blorg-search-gadget {
-	background: #d2d3ce;
+	border-bottom: 10px #f9f8f4 solid;
+}
+
+.blorg-search-gadget form {
+	background: #e5e4df;
 	padding: 10px 20px;
 }
 
@@ -204,10 +216,17 @@ body {
 	margin-right: 10px;
 	padding: 5px 10px;
 }
+.blorg-search-gadget input#keywords {
+	width: 180px;
+	border: 1px #ccc solid;
+}
+.blorg-search-gadget input#search_button {
+	margin: 0;
+}
 
 .blorg-content-gadget {
 	font-size: 110%;
-	border-bottom: 10px #fff solid;
+	border-bottom: 10px #f9f8f4 solid;
 }
 
 .blorg-content-gadget a {	color: #f16400; }
@@ -215,8 +234,12 @@ body {
 .blorg-content-gadget a:hover {	color: #000; }
 .blorg-content-gadget a:visited {	color: #f16400; }
 
+.blorg-ad-gadget {
+	background: #f9f8f4;
+}
+
 .blorg-tag-gadget {
-	border-bottom: 10px #fff solid;
+	border-bottom: 10px #f9f8f4 solid;
 }
 
 .blorg-tag-gadget ul li {
@@ -246,7 +269,7 @@ body {
 }
 
 .blorg-authors-gadget {
-	border-bottom: 10px #fff solid;
+	border-bottom: 10px #f9f8f4 solid;
 }
 
 .blorg-authors-gadget h3 {
