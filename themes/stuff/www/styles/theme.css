@@ -255,16 +255,16 @@ body {
 .blorg-content-gadget h3 {
 	background: transparent url("images/title-about.png") top center no-repeat;
 	display: block;
-	width: 272px;
-	height: 50px;
+	width: 225px;
+	height: 35px;
 	text-indent: -9999px;
 }
 
 .blorg-tag-gadget h3 {
 	background: transparent url("images/title-tags.png") top center no-repeat;
 	display: block;
-	width: 255px;
-	height: 50px;
+	width: 225px;
+	height: 35px;
 	text-indent: -9999px;
 }
 
@@ -275,8 +275,8 @@ body {
 .blorg-authors-gadget h3 {
 	background: transparent url("images/title-authors.png") top center no-repeat;
 	display: block;
-	width: 270px;
-	height: 50px;
+	width: 225px;
+	height: 35px;
 	text-indent: -9999px;
 }
 
