@@ -76,8 +76,8 @@ class Application extends SiteWebApplication
 
 		case 'article':
 			array_shift($path);
-			require_once 'Site/SiteArticlePageFactory.php';
-			$factory = new SiteArticlePageFactory();
+			require_once '../include/ArticlePageFactory.php';
+			$factory = new ArticlePageFactory();
 			$page = $factory->resolvePage($this, implode('/', $path), $layout);
 
 			break;

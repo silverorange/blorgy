@@ -18,7 +18,6 @@ body {
 	position: relative;
 }
 
-#page_title,
 #content {
 	margin-right: 250px;
 }
@@ -45,6 +44,10 @@ a:active  { color: #333333; }
 	font-size: 300%;
 	margin: 0 0 0 0;
 	padding: 0.5em 0 0 0;
+}
+
+#hd h1 img {
+	display: block;
 }
 
 #hd .tagline {
@@ -383,6 +386,17 @@ img.left  { float: left;  margin: 0.2em 1em 0 1em; }
 #content .blorg-archive-months .entry-no-title .entry-title {
 	font-size: 100%;
 	font-weight: normal;
+}
+
+/* }}} */
+/* {{{ Articles */
+
+dl.sub-articles {
+	margin: 1em 1em 1em 0;
+}
+
+dl.sub-articles dd {
+	margin: 0.3em 0 0.5em 0.5em;
 }
 
 /* }}} */

@@ -16,9 +16,9 @@ class ThemeModule extends SiteThemeModule
 {
 	// {{{ public function set()
 
-	public function set($theme)
+	public function set($shortname)
 	{
-		parent::set($theme);
+		parent::set($shortname);
 		$this->registerAuthorView();
 		$this->registerPostView();
 		$this->registerCommentView();
@@ -29,16 +29,16 @@ class ThemeModule extends SiteThemeModule
 
 	protected function registerAuthorView()
 	{
-		$class_name = $this->getCamelCaseShortname().'AuthorView';
-		$file_name = $this->getFile('views/'.$class_name.'.php');
+		$class_name = $this->theme->getShortname(true).'AuthorView';
+		$filename   = 'views/'.$class_name.'.php';
 
-		if ($file_name !== null) {
-			require_once $file_name;
+		if ($this->theme->fileExists($filename)) {
+			require_once $this->theme->getPath().'/'.$filename;
 
 			if (!class_exists($class_name)) {
-				throw new SiteException(sprintf('Author view file "%s" must '.
-					'contain a class named "%s"',
-					$file_name, $class_name));
+				throw new SiteException(sprintf('Author view for theme must '.
+					'"%s" contain a class named "%s"',
+					$this->theme->getShortname(), $class_name));
 			}
 
 			if (!is_subclass_of($class_name, 'BlorgAuthorView')) {
@@ -56,16 +56,16 @@ class ThemeModule extends SiteThemeModule
 
 	protected function registerPostView()
 	{
-		$class_name = $this->getCamelCaseShortname().'PostView';
-		$file_name = $this->getFile('views/'.$class_name.'.php');
+		$class_name = $this->theme->getShortname(true).'PostView';
+		$filename   = 'views/'.$class_name.'.php';
 
-		if ($file_name !== null) {
-			require_once $file_name;
+		if ($this->theme->fileExists($filename)) {
+			require_once $this->theme->getPath().'/'.$filename;
 
 			if (!class_exists($class_name)) {
-				throw new SiteException(sprintf('Post view file "%s" must '.
-					'contain a class named "%s"',
-					$file_name, $class_name));
+				throw new SiteException(sprintf('Post view for theme must '.
+					'"%s" contain a class named "%s"',
+					$this->theme->getShortname(), $class_name));
 			}
 
 			if (!is_subclass_of($class_name, 'BlorgPostView')) {
@@ -83,16 +83,16 @@ class ThemeModule extends SiteThemeModule
 
 	protected function registerCommentView()
 	{
-		$class_name = $this->getCamelCaseShortname().'CommentView';
-		$file_name = $this->getFile('views/'.$class_name.'.php');
+		$class_name = $this->theme->getShortname(true).'CommentView';
+		$filename   = 'views/'.$class_name.'.php';
 
-		if ($file_name !== null) {
-			require_once $file_name;
+		if ($this->theme->fileExists($filename)) {
+			require_once $this->theme->getPath().'/'.$filename;
 
 			if (!class_exists($class_name)) {
-				throw new SiteException(sprintf('Comment view file "%s" must '.
-					'contain a class named "%s"',
-					$file_name, $class_name));
+				throw new SiteException(sprintf('Comment view for theme must '.
+					'"%s" contain a class named "%s"',
+					$this->theme->getShortname(), $class_name));
 			}
 
 			if (!is_subclass_of($class_name, 'BlorgCommentView')) {

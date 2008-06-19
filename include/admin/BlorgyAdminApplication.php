@@ -5,6 +5,7 @@ require_once 'Site/SiteMultipleInstanceModule.php';
 require_once 'Admin/AdminApplication.php';
 require_once 'Blorg/Blorg.php';
 require_once '../../include/Blorgy.php';
+require_once '../../include/ThemeModule.php';
 
 SwatDBClassMap::addPath(dirname(__FILE__).'/../dataobjects');
 
@@ -16,15 +17,6 @@ SwatDBClassMap::addPath(dirname(__FILE__).'/../dataobjects');
  */
 class BlorgyAdminApplication extends AdminApplication
 {
-	// {{{ public function __construct()
-
-	public function __construct($id, $filename)
-	{
-		parent::__construct($id, $filename);
-		$this->config->session->name.= 'admin';
-	}
-
-	// }}}
 	// {{{ protected function getDefaultModuleList()
 
 	/**
@@ -36,7 +28,9 @@ class BlorgyAdminApplication extends AdminApplication
 	protected function getDefaultModuleList()
 	{
 		$modules = parent::getDefaultModuleList();
+
 		$modules['instance'] = 'SiteMultipleInstanceModule';
+		$modules['theme']    = 'ThemeModule';
 
 		return $modules;
 	}
@@ -92,6 +86,7 @@ class BlorgyAdminApplication extends AdminApplication
 			new Date_TimeZone($config->date->time_zone);
 
 		$this->default_locale = $config->i18n->locale;
+		$this->config->session->name.= '-'.$_GET['instance'];
 	}
 
 	// }}}
@@ -115,6 +110,9 @@ class BlorgyAdminApplication extends AdminApplication
                 '/blorgy-'.$this->instance->getInstance()->shortname.'/',
                 $this->secure_base_uri);
 		}
+
+		$this->theme->removePath('../themes');
+		$this->theme->addPath('../../themes');
 	}
 
 	// }}}
