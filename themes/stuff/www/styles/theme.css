@@ -336,7 +336,13 @@ body {
 	clear: both;
 	background: #ecebe9 url("images/background-footer.png") 20px 20px no-repeat;
 	padding: 15px 30px 10px 80px;
+	color: #666;
 }
+
+#ft a {	color: #666; }
+#ft a:link { color: #666; }
+#ft a:visited {	color: #666; }
+#ft a:hover {	color: #000; }
 
 #ft p.second-line {
 	color: #aeacad;
