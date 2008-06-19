@@ -17,17 +17,21 @@ body {
 	line-height: 97px;
 }
 
+#hd h1 span {
+	position: relative;
+	left: 15px;
+}
+
 #hd h1 a {
 	display: block;
-	line-height: 4000px;
-	margin: 0;
-	overflow: hidden;
+	color: #fff;
+	text-decoration: none;
 }
 
 #hd .tagline {
 	color: #90b5dc;
 	position: absolute;
-	top: 63px;
+	top: 66px;
 	left: 25px;
 	width: 210px;
 	text-align: right;
