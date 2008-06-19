@@ -43,6 +43,10 @@ a:active { color: #ccc; }
 	color: #fff;
 }
 
+#nav_bar {
+	margin-top: 1em;
+}
+
 /* }}} */
 /* {{{ Entries */
 
