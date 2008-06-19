@@ -2,4 +2,5 @@ nosync
 blorgy.ini
 pear
 www/local
-www/images
+www/images/files
+files
