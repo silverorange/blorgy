@@ -2,6 +2,8 @@
 
 require_once 'SwatDB/SwatDBClassMap.php';
 require_once 'Site/SiteMultipleInstanceModule.php';
+require_once 'Site/SiteErrorLogger.php';
+require_once 'Site/SiteExceptionLogger.php';
 require_once 'Admin/AdminApplication.php';
 require_once 'Blorg/Blorg.php';
 require_once '../../include/Blorgy.php';
