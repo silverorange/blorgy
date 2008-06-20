@@ -116,8 +116,6 @@ class BlorgPostTable extends ConversionTable
 				$select_list[] = '0';
 			elseif ($field->src_field->name == 'hidden')
 				$select_list[] = 'cast(hidden as integer)';
-			elseif ($field->src_field->name == 'shortname')
-				$select_list[] = 'title';
 			else
 				$select_list[] = $field->src_field->name;
 		}
@@ -185,6 +183,9 @@ class BlorgPostShortnameField extends ConversionTextField
 
 	private function generateShortname($text, $iteration = 0)
 	{
+		if ($iteration === 0 && preg_match('/^[a-z0-9_-]+$/', $text))
+			return $text;
+
 		$shortname = SwatString::condenseToName($text);
 
 		if ($iteration != 0)
