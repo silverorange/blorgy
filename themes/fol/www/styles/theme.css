@@ -228,6 +228,11 @@ ul li {
 	background: url("leftquote.gif") top left no-repeat; 
 }
 
+/* comments */
+
+#comments {
+	margin: 20px 0 20px 210px;
+}
 
 /* archives */
 
@@ -246,6 +251,13 @@ ul li {
 #weblog h4.blorg-archive-year-title a:hover,
 #weblog h4.blorg-archive-month-title a:hover {
 	text-decoration: underline;
+}
+
+#weblog h4.blorg-archive-year-title span,
+#weblog h4.blorg-archive-month-title span {
+	font-size: 14px;
+	font-weight: normal;
+	color: #444;
 }
 
 #weblog ul.blorg-archive-months li {
@@ -364,8 +376,8 @@ ul li {
 
 /* google ads */
 
-#google {
-	margin: 40px auto 0 auto;
+.ad {
+	margin: 40px 0;
 }
 
 /* extras */
