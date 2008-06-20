@@ -258,7 +258,7 @@ class BlorgyLayout extends SiteLayout
 	protected function finalizeHeaderTitle()
 	{
 		$this->startCapture('header_title');
-		$this->displayHeader();
+		$this->displayHeaderTitle();
 		$this->endCapture();
 	}
 
@@ -281,33 +281,31 @@ class BlorgyLayout extends SiteLayout
 	}
 
 	// }}}
-	// {{{ protected function displayHeader()
+	// {{{ protected function displayHeaderTitle()
 
-	protected function displayHeader()
+	protected function displayHeaderTitle()
 	{
-		$site_title = $this->app->config->site->title;
-
-		if ($site_title != '') {
-			$h1_tag = new SwatHtmlTag('h1');
-			$h1_tag->title = $site_title;
-			$h1_tag->open();
-
-			if ($this->app->config->blorg->header_image != null)
-				$this->displayHeaderImage();
-			else
-				$this->displayHeaderTitle();
-
-			$h1_tag->close();
-		}
+		if ($this->app->config->blorg->header_image === null)
+			$this->displayHeaderTitleText();
+		else
+			$this->displayHeaderTitleImage();
 	}
 
 	// }}}
-	// {{{ protected function displayHeaderImage()
+	// {{{ protected function displayHeaderTitleImage()
 
-	protected function displayHeaderImage()
+	protected function displayHeaderTitleImage()
 	{
 		$source = $this->app->getPage()->getSource();
 		$site_title = $this->app->config->site->title;
+
+		$h1_tag = new SwatHtmlTag('h1');
+
+		if ($site_title != '') {
+			$h1_tag->title = $site_title;
+		}
+
+		$h1_tag->open();
 
 		if ($source != '') {
 			$a_tag = new SwatHtmlTag('a');
@@ -330,17 +328,24 @@ class BlorgyLayout extends SiteLayout
 		if ($source != '') {
 			$a_tag->close();
 		}
+
+		$h1_tag->close();
 	}
 
 	// }}}
-	// {{{ protected function displayHeaderTitle()
+	// {{{ protected function displayHeaderTitleText()
 
-	protected function displayHeaderTitle()
+	protected function displayHeaderTitleText()
 	{
 		$source = $this->app->getPage()->getSource();
 		$site_title = $this->app->config->site->title;
 
+		$h1_tag = new SwatHtmlTag('h1');
+		$h1_tag->title = $site_title;
+		$h1_tag->open();
+
 		echo '<span>';
+
 		if ($source == '') {
 			echo SwatString::minimizeEntities($site_title);
 		} else {
@@ -350,7 +355,10 @@ class BlorgyLayout extends SiteLayout
 			$a_tag->setContent($site_title);
 			$a_tag->display();
 		}
+
 		echo '</span>';
+
+		$h1_tag->close();
 	}
 
 	// }}}
