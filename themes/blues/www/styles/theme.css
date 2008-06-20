@@ -1,5 +1,5 @@
 body {
-	background: #fff url('../images/header-back.png') repeat-x;
+	background: #fff url('../images/body-back.png') repeat-x;
 	font-family: verdana, sans-serif;
 }
 
@@ -10,26 +10,23 @@ body {
 #hd { height: 110px; }
 
 #hd h1 {
-	background: url('../images/logo.png') 0 0 no-repeat;
+	background: url('../images/header-back.png') left top no-repeat;
 	padding: 0;
 	height: 97px;
-	width: 375px;
 	color: #fff;
-	line-height: 4000px;
-	overflow: hidden;
+	line-height: 85px;
+	padding-left: 24px;
 }
 
 #hd h1 a {
-	display: block;
-	line-height: 4000px;
-	margin: 0;
-	overflow: hidden;
+	color: #fff;
+	text-decoration: none;
 }
 
 #hd .tagline {
 	color: #90b5dc;
 	position: absolute;
-	top: 63px;
+	top: 66px;
 	left: 25px;
 	width: 210px;
 	text-align: right;

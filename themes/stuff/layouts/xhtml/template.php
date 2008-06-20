@@ -25,13 +25,12 @@
 		<?= $this->navbar ?>
 
 		<div id="container">
-			<?PHP
-				if($this->title) { 
-					echo '<h2 id="page_title">'.$this->title.'</h2>'; 
-				}
-			?>
-
 			<div id="content">
+				<?PHP
+					if($this->title) { 
+						echo '<h2 id="page_title">'.$this->title.'</h2>'; 
+					}
+				?>
 				<?= $this->content ?>
 			</div>
 
@@ -44,7 +43,7 @@
 
 	<div id="ft">
 		<p>Copyright &copy; 2004-<?=date('Y')?> <a href="http://www.silverorange.com">silverorange</a>. All rights reserved.</p>
-		<p class="second-line">Our reviews will consist mostly of things we research, bought, and have used ourselves.<br />The more stuff you have the less happy you are.</p>
+		<p class="second-line">The more stuff you own, the less happy you will be - so be sure and own good stuff!</p>
 	</div>
 
 </div>
