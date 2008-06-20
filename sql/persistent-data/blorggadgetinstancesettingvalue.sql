@@ -16,7 +16,6 @@ SET search_path = public, pg_catalog;
 
 ALTER TABLE blorggadgetinstancesettingvalue DISABLE TRIGGER ALL;
 
-INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (1, 'display_full', true, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (4, 'limit', NULL, NULL, NULL, 6, NULL, NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (6, 'show_empty', false, NULL, NULL, NULL, NULL, NULL);
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (7, 'display_full', true, NULL, NULL, NULL, NULL, NULL);
@@ -102,7 +101,8 @@ google_ad_height = 60;
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>');
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (113, 'show_empty', false, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (115, 'content', NULL, NULL, NULL, NULL, NULL, '<h2>Our Photo Gallery (mostly of travel)</h2>');
+INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (115, 'content', NULL, NULL, NULL, NULL, NULL, '<h2><a href="http://gallery.ceoblues.com">Our Photo Gallery</a></h2>
+<p><em>mostly of our travels, but you might see some other stuff</em></p>');
 INSERT INTO blorggadgetinstancesettingvalue (gadget_instance, name, value_boolean, value_date, value_float, value_integer, value_string, value_text) VALUES (115, 'allow_markup', true, NULL, NULL, NULL, NULL, NULL);
 
 

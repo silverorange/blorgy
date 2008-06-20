@@ -14,7 +14,7 @@ SET search_path = public, pg_catalog;
 -- Name: blorggadgetinstance_id_seq; Type: SEQUENCE SET; Schema: public; Owner: php
 --
 
-SELECT pg_catalog.setval('blorggadgetinstance_id_seq', 115, true);
+SELECT pg_catalog.setval('blorggadgetinstance_id_seq', 116, true);
 
 
 --
@@ -62,10 +62,6 @@ INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (45,
 INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (46, 13, 'BlorgSearchGadget', 0);
 INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (47, 13, 'BlorgArchiveGadget', 0);
 INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (48, 13, 'BlorgFeedGadget', 0);
-INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (49, 2, 'BlorgSearchGadget', 3);
-INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (1, 2, 'BlorgArchiveGadget', 4);
-INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (50, 2, 'BlorgFeedGadget', 5);
-INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (100, 2, 'BlorgTagGadget', 6);
 INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (106, 1, 'BlorgDiggGadget', 0);
 INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (52, 16, 'BlorgSearchGadget', 0);
 INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (53, 16, 'BlorgAuthorsGadget', 0);
@@ -109,8 +105,6 @@ INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (32,
 INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (33, 27, 'BlorgFeedGadget', 6);
 INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (34, 27, 'BlorgSearchGadget', 7);
 INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (95, 11, 'BlorgArticleGadget', 0);
-INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (2, 2, 'BlorgActiveConversationsGadget', 1);
-INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (3, 2, 'BlorgAuthorsGadget', 2);
 INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (70, 22, 'BlorgSearchGadget', 1);
 INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (69, 22, 'BlorgContentGadget', 2);
 INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (110, 22, 'BlorgAdGadget', 3);
@@ -119,9 +113,14 @@ INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (94,
 INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (74, 22, 'BlorgFeedGadget', 6);
 INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (112, 25, 'BlorgSearchGadget', 1);
 INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (111, 25, 'BlorgActiveConversationsGadget', 2);
-INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (113, 25, 'BlorgTagGadget', 3);
-INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (114, 25, 'BlorgFeedGadget', 4);
-INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (115, 25, 'BlorgContentGadget', 0);
+INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (115, 25, 'BlorgContentGadget', 3);
+INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (113, 25, 'BlorgTagGadget', 4);
+INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (114, 25, 'BlorgFeedGadget', 5);
+INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (49, 2, 'BlorgSearchGadget', 1);
+INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (2, 2, 'BlorgActiveConversationsGadget', 2);
+INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (3, 2, 'BlorgAuthorsGadget', 3);
+INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (100, 2, 'BlorgTagGadget', 4);
+INSERT INTO blorggadgetinstance (id, instance, gadget, displayorder) VALUES (50, 2, 'BlorgFeedGadget', 5);
 
 
 ALTER TABLE blorggadgetinstance ENABLE TRIGGER ALL;

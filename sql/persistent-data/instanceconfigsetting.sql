@@ -14,7 +14,7 @@ SET search_path = public, pg_catalog;
 -- Name: instanceconfigsetting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: php
 --
 
-SELECT pg_catalog.setval('instanceconfigsetting_id_seq', 790, true);
+SELECT pg_catalog.setval('instanceconfigsetting_id_seq', 813, true);
 
 
 --
@@ -125,10 +125,15 @@ INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (783, 23, '
 INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (784, 23, 'site.title', 'A Good Beer Blog');
 INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (785, 23, 'blorg.header_image', '27');
 INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (786, 25, 'session.name', 'blorgy-ceobluestravel');
-INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (787, 25, 'site.title', 'CEO Blues Travel');
-INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (788, 25, 'blorg.header_image', '28');
-INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (789, 2, 'site.title', 'CEO Blues');
-INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (790, 2, 'blorg.header_image', '29');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (802, 25, 'date.time_zone', 'America/Halifax');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (803, 25, 'blorg.header_image', '37');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (804, 25, 'site.title', 'CEO Blues Travel');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (805, 25, 'analytics.google_account', 'UA-2751170 ');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (809, 2, 'date.time_zone', 'America/Halifax');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (810, 2, 'blorg.default_comment_status', '0');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (811, 2, 'blorg.header_image', '36');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (812, 2, 'site.title', 'CEO Blues');
+INSERT INTO instanceconfigsetting (id, instance, name, value) VALUES (813, 2, 'analytics.google_account', 'UA-2751170');
 
 
 ALTER TABLE instanceconfigsetting ENABLE TRIGGER ALL;
