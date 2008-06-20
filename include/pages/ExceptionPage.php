@@ -93,15 +93,14 @@ class ExceptionPage extends SiteExceptionPage
 		//remove "rss" from the start of the array
 		array_shift($source);
 
-		if (count($source) == 0)
-			$this->app->relocate('feed');
-		elseif ($source[0] == 'replies')
+		if ($source[0] == 'replies')
 			$this->app->relocate('feed/comments');
 		elseif ($source[0] == 'sideblog')
 			$this->app->relocate('feed');
-		elseif ($source[0] == 'categories' && count($source) == 2) {
+		elseif ($source[0] == 'categories' && count($source) == 2)
 			$this->app->relocate('tag/'.$source[1].'/feed');
-		}
+		else
+			$this->app->relocate('feed');
 	}
 
 	// }}}
