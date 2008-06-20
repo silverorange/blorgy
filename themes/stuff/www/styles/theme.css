@@ -377,6 +377,18 @@ blockquote {
 	padding: 20px;
 }
 
+/* }}} */
+/* {{{ Author */
+
+#content .author h3.author-name {
+	font-size: 180%;
+	font-weight: normal;
+}
+
+#content .author .author-content {
+	margin-bottom: 20px;
+	border-bottom: 1px #ddd solid;
+}
 
 /* }}} */
 /* {{{ Footer */
