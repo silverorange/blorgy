@@ -354,14 +354,15 @@ blockquote {
 
 #comments {
 	clear: both;
-	margin-right: 20px;
+	margin: 0 20px;
 }
 
 #comments .comment {
 	margin: 1em 0 3em 0;
 }
 
-#comments .comment .comment-title {
+#comments .comment .comment-title,
+#comments .comment .comment-link {
 	padding-left: 20px;
 }
 
