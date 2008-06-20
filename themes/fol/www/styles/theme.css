@@ -91,7 +91,9 @@ ul li {
 
 #weblog h2#page_title {
 	font-size: 28px;
-	margin: 20px 0;
+	margin: 20px 0 0 0;
+	padding-bottom: 10px;
+	border-bottom: 1px #ddd solid;
 }
 
 #weblog h3 {
@@ -100,15 +102,15 @@ ul li {
 	color: #4a4a4a;
 	margin: 0 0 15px 0;
 }
-#weblog ul.entries .entry h3 { font-size: 14px; font-weight: bold; } /* archive list exception */
-#weblog ul.entries .entry-no-title h3 { font-size: 14px; font-weight: normal; } /* archive list exception */
+#weblog ul.entries .entry h3 { font-size: 20px; font-weight: normal; } /* archive list exception */
+#weblog ul.entries .entry-no-title h3 { font-size: 14px; font-weight: normal; margin-bottom: 0; } /* archive list exception */
 
 #weblog h3.entry-title a {
 	color: #4a4a4a;
 	text-decoration: none;
 }
 #weblog ul.entries .entry h3.entry-title a { color: #003366; } /* archive list exception */
-#weblog ul.entries .entry-no-title h3.entry-title a { color: #4a4a4a; } /* archive list exception */
+#weblog ul.entries .entry-no-title h3.entry-title a { color: #aaa; } /* archive list exception */
 #weblog ul.entries .entry h3.entry-title a:hover { text-decoration: underline; } /* archive list exception */
 #weblog ul.entries .entry-no-title h3.entry-title a:hover { text-decoration: underline; } /* archive list exception */
 
@@ -141,6 +143,7 @@ ul li {
 }
 #weblog .entry-no-title .entry-subtitle {
 	display: none;
+	margin: 0;
 }
 
 #weblog .entry-subtitle a.permalink { /* permalink date link */
@@ -228,21 +231,42 @@ ul li {
 
 /* archives */
 
-#weblog ul.months li {
-	list-style-type: disc;
-	margin: 20px 30px;
+#weblog h4.blorg-archive-year-title,
+#weblog h4.blorg-archive-month-title {
+	border: 0;
 }
 
-#weblog ul.months li ul.entries li {
+#weblog h4.blorg-archive-year-title a,
+#weblog h4.blorg-archive-month-title a {
+	font-weight: bold;
+	color: #444;
+	text-decoration: none;
+}
+
+#weblog h4.blorg-archive-year-title a:hover,
+#weblog h4.blorg-archive-month-title a:hover {
+	text-decoration: underline;
+}
+
+#weblog ul.blorg-archive-months li {
+	list-style-type: none;
+	margin: 0 0 20px 30px;
+}
+
+#weblog ul.blorg-archive-months li ul.entries li {
 	margin: 5px 30px;
+	padding: 15px 0;
+	border-bottom: 1px #ddd solid;
 }
 
-#weblog ul.months li ul.entries li div.entry {
-	margin: 20px 0;
+#weblog ul.blorg-archive-months li ul.entries li div.entry {
+	margin: 0;
+	padding: 0;
 }
 
-#weblog ul.months li ul.entries li div.entry-no-title {
-	margin: 20px 0;
+#weblog ul.blorg-archive-months li ul.entries li div.entry-no-title {
+	margin: 0;
+	padding: 0;
 }
 
 /* content footer */
