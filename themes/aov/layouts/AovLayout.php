@@ -11,9 +11,9 @@ require_once '../include/layouts/BlorgyLayout.php';
  */
 class AovLayout extends BlorgyLayout
 {
-	// {{{ protected function displayHeaderTitle()
+	// {{{ protected function displayHeaderTitleText()
 
-	protected function displayHeaderTitle()
+	protected function displayHeaderTitleText()
 	{
 		$site_title = $this->app->config->site->title;
 
