@@ -22,6 +22,7 @@ SwatDBClassMap::addPath(dirname(__FILE__).'/dataobjects');
  *
  * @package   Blörgy
  * @copyright 2008 silverorange
+ * @license   http://www.gnu.org/copyleft/lesser.html LGPL License 2.1
  */
 class Application extends SiteWebApplication
 {
@@ -171,14 +172,12 @@ class Application extends SiteWebApplication
 		if (isset($config->exceptions->log_location))
 			SwatException::setLogger(new SiteExceptionLogger(
 				$config->exceptions->log_location,
-				$config->exceptions->base_uri,
-				$config->email->logging_address));
+				$config->exceptions->base_uri));
 
 		if (isset($config->errors->log_location))
 			SwatError::setLogger(new SiteErrorLogger(
 				$config->errors->log_location,
-				$config->errors->base_uri,
-				$config->email->logging_address));
+				$config->errors->base_uri));
 
 		SwatForm::$default_salt = $config->swat->form_salt;
 

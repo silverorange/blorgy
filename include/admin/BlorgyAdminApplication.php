@@ -12,8 +12,9 @@ SwatDBClassMap::addPath(dirname(__FILE__).'/../dataobjects');
 /**
  * Web application class for an administering this site
  *
- * @package   Blorgy
+ * @package   Blörgy
  * @copyright 2008 silverorange
+ * @license   http://www.gnu.org/copyleft/lesser.html LGPL License 2.1
  */
 class BlorgyAdminApplication extends AdminApplication
 {
@@ -74,7 +75,8 @@ class BlorgyAdminApplication extends AdminApplication
 
 		if (isset($config->errors->log_location))
 			SwatError::setLogger(new SiteErrorLogger(
-				$config->errors->log_location, $config->errors->base_uri));
+				$config->errors->log_location,
+				$config->errors->base_uri));
 
 		SwatForm::$default_salt = $config->swat->form_salt;
 
