@@ -168,7 +168,10 @@ body {
 /* }}} */
 /* {{{ Post Formatting */
 
-#content .entry .entry-content-extended h3 {
+#content .entry .entry-content-extended h3,
+#content .entry .entry-content-extended h4,
+#content .entry .entry-content-extended h5,
+#content .entry .entry-content-extended h6 {
 	font-size: 130%;
 	font-weight: normal;
 }
@@ -181,6 +184,8 @@ body {
 	margin: 0 5px 10px 5px;
 	padding: 8px;
 }
+.inset a { text-decoration: none; }
+.inset a span:hover { color: #f16400; text-decoration: underline; }
 
 .inset img {
 	background: #fff;
