@@ -83,6 +83,7 @@ body {
 /* {{{ Post Entries */
 
 #content .entry {
+	clear: left;
 	padding: 0 10px 10px 10px;
 }
 
@@ -131,7 +132,7 @@ body {
 	float: left;
 	left: -140px;
 	width: 100px;
-	margin-top: 5px;
+	margin: 5px 0 20px 0;
 	padding: 8px;
 }
 
@@ -168,7 +169,10 @@ body {
 /* }}} */
 /* {{{ Post Formatting */
 
-#content .entry .entry-content-extended h3 {
+#content .entry .entry-content-extended h3,
+#content .entry .entry-content-extended h4,
+#content .entry .entry-content-extended h5,
+#content .entry .entry-content-extended h6 {
 	font-size: 130%;
 	font-weight: normal;
 }
@@ -181,6 +185,8 @@ body {
 	margin: 0 5px 10px 5px;
 	padding: 8px;
 }
+.inset a { text-decoration: none; }
+.inset a span:hover { color: #f16400; text-decoration: underline; }
 
 .inset img {
 	background: #fff;
@@ -371,6 +377,18 @@ blockquote {
 	padding: 20px;
 }
 
+/* }}} */
+/* {{{ Author */
+
+#content .author h3.author-name {
+	font-size: 180%;
+	font-weight: normal;
+}
+
+#content .author .author-content {
+	margin-bottom: 20px;
+	border-bottom: 1px #ddd solid;
+}
 
 /* }}} */
 /* {{{ Footer */
