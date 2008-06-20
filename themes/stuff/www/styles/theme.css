@@ -157,6 +157,10 @@ body {
 	padding: 8px;
 }
 
+#content .entry .entry-content .summary {
+	margin-bottom: 10px;
+}
+
 #content .entry .entry-content .summary dl {
 	margin: 0;
 }
