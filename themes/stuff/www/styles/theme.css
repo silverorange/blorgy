@@ -83,6 +83,7 @@ body {
 /* {{{ Post Entries */
 
 #content .entry {
+	clear: left;
 	padding: 0 10px 10px 10px;
 }
 
@@ -131,7 +132,7 @@ body {
 	float: left;
 	left: -140px;
 	width: 100px;
-	margin-top: 5px;
+	margin: 5px 0 20px 0;
 	padding: 8px;
 }
 
