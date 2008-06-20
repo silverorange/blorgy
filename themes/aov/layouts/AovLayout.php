@@ -11,9 +11,9 @@ require_once '../include/layouts/BlorgyLayout.php';
  */
 class AovLayout extends BlorgyLayout
 {
-	// {{{ protected function displayHeaderTitle()
+	// {{{ protected function displayHeaderTitleText()
 
-	protected function displayHeaderTitle()
+	protected function displayHeaderTitleText()
 	{
 		$site_title = $this->app->config->site->title;
 
@@ -38,6 +38,7 @@ class AovLayout extends BlorgyLayout
 		$letter_span = new SwatHtmlTag('span');
 		$letter_span->class = 'first-letter';
 
+		$num_words = count($words);
 		foreach ($words as $word) {
 			$word = trim($word);
 			if ($word != '') {
@@ -51,7 +52,11 @@ class AovLayout extends BlorgyLayout
 				echo SwatString::minimizeEntities(substr($word, 1));
 
 				$word_span->close();
-				echo ' ';
+
+				// don't display a space for the last word
+				if ($count < $num_words) {
+					echo ' ';
+				}
 			}
 		}
 
