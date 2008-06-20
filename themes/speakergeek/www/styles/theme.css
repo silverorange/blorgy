@@ -44,6 +44,8 @@ body {
 	overflow: hidden;
 }
 
+#page_title {	margin-top: 0; }
+
 a,
 a:link,
 a:hover,
