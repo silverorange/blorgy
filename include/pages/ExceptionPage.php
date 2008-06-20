@@ -45,8 +45,10 @@ class ExceptionPage extends SiteExceptionPage
 
 		if (count($source) == 0)
 			$this->app->relocate('archive');
-		else
+		elseif (is_numeric($source[0]))
 			$this->app->relocate('archive/'.implode('/', $source));
+		else
+			$this->app->relocate('tag/'.implode('/', $source));
 	}
 
 	// }}}
