@@ -1,19 +1,29 @@
+html, body, #doc, #bd, #content { height: 100%; }
+
+html { background: #2f5a99; }
+
 body {
-	background: #2f5a99;
 	font-family: verdana, sans-serif;
-	margin: 0;
+	margin: 0 5%;
 	padding: 0;
 }
 
+
+#hd {
+	border-left: 2px solid #0a2e70;
+	border-right: 2px solid #0a2e70;
+}
+
 #bd {
-	background: url('../images/footer.jpg') center bottom repeat-x;
+	background: #fff url('../images/footer.jpg') -150px bottom repeat-x;
 	padding: 0px 30px 65px 30px;
+	border-left: 2px solid #0a2e70;
+	border-right: 2px solid #0a2e70;
 }
 
 #doc {
 	background: #fff url('../images/title.jpg') left top repeat-x;
-	border-left: 2px solid #0a2e70;
-	border-right: 2px solid #0a2e70;
+	margin: 0;
 }
 
 #content { margin-right: 30%; }
@@ -33,8 +43,6 @@ body {
 	line-height: 2000px;
 	overflow: hidden;
 }
-
-#nav_bar { margin-top: 10px; }
 
 a,
 a:link,
