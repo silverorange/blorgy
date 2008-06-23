@@ -9,6 +9,7 @@ require_once 'Site/SiteConfigModule.php';
 require_once 'Site/SiteCookieModule.php';
 require_once 'Site/SiteDatabaseModule.php';
 require_once 'Site/SiteMultipleInstanceModule.php';
+require_once 'Site/SiteTimerModule.php';
 require_once 'Site/SiteExceptionLogger.php';
 require_once 'Site/SiteErrorLogger.php';
 require_once 'Blorg/Blorg.php';
@@ -137,6 +138,7 @@ class Application extends SiteWebApplication
 			'database' => 'SiteDatabaseModule',
 			'instance' => 'SiteMultipleInstanceModule',
 			'theme'    => 'ThemeModule',
+			'timer'    => 'SiteTimerModule',
 		);
 	}
 
