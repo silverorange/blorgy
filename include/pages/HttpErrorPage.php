@@ -22,19 +22,6 @@ class HttpErrorPage extends SiteHttpErrorPage
 	}
 
 	// }}}
-
-	// finalize phase
-	// {{{ public function finalize()
-
-	public function finalize()
-	{
-		parent::finalize();
-
-		$this->layout->addHtmlHeadEntry(new SwatStyleSheetHtmlHeadEntry(
-			'styles/http-error-page.css'));
-	}
-
-	// }}}
 }
 
 ?>
