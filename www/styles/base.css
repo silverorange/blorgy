@@ -346,6 +346,8 @@ img.left  { float: left;  margin: 0.2em 1em 0 1em; }
 /* }}} */
 /* {{{ Archive */
 
+#content ul.blorg-archive-tags,
+#content ul.blorg-archive-tags ul,
 #content ul.blorg-archive-years,
 #content ul.blorg-archive-years ul,
 #content ul.blorg-archive-months,
@@ -353,12 +355,14 @@ img.left  { float: left;  margin: 0.2em 1em 0 1em; }
 	margin: 0.5em 0 1em 1em;
 }
 
+#content ul.blorg-archive-tags li,
 #content ul.blorg-archive-years li,
 #content ul.blorg-archive-months li {
 	list-style-type: none;
 	margin-bottom: 0.2em;
 }
 
+#content ul.blorg-archive-tags li span,
 #content ul.blorg-archive-years li span,
 #content ul.blorg-archive-months li span {
 	color: #999;
@@ -387,6 +391,10 @@ img.left  { float: left;  margin: 0.2em 1em 0 1em; }
 
 #content .blorg-archive-months .entry-no-title .entry-title {
 	font-size: 100%;
+	font-weight: normal;
+}
+
+#content .blorg-archive-tag-title span {
 	font-weight: normal;
 }
 
