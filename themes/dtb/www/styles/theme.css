@@ -201,12 +201,12 @@ input,textarea {
 	border-bottom: 1px solid #747474;
 	border-top: 1px solid #2d2d2d;
 	border-left: 1px solid #2d2d2d;
-	background: #3c3c3c url(input_back.gif) top repeat-x;
+	background: #3c3c3c url(../images/input_back.gif) top repeat-x;
 }
 
 textarea { padding: 6px 0 6px 6px; }
 
-input:focus { background: #505050 url(input_back_active.gif) top repeat-x; color: #fff; }
+input:focus { background: #505050 url(../images/input_back_active.gif) top repeat-x; color: #fff; }
 
 .swat-button {
 	font-family: verdana,sans-serif;
@@ -215,7 +215,7 @@ input:focus { background: #505050 url(input_back_active.gif) top repeat-x; color
 	border-bottom: 1px solid #2d2d2d;
 	border-top: 1px solid #747474;
 	border-left: 1px solid #747474;
-	background: #666 url(button_back.gif);
+	background: #666 url(../images/button_back.gif);
 }
 
 .swat-form-field input.swat-primary,
