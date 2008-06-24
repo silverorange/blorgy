@@ -120,7 +120,7 @@ ul li {
 
 #weblog h4, #weblog h5, #weblog h6 {
 	color: #777;
-	font-size: 16px;
+	font-size: 20px;
 	margin: 0 0 5px 0;
 	padding: 15px 0 0 0;
 	border-bottom: 1px #ddd solid;
@@ -193,7 +193,7 @@ ul li {
 
 #weblog .entry .entry-content ol, 
 #weblog .entry .entry-content ul {
-	margin: 0;
+	margin: 16px 0;
 	padding: 0;
 }
 
@@ -203,15 +203,31 @@ ul li {
 	padding: 0;
 }
 
+#weblog .entry .entry-content ol li ol, 
+#weblog .entry .entry-content ul li ul {
+	margin: 0;
+}
+
 #weblog .entry .entry-content ol li ol li, 
 #weblog .entry .entry-content ul li ul li {
 	margin: 0.2em 1.5em;
 }
 
 #weblog .entry .entry-content li span {
-	color: #ccc;
+	color: #bbb;
 }
 
+#weblog .entry .entry-content dt {
+	font-weight: bold;
+}
+
+#weblog .entry .entry-content dd {
+	margin-left: 20px;
+}
+
+#weblog .entry .entry-content dd span {
+	color: #bbb;
+}
 
 #weblog .entry .entry-content table { margin-left: auto; margin-right: auto; }
 #weblog .entry .entry-content table.grey { background-color: #f1f1f1; }
