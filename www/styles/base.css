@@ -217,6 +217,9 @@ textarea {
 	width: auto;
 }
 
+em { font-weight: inherit; }
+strong { font-style: inherit; }
+
 /* }}} */
 /* {{{ Navbar */
 
