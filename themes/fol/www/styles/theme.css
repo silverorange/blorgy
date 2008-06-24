@@ -208,6 +208,11 @@ ul li {
 	margin: 0.2em 1.5em;
 }
 
+#weblog .entry .entry-content li span {
+	color: #ccc;
+}
+
+
 #weblog .entry .entry-content table { margin-left: auto; margin-right: auto; }
 #weblog .entry .entry-content table.grey { background-color: #f1f1f1; }
 
