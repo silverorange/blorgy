@@ -179,6 +179,15 @@ tt {
 	color: #555;
 }
 
+ul.plain {
+	margin-left: 1em;
+}
+
+ul.plain li {
+	list-style-type: none;
+	padding: 0.25em 0;
+}
+
 /* }}} */
 /* {{{ Post Comments */
 
