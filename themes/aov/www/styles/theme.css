@@ -156,10 +156,15 @@ a:active { color: #000; }
 /* }}} */
 /* {{{ Post Content */
 
+.entry {
+	margin-bottom: 6em;
+}
+
 .entry-no-title {
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
 	padding: 0.5em;
+	margin-bottom: 2em;
 }
 
 .entry .entry-content,
