@@ -175,14 +175,6 @@ class BlorgyLayout extends SiteLayout
 		$this->finalizeTitle();
 		$this->finalizeBaseCss();
 		$this->finalizeTheme();
-
-		$time = microtime(true);
-
-		$delta = $this->app->timer->getTime();
-		if ($delta > 15000) {
-			$e = new SwatException('Slow page detected');
-			$e->process(false);
-		}
 	}
 
 	// }}}
