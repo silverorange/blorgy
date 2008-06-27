@@ -156,6 +156,7 @@ ul li {
 	color: #7a7a7a;
 	text-decoration: underline;
 }
+#weblog .entry-subtitle a.permalink { text-decoration: none; }
 #weblog .entry-subtitle a.comment-count:hover { color: #000; }
 
 /* post/author formatting */
