@@ -19,7 +19,7 @@
 		<li><a href="http://www.focusedonlight.com">photos</a></li>
 		<li><a href="archive/">archives</a></li>
 		<li><a href="author/stephen">about</a></li>
-		<li><a href="rss">rss</a></li>
+		<li><a href="feed">atom</a></li>
 	</ul>
 </div>
 
