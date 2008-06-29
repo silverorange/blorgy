@@ -221,8 +221,27 @@ class BlorgyLayout extends SiteLayout
 
 	protected function finalizeTitle()
 	{
-		$this->finalizeHeaderTitle();
 		$this->finalizeHtmlTitle();
+		$this->finalizeHeaderTitle();
+		$this->finalizePageTitle();
+	}
+
+	// }}}
+	// {{{ protected function finalizePageTitle()
+
+	/**
+	 * Finalizes the page title
+	 */
+	protected function finalizePageTitle()
+	{
+		$page_title = $this->data->title;
+
+		if ($page_title != '') {
+			$header_tag = new SwatHtmlTag('h2');
+			$header_tag->id = 'page_title';
+			$header_tag->setContent($page_title, true);
+			$this->data->title = $header_tag->__toString();
+		}
 	}
 
 	// }}}
