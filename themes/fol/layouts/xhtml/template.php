@@ -25,10 +25,10 @@
 
 <div id="weblog">
 
-	<?PHP
-		if($this->title) { 
+	<?php
+		if ($this->title != '') {
 			echo $this->navbar;
-			echo '<h2 id="page_title">'.$this->title.'</h2>'; 
+			echo $this->title;
 		}
 	?>
 

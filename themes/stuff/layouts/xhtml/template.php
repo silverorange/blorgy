@@ -26,11 +26,7 @@
 
 		<div id="container">
 			<div id="content">
-				<?PHP
-					if($this->title) { 
-						echo '<h2 id="page_title">'.$this->title.'</h2>'; 
-					}
-				?>
+				<?= $this->title ?>
 				<?= $this->content ?>
 			</div>
 
@@ -42,7 +38,7 @@
 	</div>
 
 	<div id="ft">
-		<p>Copyright &copy; 2004-<?=date('Y')?> <a href="http://www.silverorange.com">silverorange</a>. All rights reserved.</p>
+		<p>Copyright &copy; 2004-<?= date('Y') ?> <a href="http://www.silverorange.com">silverorange</a>. All rights reserved.</p>
 		<p class="second-line">The more stuff you own, the less happy you will be - so be sure and own good stuff!</p>
 	</div>
 

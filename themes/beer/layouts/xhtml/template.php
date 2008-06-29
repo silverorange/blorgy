@@ -24,7 +24,7 @@
 		<div id="content">
 
 			<?= $this->navbar ?>
-			<h2 id="page_title"><?= $this->title ?></h2>
+			<?= $this->title ?>
 			<?= $this->content ?>
 
 		</div>
