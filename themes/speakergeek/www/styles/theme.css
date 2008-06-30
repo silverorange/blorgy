@@ -55,9 +55,7 @@ a:visited,
 
 .entry .entry-subtitle { color: #666; }
 
-.entry .entry-content, .entry .entry-tags{ padding-left: 18px; }
-
-.entry .entry-tags { margin-top: 1em; }
+.entry .entry-content { padding-left: 18px; }
 
 .entry-no-title .entry-content { padding-left: 0; }
 

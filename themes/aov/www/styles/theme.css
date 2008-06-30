@@ -167,14 +167,10 @@ a:active { color: #000; }
 	margin-bottom: 2em;
 }
 
-.entry .entry-content, .entry-tags,
+.entry .entry-content,
 #content .author-content {
 	font-size: 123.1%;
 	line-height: 1.4;
-}
-
-.entry-tags {
-	margin-top: 1em;
 }
 
 /* }}} */

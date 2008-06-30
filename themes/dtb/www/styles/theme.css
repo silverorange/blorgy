@@ -83,7 +83,7 @@ a:active { color: #ccc; }
 	font-weight: bold;
 }
 
-.entry .entry-content, .entry .entry-tags {
+.entry .entry-content {
 	clear: both;
 	padding: 0.5em 0 0 10px;
 }
