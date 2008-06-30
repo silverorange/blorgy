@@ -97,6 +97,8 @@ a:active  { color: #333333; }
 .entry .entry-subtitle a:active {
 	color: #333;
 }
+.entry .entry-subtitle .comment-count { white-space: nowrap; }
+
 .entry .entry-subtitle abbr { border: 0; }
 
 /* }}} */
