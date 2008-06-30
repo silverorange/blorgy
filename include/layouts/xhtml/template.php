@@ -7,7 +7,6 @@
 	<?= $this->html_head_entries ?>
 	<title><?= $this->html_title ?></title>
 	<meta name="description" content="<?= $this->meta_description ?>" />
-	<meta name="keywords" content="<?= $this->meta_keywords ?>" />
 </head>
 
 <body>
@@ -23,7 +22,7 @@
 
 		<div id="content">
 			<?= $this->navbar ?>
-			<h2 id="page_title"><?= $this->title ?></h2>
+			<?= $this->title ?>
 			<?= $this->content ?>
 		</div>
 

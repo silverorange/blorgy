@@ -5,8 +5,8 @@ require_once 'Swat/SwatHtmlTag.php';
 require_once 'Swat/SwatStyleSheetHtmlHeadEntry.php';
 require_once 'Site/layouts/SiteLayout.php';
 require_once 'Blorg/BlorgSidebar.php';
-require_once 'Blorg/BlorgGadgetFactory.php';
-require_once 'Blorg/dataobjects/BlorgGadgetInstanceWrapper.php';
+require_once 'Site/SiteGadgetFactory.php';
+require_once 'Site/dataobjects/SiteGadgetInstanceWrapper.php';
 require_once 'Blorg/dataobjects/BlorgFileImage.php';
 
 /**
@@ -64,17 +64,17 @@ class BlorgyLayout extends SiteLayout
 	{
 		$this->sidebar = new BlorgSidebar();
 
-		$sql = sprintf('select * from BlorgGadgetInstance
+		$sql = sprintf('select * from GadgetInstance
 			where instance %s %s
 			order by displayorder',
 			SwatDB::equalityOperator($this->app->getInstanceId()),
 			$this->app->db->quote($this->app->getInstanceId(), 'integer'));
 
 		$gadget_instances = SwatDB::query($this->app->db, $sql,
-			SwatDBClassMap::get('BlorgGadgetInstanceWrapper'));
+			SwatDBClassMap::get('SiteGadgetInstanceWrapper'));
 
 		foreach ($gadget_instances as $gadget_instance) {
-			$gadget = BlorgGadgetFactory::get($this->app, $gadget_instance);
+			$gadget = SiteGadgetFactory::get($this->app, $gadget_instance);
 			$this->sidebar->add($gadget);
 		}
 
@@ -221,8 +221,27 @@ class BlorgyLayout extends SiteLayout
 
 	protected function finalizeTitle()
 	{
-		$this->finalizeHeaderTitle();
 		$this->finalizeHtmlTitle();
+		$this->finalizeHeaderTitle();
+		$this->finalizePageTitle();
+	}
+
+	// }}}
+	// {{{ protected function finalizePageTitle()
+
+	/**
+	 * Finalizes the page title
+	 */
+	protected function finalizePageTitle()
+	{
+		$page_title = $this->data->title;
+
+		if ($page_title != '') {
+			$header_tag = new SwatHtmlTag('h2');
+			$header_tag->id = 'page_title';
+			$header_tag->setContent($page_title, true);
+			$this->data->title = $header_tag->__toString();
+		}
 	}
 
 	// }}}
