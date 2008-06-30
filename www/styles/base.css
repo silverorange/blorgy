@@ -225,18 +225,18 @@ strong { font-style: inherit; }
 /* }}} */
 /* {{{ Navbar */
 
-#nav_bar {
+.swat-nav-bar {
 	font-size: 85%;
 	color: #999;
 }
 
-#nav_bar a:link,
-#nav_bar a:visited {
+.swat-nav-bar a:link,
+.swat-nav-bar a:visited {
 	color: #999;
 }
 
-#nav_bar a:hover,
-#nav_bar a:active {
+.swat-nav-bar a:hover,
+.swat-nav-bar a:active {
 	color: #666;
 }
 
