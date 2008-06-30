@@ -138,6 +138,9 @@ a:active {
 	border-color: #dcd1ab;
 }
 
+.entry-tags {
+	margin-top: 1em;
+}
 
 /* Pagination */
 
