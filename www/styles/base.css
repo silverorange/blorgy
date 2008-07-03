@@ -227,6 +227,10 @@ strong { font-style: inherit; }
 /* }}} */
 /* {{{ Navbar */
 
+#nav_bar {
+	margin-bottom: 1em;
+}
+
 .swat-nav-bar {
 	font-size: 85%;
 	color: #999;
