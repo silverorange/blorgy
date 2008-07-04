@@ -241,7 +241,7 @@ blockquote {
 .site-sidebar-gadget {display:block;}
 /* End hide from IE Mac */
 
-.blorg-content-gadget-first {
+.site-content-gadget-first {
 
 }
 
@@ -278,14 +278,14 @@ blockquote {
 	margin: 0;
 }
 
-.blorg-content-gadget {
+.site-content-gadget {
 	font-size: 110%;
 }
 
-.blorg-content-gadget a {	color: #f16400; }
-.blorg-content-gadget a:link {	color: #f16400; }
-.blorg-content-gadget a:hover {	color: #000; }
-.blorg-content-gadget a:visited {	color: #f16400; }
+.site-content-gadget a {	color: #f16400; }
+.site-content-gadget a:link {	color: #f16400; }
+.site-content-gadget a:hover {	color: #000; }
+.site-content-gadget a:visited {	color: #f16400; }
 
 .blorg-ad-gadget {
 	background: #f9f8f4;
@@ -301,7 +301,7 @@ blockquote {
 }
 .blorg-tag-gadget ul li span { font-weight: normal; }
 
-.blorg-content-gadget h3 {
+.site-content-gadget h3 {
 	background: transparent url("images/title-about.png") top left no-repeat;
 	display: block;
 	width: 250px;
