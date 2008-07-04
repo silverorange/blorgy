@@ -25,8 +25,8 @@ a:link,
 .entry .entry-subtitle a,
 .entry .entry-subtitle a:link,
 .entry .entry-subtitle a:visited,
-.blorg-sidebar-gadget a:link,
-.blorg-sidebar-gadget a:visited,
+.site-sidebar-gadget a:link,
+.site-sidebar-gadget a:visited,
 .comment .comment-link a:link,
 .comment .comment-link a:visited {
 	color: #166086;
@@ -62,10 +62,10 @@ img.border {	background: #c7e98c none repeat scroll 0%;	border: 1px solid #4e9
 	top: -60px;
 }
 
-.blorg-sidebar .blorg-gadget-title { 	font-size: 123.1%; }
+.site-sidebar .site-gadget-title { 	font-size: 123.1%; }
 
-.blorg-sidebar .blorg-gadget-title,
-.blorg-sidebar .blorg-gadget-title a {
+.site-sidebar .site-gadget-title,
+.site-sidebar .site-gadget-title a {
 	color: #477053;
 }
 

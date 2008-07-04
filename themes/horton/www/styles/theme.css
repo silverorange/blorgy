@@ -39,11 +39,11 @@ body {
 	width: 275px;
 }
 
-#sidebar .blorg-sidebar {
+#sidebar .site-sidebar {
 	margin-right: 50px;
 }
 
-#sidebar .blorg-sidebar .blorg-gadget-title {
+#sidebar .site-sidebar .site-gadget-title {
 	color: #7b745e;
 	font-family: georgia,serif;
 	font-weight: normal;

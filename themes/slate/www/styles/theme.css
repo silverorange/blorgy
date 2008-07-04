@@ -61,12 +61,12 @@ a:hover { color: #eee; }
 	width: 275px;
 }
 
-#sidebar .blorg-sidebar {
+#sidebar .site-sidebar {
 	position: relative;
 	top: -45px;
 }
 
-#sidebar .blorg-sidebar .blorg-gadget-title {
+#sidebar .site-sidebar .site-gadget-title {
 	color: #666;
 	font-size: 123.1%;
 	padding: 0;

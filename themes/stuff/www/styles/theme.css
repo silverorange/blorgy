@@ -220,7 +220,7 @@ blockquote {
 /* }}} */
 /* {{{ Gadgets */
 
-.blorg-sidebar-gadget {
+.site-sidebar-gadget {
 	clear: both;
 	background: #ecebe9;
 	width: 360px;
@@ -229,27 +229,27 @@ blockquote {
 	padding-bottom: 1em;
 }
 
-.blorg-sidebar-gadget:after {
+.site-sidebar-gadget:after {
 	content:".";
 	display:block;
 	height:0;
 	clear:both;
 	visibility:hidden;
 }
-.blorg-sidebar-gadget {display:inline-block;}
+.site-sidebar-gadget {display:inline-block;}
 /* Hide from IE Mac \*/
-.blorg-sidebar-gadget {display:block;}
+.site-sidebar-gadget {display:block;}
 /* End hide from IE Mac */
 
 .blorg-content-gadget-first {
 
 }
 
-.blorg-sidebar-gadget .blorg-gadget-title {
+.site-sidebar-gadget .site-gadget-title {
 	margin: 10px 20px 5px 20px;
 }
 
-.blorg-sidebar-gadget .blorg-gadget-content {
+.site-sidebar-gadget .site-gadget-content {
 	margin: 0 20px 0 20px;
 }
 

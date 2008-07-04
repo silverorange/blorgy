@@ -94,11 +94,11 @@ a:active { color: #ccc; }
 	width: 35%;
 }
 
-#sidebar .blorg-sidebar {
+#sidebar .site-sidebar {
 	position: relative;
 }
 
-#sidebar .blorg-sidebar .blorg-gadget-title {
+#sidebar .site-sidebar .site-gadget-title {
 	color: #fff;
 	font-size: 123.1%;
 	padding: 0 0 0 1px;
@@ -106,22 +106,22 @@ a:active { color: #ccc; }
 	background: url('../images/dotted.gif') bottom left repeat-x;
 }
 
-.blorg-sidebar-gadget a { color: #fff; }
-.blorg-sidebar-gadget a:link { color: #ddd; }
-.blorg-sidebar-gadget a:visited { color: #ddd; }
-.blorg-sidebar-gadget a:hover { color: #aaa; }
-.blorg-sidebar-gadget a:active { color: #ccc; }
+.site-sidebar-gadget a { color: #fff; }
+.site-sidebar-gadget a:link { color: #ddd; }
+.site-sidebar-gadget a:visited { color: #ddd; }
+.site-sidebar-gadget a:hover { color: #aaa; }
+.site-sidebar-gadget a:active { color: #ccc; }
 
-.blorg-sidebar-gadget {
+.site-sidebar-gadget {
 	color: #fff;
 }
 
-.blorg-gadget-content {
+.site-gadget-content {
 	padding: 5px;
 	line-height: 1.5;
 }
 
-.blorg-gadget-content ul li {
+.site-gadget-content ul li {
 	background: url('../images/list.gif') 0 7px no-repeat;
 	padding: 5px 0 5px 20px;
 	margin: 0;
