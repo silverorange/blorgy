@@ -127,6 +127,16 @@ a:active { color: #ccc; }
 	margin: 0;
 }
 
+.blorg-feed-gadget ul li,
+.blorg-archive-gadget ul li ul li {
+	background: none;
+	padding-left: 0;
+}
+
+.blorg-archive-gadget ul li ul li {
+	padding-bottom: 0;
+}
+
 /* }}} */
 /* {{{ Pagination */
 .swat-pagination span,
