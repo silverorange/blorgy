@@ -85,8 +85,8 @@ a:visited { color: #666; }
 	padding-right: 2em;
 }
 
-#sidebar .blorg-gadget-title,
-#sidebar .blorg-gadget-title a {
+#sidebar .site-gadget-title,
+#sidebar .site-gadget-title a {
 	color: #2261a2;
 	margin-bottom: 6px;
 }

@@ -4,7 +4,7 @@ require_once 'Swat/SwatNavBar.php';
 require_once 'Swat/SwatHtmlTag.php';
 require_once 'Swat/SwatStyleSheetHtmlHeadEntry.php';
 require_once 'Site/layouts/SiteLayout.php';
-require_once 'Blorg/BlorgSidebar.php';
+require_once 'Site/SiteSidebar.php';
 require_once 'Site/SiteGadgetFactory.php';
 require_once 'Site/dataobjects/SiteGadgetInstanceWrapper.php';
 require_once 'Blorg/dataobjects/BlorgFileImage.php';
@@ -29,7 +29,7 @@ class BlorgyLayout extends SiteLayout
 	// {{{ protected properties
 
 	/**
-	 * @var BlorgSidebar
+	 * @var SiteSidebar
 	 */
 	protected $sidebar;
 
@@ -62,7 +62,7 @@ class BlorgyLayout extends SiteLayout
 
 	protected function initSideBar()
 	{
-		$this->sidebar = new BlorgSidebar();
+		$this->sidebar = new SiteSidebar();
 
 		$sql = sprintf('select * from GadgetInstance
 			where instance %s %s

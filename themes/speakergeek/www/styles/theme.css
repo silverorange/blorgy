@@ -67,18 +67,18 @@ a:visited,
 /* Sidebar */
 #sidebar { width: 25%; }
 
-.blorg-sidebar .blorg-gadget-title {
+.site-sidebar .site-gadget-title {
 	color: #666;
 	padding: 2px;
 	border-bottom: 1px solid #ccc;
 	margin-right: 30px;
 }
 
-.blorg-sidebar .blorg-gadget-title a {
+.site-sidebar .site-gadget-title a {
 	text-decoration: none;
 }
 
-.blorg-sidebar .blorg-search-gadget form {
+.site-sidebar .blorg-search-gadget form {
 	margin-top: 6px;
 }
 

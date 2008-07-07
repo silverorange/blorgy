@@ -412,29 +412,29 @@ ul li {
 
 /* search */
 
-.blorg-sidebar { 
+.site-sidebar { 
 	clear: both;
 	text-align: center;
 	margin: 25px auto 0 auto;
 	padding: 0 0 10px 0;
 }
 
-.blorg-sidebar h3.blorg-gadget-title { 
+.site-sidebar h3.site-gadget-title { 
 	display: none;
 }
 
-.blorg-sidebar input.swat-entry { 
+.site-sidebar input.swat-entry { 
 	width: 200px;
 	margin: 0 5px 0 0;
 	padding: 4px;
 	border: 1px #ccc solid;
 }
 
-.blorg-sidebar input.swat-button {
+.site-sidebar input.swat-button {
 	vertical-align: top;
 }
 
-.blorg-sidebar input.swat-button-submit { 
+.site-sidebar input.swat-button-submit { 
 	padding: 3px 8px;
 	border-right: 1px #888 solid;
 	border-bottom: 1px #888 solid;

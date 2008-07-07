@@ -73,7 +73,7 @@ a:active {
 	background: transparent url('../images/beerbackground.png') repeat-y top left;
 }
 
-#sidebar .blorg-sidebar {
+#sidebar .site-sidebar {
 	padding: 62px;
 }
 
@@ -90,21 +90,21 @@ a:active {
 
 /* Sidebar */
 
-.blorg-sidebar-gadget {
+.site-sidebar-gadget {
 	color: #d9b566;
 }
 
-.blorg-gadget-title {
+.site-gadget-title {
 	color: #eeeac6;
 }
 
-.blorg-sidebar-gadget a:link,
-.blorg-sidebar-gadget a:visited {
+.site-sidebar-gadget a:link,
+.site-sidebar-gadget a:visited {
 	color: #d9b566;
 }
 
-.blorg-sidebar-gadget a:hover,
-.blorg-sidebar-gadget a:active {
+.site-sidebar-gadget a:hover,
+.site-sidebar-gadget a:active {
 	color: #eeeac6;
 }
 

@@ -133,16 +133,16 @@ a:active  { color: #fff; }
 /* }}} */
 /* {{{ Sidebar Gadgets */
 
-.blorg-sidebar-gadget {
+.site-sidebar-gadget {
 	font-family: sans-serif;
 	color: #999;
 }
 
-.blorg-sidebar-gadget ul li {
+.site-sidebar-gadget ul li {
 	font-size: 100%;
 }
 
-.blorg-sidebar-gadget .blorg-gadget-title {
+.site-sidebar-gadget .site-gadget-title {
 	font-weight: normal;
 	font-family: Georgia,'Times New Roman',serif;
 	font-size: 131%;
@@ -152,14 +152,14 @@ a:active  { color: #fff; }
 	margin-bottom: 0.25em;
 }
 
-.blorg-sidebar-gadget a:link,
-.blorg-sidebar-gadget a:visited {
+.site-sidebar-gadget a:link,
+.site-sidebar-gadget a:visited {
 	color: #ddd;
 	text-decoration: none;
 }
 
-.blorg-sidebar-gadget a:hover,
-.blorg-sidebar-gadget a:active {
+.site-sidebar-gadget a:hover,
+.site-sidebar-gadget a:active {
 	color: #fff;
 }
 
