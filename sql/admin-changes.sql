@@ -32,7 +32,7 @@ INSERT INTO AdminComponent (id, shortname, title, description, displayorder, sec
 	VALUES (15, 'Sidebar', 'Sidebar', null, 10, 30, true, true);
 
 INSERT INTO AdminComponent (id, shortname, title, description, displayorder, section, enabled, visible)
-	VALUES (16, 'Select Theme', 'Theme', null, 20, 30, true, true);
+	VALUES (16, 'Theme', 'Select Theme', null, 20, 30, true, true);
 
 
 -- update sequences
