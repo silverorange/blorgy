@@ -193,6 +193,11 @@ ul.plain li {
 	padding: 0.25em 0;
 }
 
+.smallprint {
+	font-size: 85%;
+	color: #666;
+}
+
 /* }}} */
 /* {{{ Post Comments */
 
