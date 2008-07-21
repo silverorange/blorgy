@@ -1,77 +1,83 @@
+html, body, #content { height: 100%; }
+
+html {
+	background: #2f5a99;
+}
+
 body {
-	font-family: verdana, sans-serif;
+	background: #fff;
 	margin: 0 5%;
 	padding: 0;
+	font-family: verdana, sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 1.5em; 
+	color: #333;
 }
 
-#content { margin-right: 30%; }
-
-#hd {
-	background: url('../images/title.jpg');
+#wrapper {
+	background: #fff url('../images/footer.jpg') center bottom repeat-x;
+	min-height: 100%;
+	border-left: 2px solid #0a2e70;
+	border-right: 2px solid #0a2e70;
 }
 
-#hd h1 {
-	padding-left: 30px;
-	padding-top: 30px;
+#content {
+	padding: 0 25px;
+	width: 70%;
 }
-
-#hd h1,
-#hd h1 a {
-	background: url('../images/logo.jpg') left top no-repeat;
-	color: #09227f;
-	font-style: italic;
-	width: 340px;
-	height: 110px;
-	line-height: 2000px;
-	overflow: hidden;
-}
-
-
 
 a,
-a:link,
-a:hover,
-.entry .entry-title a:visited,
-.entry .entry-subtitle a,
-.entry .entry-subtitle a:link,
-.entry .entry-subtitle a:hover {
+a:visited,
+a:active {
 	color: #003399;
 }
 
-a:visited,
-.entry .entry-subtitle a:visited {
-	color: #666;
+#nav_bar {
+	padding-left: 1.25em;
+	color: #999;
+	font-size: 11px;
 }
 
 
-/* Entries */
-.entry .entry-title { font-size: 130%; }
-
-.entry .entry-subtitle {
-	background: url('../images/speakerbullet.jpg') 0 50% no-repeat;
-	padding: 2px 0 2px 18px;
-	height: 15px;
+/* Header */
+#hd {
+	background: url('../images/title.jpg');
+	height: 140px;
 }
 
-.entry .entry-subtitle { color: #666; }
-
-.entry .entry-content { padding-left: 18px; }
-
-.entry-no-title .entry-content { padding-left: 0; }
-
-.entry-no-title .entry-subtitle {
-	background: none;
-	padding-left: 0;
+#hd span {
+	position: relative;
+	top: 35px;
+	left: 20px;
+	font-size: 300%;
+	font-weight: bold;
+	color: #003399;
 }
+
+#hd a { color: #1243ac; }
+
 
 /* Sidebar */
-#sidebar { width: 25%; }
+#sidebar {
+	float: right;
+	width: 23%;
+	color: #999;
+	font-size: 93%;
+	margin-left: 3em;
+}
 
 .site-sidebar .site-gadget-title {
 	color: #666;
 	padding: 2px;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #ddd;
 	margin-right: 30px;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.site-sidebar .site-gadget-content {
+	margin-bottom: 2em;
 }
 
 .site-sidebar .site-gadget-title a {
@@ -81,6 +87,66 @@ a:visited,
 .site-sidebar .blorg-search-gadget form {
 	margin-top: 6px;
 }
+
+.site-sidebar-gadget a:link,
+.site-sidebar-gadget a:visited {
+	color:#666;
+}
+
+.site-sidebar-gadget ul li ul li {
+	margin-left: 1em;
+}
+
+
+/* Search Form */
+.site-sidebar .blorg-search-gadget form {
+	margin-top: 6px;
+}
+
+blorg-search-gadget .swat-form-field,
+.blorg-search-gadget .swat-form-field-contents {
+	display:inline;
+}
+
+.blorg-search-gadget .swat-entry,
+.blorg-search-gadget .swat-button {
+	vertical-align:middle;
+}
+
+.blorg-search-gadget .swat-entry {
+	width:120px;
+}
+
+
+/* Entries */
+.entry {
+	padding: 1em 0 1em 0;
+	margin-bottom: 1em;
+}
+l8
+.entry-no-title {
+	border-top: 1px dotted #ddd;
+	border-bottom: 1px dotted #ddd;
+}
+
+.entry-title,
+#page_title {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.entry-title a { text-decoration: none; }
+
+.entry .entry-subtitle {
+	background: url('../images/speakerbullet.jpg') 0 50% no-repeat;
+	padding: 2px 0 2px 18px;
+	height: 15px;
+	color: #666;
+	font-size: 10px;
+	margin-bottom: 6px;
+}
+
+.entry .entry-subtitle a { color: #666; }
 
 
 /* Pagination */
@@ -109,16 +175,71 @@ a:visited,
 	color: #333;
 }
 
-.footer .results-message,
-.footer .archive-link {
+.footer {
+	padding-bottom: 85px;
 	font-size: 85%;
+	text-align: center;
 }
 
 
 /* Comment Form */
-#comment_edit_form .swat-frame-contents {
-	background: transparent;
+#comment_edit_form {
+	margin-top: 2em;
 }
+
+#comment_edit_frame,
+#comment_edit_frame .swat-footer-form-field { background: transparent; }
+
+#comment_edit_frame .swat-frame-title {
+	margin-bottom: 0;
+	border-bottom: 1px solid #ccc;
+	background: transparent;
+	color: #333;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.swat-frame { border: 0; }
+
+.swat-form label {
+	font-weight: normal;
+	font-size: 11px;
+}
+
+.swat-frame .swat-actions,
+.swat-frame .swat-header-form-field,
+.swat-frame .swat-footer-form-field {
+	padding: 0;
+	margin: 15px 0;
+}
+
+.swat-frame .swat-footer-form-field {
+	padding: 1em 0;
+}
+
+#comment_edit_frame .swat-frame-contents {
+	background: transparent;
+	padding: 1em;
+}
+
+#comment_edit_form .swat-entry,
+#comment_edit_form .swat-textarea {
+	width: 98%;
+}
+
+#comment_edit_details {
+	width: 35%;
+	float: left;
+	position: relative;
+}
+
+#comment_bodytext_field {
+	width: 62%;
+	float: right;
+	position: relative;
+}
+
+#comment_edit_frame .swat-footer-form-field { clear: both; }
 
 #comment_edit_form .swat-required { color: #aaa; }
 
@@ -140,4 +261,78 @@ a:visited,
 	border-bottom: 1px solid #777;
 	border-right: 1px solid #777;
 	padding: 2px;
+}
+
+
+/* Comments */
+#comments {
+	font-size: 11px;
+}
+
+.comments-title {
+	font-weight: bold;
+	font-size: 14px;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 0.75em;
+}
+
+.comment .comment-link a:link,
+.comment .comment-link a:visited {
+	color: #999;
+}
+
+.comment {
+	margin-bottom: 1.5em;
+	padding-left: 1.5em;
+}
+
+.comment .comment-title span.comment-author {
+	color: #666;
+}
+
+.comment .comment-title {
+	font-size: 100%;
+	font-weight: bold;
+}
+
+.comment .comment-title a.permalink:link,
+.comment .comment-title a.permalink:visited {
+	color: #999;
+	text-decoration: none;
+}
+
+.comment .comment-title a.permalink:hover {
+	color: #777;
+	text-decoration: underline;
+}
+
+.comment .comment-title .permalink {
+	font-weight: normal;
+}
+
+
+/* Archive */
+#content .blorg-archive-years {
+	padding-bottom: 200px;
+}
+
+#content ul.blorg-archive-tags li,
+#content ul.blorg-archive-years li,
+#content ul.blorg-archive-months li {
+	list-style-type: none;
+	margin-bottom: 0.2em;
+}
+
+#content ul.blorg-archive-tags,
+#content ul.blorg-archive-tags ul,
+#content ul.blorg-archive-years,
+#content ul.blorg-archive-years ul,
+#content ul.blorg-archive-months,
+#content ul.blorg-archive-months ul {
+	margin: 0.5em 0pt 1em 1em;
+}
+
+#page_title {
+	margin-left: 1em;
+	margin-top: 1em;
 }
