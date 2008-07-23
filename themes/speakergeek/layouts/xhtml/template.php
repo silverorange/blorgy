@@ -26,7 +26,7 @@
 				echo $this->title;
 			}
 		?>
-		
+
 		<div id="content">
 			<?= $this->content ?>
 		</div>
