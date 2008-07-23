@@ -130,7 +130,8 @@ l8
 }
 
 .entry-title,
-#page_title {
+#page_title,
+.author-name {
 	font-weight: bold;
 	font-size: 18px;
 }
@@ -332,7 +333,16 @@ l8
 	margin: 0.5em 0pt 1em 1em;
 }
 
+/* Misc */
 #page_title {
 	margin-left: 1em;
 	margin-top: 1em;
+}
+
+.author-name {
+	margin-bottom: 1em;
+}
+
+.author-content img {
+	margin-left: 2em;
 }
