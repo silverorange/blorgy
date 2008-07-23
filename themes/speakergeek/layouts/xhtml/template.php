@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<base href="<?= $this->basehref ?>"></base>
-	<?=$this->html_head_entries?>
+	<?= $this->html_head_entries ?>
 	<title><?= $this->html_title ?></title>
 	<meta name="description" content="<?= $this->meta_description ?>" />
 </head>
