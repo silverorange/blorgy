@@ -12,6 +12,7 @@ require_once 'Site/SiteMultipleInstanceModule.php';
 require_once 'Site/SiteTimerModule.php';
 require_once 'Site/SiteExceptionLogger.php';
 require_once 'Site/SiteErrorLogger.php';
+require_once 'Site/SiteMessagesModule.php';
 require_once 'Blorg/Blorg.php';
 require_once 'Blorgy.php';
 require_once '../include/ThemeModule.php';
@@ -69,29 +70,30 @@ class Application extends SiteWebApplication
 		case 'httperror':
 			require_once '../include/pages/HttpErrorPage.php';
 			$page = new HttpErrorPage($this, $layout);
+			$page->setSource($source);
 			break;
 
 		case 'exception':
 			require_once 'pages/ExceptionPage.php';
 			$page = new ExceptionPage($this, $layout);
+			$page->setSource($source);
 			break;
 
 		case 'article':
-			array_shift($path);
 			require_once '../include/ArticlePageFactory.php';
-			$factory = new ArticlePageFactory();
-			$page = $factory->resolvePage($this, implode('/', $path), $layout);
-
+			$factory = new ArticlePageFactory($this);
+			$factory->setDefaultArticlePage('ArticlePage');
+			$factory->setPathPrefixLength(1);
+			$page = $factory->get($source, $layout);
 			break;
 
 		default:
 			require_once 'Blorg/BlorgPageFactory.php';
-			$factory = new BlorgPageFactory();
-			$page = $factory->resolvePage($this, $source, $layout);
+			$factory = new BlorgPageFactory($this);
+			$page = $factory->get($source, $layout);
 			break;
 		}
 
-		$page->setSource($source);
 		return $page;
 	}
 
