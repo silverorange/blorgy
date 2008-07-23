@@ -32,5 +32,8 @@
 		</div>
 	</div>
 </div>
+
+<?= $this->google_analytics ?>
+
 </body>
 </html>
