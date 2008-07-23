@@ -13,11 +13,9 @@ class SpeakergeekLayout extends BlorgyLayout
 
 	protected function finalizeBaseCss()
 	{
-		//$yui = new SwatYUI(array('reset', 'fonts', 'base'));
-		//$this->addHtmlHeadEntrySet($yui->getHtmlHeadEntrySet());
-
-		//$this->addHtmlHeadEntry(new SwatStyleSheetHtmlHeadEntry('styles/base.css'));
-		$this->addHtmlHeadEntry(new SwatStyleSheetHtmlHeadEntry('themes/speakergeek/styles/reset.css'));
+		// Use custom reset.css as copied from the FOL theme
+		$this->addHtmlHeadEntry(new SwatStyleSheetHtmlHeadEntry(
+			'themes/speakergeek/styles/reset.css'));
 	}
 
 	// }}}
