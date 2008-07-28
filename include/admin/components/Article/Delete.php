@@ -73,8 +73,6 @@ class ArticleDelete extends SiteArticleDelete
 
 		if ($dep->getStatusLevelCount(AdminDependency::DELETE) === 0)
 			$this->switchToCancelButton();
-
-		$this->buildNavBar();
 	}
 
 	// }}}
