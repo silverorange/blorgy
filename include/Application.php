@@ -81,13 +81,13 @@ class Application extends SiteWebApplication
 			require_once '../include/ArticlePageFactory.php';
 			$factory = new ArticlePageFactory($this);
 			$factory->setDefaultArticlePage('ArticlePage');
-			$page = $factory->get($source, $layout);
+			$page = $factory->resolvePage($source, $layout);
 			break;
 
 		default:
 			require_once 'Blorg/BlorgPageFactory.php';
 			$factory = new BlorgPageFactory($this);
-			$page = $factory->get($source, $layout);
+			$page = $factory->resolvePage($source, $layout);
 			break;
 		}
 
