@@ -48,6 +48,17 @@ class TestCase extends PHPUnit_Framework_TestCase
 	}
 
 	// }}}
+	// {{{ protected function assertHasPosts()
+
+	protected function assertHasPosts()
+	{
+		// make sure there are posts displayed
+		$this->assertTrue($this->selenium->isElementPresent(
+			"xpath=//div[contains(@class, 'entry')]/".
+			"div[contains(@class, 'entry-content')]"));
+	}
+
+	// }}}
 }
 
 ?>

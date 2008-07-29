@@ -10,11 +10,7 @@ class MonthArchiveTestCase extends TestCase
 	{
 		$this->selenium->open('archive/2006/november');
 		$this->assertNoExceptions();
-
-		// make sure there are posts displayed
-		$this->assertTrue($this->selenium->isElementPresent(
-			"xpath=//div[contains(@class, 'entry')]/".
-			"div[contains(@class, 'entry-content')]"));
+		$this->assertHasPosts();
 	}
 
 	// }}}

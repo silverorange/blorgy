@@ -10,11 +10,7 @@ class FrontTestCase extends TestCase
 	{
 		$this->selenium->open('');
 		$this->assertNoExceptions();
-
-		// make sure there are posts displayed
-		$this->assertTrue($this->selenium->isElementPresent(
-			"xpath=//div[contains(@class, 'entry')]/".
-			"div[contains(@class, 'entry-content')]"));
+		$this->assertHasPosts();
 
 		// make sure footer summary is there
 		$this->assertTrue($this->selenium->isTextPresent(
@@ -28,11 +24,7 @@ class FrontTestCase extends TestCase
 	{
 		$this->selenium->open('page2');
 		$this->assertNoExceptions();
-
-		// make sure there are posts displayed
-		$this->assertTrue($this->selenium->isElementPresent(
-			"xpath=//div[contains(@class, 'entry')]/".
-			"div[contains(@class, 'entry-content')]"));
+		$this->assertHasPosts();
 
 		// make sure footer summary is correct
 		$this->assertTrue($this->selenium->isTextPresent(
