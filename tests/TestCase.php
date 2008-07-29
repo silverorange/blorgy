@@ -5,7 +5,7 @@ require_once 'PHPUnit/Framework/TestCase.php';
 
 class TestCase extends PHPUnit_Framework_TestCase
 {
-	const WORKING_DIR = 'work-gauthierm';
+	const WORKING_DIR = 'live';
 	const INSTANCE    = 'aov';
 
 	// {{{ public function setUp()
@@ -36,6 +36,15 @@ class TestCase extends PHPUnit_Framework_TestCase
 	{
 		$this->assertFalse($this->selenium->isElementPresent(
 			'xpath=//div[@class=\'swat-exception\']'));
+	}
+
+	// }}}
+	// {{{ protected function assertNotFound()
+
+	protected function assertNotFound()
+	{
+		$this->assertTrue($this->selenium->isTextPresent(
+			'Sorry, we couldn’t find the page you were looking for.'));
 	}
 
 	// }}}

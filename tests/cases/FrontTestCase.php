@@ -4,9 +4,9 @@ require_once 'TestCase.php';
 
 class FrontTestCase extends TestCase
 {
-	// {{{ public function testResults()
+	// {{{ public function testLoad()
 
-	public function testResults()
+	public function testLoad()
 	{
 		$this->selenium->open('');
 		$this->assertNoExceptions();
@@ -45,8 +45,7 @@ class FrontTestCase extends TestCase
 	public function testInvalidPagination()
 	{
 		$this->selenium->open('page20000');
-		$this->assertTrue($this->selenium->isTextPresent(
-			'Sorry, we couldn’t find the page you were looking for.'));
+		$this->assertNotFound();
 	}
 
 	// }}}
