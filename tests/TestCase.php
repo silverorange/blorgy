@@ -5,24 +5,34 @@ require_once 'PHPUnit/Framework/TestCase.php';
 
 class TestCase extends PHPUnit_Framework_TestCase
 {
-	const WORKING_DIR = 'live';
+	const WORKING_DIR = 'work-gauthierm';
 	const INSTANCE    = 'aov';
 
-	// {{{ protected function initSelenium()
+	// {{{ public function setUp()
 
-	protected function initSelenium($secure = false)
+	public function setUp()
 	{
 		$uri = 'http://zest/blorgy-'.self::INSTANCE.'/'.
 			self::WORKING_DIR.'/www/';
 
 		$this->selenium = new Testing_Selenium(
 			'*custom /usr/local/bin/firefox-bin', $uri);
+
+		$this->selenium->start();
 	}
 
 	// }}}
-	// {{{ public function sharedAssertions()
+	// {{{ public function tearDown()
 
-	public function sharedAssertions()
+	public function tearDown()
+	{
+		$this->selenium->stop();
+	}
+
+	// }}}
+	// {{{ protected function assertNoExceptions()
+
+	protected function assertNoExceptions()
 	{
 		$this->assertFalse($this->selenium->isElementPresent(
 			'xpath=//div[@class=\'swat-exception\']'));

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites>
-  <testsuite name="All Tests" tests="2" failures="0" errors="0" time="12.866898">
-    <testsuite name="SearchTestCase" file="/so/sites/blorgy/work-gauthierm/tests/cases/SearchTestCase.php" tests="2" failures="0" errors="0" time="12.866898">
-      <testcase name="testResults" class="SearchTestCase" file="/so/sites/blorgy/work-gauthierm/tests/cases/SearchTestCase.php" line="28" time="7.332244"/>
-      <testcase name="testNoResults" class="SearchTestCase" file="/so/sites/blorgy/work-gauthierm/tests/cases/SearchTestCase.php" line="38" time="5.534654"/>
-    </testsuite>
-  </testsuite>
-</testsuites>

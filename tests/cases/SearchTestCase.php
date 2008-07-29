@@ -4,30 +4,13 @@ require_once 'TestCase.php';
 
 class SearchTestCase extends TestCase
 {
-	// {{{ public function setUp()
-
-	public function setUp()
-	{
-		$this->initSelenium(true);
-		$this->selenium->start();
-	}
-
-	// }}}
-	// {{{ public function tearDown()
-
-	public function tearDown()
-	{
-		$this->selenium->stop();
-	}
-
-	// }}}
-
 	// tests
 	// {{{ public function testResults()
 
 	public function testResults()
 	{
 		$this->selenium->open('search?keywords=test');
+		$this->assertNoExceptions();
 		$this->assertFalse($this->selenium->isTextPresent(
 			'No results found for'));
 	}
@@ -38,6 +21,7 @@ class SearchTestCase extends TestCase
 	public function testNoResults()
 	{
 		$this->selenium->open('search?keywords=qwefoiqewfoiqewoibfoibqewf');
+		$this->assertNoExceptions();
 		$this->assertTrue($this->selenium->isTextPresent(
 			'No results found for'));
 	}
@@ -48,6 +32,7 @@ class SearchTestCase extends TestCase
 	public function testSpellCheckResults()
 	{
 		$this->selenium->open('search?keywords=delicius');
+		$this->assertNoExceptions();
 		$this->assertTrue($this->selenium->isTextPresent(
 			'Did you mean'));
 	}
@@ -58,6 +43,7 @@ class SearchTestCase extends TestCase
 	public function testPostPagination()
 	{
 		$this->selenium->open('search?keywords=test&type=post&page=2');
+		$this->assertNoExceptions();
 		$this->assertTrue($this->selenium->isTextPresent('Page 2'));
 		$this->assertTrue($this->selenium->isElementPresent(
 			"xpath=//div[contains(@class, 'entry')]/".
@@ -73,6 +59,7 @@ class SearchTestCase extends TestCase
 	public function testArticlePagination()
 	{
 		$this->selenium->open('search?keywords=test&type=article&page=2');
+		$this->assertNoExceptions();
 		$this->assertTrue($this->selenium->isTextPresent('Page 2'));
 		$this->assertTrue($this->selenium->isTextPresent(
 			'Article Search Results'));
