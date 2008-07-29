@@ -11,7 +11,7 @@ body {
 	font-family: verdana, sans-serif;
 	font-weight: normal;
 	font-size: 12px;
-	line-height: 1.5em; 
+	line-height: 1.5em;
 	color: #333;
 }
 
@@ -23,13 +23,13 @@ body {
 }
 
 #content {
-	padding: 0 25px;
+	padding: 0 250px 0 25px;
 }
 
 a,
 a:visited,
 a:active {
-	color: #003399;
+	color: #039;
 }
 
 #nav_bar {
@@ -51,7 +51,7 @@ a:active {
 	left: 20px;
 	font-size: 300%;
 	font-weight: bold;
-	color: #003399;
+	color: #039;
 }
 
 #hd a { color: #1243ac; }
@@ -102,7 +102,7 @@ a:active {
 	margin-top: 6px;
 }
 
-blorg-search-gadget .swat-form-field,
+.blorg-search-gadget .swat-form-field,
 .blorg-search-gadget .swat-form-field-contents {
 	display:inline;
 }
@@ -122,10 +122,12 @@ blorg-search-gadget .swat-form-field,
 	padding: 1em 0 1em 0;
 	margin-bottom: 1em;
 }
-l8
+
 .entry-no-title {
 	border-top: 1px dotted #ddd;
 	border-bottom: 1px dotted #ddd;
+	padding: 0.5em;
+	margin-bottom: 2em;
 }
 
 .entry-title,
