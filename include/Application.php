@@ -12,6 +12,7 @@ require_once 'Site/SiteMultipleInstanceModule.php';
 require_once 'Site/SiteTimerModule.php';
 require_once 'Site/SiteExceptionLogger.php';
 require_once 'Site/SiteErrorLogger.php';
+require_once 'Site/SiteMessagesModule.php';
 require_once 'Blorg/Blorg.php';
 require_once 'Blorgy.php';
 require_once '../include/ThemeModule.php';
@@ -77,17 +78,16 @@ class Application extends SiteWebApplication
 			break;
 
 		case 'article':
-			array_shift($path);
 			require_once '../include/ArticlePageFactory.php';
-			$factory = new ArticlePageFactory();
-			$page = $factory->resolvePage($this, implode('/', $path), $layout);
-
+			$factory = new ArticlePageFactory($this);
+			$factory->setDefaultArticlePage('ArticlePage');
+			$page = $factory->resolvePage($source, $layout);
 			break;
 
 		default:
 			require_once 'Blorg/BlorgPageFactory.php';
-			$factory = new BlorgPageFactory();
-			$page = $factory->resolvePage($this, $source, $layout);
+			$factory = new BlorgPageFactory($this);
+			$page = $factory->resolvePage($source, $layout);
 			break;
 		}
 

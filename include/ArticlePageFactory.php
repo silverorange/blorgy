@@ -12,40 +12,36 @@ require_once '../include/pages/ArticlePage.php';
  */
 class ArticlePageFactory extends SiteArticlePageFactory
 {
-	// {{{ public function __construct()
-
-	public function __construct()
-	{
-		$this->default_page_class = 'ArticlePage';
-	}
-
-	// }}}
-	// {{{ protected function findArticle()
+	// {{{ protected function getArticleId()
 
 	/**
 	 * Gets an article id from the given article path
 	 *
-	 * @param SiteWebApplication $app
 	 * @param string $path
 	 *
 	 * @return integer the database identifier corresponding to the given
 	 *                  article path or null if no such identifier exists.
 	 */
-	protected function findArticle(SiteWebApplication $app, $path)
+	protected function getArticleId($path)
 	{
-		if (!SwatString::validateUtf8($path))
+		// don't try to find articles with invalid UTF-8 in the path
+		if (!SwatString::validateUtf8($path)) {
 			throw new SiteException(
 				sprintf('Path is not valid UTF-8: ‘%s’', $path));
+		}
 
-		// trim at 254 to prevent database errors
-		$path = substr($path, 0, 254);
-		$instance_id = $app->getInstanceId();
-		$sql = sprintf('select findArticle(%s, %s)',
-			$app->db->quote($path, 'text'),
-			$app->db->quote($instance_id, 'integer'));
+		// don't try to find articles with more than 254 characters in the path
+		if (strlen($path) > 254) {
+			throw new SiteException(
+				sprintf('Path is too long: ‘%s’', $path));
+		}
 
-		$article_id = SwatDB::queryOne($app->db, $sql);
-		return $article_id;
+		$instance_id = $this->app->getInstanceId();
+		return SwatDB::executeStoredProcOne($this->app->db,
+			'findArticle', array(
+				$this->app->db->quote($path, 'text'),
+				$this->app->db->quote($instance_id, 'integer'),
+			));
 	}
 
 	// }}}
