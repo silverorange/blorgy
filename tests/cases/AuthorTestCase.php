@@ -8,10 +8,9 @@ class AuthorTestCase extends TestCase
 
 	public function testLoad()
 	{
-		$this->selenium->open('author/steven');
-		$this->assertNoExceptions();
+		$this->loadAuthor();
 
-		// make sure there are authors displayed
+		// make sure the author is displayed
 		$this->assertTrue($this->selenium->isElementPresent(
 			"xpath=//div[@class='author']/h3[@class='author-name']"));
 
@@ -19,7 +18,7 @@ class AuthorTestCase extends TestCase
 			"xpath=//div[@class='author']/div[@class='author-content']"));
 
 		// make sure there are posts displayed
-		// TODO: AOV doesn't display posts on the author page
+		// TODO: some blorgs don't display posts on the author page
 	}
 
 	// }}}
@@ -27,7 +26,7 @@ class AuthorTestCase extends TestCase
 
 	public function testPagination()
 	{
-		// TODO: AOV doesn't display posts on the author page
+		// TODO: some blorgs don't display posts on the author page
 	}
 
 	// }}}
@@ -35,7 +34,7 @@ class AuthorTestCase extends TestCase
 
 	public function testInvalidPagination()
 	{
-		// TODO: AOV doesn't display posts on the author page
+		// TODO: some blorgs don't display posts on the author page
 	}
 
 	// }}}
@@ -45,6 +44,21 @@ class AuthorTestCase extends TestCase
 	{
 		$this->selenium->open('author/thisisnotavalidauthor');
 		$this->assertNotFound();
+	}
+
+	// }}}
+	// {{{ protected function loadAuthor()
+
+	protected function loadAuthor()
+	{
+		$this->selenium->open('author');
+		$this->assertNoExceptions();
+
+		$this->selenium->click("xpath=//div[@class='author']/".
+			"h4[@class='author-name']/a");
+
+		$this->selenium->waitForPageToLoad(30000);
+		$this->assertNoExceptions();
 	}
 
 	// }}}
