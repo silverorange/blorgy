@@ -4,6 +4,11 @@ require_once 'TestCase.php';
 
 class FrontTestCase extends TestCase
 {
+	// {{{ class constants
+
+	const MAX_POSTS = 10;
+
+	// }}}
 	// {{{ public function testLoad()
 
 	public function testLoad()
@@ -13,8 +18,8 @@ class FrontTestCase extends TestCase
 		$this->assertHasPosts();
 
 		// make sure footer summary is there
-		$this->assertTrue($this->selenium->isTextPresent(
-			'posts, displaying 1 to 10'));
+		$text = sprintf('posts, displaying 1 to %s', self::MAX_POSTS);
+		$this->assertTrue($this->selenium->isTextPresent($text));
 	}
 
 	// }}}
@@ -27,8 +32,10 @@ class FrontTestCase extends TestCase
 		$this->assertHasPosts();
 
 		// make sure footer summary is correct
-		$this->assertTrue($this->selenium->isTextPresent(
-			'posts, displaying 11 to 20'));
+		$start = self::MAX_POSTS + 1;
+		$end   = self::MAX_POSTS * 2;
+		$text  = sprintf('posts, displaying %s to %s', $start, $end);
+		$this->assertTrue($this->selenium->isTextPresent($text));
 	}
 
 	// }}}
