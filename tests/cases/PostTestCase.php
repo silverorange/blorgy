@@ -16,8 +16,7 @@ class PostTestCase extends TestCase
 
 	public function testLoad()
 	{
-		$this->selenium->open('archive/2006/november/actsofvolition');
-		$this->assertNoExceptions();
+		$this->loadCommentablePost();
 
 		// make sure the post is displayed
 		$this->assertTrue($this->selenium->isElementPresent(
@@ -47,6 +46,7 @@ class PostTestCase extends TestCase
 
 	public function testNotFound()
 	{
+		// TODO: ensure the year and month are valid for this blorg
 		$this->selenium->open('archive/2006/november/thispostdoesnotexist');
 		$this->assertNotFound();
 	}
@@ -56,7 +56,8 @@ class PostTestCase extends TestCase
 
 	public function testValidateComment()
 	{
-		$this->selenium->open('archive/2006/november/actsofvolition');
+		$this->loadCommentablePost();
+
 		$this->assertNoExceptions();
 
 		// make sure the comment form is displayed
@@ -84,8 +85,7 @@ class PostTestCase extends TestCase
 
 	public function testPreviewComment()
 	{
-		$this->selenium->open('archive/2006/november/actsofvolition');
-		$this->assertNoExceptions();
+		$this->loadCommentablePost();
 
 		$this->enterComment();
 
@@ -120,8 +120,7 @@ class PostTestCase extends TestCase
 
 	public function testRememberMeCookie()
 	{
-		$this->selenium->open('archive/2006/november/thewebosdoesnt');
-		$this->assertNoExceptions();
+		$this->loadCommentablePost();
 
 		$this->assertNotContains(TestCase::INSTANCE.'_comment_credentials=',
 			$this->selenium->getCookie());
@@ -141,8 +140,7 @@ class PostTestCase extends TestCase
 
 	public function testPostComment()
 	{
-		$this->selenium->open('archive/2006/november/thewebosdoesnt');
-		$this->assertNoExceptions();
+		$this->loadCommentablePost();
 
 		$this->enterComment();
 
@@ -186,6 +184,59 @@ class PostTestCase extends TestCase
 		$this->selenium->type('link',     self::COMMENT_LINK);
 		$this->selenium->type('email',    self::COMMENT_EMAIL);
 		$this->selenium->type('bodytext', self::COMMENT_BODYTEXT);
+	}
+
+	// }}}
+	// {{{ protected function loadPost()
+
+	protected function loadPost()
+	{
+		$this->selenium->open('');
+		$this->assertNoExceptions();
+
+		$post_link_xpath =
+			"xpath=//div[contains(@class, 'entry')]/".
+			"h3[@class='entry-title']/a";
+
+		// page through posts until we find a linked post
+		while (!$this->selenium->isElementPresent($post_link_xpath)) {
+			$this->selenium->click(
+				"xpath=//div[@class='swat-pagination']/a[last()]");
+
+			$this->selenium->waitForPageToLoad(30000);
+			$this->assertNoExceptions();
+		}
+
+		$element = $this->selenium->click($post_link_xpath);
+		$this->selenium->waitForPageToLoad(30000);
+		$this->assertNoExceptions();
+	}
+
+	// }}}
+	// {{{ protected function loadCommentablePost()
+
+	protected function loadCommentablePost()
+	{
+		$this->selenium->open('');
+		$this->assertNoExceptions();
+
+		$comment_link_xpath =
+			"xpath=//div[contains(@class, 'entry')]/".
+			"div[@class='entry-subtitle']/".
+			"a[@class='comment-count']";
+
+		// page through posts until we find a commentable post
+		while (!$this->selenium->isElementPresent($comment_link_xpath)) {
+			$this->selenium->click(
+				"xpath=//div[@class='swat-pagination']/a[last()]");
+
+			$this->selenium->waitForPageToLoad(30000);
+			$this->assertNoExceptions();
+		}
+
+		$element = $this->selenium->click($comment_link_xpath);
+		$this->selenium->waitForPageToLoad(30000);
+		$this->assertNoExceptions();
 	}
 
 	// }}}
