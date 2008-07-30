@@ -119,6 +119,20 @@ class PostTestCase extends TestCase
 
 	public function testRememberMeCookie()
 	{
+		$this->selenium->open('archive/2006/november/thewebosdoesnt');
+		$this->assertNoExceptions();
+
+		$this->assertNotContains(TestCase::INSTANCE.'_comment_credentials=',
+			$this->selenium->getCookie());
+
+		$this->enterComment();
+
+		$this->selenium->click('remember_me');
+		$this->selenium->click('post_button');
+		$this->selenium->waitForPageToLoad(30000);
+
+		$this->assertContains(TestCase::INSTANCE.'_comment_credentials=',
+			$this->selenium->getCookie());
 	}
 
 	// }}}
