@@ -86,6 +86,7 @@ class PostTestCase extends TestCase
 	{
 		$this->selenium->open('archive/2006/november/actsofvolition');
 		$this->assertNoExceptions();
+
 		$this->enterComment();
 
 		$this->selenium->click('preview_button');
@@ -140,6 +141,36 @@ class PostTestCase extends TestCase
 
 	public function testPostComment()
 	{
+		$this->selenium->open('archive/2006/november/thewebosdoesnt');
+		$this->assertNoExceptions();
+
+		$this->enterComment();
+
+		$this->selenium->click('post_button');
+		$this->selenium->waitForPageToLoad(30000);
+		$this->assertTrue($this->selenium->isTextPresent(
+			'Your comment has been published.'));
+
+		// make sure form was cleared
+		$this->assertEquals('', $this->selenium->getValue('fullname'));
+		$this->assertEquals('', $this->selenium->getValue('link'));
+		$this->assertEquals('', $this->selenium->getValue('email'));
+		$this->assertEquals('', $this->selenium->getValue('bodytext'));
+
+		// get new comment id
+		$location = $this->selenium->getLocation();
+		$comment_id = end(explode('#', $location));
+
+		// make sure new comment exists
+		$this->assertTrue($this->selenium->isElementPresent(
+			"xpath=//div[@id='{$comment_id}']"));
+
+		// make sure new comment bodytext displayed
+		$this->assertEquals(
+			self::COMMENT_BODYTEXT,
+			$this->selenium->getText(
+				"xpath=//div[@id='{$comment_id}']/".
+				"div[@class='comment-content']/p"));
 	}
 
 	// }}}
