@@ -1,7 +1,13 @@
 <?php
 
+chdir(dirname(__FILE__));
+
 require_once 'PHPUnit/Framework/TestSuite.php';
 require_once 'PHPUnit/TextUI/TestRunner.php';
+
+if (!defined('PHPUnit_MAIN_METHOD')) {
+	define('PHPUnit_MAIN_METHOD', 'TestSuite::main');
+}
 
 class TestSuite
 {
@@ -14,19 +20,21 @@ class TestSuite
 	{
 		$suite = new PHPUnit_Framework_TestSuite('All Tests');
 
-		$dir = dirname(__FILE__);
-		chdir($dir);
-		$files = scandir('cases');
-		foreach ($files as $file) {
+		$directory = new DirectoryIterator('cases');
+		foreach ($directory as $file) {
 			if (substr($file, 0, 1) !== '.' && substr($file, -4) === '.php') {
-				require_once $dir.'/cases/'.$file;
-				$class = substr($file, 0, -4);
-				$suite->addTestSuite($class);
+				require_once $file->getRealPath();
+				$class_name = substr($file, 0, -4);
+				$suite->addTestSuite($class_name);
 			}
 		}
 
 		return $suite;
 	}
+}
+
+if (PHPUnit_MAIN_METHOD == 'TestSuite::main') {
+	TestSuite::main();
 }
 
 ?>
