@@ -187,32 +187,6 @@ class PostTestCase extends TestCase
 	}
 
 	// }}}
-	// {{{ protected function loadPost()
-
-	protected function loadPost()
-	{
-		$this->selenium->open('');
-		$this->assertNoExceptions();
-
-		$post_link_xpath =
-			"xpath=//div[contains(@class, 'entry')]/".
-			"h3[@class='entry-title']/a";
-
-		// page through posts until we find a linked post
-		while (!$this->selenium->isElementPresent($post_link_xpath)) {
-			$this->selenium->click(
-				"xpath=//div[@class='swat-pagination']/a[last()]");
-
-			$this->selenium->waitForPageToLoad(30000);
-			$this->assertNoExceptions();
-		}
-
-		$element = $this->selenium->click($post_link_xpath);
-		$this->selenium->waitForPageToLoad(30000);
-		$this->assertNoExceptions();
-	}
-
-	// }}}
 	// {{{ protected function loadCommentablePost()
 
 	protected function loadCommentablePost()
@@ -223,7 +197,8 @@ class PostTestCase extends TestCase
 		$comment_link_xpath =
 			"xpath=//div[contains(@class, 'entry')]/".
 			"div[@class='entry-subtitle']/".
-			"a[@class='comment-count']";
+			"a[@class='comment-count' and ".
+				"contains(text(), 'leave a comment') = false]";
 
 		// page through posts until we find a commentable post
 		while (!$this->selenium->isElementPresent($comment_link_xpath)) {
