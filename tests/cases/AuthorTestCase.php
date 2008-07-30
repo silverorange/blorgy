@@ -2,7 +2,7 @@
 
 require_once 'TestCase.php';
 
-class AuthorIndexTestCase extends TestCase
+class AuthorTestCase extends TestCase
 {
 	// {{{ public function testLoad()
 
