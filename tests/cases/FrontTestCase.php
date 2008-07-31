@@ -1,8 +1,8 @@
 <?php
 
-require_once 'TestCase.php';
+require_once 'SeleniumTestCase.php';
 
-class FrontTestCase extends TestCase
+class FrontTestCase extends SeleniumTestCase
 {
 	// {{{ class constants
 
@@ -33,8 +33,7 @@ class FrontTestCase extends TestCase
 
 		// make sure footer summary is correct
 		$start = self::MAX_POSTS + 1;
-		$end   = self::MAX_POSTS * 2;
-		$text  = sprintf('posts, displaying %s to %s', $start, $end);
+		$text  = sprintf('posts, displaying %s to', $start);
 		$this->assertTrue($this->selenium->isTextPresent($text));
 	}
 

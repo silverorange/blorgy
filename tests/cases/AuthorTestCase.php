@@ -1,8 +1,8 @@
 <?php
 
-require_once 'TestCase.php';
+require_once 'SeleniumTestCase.php';
 
-class AuthorTestCase extends TestCase
+class AuthorTestCase extends SeleniumTestCase
 {
 	// {{{ public function testLoad()
 

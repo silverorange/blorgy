@@ -1,8 +1,8 @@
 <?php
 
-require_once 'TestCase.php';
+require_once 'SeleniumTestCase.php';
 
-class PostTestCase extends TestCase
+class PostTestCase extends SeleniumTestCase
 {
 	// {{{ class constants
 
