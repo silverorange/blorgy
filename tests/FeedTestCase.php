@@ -16,6 +16,11 @@ class FeedTestCase extends TestCase
 	 */
 	protected $document;
 
+	/**
+	 * @var array
+	 */
+	protected $request_info;
+
 	// }}}
 	// {{{ protected function loadFeed()
 
@@ -24,6 +29,7 @@ class FeedTestCase extends TestCase
 		$curl = curl_init($uri);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		$feed = curl_exec($curl);
+		$this->request_info = curl_getinfo($curl);
 		curl_close($curl);
 
 		$this->document = new DOMDocument();
@@ -33,6 +39,15 @@ class FeedTestCase extends TestCase
 		$this->xpath = new DOMXPath($this->document);
 		$this->xpath->registerNamespace('atom', 'http://www.w3.org/2005/Atom');
 		$this->xpath->registerNamespace('html','http://www.w3.org/1999/xhtml');
+	}
+
+	// }}}
+	// {{{ protected function assertNoExceptions()
+
+	protected function assertNoExceptions()
+	{
+		$list= $this->xpath->query("//html:div[@class='swat-exception']");
+		$this->assertEquals(0, $list->length);
 	}
 
 	// }}}
