@@ -2,6 +2,7 @@
 
 require_once 'SwatDB/SwatDBClassMap.php';
 require_once 'Site/SiteMultipleInstanceModule.php';
+require_once 'Site/SiteMemcacheModule.php';
 require_once 'Site/SiteErrorLogger.php';
 require_once 'Site/SiteExceptionLogger.php';
 require_once 'Admin/AdminApplication.php';
@@ -20,6 +21,15 @@ SwatDBClassMap::addPath(dirname(__FILE__).'/../dataobjects');
  */
 class BlorgyAdminApplication extends AdminApplication
 {
+	// {{{ public function __construct()
+
+	public function __construct($id, $filename)
+	{
+		parent::__construct($id, $filename);
+		$this->front_source = 'Front';
+	}
+
+	// }}}
 	// {{{ protected function getDefaultModuleList()
 
 	/**
@@ -34,6 +44,7 @@ class BlorgyAdminApplication extends AdminApplication
 
 		$modules['instance'] = 'SiteMultipleInstanceModule';
 		$modules['theme']    = 'ThemeModule';
+		$modules['memcache'] = 'SiteMemcacheModule';
 
 		return $modules;
 	}
@@ -90,7 +101,10 @@ class BlorgyAdminApplication extends AdminApplication
 			new Date_TimeZone($config->date->time_zone);
 
 		$this->default_locale = $config->i18n->locale;
-		$this->config->session->name.= '-'.$_GET['instance'];
+		$config->session->name.= '-'.$_GET['instance'];
+
+		$this->memcache->server = $config->memcache->server;
+		$this->memcache->app_ns = $config->memcache->app_ns;
 	}
 
 	// }}}
