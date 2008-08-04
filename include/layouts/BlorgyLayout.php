@@ -66,7 +66,7 @@ class BlorgyLayout extends SiteLayout
 
 		$gadget_instances = false;
 
-		if ($this->app->memcache !== null) {
+		if (isset($this->app->memcache)) {
 			$gadget_instances = $this->app->memcache->get('gadget_instances');
 		}
 
@@ -84,7 +84,7 @@ class BlorgyLayout extends SiteLayout
 				'SiteGadgetInstanceSettingValueWrapper',
 				'GadgetInstanceSettingValue', 'gadget_instance');
 
-			if ($this->app->memcache !== null) {
+			if (isset($this->app->memcache)) {
 				$this->app->memcache->set('gadget_instances',
 					$gadget_instances);
 			}
