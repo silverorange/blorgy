@@ -64,14 +64,31 @@ class BlorgyLayout extends SiteLayout
 	{
 		$this->sidebar = new SiteSidebar();
 
-		$sql = sprintf('select * from GadgetInstance
-			where instance %s %s
-			order by displayorder',
-			SwatDB::equalityOperator($this->app->getInstanceId()),
-			$this->app->db->quote($this->app->getInstanceId(), 'integer'));
+		$gadget_instances = false;
 
-		$gadget_instances = SwatDB::query($this->app->db, $sql,
-			SwatDBClassMap::get('SiteGadgetInstanceWrapper'));
+		if ($this->app->memcache !== null) {
+			$gadget_instances = $this->app->memcache->get('gadget_instances');
+		}
+
+		if ($gadget_instances === false) {
+			$sql = sprintf('select * from GadgetInstance
+				where instance %s %s
+				order by displayorder',
+				SwatDB::equalityOperator($this->app->getInstanceId()),
+				$this->app->db->quote($this->app->getInstanceId(), 'integer'));
+
+			$gadget_instances = SwatDB::query($this->app->db, $sql,
+				SwatDBClassMap::get('SiteGadgetInstanceWrapper'));
+
+			$gadget_instances->loadAllSubRecordsets('setting_values',
+				'SiteGadgetInstanceSettingValueWrapper',
+				'GadgetInstanceSettingValue', 'gadget_instance');
+
+			if ($this->app->memcache !== null) {
+				$this->app->memcache->set('gadget_instances',
+					$gadget_instances);
+			}
+		}
 
 		foreach ($gadget_instances as $gadget_instance) {
 			$gadget = SiteGadgetFactory::get($this->app, $gadget_instance);

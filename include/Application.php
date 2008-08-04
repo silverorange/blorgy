@@ -10,6 +10,7 @@ require_once 'Site/SiteCookieModule.php';
 require_once 'Site/SiteDatabaseModule.php';
 require_once 'Site/SiteMultipleInstanceModule.php';
 require_once 'Site/SiteTimerModule.php';
+require_once 'Site/SiteMemcacheModule.php';
 require_once 'Site/SiteExceptionLogger.php';
 require_once 'Site/SiteErrorLogger.php';
 require_once 'Site/SiteMessagesModule.php';
@@ -139,6 +140,7 @@ class Application extends SiteWebApplication
 			'instance' => 'SiteMultipleInstanceModule',
 			'theme'    => 'ThemeModule',
 			'timer'    => 'SiteTimerModule',
+			//'memcache' => 'SiteMemcacheModule',
 		);
 	}
 
@@ -189,7 +191,10 @@ class Application extends SiteWebApplication
 		$this->default_time_zone =
 			new Date_TimeZone($config->date->time_zone);
 
-		setlocale(LC_ALL, $this->config->i18n->locale);
+		setlocale(LC_ALL, $config->i18n->locale);
+
+		//$this->memcache->server = $config->memcache->server;
+		//$this->memcache->app_ns = $config->memcache->app_ns;
 	}
 
 	// }}}
