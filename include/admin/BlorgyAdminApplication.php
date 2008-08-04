@@ -44,7 +44,7 @@ class BlorgyAdminApplication extends AdminApplication
 
 		$modules['instance'] = 'SiteMultipleInstanceModule';
 		$modules['theme']    = 'ThemeModule';
-		$modules['memcache'] = 'SiteMemcacheModule';
+//		$modules['memcache'] = 'SiteMemcacheModule';
 
 		return $modules;
 	}
@@ -103,8 +103,8 @@ class BlorgyAdminApplication extends AdminApplication
 		$this->default_locale = $config->i18n->locale;
 		$config->session->name.= '-'.$_GET['instance'];
 
-		$this->memcache->server = $config->memcache->server;
-		$this->memcache->app_ns = $config->memcache->app_ns;
+//		$this->memcache->server = $config->memcache->server;
+//		$this->memcache->app_ns = $config->memcache->app_ns;
 	}
 
 	// }}}
