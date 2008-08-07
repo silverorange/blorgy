@@ -172,6 +172,18 @@ class PostTestCase extends SeleniumTestCase
 	}
 
 	// }}}
+	// {{{ public function testExtendedBodytext()
+
+	public function testExtendedBodytext()
+	{
+		$this->loadExtendedPost();
+
+		// make sure extended bodytext is displayed
+		$this->assertTrue($this->selenium->isElementPresent(
+			"xpath=//div[contains(@class, 'entry-content-extended')]"));
+	}
+
+	// }}}
 	// {{{ protected function enterComment()
 
 	protected function enterComment()
@@ -210,6 +222,32 @@ class PostTestCase extends SeleniumTestCase
 		}
 
 		$element = $this->selenium->click($comment_link_xpath);
+		$this->selenium->waitForPageToLoad(30000);
+		$this->assertNoExceptions();
+	}
+
+	// }}}
+	// {{{ protected function loadExtendedPost()
+
+	protected function loadExtendedPost()
+	{
+		$this->selenium->open('');
+		$this->assertNoExceptions();
+
+		$extended_link_xpath =
+			"xpath=//div[contains(@class, 'entry')]/".
+			"div[@class='entry-read-more']/a";
+
+		// page through posts until we find a commentable post
+		while (!$this->selenium->isElementPresent($extended_link_xpath)) {
+			$this->selenium->click(
+				"xpath=//div[@class='swat-pagination']/a[last()]");
+
+			$this->selenium->waitForPageToLoad(30000);
+			$this->assertNoExceptions();
+		}
+
+		$element = $this->selenium->click($extended_link_xpath);
 		$this->selenium->waitForPageToLoad(30000);
 		$this->assertNoExceptions();
 	}
