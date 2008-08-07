@@ -81,7 +81,7 @@ class BlorgyLayout extends SiteLayout
 				SwatDBClassMap::get('SiteGadgetInstanceWrapper'));
 
 			$gadget_instances->loadAllSubRecordsets('setting_values',
-				'SiteGadgetInstanceSettingValueWrapper',
+				SwatDBClassMap::get('SiteGadgetInstanceSettingValueWrapper'),
 				'GadgetInstanceSettingValue', 'gadget_instance');
 
 			if (isset($this->app->memcache)) {
