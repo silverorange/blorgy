@@ -21,16 +21,27 @@ class FeedTestCase extends TestCase
 	 */
 	protected $request_info;
 
-	// }}}
-	// {{{ protected function loadFeed()
+	/**
+	 * @var string
+	 */
+	protected $location;
 
-	protected function loadFeed($uri)
+	// }}}
+	// {{{ protected function load()
+
+	protected function load($uri)
 	{
+		if (preg_match('/^https?:/i', $uri) === 0) {
+			$uri = $this->base_href.$uri;
+		}
+
 		$curl = curl_init($uri);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 		$feed = curl_exec($curl);
 		$this->request_info = curl_getinfo($curl);
 		curl_close($curl);
+
+		$this->location = $uri;
 
 		$this->document = new DOMDocument();
 		$this->document->resolveExternals = true;
@@ -120,7 +131,7 @@ class FeedTestCase extends TestCase
 		$this->assertNotEquals('', $href);
 
 		// load next page
-		$this->loadFeed($href);
+		$this->load($href);
 		$this->assertNoExceptions();
 
 		// get last page
@@ -130,7 +141,7 @@ class FeedTestCase extends TestCase
 		$this->assertNotEquals('', $href);
 
 		// load last page
-		$this->loadFeed($href);
+		$this->load($href);
 		$this->assertNoExceptions();
 
 		// make sure there is no next page
@@ -144,7 +155,7 @@ class FeedTestCase extends TestCase
 		$this->assertNotEquals('', $href);
 
 		// load prev page
-		$this->loadFeed($href);
+		$this->load($href);
 		$this->assertNoExceptions();
 
 		// get first page
@@ -154,8 +165,21 @@ class FeedTestCase extends TestCase
 		$this->assertNotEquals('', $href);
 
 		// load first page
-		$this->loadFeed($href);
+		$this->load($href);
 		$this->assertNoExceptions();
+	}
+
+	// }}}
+	// {{{ protected function assertNotFound()
+
+	protected function assertNotFound()
+	{
+		// make sure there was an exception
+		$list = $this->xpath->query("//html:div[@class='swat-exception']");
+		$this->assertNotEquals(0, $list->length);
+
+		// make sure response code was 404
+		$this->assertEquals(404, $this->request_info['http_code']);
 	}
 
 	// }}}

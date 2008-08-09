@@ -8,7 +8,7 @@ class AtomTestCase extends FeedTestCase
 
 	public function testLoad()
 	{
-		$this->loadFeed($this->base_href.'feed');
+		$this->load('feed');
 		$this->assertNoExceptions();
 		$this->assertFeedElementsPresent();
 
@@ -30,7 +30,7 @@ class AtomTestCase extends FeedTestCase
 
 	public function testPagination()
 	{
-		$this->loadFeed($this->base_href.'feed');
+		$this->load('feed');
 		$this->assertNoExceptions();
 		$this->assertPaginationWorks();
 	}
@@ -40,14 +40,8 @@ class AtomTestCase extends FeedTestCase
 
 	public function testInvalidPagination()
 	{
-		$this->loadFeed($this->base_href.'feed/page20000');
-
-		// make sure there was an exception
-		$list = $this->xpath->query("//html:div[@class='swat-exception']");
-		$this->assertNotEquals(0, $list->length);
-
-		// make sure response code was 404
-		$this->assertEquals(404, $this->request_info['http_code']);
+		$this->load('feed/page20000');
+		$this->assertNotFound();
 	}
 
 	// }}}

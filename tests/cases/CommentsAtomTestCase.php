@@ -8,7 +8,7 @@ class CommentsAtomTestCase extends FeedTestCase
 
 	public function testLoad()
 	{
-		$this->loadFeed($this->base_href.'feed/comments');
+		$this->load('feed/comments');
 		$this->assertNoExceptions();
 		$this->assertFeedElementsPresent();
 
@@ -26,7 +26,7 @@ class CommentsAtomTestCase extends FeedTestCase
 
 	public function testPagination()
 	{
-		$this->loadFeed($this->base_href.'feed/comments');
+		$this->load('feed/comments');
 		$this->assertNoExceptions();
 		$this->assertPaginationWorks();
 	}
@@ -36,14 +36,8 @@ class CommentsAtomTestCase extends FeedTestCase
 
 	public function testInvalidPagination()
 	{
-		$this->loadFeed($this->base_href.'feed/comments/page20000');
-
-		// make sure there was an exception
-		$list = $this->xpath->query("//html:div[@class='swat-exception']");
-		$this->assertNotEquals(0, $list->length);
-
-		// make sure response code was 404
-		$this->assertEquals(404, $this->request_info['http_code']);
+		$this->load('feed/comments/page200000');
+		$this->assertNotFound();
 	}
 
 	// }}}
