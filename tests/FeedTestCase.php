@@ -53,6 +53,36 @@ class FeedTestCase extends TestCase
 	}
 
 	// }}}
+	// {{{ protected function loadHtml()
+
+	protected function loadHtml($uri)
+	{
+		if (preg_match('/^https?:/i', $uri) === 0) {
+			$uri = $this->base_href.$uri;
+		}
+
+		$curl = curl_init($uri);
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+		$html = curl_exec($curl);
+		$this->request_info = curl_getinfo($curl);
+		curl_close($curl);
+
+		$this->location = $uri;
+
+		$tidy = new Tidy();
+		$tidy->parseString($html, array('output-xhtml' => true), 'utf8');
+		$tidy->cleanRepair();
+
+		$this->document = new DOMDocument();
+		$this->document->resolveExternals = true;
+		$this->document->loadXml($tidy->__toString());
+
+		$this->xpath = new DOMXPath($this->document);
+		$this->xpath->registerNamespace('atom', 'http://www.w3.org/2005/Atom');
+		$this->xpath->registerNamespace('html','http://www.w3.org/1999/xhtml');
+	}
+
+	// }}}
 	// {{{ protected function assertNoExceptions()
 
 	protected function assertNoExceptions()
