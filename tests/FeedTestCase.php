@@ -70,12 +70,17 @@ class FeedTestCase extends TestCase
 		$this->location = $uri;
 
 		$tidy = new Tidy();
-		$tidy->parseString($html, array('output-xhtml' => true), 'utf8');
+		$tidy->parseString($html, array(
+			'output-xhtml'     => true,
+			'char-encoding'    => 'utf8',
+			'numeric-entities' => true,
+		), 'utf8');
+
 		$tidy->cleanRepair();
 
 		$this->document = new DOMDocument();
 		$this->document->resolveExternals = true;
-		$this->document->loadXml($tidy->__toString());
+		$this->document->loadXml($tidy);
 
 		$this->xpath = new DOMXPath($this->document);
 		$this->xpath->registerNamespace('atom', 'http://www.w3.org/2005/Atom');
