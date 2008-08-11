@@ -33,7 +33,8 @@ class TestCase extends PHPUnit_Framework_TestCase
 
 	public function setUp()
 	{
-		if (!is_array($GLOBALS['Blorgy_FunctionalTest_Config'])) {
+		if (!isset($GLOBALS['Blorgy_FunctionalTest_Config']) ||
+			!is_array($GLOBALS['Blorgy_FunctionalTest_Config'])) {
 			$this->markTestSkipped('Functional test configuration is missing.');
 		}
 
