@@ -61,10 +61,10 @@ class MoonPostView extends BlorgPostView
 
 		if (strlen($author) > 0) {
 			if ($show_comment_count) {
-				printf(Blorg::_('Posted by %s on %s | %s'),
+				printf('Posted by %s on %s | %s',
 					$author, $permalink, $comment_count);
 			} else {
-				printf(Blorg::_('Posted by %s on %s'), $author, $permalink);
+				printf('Posted by %s on %s', $author, $permalink);
 			}
 		} else {
 			if ($show_comment_count) {
