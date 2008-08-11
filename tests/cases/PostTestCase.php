@@ -127,7 +127,7 @@ class PostTestCase extends SeleniumTestCase
 
 		$this->enterComment();
 
-		$this->selenium->click('remember_me');
+		$this->selenium->check('remember_me');
 		$this->selenium->click('post_button');
 		$this->selenium->waitForPageToLoad(30000);
 
@@ -144,6 +144,9 @@ class PostTestCase extends SeleniumTestCase
 
 		$this->enterComment();
 
+		// don't remember credentials
+		$this->selenium->uncheck('remember_me');
+
 		$this->selenium->click('post_button');
 		$this->selenium->waitForPageToLoad(30000);
 		$this->assertTrue($this->selenium->isTextPresent(
@@ -157,7 +160,8 @@ class PostTestCase extends SeleniumTestCase
 
 		// get new comment id
 		$location = $this->selenium->getLocation();
-		$comment_id = end(explode('#', $location));
+		$location_exp = explode('#', $location);
+		$comment_id = end($location_exp);
 
 		// make sure new comment exists
 		$this->assertTrue($this->selenium->isElementPresent(
