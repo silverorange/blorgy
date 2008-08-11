@@ -4,5 +4,5 @@ if [ "$1" == "" ]; then
 else
 	file="$1"
 	class="`basename "$file" .php`"
-	phpunit $class "$file"
+	phpunit --verbose $class "$file"
 fi
