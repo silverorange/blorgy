@@ -88,6 +88,8 @@ class BlorgyLayout extends SiteLayout
 				$this->app->memcache->set('gadget_instances',
 					$gadget_instances);
 			}
+		} else {
+			$gadget_instances->setDatabase($this->app->db);
 		}
 
 		foreach ($gadget_instances as $gadget_instance) {
