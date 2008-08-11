@@ -20,6 +20,8 @@ require_once '../include/ThemeModule.php';
 
 SwatDBClassMap::addPath(dirname(__FILE__).'/dataobjects');
 
+//define('SWATDB_DEBUG', true);
+
 /**
  * Blörgy web application
  *
@@ -140,7 +142,7 @@ class Application extends SiteWebApplication
 			'instance' => 'SiteMultipleInstanceModule',
 			'theme'    => 'ThemeModule',
 			'timer'    => 'SiteTimerModule',
-			//'memcache' => 'SiteMemcacheModule',
+			'memcache' => 'SiteMemcacheModule',
 		);
 	}
 
@@ -193,8 +195,8 @@ class Application extends SiteWebApplication
 
 		setlocale(LC_ALL, $config->i18n->locale);
 
-		//$this->memcache->server = $config->memcache->server;
-		//$this->memcache->app_ns = $config->memcache->app_ns;
+		$this->memcache->server = $config->memcache->server;
+		$this->memcache->app_ns = $config->memcache->app_ns;
 	}
 
 	// }}}
