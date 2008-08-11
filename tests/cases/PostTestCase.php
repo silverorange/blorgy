@@ -122,7 +122,7 @@ class PostTestCase extends SeleniumTestCase
 	{
 		$this->loadCommentablePost();
 
-		$this->assertNotContains(TestCase::INSTANCE.'_comment_credentials=',
+		$this->assertNotContains($this->instance.'_comment_credentials=',
 			$this->selenium->getCookie());
 
 		$this->enterComment();
@@ -131,7 +131,7 @@ class PostTestCase extends SeleniumTestCase
 		$this->selenium->click('post_button');
 		$this->selenium->waitForPageToLoad(30000);
 
-		$this->assertContains(TestCase::INSTANCE.'_comment_credentials=',
+		$this->assertContains($this->instance.'_comment_credentials=',
 			$this->selenium->getCookie());
 	}
 

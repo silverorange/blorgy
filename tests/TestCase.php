@@ -11,6 +11,11 @@ class TestCase extends PHPUnit_Framework_TestCase
 	 */
 	protected $base_href = '';
 
+	/**
+	 * @var string
+	 */
+	protected $instance = '';
+
 	// }}}
 	// {{{ private properties
 
@@ -48,6 +53,8 @@ class TestCase extends PHPUnit_Framework_TestCase
 		}
 
 		$this->olde_error_level = error_reporting(E_ALL | E_STRICT);
+
+		$this->instance = $config['instance'];
 
 		if (strpos($config['base_href'], '%s') === false) {
 			$this->base_href = $config['base_href'];
