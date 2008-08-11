@@ -83,7 +83,9 @@ class PostAtomTestCase extends FeedTestCase
 				if (preg_match($exp, $node->nodeValue, $matches) === 1) {
 					if ($matches[1] > $min_comments) {
 						$href = $node->getAttribute('href');
-						$href = reset(explode('#', $href));
+						if (($pos = strpos($href, '#')) !== false) {
+							$href = substr($href, 0, $pos);
+						}
 						break 2;
 					}
 				}
