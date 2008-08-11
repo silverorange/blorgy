@@ -23,6 +23,8 @@ class SeleniumTestCase extends TestCase
 	public function tearDown()
 	{
 		$this->selenium->stop();
+
+		parent::tearDown();
 	}
 
 	// }}}
