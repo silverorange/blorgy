@@ -81,10 +81,11 @@ class Application extends SiteWebApplication
 			break;
 
 		case 'article':
+			array_shift($path);
 			require_once '../include/ArticlePageFactory.php';
 			$factory = new ArticlePageFactory($this);
 			$factory->setDefaultArticlePage('ArticlePage');
-			$page = $factory->resolvePage($source, $layout);
+			$page = $factory->resolvePage(implode($path, '/'), $layout);
 			break;
 
 		default:
