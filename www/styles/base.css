@@ -349,6 +349,30 @@ img.right { float: right; margin: 0.2em 0 1em 1em; }
 img.left  { float: left;  margin: 0.2em 1em 0 1em; }
 img.center { display: block; margin: 1em auto;; }
 
+
+/* Styles for data tables */
+
+table.data {
+	border: 0;
+	border-collapse: collapse;
+}
+
+table.data caption {
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	color: #666;
+}
+
+table.data th {
+	text-align: left;
+}
+
+table.data td, table.data th {
+	padding: 0.3em;
+	border: 0;
+	border-bottom: 1px solid #eee;
+}
+
 /* }}} */
 /* {{{ Authors */
 
