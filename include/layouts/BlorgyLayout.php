@@ -357,11 +357,11 @@ class BlorgyLayout extends SiteLayout
 		$blorg_file->setDatabase($this->app->db);
 		$blorg_file->load(intval($this->app->config->blorg->header_image));
 
-		$tag = new SwatHtmlTag('img');
-		$tag->src = $blorg_file->getRelativeUri();
-		$tag->alt = $site_title;
-		$tag->class = 'header-image';
-		$tag->display();
+		$img_tag = new SwatHtmlTag('img');
+		$img_tag->src = $blorg_file->getRelativeUri();
+		$img_tag->alt = $site_title;
+		$img_tag->class = 'header-image clearfix';
+		$img_tag->display();
 
 		if ($source != '') {
 			$a_tag->close();
