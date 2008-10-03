@@ -89,8 +89,8 @@ class Application extends SiteWebApplication
 			break;
 
 		default:
-			require_once 'Blorg/BlorgPageFactory.php';
-			$factory = new BlorgPageFactory($this);
+			require_once '../include/BlorgyBlorgPageFactory.php';
+			$factory = new BlorgyBlorgPageFactory($this);
 			$page = $factory->resolvePage($source, $layout);
 			break;
 		}
