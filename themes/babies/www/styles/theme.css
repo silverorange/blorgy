@@ -6,6 +6,8 @@ body {
 
 /* {{{ Layout */
 
+#bd { zoom: 1; }
+
 #doc {
 	width: auto;
 	margin: 0;
