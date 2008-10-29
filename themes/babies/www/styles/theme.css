@@ -25,8 +25,8 @@ body {
 }
 
 #content {
-	width: 370px;
-	margin: 20px;
+	width: 400px;
+	margin: 10px 20px;
 	float: left;
 }
 
@@ -40,19 +40,14 @@ body {
 }
 
 .sidebar {
-	width: 201px;
-	padding: 10px;
-	padding-top: 15px;
+	width: 186px;
+	padding: 0 10px 0 10px;
 }
 
 #ft {
 	clear: both;
 	padding: 15px;
 	color: #999;
-}
-
-div.site-sidebar {
-	padding: 0 2em;
 }
 
 /* }}} */
@@ -68,12 +63,10 @@ a:active { color: #000; }
 /* {{{ Post Header */
 
 .entry .entry-title {
-	font-size: 220%;
-	letter-spacing: -2px;
+	font-size: 170%;
 	font-weight: normal;
 	margin-bottom: 0;
 	color: #5e9e3e;
-	font-style: italic;
 }
 
 .entry .entry-title a,
@@ -94,6 +87,7 @@ a:active { color: #000; }
 	color: #bc3a71;
 	margin: 0.25em 0.5em 0.5em 0.5em;
 	font-family: segoe ui, verdana, sans-serif;
+	text-transform: lowercase;
 }
 
 .entry .entry-subtitle a,
@@ -142,6 +136,11 @@ a:active { color: #000; }
 a img.border { border: 1px solid #992053; padding: 2px; background: #fff; }
 a img.border:hover	{ border: 1px solid #b95d84; padding: 2px; background: #fff; }
 a img.border:active	{ border: 1px solid #b95d84; padding: 2px; background: #fff; }
+
+.archive-link,
+.blorg-syndication {
+	text-transform: lowercase;
+}
 
 tt {
 	font-size: 90%;
@@ -250,6 +249,7 @@ textarea {
 	font-size: 85%;
 	font-family: segoe ui, verdana, sans-serif;
 	color: #b6547d;
+	text-transform: lowercase;
 }
 
 #nav_bar .swat-navbar-first { font-weight: bold; }

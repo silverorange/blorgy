@@ -11,8 +11,6 @@ require_once 'Site/SiteDatabaseModule.php';
 require_once 'Site/SiteMultipleInstanceModule.php';
 require_once 'Site/SiteTimerModule.php';
 require_once 'Site/SiteMemcacheModule.php';
-require_once 'Site/SiteExceptionLogger.php';
-require_once 'Site/SiteErrorLogger.php';
 require_once 'Site/SiteMessagesModule.php';
 require_once 'Blorg/Blorg.php';
 require_once 'Blorgy.php';
@@ -175,16 +173,6 @@ class Application extends SiteWebApplication
 	protected function configure(SiteConfigModule $config)
 	{
 		parent::configure($config);
-
-		if (isset($config->exceptions->log_location))
-			SwatException::setLogger(new SiteExceptionLogger(
-				$config->exceptions->log_location,
-				$config->exceptions->base_uri));
-
-		if (isset($config->errors->log_location))
-			SwatError::setLogger(new SiteErrorLogger(
-				$config->errors->log_location,
-				$config->errors->base_uri));
 
 		SwatForm::$default_salt = $config->swat->form_salt;
 
