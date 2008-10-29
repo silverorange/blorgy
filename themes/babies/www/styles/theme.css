@@ -1,7 +1,8 @@
 body {
-	font-family: Georgia,serif;
-	background: #f3d0df;
+	font-family: Helvetica, sans-serif;
+	background: #fff url('../images/background.png');
 	color: #2b0012;
+	padding-bottom: 30px;
 }
 
 /* {{{ Layout */
@@ -9,23 +10,45 @@ body {
 #bd { zoom: 1; }
 
 #doc {
-	width: auto;
-	margin: 0;
-	min-width: 650px;
-	position: relative;
+	width: 852px;
+	padding: 0;
+	margin: 0 auto;
+	background: #fff;
+	border-left: 5px solid #a8dbd2;
+	border-right: 5px solid #a8dbd2;
+	border-bottom: 5px solid #a8dbd2;
+}
+
+#hd h1 {
+	padding: 0;
+	border-bottom: 5px solid #a8dbd2;
 }
 
 #content {
-	margin-left: 275px;
-	padding-top: 20px;
-	position: relative;
+	width: 370px;
+	margin: 20px;
+	float: left;
 }
 
-#sidebar {
-	left: 0;
-	top: -20px;
-	background: #992053;
-	width: 250px;
+#left_sidebar {
+	float: left;
+}
+
+#right_sidebar {
+	margin-top: 1em;
+	float: right;
+}
+
+.sidebar {
+	width: 201px;
+	padding: 10px;
+	padding-top: 15px;
+}
+
+#ft {
+	clear: both;
+	padding: 15px;
+	color: #999;
 }
 
 div.site-sidebar {
@@ -42,37 +65,14 @@ a:hover { color: #000; }
 a:active { color: #000; }
 
 /* }}} */
-/* {{{ Header */
-
-#hd {
-	height: 203px;
-	background: #000 url('../images/feet.jpg') no-repeat scroll right top;
-}
-
-#hd h1 {
-	text-indent: -30000px;
-    font: 0/0 Arial; /* hack to make hiding the text work in FF2 */
-	background: transparent url(../images/title-transparent.png) no-repeat scroll left top;
-	width: 406px;
-	height: 119px;
-	position: absolute;
-	left: 30px;
-	top: 30px;
-}
-
-* html #hd h1 {
-	background: transparent url(../images/title.png) no-repeat scroll left top;
-}
-
-/* }}} */
 /* {{{ Post Header */
 
 .entry .entry-title {
-	font-size: 300%;
+	font-size: 220%;
 	letter-spacing: -2px;
 	font-weight: normal;
 	margin-bottom: 0;
-	color: #992053;
+	color: #5e9e3e;
 	font-style: italic;
 }
 
@@ -81,7 +81,7 @@ a:active { color: #000; }
 .entry .entry-title a:visited,
 .entry .entry-title a:hover,
 .entry .entry-title a:active {
-	color: #992053;
+	color: #5e9e3e;
 	text-decoration: none;
 }
 
@@ -274,29 +274,29 @@ textarea {
 }
 
 .site-gadget-title {
-	color: #fff;
+	color: #e98314;
 }
 
 .blorg-tag-gadget ul li span,
 .blorg-archive-gadget ul li span,
 .blorg-active-conversations-gadget ul li span {
-	color: #b9537e;
+	color: #999;
 }
 
 .site-sidebar-gadget {
 	font-family: segoe ui, verdana, sans-serif;
-	color: #b9537e;
+	color: #444;
 }
 
 .site-sidebar-gadget a:link,
 .site-sidebar-gadget a:visited {
-	color: #f3d0df;
+	color: #e98314;
 	text-decoration: none;
 }
 
 .site-sidebar-gadget a:hover,
 .site-sidebar-gadget a:active {
-	color: #d67ca3;
+	color: #e39c50;
 }
 
 .blorg-active-conversations-gadget ul li.new span { color: #ac416e; }
