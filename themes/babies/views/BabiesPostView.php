@@ -102,7 +102,7 @@ class BabiesPostView extends BlorgPostView
 		echo '<div>';
 echo '
 <script type="text/javascript">
-digg_url = "'.$this->getLink('permalink').'"
+digg_url = "'.$this->app->getBaseHref().$this->getPostRelativeUri($post).'"
 digg_skin = "compact";
 </script>';
 
