@@ -35,7 +35,7 @@
 	</div>
 
 	<div id="ft">
-		<p>copyright &copy; 2007-<?= date('Y') ?> annie green productions</p>
+		<p>copyright &copy; <? echo (date('Y') > 2008) ? '2008 - '.date('Y') : '2008'; ?> annie green productions</p>
 	</div>
 
 </div>
