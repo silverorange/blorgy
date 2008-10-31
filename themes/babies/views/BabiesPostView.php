@@ -99,8 +99,9 @@ class BabiesPostView extends BlorgPostView
 			$this->displayTags($post);
 		}
 
-		echo '<div>';
+		echo '<div class="external-links">';
 echo '
+<div class="external-link">
 <script type="text/javascript">
 digg_url = "'.$this->app->getBaseHref().$this->getPostRelativeUri($post).'"
 digg_skin = "compact";
@@ -108,9 +109,11 @@ digg_skin = "compact";
 
 echo <<<EOF
 <script src="http://digg.com/tools/diggthis.js" type="text/javascript"></script>
-
+</div>
+<div class="external-link">
 <img src="http://static.delicious.com/img/delicious.small.gif" height="10" width="10" alt="Delicious" />
 <a href="http://delicious.com/save" onclick="window.open('http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=550,height=550'); return false;"> Bookmark this on Delicious</a>
+</div>
 
 EOF;
 		echo '</div>';

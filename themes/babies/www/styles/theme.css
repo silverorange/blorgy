@@ -141,6 +141,10 @@ a:active { color: #000; }
 	padding-top: 0.3em;
 }
 
+.external-links .external-link {
+	float: left;
+}
+
 /* }}} */
 /* {{{ Content */
 
