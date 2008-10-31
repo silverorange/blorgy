@@ -83,13 +83,68 @@ class BabiesPostView extends BlorgPostView
 				$post->comment_status == BlorgPost::COMMENT_STATUS_OPEN ||
 				$post->comment_status == BlorgPost::COMMENT_STATUS_MODERATED));
 
+		$date = clone $post->publish_date;
+		$date->convertTZ($this->app->default_time_zone);
+		$formatted_date = $date->format(SwatDate::DF_DATE_SHORT);
+
 		if ($show_comment_count) {
-			printf('posted on %s | %s', $permalink, $comment_count);
+			printf('posted on %s | %s | %s', $formatted_date, $comment_count,
+				$permalink);
 		} else {
-			echo 'posted on '.$permalink;
+			echo 'posted on '.$formatted_date.' | '.$permalink;
 		}
 
+		if (count($post->tags) > 0) {
+			echo ' | tagged: ';
+			$this->displayTags($post);
+		}
+
+		echo '<div>';
+echo '
+<script type="text/javascript">
+digg_url = "'.$this->getLink('permalink').'"
+digg_skin = "compact";
+</script>';
+
+echo <<<EOF
+<script src="http://digg.com/tools/diggthis.js" type="text/javascript"></script>
+
+<img src="http://static.delicious.com/img/delicious.small.gif" height="10" width="10" alt="Delicious" />
+<a href="http://delicious.com/save" onclick="window.open('http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=550,height=550'); return false;"> Bookmark this on Delicious</a>
+
+EOF;
 		echo '</div>';
+
+		echo '</div>';
+	}
+
+	// }}}
+	// {{{ protected function displayPermalink()
+
+	/**
+	 * Displays the date permalink for a weblog post
+	 *
+	 * @param BlorgPost $post
+	 */
+	protected function displayPermalink(BlorgPost $post)
+	{
+		if ($this->getMode('permalink') > BlorgView::MODE_NONE) {
+			$link = $this->getLink('permalink');
+			if ($link === false) {
+				$permalink_tag = new SwatHtmlTag('span');
+			} else {
+				$permalink_tag = new SwatHtmlTag('a');
+				if ($link === true) {
+					$permalink_tag->href = $this->getPostRelativeUri($post);
+				} else {
+					$permalink_tag->href = $link;
+				}
+			}
+			$permalink_tag->class = 'permalink';
+			$permalink_tag->open();
+			echo 'permalink';
+			$permalink_tag->close();
+		}
 	}
 
 	// }}}

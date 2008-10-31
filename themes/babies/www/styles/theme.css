@@ -1,6 +1,7 @@
 body {
 	font-family: 'Trebuchet MS', Verdana, sans-serif;
 	font-size: small;
+	font-size:85%;
 	line-height: 150%;
 	background: #fff url('../images/background.png');
 	color: #2b0012;
@@ -19,11 +20,16 @@ body {
 	border-left: 5px solid #a8dbd2;
 	border-right: 5px solid #a8dbd2;
 	border-bottom: 5px solid #a8dbd2;
+	font-size: 90%;
 }
 
 #hd h1 {
 	padding: 0;
 	border-bottom: 5px solid #a8dbd2;
+}
+
+#hd {
+	margin-bottom: 1.5em;
 }
 
 #content {
@@ -43,6 +49,7 @@ body {
 
 .sidebar {
 	width: 186px;
+	line-height: 1.3em;
 	padding: 0 10px 0 10px;
 }
 
@@ -65,7 +72,6 @@ a:active { color: #000; }
 /* {{{ Post Header */
 
 .entry .entry-title {
-	font-size: medium;
 	font-weight: normal;
 	color: #5e9e3e;
 	margin: 0.5em 0;
@@ -87,21 +93,21 @@ a:active { color: #000; }
 }
 
 .entry .entry-subtitle {
-	color: #bc3a71;
-	margin: 0.25em 0.5em 0.5em 0.5em;
+	color: #5e9e3e;
+	margin: 0.25em 0.5em 0.5em 0;
 	text-transform: lowercase;
 }
 
 .entry .entry-subtitle a,
 .entry .entry-subtitle a:link,
 .entry .entry-subtitle a:visited {
-	color: #bc3a71;
+	color: #5e9e3e;
 	font-weight: bold;
 }
 
 .entry .entry-subtitle a:hover,
 .entry .entry-subtitle a:active {
-	color: #dc81a8;
+	color: #5e9e3e;
 }
 
 .entry .entry-subtitle abbr {
@@ -113,6 +119,10 @@ a:active { color: #000; }
 
 .entry {
 	margin-bottom: 3em;
+}
+
+.entry .file img {
+	border: 2px solid #a8dbd2;
 }
 
 .entry-no-title {
@@ -127,7 +137,7 @@ a:active { color: #000; }
 }
 
 .entry-subtitle {
-	border-top: 1px dashed #e8acc6;
+	border-top: 1px dashed #5e9e3e;
 	padding-top: 0.3em;
 }
 
