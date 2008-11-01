@@ -104,21 +104,22 @@ class BabiesPostView extends BlorgPostView
 echo <<<EOF
 <div class="external-link">
 <img src="http://static.delicious.com/img/delicious.small.gif" height="10" width="10" alt="Delicious" />
-<a href="http://delicious.com/save" onclick="window.open('http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=550,height=550'); return false;"> Bookmark this on Delicious</a>
+<a href="http://delicious.com/save" onclick="window.open('http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=550,height=550'); return false;"> Delicious</a>
 </div>
 EOF;
 
-echo '
-<div class="external-link">
-<script type="text/javascript">
-digg_url = "'.$this->app->getBaseHref().$this->getPostRelativeUri($post).'"
-digg_skin = "compact";
-</script>
-<script src="http://digg.com/tools/diggthis.js" type="text/javascript"></script>
-</div>
-';
-		echo '</div>';
+		echo '<div class="external-link"><script type="text/javascript">';
+		echo 'digg_url = '.SwatString::quoteJavaScriptString(
+			$this->app->getBaseHref().$this->getPostRelativeUri($post)).';';
 
+		echo "digg_skin = 'compact';";
+		echo 'digg_title = '.SwatString::quoteJavaScriptString($post->title).';';
+		echo 'digg_bodytext = '.SwatString::quoteJavaScriptString(
+			substr(strip_tags($post->bodytext), 0, 500)).';';
+
+		echo '</script><script src="http://digg.com/tools/diggthis.js" type="text/javascript"></script></div>';
+
+		echo '</div>';
 		echo '</div>';
 	}
 
