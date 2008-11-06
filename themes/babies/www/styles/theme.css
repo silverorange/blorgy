@@ -64,7 +64,7 @@ body {
 
 a { color: #069; }
 a:link { color: #069; }
-a:visited { color: #992053; }
+a:visited { color: #089; }
 a:hover { color: #000; }
 a:active { color: #000; }
 
@@ -118,7 +118,7 @@ a:active { color: #000; }
 /* {{{ Post Content */
 
 .entry {
-	margin-bottom: 3em;
+	margin-bottom: 5em;
 }
 
 .entry .file img {
