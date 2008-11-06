@@ -21,6 +21,17 @@
 		<div id="container">
 			<div id="left_sidebar" class="sidebar">
 				<?= $this->sidebar ?>
+				<script type="text/javascript"><!--
+					google_ad_client = "pub-8603556777682286";
+					/* front-page left banner */
+					google_ad_slot = "3052633307";
+					google_ad_width = 120;
+					google_ad_height = 240;
+					//-->
+				</script>
+				<script type="text/javascript"
+				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+				</script>
 			</div>
 			<div id="content">
 				<?= $this->navbar ?>
@@ -28,7 +39,17 @@
 				<?= $this->content ?>
 			</div>
 			<div id="right_sidebar" class="sidebar">
-				A bunch of stuff will be put here including an ad probably.
+				<script type="text/javascript"><!--
+					google_ad_client = "pub-8603556777682286";
+					/* front-page vertical banner */
+					google_ad_slot = "0501133756";
+					google_ad_width = 160;
+					google_ad_height = 600;
+				//-->
+				</script>
+				<script type="text/javascript"
+				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+				</script>
 			</div>
 		</div>
 
