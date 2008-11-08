@@ -62,9 +62,9 @@ body {
 /* }}} */
 /* {{{ Links */
 
-a { color: #069; }
-a:link { color: #069; }
-a:visited { color: #069; }
+a { color: #5e9e3e; }
+a:link { color: #5e9e3e; }
+a:visited { color: #5e9e3e; }
 a:hover { color: #000; }
 a:active { color: #000; }
 
@@ -148,7 +148,7 @@ a:active { color: #000; }
 /* }}} */
 /* {{{ Content */
 
-a img.border { border: 1px solid #992053; padding: 2px; background: #fff; }
+a img.border { border: 1px solid #5e9e3e; padding: 2px; background: #fff; }
 a img.border:hover	{ border: 1px solid #b95d84; padding: 2px; background: #fff; }
 a img.border:active	{ border: 1px solid #b95d84; padding: 2px; background: #fff; }
 
@@ -174,7 +174,7 @@ ul.plain li {
 small,
 .smallprint {
 	font-size: 85%;
-	color: #992053;
+	color: #5e9e3e;
 }
 
 .swat-pagination a:link {
@@ -208,11 +208,11 @@ small,
 .comment .comment-title {
 	font-weight: bold;
 	font-size: 100%;
-	color: #b6547d;
+	color: #5e9e3e;
 }
 
 .comment .comment-title span.comment-author {
-	color: #992053;
+	color: #5e9e3e;
 }
 
 .comment .comment-title .permalink {
@@ -221,13 +221,13 @@ small,
 
 .comment .comment-title a.permalink:link,
 .comment .comment-title a.permalink:visited {
-	color: #b6547d;
+	color: #5e9e3e;
 	text-decoration: none;
 }
 
 .comment .comment-title a.permalink:hover,
 .comment .comment-title a.permalink:active {
-	color: #992053;
+	color: #5e9e3e;
 	text-decoration: underline;
 }
 
@@ -235,12 +235,12 @@ small,
 
 .comment .comment-link a:link,
 .comment .comment-link a:visited {
-	color: #b6547d;
+	color: #5e9e3e;
 }
 
 .comment .comment-link a:hover,
 .comment .comment-link a:active {
-	color: #992053;
+	color: #5e9e3e;
 }
 
 .comment .comment-content {
@@ -263,7 +263,7 @@ textarea {
 #nav_bar {
 	font-size: 85%;
 	font-family: segoe ui, verdana, sans-serif;
-	color: #b6547d;
+	color: #5e9e3e;
 	text-transform: lowercase;
 }
 
@@ -271,12 +271,12 @@ textarea {
 
 #nav_bar a:link,
 #nav_bar a:visited {
-	color: #b6547d;
+	color: #5e9e3e;
 }
 
 #nav_bar a:hover,
 #nav_bar a:active {
-	color: #992053;
+	color: #5e9e3e;
 }
 
 #nav_bar span { display: none; }
@@ -330,7 +330,7 @@ textarea {
 }
 
 .swat-frame .swat-frame-title {
-	color: #992053;
+	color: #5e9e3e;
 	margin: 1em 0;
 }
 
