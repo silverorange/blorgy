@@ -95,7 +95,7 @@ a:active { color: #000; }
 .entry .entry-subtitle {
 	color: #5e9e3e;
 	margin: 0.25em 0.5em 0.5em 0;
-	text-transform: lowercase;
+	text-transform: uppercase;
 }
 
 .entry .entry-subtitle a,
