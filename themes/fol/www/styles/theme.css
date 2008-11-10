@@ -142,7 +142,6 @@ ul li {
 	margin: -15px 0 0 0;
 }
 #weblog .entry-no-title .entry-subtitle {
-	display: none;
 	margin: 0;
 }
 
@@ -282,9 +281,22 @@ ul li {
 	margin: 0;
 }
 
-/* comments form */
+/* swat-frame */
 
 .swat-frame {
+	background: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.swat-frame-contents {
+	padding: 0;	
+}
+
+/* comments form */
+
+#comment_edit_frame {
 	background: none;
 	background-color: #f9f9f9;
 	padding: 20px 20px 20px 200px;
@@ -293,34 +305,37 @@ ul li {
 	border-bottom: 1px #ccc solid;
 }
 
-.swat-frame .swat-frame-title,
-.swat-frame .swat-footer-form-field {
+#comment_edit_frame .swat-frame-contents {
+	padding: 16px;	
+}
+
+#comment_edit_frame .swat-frame-title,
+#comment_edit_frame .swat-footer-form-field {
 	background: none;
 	color: #888;
 }
 
-.swat-frame label {
+#comment_edit_frame label {
 	color: #555;
 }
 
-.swat-frame span.swat-required {
+#comment_edit_frame span.swat-required {
 	color: #aaa;
 }
 
-.swat-frame input.swat-entry,
-.swat-frame textarea.swat-textarea {
+#comment_edit_frame input.swat-entry,
+#comment_edit_frame textarea.swat-textarea {
 	padding: 3px 8px;
 	border: 1px #ccc solid;
 }
 
-.swat-frame input.swat-button-submit { 
+#comment_edit_frame input.swat-button-submit { 
 	padding: 3px 8px;
 	border-right: 1px #888 solid;
 	border-bottom: 1px #888 solid;
 	border-left: 1px #ccc solid;
 	border-top: 1px #ccc solid;
 }
-
 
 /* archives */
 
