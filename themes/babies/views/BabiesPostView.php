@@ -88,14 +88,14 @@ class BabiesPostView extends BlorgPostView
 		$formatted_date = $date->format(SwatDate::DF_DATE_SHORT);
 
 		if ($show_comment_count) {
-			printf('posted on %s | %s | %s', $formatted_date, $comment_count,
-				$permalink);
+			printf('posted on %s | %s | %s', $formatted_date, $permalink,
+				$comment_count);
 		} else {
 			echo 'posted on '.$formatted_date.' | '.$permalink;
 		}
 
 		if (count($post->tags) > 0) {
-			echo ' | tagged: ';
+			echo '<br />tagged: ';
 			$this->displayTags($post);
 		}
 
