@@ -191,9 +191,14 @@ ul.plain li {
 }
 
 small,
-.smallprint {
+.smallprint,
+blockquote {
 	font-size: 85%;
 	color: #666;
+}
+
+blockquote {
+	line-height: 1.6;
 }
 
 /* }}} */
