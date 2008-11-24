@@ -102,10 +102,10 @@ class BlorgCommentStatusField extends ConversionField
 	{
 		$data = parent::convertData($data);
 
-		$status = BlorgComment::STATUS_PUBLISHED;
+		$status = SiteComment::STATUS_PUBLISHED;
 
 		if ($data === true)
-			$status = BlorgComment::STATUS_UNPUBLISHED;
+			$status = SiteComment::STATUS_UNPUBLISHED;
 
 		return $status;
 	}
