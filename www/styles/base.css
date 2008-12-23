@@ -341,7 +341,10 @@ strong { font-style: inherit; }
 /* }}} */
 /* {{{ Content */
 
-img { border: 0px; }
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
 
 img.border { border: 1px solid #999; padding: 2px; background: #fff; }
 
