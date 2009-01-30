@@ -177,6 +177,12 @@ body {
 	font-weight: normal;
 }
 
+.image-frame {
+	background: #595959 url("images/background-product.png") bottom center repeat-x;
+	margin: 0 5px 10px 5px;
+	padding: 8px;
+}
+
 .inset {
 	background: #595959 url("images/background-product.png") bottom center repeat-x;
 	font-size: 80%;
@@ -188,6 +194,7 @@ body {
 .inset a { text-decoration: none; }
 .inset a span:hover { color: #f16400; text-decoration: underline; }
 
+.image-frame img,
 .inset img {
 	background: #fff;
 	padding: 2px;
