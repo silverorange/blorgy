@@ -336,7 +336,7 @@ blockquote {
 	width: 50px;
 	height: 50px;
 	text-indent: -9999px;
-	margin: 5px;
+	margin: 5px 10px;
 	outline: none;
 }
 .blorg-authors-gadget h4#author_nick a { background: transparent url("images/author-nick.png") top center no-repeat; }
@@ -350,6 +350,7 @@ blockquote {
 .blorg-authors-gadget h4#author_dave a { background: transparent url("images/author-dave.png") top center no-repeat; }
 .blorg-authors-gadget h4#author_dennis a { background: transparent url("images/author-dennis.png") top center no-repeat; }
 .blorg-authors-gadget h4#author_kelly a { background: transparent url("images/author-kelly.png") top center no-repeat; }
+.blorg-authors-gadget h4#author_charlesp a { background: transparent url("images/author-charlesp.png") top center no-repeat; }
 
 .blorg-feed-gadget {
 	background: #ecebe9 url("images/background-sidebar.png") bottom right no-repeat
