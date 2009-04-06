@@ -291,6 +291,7 @@ strong { font-style: inherit; }
 }
 
 .blorg-tag-gadget ul li span,
+.blorg-twitter-gadget ul li span,
 .blorg-archive-gadget ul li span,
 .blorg-active-conversations-gadget ul li span {
 	color: #999;
