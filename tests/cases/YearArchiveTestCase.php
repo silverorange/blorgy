@@ -86,7 +86,7 @@ class YearArchiveTestCase extends SeleniumTestCase
 	// }}}
 	// {{{ protected function loadPagedYear()
 
-	protected function loadPagedYEar()
+	protected function loadPagedYear()
 	{
 		$this->addPagedYearLocator();
 
@@ -107,7 +107,7 @@ class YearArchiveTestCase extends SeleniumTestCase
 	 * posts is greater than the specified value. This is used to select
 	 * year pages that will be paginated.
 	 *
-	 * Example use: <code>pagedyear=50</code< will select the first year page
+	 * Example use: <code>pagedyear=50</code> will select the first year page
 	 * link where the number of posts is greater than 50.
 	 */
 	protected function addPagedYearLocator()
