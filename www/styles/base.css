@@ -353,6 +353,10 @@ img.right { float: right; margin: 0.2em 0 1em 1em; }
 img.left  { float: left;  margin: 0.2em 1em 1em 0; }
 img.center { display: block; margin: 1em auto; }
 
+del {
+	text-decoration: line-through;
+	color: #999;
+}
 
 /* Styles for data tables */
 
