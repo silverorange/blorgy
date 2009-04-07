@@ -55,7 +55,7 @@ class DtbPostView extends BlorgPostView
 		$show_comment_count =
 			(strlen($comment_count) > 0 &&
 				(($post->comment_status == BlorgPost::COMMENT_STATUS_LOCKED &&
-					count($post->getVisibleComments()) > 0) ||
+					$post->getVisibleCommentCount() > 0) ||
 				$post->comment_status == BlorgPost::COMMENT_STATUS_OPEN ||
 				$post->comment_status == BlorgPost::COMMENT_STATUS_MODERATED));
 
