@@ -11,7 +11,6 @@ require_once 'Blorg/views/BlorgPostView.php';
  */
 class NostalgiaPostView extends BlorgPostView
 {
-
 	// general display methods
 	// {{{ protected function displayFooter()
 

@@ -184,8 +184,10 @@ class Application extends SiteWebApplication
 
 		setlocale(LC_ALL, $config->i18n->locale);
 
-		$this->memcache->server = $config->memcache->server;
-		$this->memcache->app_ns = $config->memcache->app_ns;
+		if (isset($this->memcache)) {
+			$this->memcache->server = $config->memcache->server;
+			$this->memcache->app_ns = $config->memcache->app_ns;
+		}
 	}
 
 	// }}}
