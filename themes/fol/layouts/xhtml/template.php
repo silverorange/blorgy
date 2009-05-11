@@ -15,7 +15,6 @@
 	<?= $this->header_title ?>
 
 	<ul>
-		<li><a href="http://www.focusedonlight.com">photos</a></li>
 		<li><a href="archive/">archives</a></li>
 		<li><a href="author/stephen">about</a></li>
 		<li><a href="feed">rss</a></li>
