@@ -44,11 +44,11 @@ class ExceptionPage extends SiteExceptionPage
 		array_shift($source);
 
 		if (count($source) == 0)
-			$this->app->relocate('archive');
+			$this->relocate('archive');
 		elseif (is_numeric($source[0]))
-			$this->app->relocate('archive/'.implode('/', $source));
+			$this->relocate('archive/'.implode('/', $source));
 		else
-			$this->app->relocate('tag/'.implode('/', $source));
+			$this->relocate('tag/'.implode('/', $source));
 	}
 
 	// }}}
@@ -62,9 +62,9 @@ class ExceptionPage extends SiteExceptionPage
 		array_shift($source);
 
 		if (count($source) == 0)
-			$this->app->relocate('article');
+			$this->relocate('article');
 		else
-			$this->app->relocate('article/'.implode('/', $source));
+			$this->relocate('article/'.implode('/', $source));
 	}
 
 	// }}}
@@ -78,9 +78,9 @@ class ExceptionPage extends SiteExceptionPage
 		array_shift($source);
 
 		if (count($source) == 0)
-			$this->app->relocate('author');
+			$this->relocate('author');
 		else
-			$this->app->relocate('author/'.implode('/', $source));
+			$this->relocate('author/'.implode('/', $source));
 	}
 
 	// }}}
@@ -97,13 +97,13 @@ class ExceptionPage extends SiteExceptionPage
 			array_pop($source);
 
 		if (count($source) == 0)
-			$this->app->relocate('feed');
+			$this->relocate('feed');
 		elseif ($source[0] == 'replies')
-			$this->app->relocate('feed/comments');
+			$this->relocate('feed/comments');
 		elseif ($source[0] == 'sideblog')
-			$this->app->relocate('feed');
+			$this->relocate('feed');
 		elseif ($source[0] == 'categories' && count($source) == 2)
-			$this->app->relocate('tag/'.$source[1].'/feed');
+			$this->relocate('tag/'.$source[1].'/feed');
 	}
 
 	// }}}
@@ -142,7 +142,7 @@ class ExceptionPage extends SiteExceptionPage
 			$month_name,
 			$post->shortname);
 
-		$this->app->relocate($url);
+		$this->relocate($url);
 	}
 
 	// }}}
@@ -150,9 +150,17 @@ class ExceptionPage extends SiteExceptionPage
 
 	private function relocateReallyOldAuthor($name)
 	{
-		$this->app->relocate('author/'.$name);
+		$this->relocate('author/'.$name);
 	}
 
+	// }}}
+	// {{{ private function relocate()
+
+	private function relocate($uri)
+	{
+		// do a 301 permanent relocate
+		$this->relocate($uri, null, null, true);
+	}
 	// }}}
 }
 
