@@ -233,6 +233,8 @@ ul li {
 #weblog .entry .entry-content table { margin-left: auto; margin-right: auto; }
 #weblog .entry .entry-content table.grey { background-color: #f1f1f1; }
 
+#weblog .entry .entry-content table.tablerow-underline tr { border-bottom 1px #ccc solid; }
+
 #weblog .entry .entry-content th, td {
 	padding: 5px;
 	text-align: left;
