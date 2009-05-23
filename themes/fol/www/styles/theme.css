@@ -233,8 +233,6 @@ ul li {
 #weblog .entry .entry-content table { margin-left: auto; margin-right: auto; }
 #weblog .entry .entry-content table.grey { background-color: #f1f1f1; }
 
-#weblog .entry .entry-content table.tablerow-underline tr { border-bottom 1px #ccc solid; }
-
 #weblog .entry .entry-content th, td {
 	padding: 5px;
 	text-align: left;
@@ -244,6 +242,9 @@ ul li {
 #weblog .entry .entry-content th { background-color: #f7f7f7; }
 #weblog .entry .entry-content td { background-color: #fff; }
 #weblog .entry .entry-content td.greyback { background-color: #f7f7f7; font-weight: 500; }
+
+#weblog .entry .entry-content table.tablerow-underline td { border-bottom 1px #ccc solid; }
+#weblog .entry .entry-content table.tablerow-underline td img.border { padding: 4px; }
 
 #weblog .entry .entry-content blockquote	{
 	margin: 0; 
