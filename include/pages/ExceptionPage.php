@@ -159,7 +159,7 @@ class ExceptionPage extends SiteExceptionPage
 	private function relocate($uri)
 	{
 		// do a 301 permanent relocate
-		$this->relocate($uri, null, null, true);
+		$this->app->relocate($uri, null, null, true);
 	}
 	// }}}
 }
