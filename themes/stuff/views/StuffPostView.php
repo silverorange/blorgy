@@ -41,7 +41,7 @@ class StuffPostView extends BlorgPostView
 	 */
 	protected function displaySubHeader(BlorgPost $post)
 	{
-		if ($this->getMode('bodytext') > BlorgView::MODE_NONE &&
+		if ($this->getMode('bodytext') > SiteView::MODE_NONE &&
 			$this->getImage($post) !== null) {
 			$author = '';
 		} else {
@@ -98,7 +98,7 @@ class StuffPostView extends BlorgPostView
 	protected function displayImage(BlorgPost $post)
 	{
 		// borrow display mode from bodytext part
-		if ($this->getMode('bodytext') > BlorgView::MODE_NONE) {
+		if ($this->getMode('bodytext') > SiteView::MODE_NONE) {
 
 			$image = $this->getImage($post);
 
@@ -113,7 +113,7 @@ class StuffPostView extends BlorgPostView
 					if (is_string($link)) {
 						$a_tag->href = $link;
 					} else {
-						$a_tag->href = $this->getPostRelativeUri($post);
+						$a_tag->href = $this->getRelativeUri($post);
 					}
 					$a_tag->title = $post->getTitle();
 					$a_tag->open();
