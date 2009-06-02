@@ -19,7 +19,10 @@ class TagTestCase extends SeleniumTestCase
 
 		// make sure footer summary is there
 		$text = sprintf('posts, displaying 1 to %s', self::MAX_POSTS);
-		$this->assertTrue($this->selenium->isTextPresent($text));
+		$this->assertTrue(
+			$this->selenium->isTextPresent($text),
+			'Footer summary text is not present on tag page.'
+		);
 	}
 
 	// }}}
@@ -39,7 +42,10 @@ class TagTestCase extends SeleniumTestCase
 		$start = self::MAX_POSTS + 1;
 		$end   = self::MAX_POSTS * 2;
 		$text  = sprintf('posts, displaying %s to %s', $start, $end);
-		$this->assertTrue($this->selenium->isTextPresent($text));
+		$this->assertTrue(
+			$this->selenium->isTextPresent($text),
+			'Footer summary text is not present on second page of tag page.'
+		);
 	}
 
 	// }}}

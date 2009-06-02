@@ -12,7 +12,9 @@ class SeleniumTestCase extends TestCase
 		parent::setUp();
 
 		$this->selenium = new Testing_Selenium(
-			'*custom /usr/local/bin/firefox-bin', $this->base_href);
+			'*chrome /usr/local/bin/firefox-bin',
+			$this->base_href
+		);
 
 		$this->selenium->start();
 	}
@@ -31,8 +33,12 @@ class SeleniumTestCase extends TestCase
 
 	protected function assertNoExceptions()
 	{
-		$this->assertFalse($this->selenium->isElementPresent(
-			'xpath=//div[@class=\'swat-exception\']'));
+		$this->assertFalse(
+			$this->selenium->isElementPresent(
+				'xpath=//div[@class=\'swat-exception\']'
+			),
+			'One or more exceptions are present on the page.'
+		);
 	}
 
 	// }}}
@@ -40,8 +46,12 @@ class SeleniumTestCase extends TestCase
 
 	protected function assertNotFound()
 	{
-		$this->assertTrue($this->selenium->isTextPresent(
-			'Sorry, we couldn’t find the page you were looking for.'));
+		$this->assertTrue(
+			$this->selenium->isTextPresent(
+				'Sorry, we couldn’t find the page you were looking for.'
+			),
+			'Expected "not found" message not present.'
+		);
 	}
 
 	// }}}
@@ -50,9 +60,13 @@ class SeleniumTestCase extends TestCase
 	protected function assertHasPosts()
 	{
 		// make sure there are posts displayed
-		$this->assertTrue($this->selenium->isElementPresent(
-			"xpath=//div[contains(@class, 'entry')]/".
-			"div[contains(@class, 'entry-content')]"));
+		$this->assertTrue(
+			$this->selenium->isElementPresent(
+				"xpath=//div[contains(@class, 'entry')]/".
+				"div[contains(@class, 'entry-content')]"
+			),
+			'No posts are present on the page.'
+		);
 	}
 
 	// }}}

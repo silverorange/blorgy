@@ -14,13 +14,22 @@ class AtomTestCase extends FeedTestCase
 
 		// also check for alternative link
 		$list = $this->xpath->query("/atom:feed/atom:link[@rel='alternate']");
-		$this->assertEquals(1, $list->length);
+		$this->assertEquals(
+			1,
+			$list->length,
+			'Number of alternative links in atom feed is not 1.'
+		);
 
 		// make sure subtitle is correct
 		$subtitle = $this->xpath->evaluate(
-			"string(/atom:feed/atom:subtitle/text())");
+			"string(/atom:feed/atom:subtitle/text())"
+		);
 
-		$this->assertEquals('Recent Posts', $subtitle);
+		$this->assertEquals(
+			'Recent Posts',
+			$subtitle,
+			'Atom subtitle does not equal "Recent Posts"'
+		);
 
 		$this->assertEntryElementsPresent();
 	}

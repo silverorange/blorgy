@@ -11,11 +11,19 @@ class AuthorTestCase extends SeleniumTestCase
 		$this->loadAuthor();
 
 		// make sure the author is displayed
-		$this->assertTrue($this->selenium->isElementPresent(
-			"xpath=//div[@class='author']/h3[@class='author-name']"));
+		$this->assertTrue(
+			$this->selenium->isElementPresent(
+				"xpath=//div[@class='author']/h3[@class='author-name']"
+			),
+			'Author name is not present on author page.'
+		);
 
-		$this->assertTrue($this->selenium->isElementPresent(
-			"xpath=//div[@class='author']/div[@class='author-content']"));
+		$this->assertTrue(
+			$this->selenium->isElementPresent(
+				"xpath=//div[@class='author']/div[@class='author-content']"
+			),
+			'Author description is not present on author page.'
+		);
 
 		// make sure there are posts displayed
 		// TODO: some blorgs don't display posts on the author page
@@ -54,8 +62,9 @@ class AuthorTestCase extends SeleniumTestCase
 		$this->selenium->open('author');
 		$this->assertNoExceptions();
 
-		$this->selenium->click("xpath=//div[@class='author']/".
-			"h4[@class='author-name']/a");
+		$this->selenium->click(
+			"xpath=//div[@class='author']/h4[@class='author-name']/a"
+		);
 
 		$this->selenium->waitForPageToLoad(30000);
 		$this->assertNoExceptions();

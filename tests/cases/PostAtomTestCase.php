@@ -14,17 +14,30 @@ class PostAtomTestCase extends FeedTestCase
 
 		// also check for alternative link
 		$list = $this->xpath->query("/atom:feed/atom:link[@rel='alternate']");
-		$this->assertEquals(1, $list->length);
+		$this->assertEquals(
+			1,
+			$list->length,
+			'Number of alternative links in atom feed is not 1.'
+		);
 
 		// make sure subtitle is correct
 		$subtitle = $this->xpath->evaluate(
-			"string(/atom:feed/atom:subtitle/text())");
+			"string(/atom:feed/atom:subtitle/text())"
+		);
 
-		$this->assertContains('Comments on ', $subtitle);
+		$this->assertContains(
+			'Comments on ',
+			$subtitle,
+			'Post atom subtitle does not contain the string "Comments on ".'
+		);
 
 		// check for post author
 		$list = $this->xpath->query("/atom:feed/atom:author/atom:name");
-		$this->assertEquals(1, $list->length);
+		$this->assertEquals(
+			1,
+			$list->length,
+			'Post atom feed does not contain exactly 1 author.'
+		);
 
 		$this->assertEntryElementsPresent();
 	}
@@ -75,7 +88,8 @@ class PostAtomTestCase extends FeedTestCase
 				"//html:div[contains(@class, 'entry')]/".
 				"html:div[@class='entry-subtitle']/".
 				"html:a[@class='comment-count' and ".
-					"contains(text(), 'leave a comment') = false]");
+				"contains(text(), 'leave a comment') = false]"
+			);
 
 			foreach ($comment_links as $node) {
 				$matches = array();
@@ -93,7 +107,8 @@ class PostAtomTestCase extends FeedTestCase
 
 			$next_link = $this->xpath->query(
 				"//html:div[@class='swat-pagination']/".
-				"html:a[contains(text(), 'Older')]/@href");
+				"html:a[contains(text(), 'Older')]/@href"
+			);
 
 			$more_pages = ($next_link->length > 0);
 			$page++;
@@ -102,7 +117,8 @@ class PostAtomTestCase extends FeedTestCase
 		if ($href === null) {
 			$this->markTestSkipped(
 				'No posts with at least '.$min_comments.' comments are '.
-				'available for this instance.');
+				'available for this instance.'
+			);
 		}
 
 		// load post comments feed

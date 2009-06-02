@@ -19,7 +19,10 @@ class FrontTestCase extends SeleniumTestCase
 
 		// make sure footer summary is there
 		$text = sprintf('posts, displaying 1 to %s', self::MAX_POSTS);
-		$this->assertTrue($this->selenium->isTextPresent($text));
+		$this->assertTrue(
+			$this->selenium->isTextPresent($text),
+			'Footer summary text is not present on front page.'
+		);
 	}
 
 	// }}}
@@ -34,7 +37,10 @@ class FrontTestCase extends SeleniumTestCase
 		// make sure footer summary is correct
 		$start = self::MAX_POSTS + 1;
 		$text  = sprintf('posts, displaying %s to', $start);
-		$this->assertTrue($this->selenium->isTextPresent($text));
+		$this->assertTrue(
+			$this->selenium->isTextPresent($text),
+			'Footer summary text is not present on second page.'
+		);
 	}
 
 	// }}}

@@ -12,8 +12,12 @@ class AuthorIndexTestCase extends SeleniumTestCase
 		$this->assertNoExceptions();
 
 		// make sure there are authors displayed
-		$this->assertTrue($this->selenium->isElementPresent(
-			"xpath=//div[@class='author']/h4[@class='author-name']"));
+		$this->assertTrue(
+			$this->selenium->isElementPresent(
+				"xpath=//div[@class='author']/h4[@class='author-name']"
+			),
+			'No authors are displayed on the author index page.'
+		);
 	}
 
 	// }}}

@@ -93,7 +93,11 @@ class FeedTestCase extends TestCase
 	protected function assertNoExceptions()
 	{
 		$list= $this->xpath->query("//html:div[@class='swat-exception']");
-		$this->assertEquals(0, $list->length);
+		$this->assertEquals(
+			0,
+			$list->length,
+			'One or more exceptions are present in the feed.'
+		);
 	}
 
 	// }}}
@@ -102,22 +106,46 @@ class FeedTestCase extends TestCase
 	protected function assertFeedElementsPresent()
 	{
 		$list= $this->xpath->query("/atom:feed/atom:generator");
-		$this->assertEquals(1, $list->length);
+		$this->assertEquals(
+			1,
+			$list->length,
+			'Feed does not have exactly 1 generator.'
+		);
 
 		$list = $this->xpath->query("/atom:feed/atom:id");
-		$this->assertEquals(1, $list->length);
+		$this->assertEquals(
+			1,
+			$list->length,
+			'Feed does not have exactly 1 id.'
+		);
 
 		$list = $this->xpath->query("/atom:feed/atom:link[@rel='self']");
-		$this->assertEquals(1, $list->length);
+		$this->assertEquals(
+			1,
+			$list->length,
+			'Feed does not have exactly 1 "self" link.'
+		);
 
 		$list = $this->xpath->query("/atom:feed/atom:subtitle");
-		$this->assertEquals(1, $list->length);
+		$this->assertEquals(
+			1,
+			$list->length,
+			'Feed does not have exactly 1 subtitle.'
+		);
 
 		$list = $this->xpath->query("/atom:feed/atom:title");
-		$this->assertEquals(1, $list->length);
+		$this->assertEquals(
+			1,
+			$list->length,
+			'Feed does not have exactly 1 title.'
+		);
 
 		$list = $this->xpath->query("/atom:feed/atom:updated");
-		$this->assertEquals(1, $list->length);
+		$this->assertEquals(
+			1,
+			$list->length,
+			'Feed does not have exactly 1 updated date.'
+		);
 	}
 
 	// }}}
@@ -126,32 +154,66 @@ class FeedTestCase extends TestCase
 	protected function assertEntryElementsPresent()
 	{
 		$list= $this->xpath->query("/atom:feed/atom:entry");
-		$this->assertNotEquals(0, $list->length);
+		$this->assertNotEquals(
+			0,
+			$list->length,
+			'Feed does not contain any entries.'
+		);
 
 		$list = $this->xpath->query("/atom:feed/atom:entry/atom:author");
-		$this->assertNotEquals(0, $list->length);
+		$this->assertNotEquals(
+			0,
+			$list->length,
+			'Entries do not have any author.'
+		);
 
 		$list = $this->xpath->query(
-			"/atom:feed/atom:entry/atom:author/atom:name");
+			"/atom:feed/atom:entry/atom:author/atom:name"
+		);
 
-		$this->assertNotEquals(0, $list->length);
+		$this->assertNotEquals(
+			0,
+			$list->length,
+			'Authors dot not have any name.'
+		);
 
 		$list = $this->xpath->query("/atom:feed/atom:entry/atom:content");
-		$this->assertNotEquals(0, $list->length);
+		$this->assertNotEquals(
+			0,
+			$list->length,
+			'Entries do not have any content.'
+		);
 
 		$list = $this->xpath->query("/atom:feed/atom:entry/atom:id");
-		$this->assertNotEquals(0, $list->length);
+		$this->assertNotEquals(
+			0,
+			$list->length,
+			'Entries do not have ids.'
+		);
 
 		$list = $this->xpath->query(
-			"/atom:feed/atom:entry/atom:link[@rel='alternate']");
+			"/atom:feed/atom:entry/atom:link[@rel='alternate']"
+		);
 
-		$this->assertNotEquals(0, $list->length);
+		$this->assertNotEquals(
+			0,
+			$list->length,
+			'Entries do not have alternative links.'
+		);
 
 		$list = $this->xpath->query("/atom:feed/atom:entry/atom:title");
-		$this->assertNotEquals(0, $list->length);
+		$this->assertNotEquals(
+			0,
+			$list->length,
+			'Entries do not have titles.'
+		);
 
 		$list = $this->xpath->query("/atom:feed/atom:entry/atom:updated");
-		$this->assertNotEquals(0, $list->length);
+		$this->assertNotEquals(
+			0,
+			$list->length,
+			'Entries do not have updated dates.'
+		);
 	}
 
 	// }}}
@@ -161,9 +223,14 @@ class FeedTestCase extends TestCase
 	{
 		// get next page
 		$href = $this->xpath->evaluate(
-			"string(/atom:feed/atom:link[@rel='next']/@href)");
+			"string(/atom:feed/atom:link[@rel='next']/@href)"
+		);
 
-		$this->assertNotEquals('', $href);
+		$this->assertNotEquals(
+			'',
+			$href,
+			'No next link present in paginated feed.'
+		);
 
 		// load next page
 		$this->load($href);
@@ -171,9 +238,14 @@ class FeedTestCase extends TestCase
 
 		// get last page
 		$href = $this->xpath->evaluate(
-			"string(/atom:feed/atom:link[@rel='last']/@href)");
+			"string(/atom:feed/atom:link[@rel='last']/@href)"
+		);
 
-		$this->assertNotEquals('', $href);
+		$this->assertNotEquals(
+			'',
+			$href,
+			'No last link present in paginated feed'
+		);
 
 		// load last page
 		$this->load($href);
@@ -181,13 +253,22 @@ class FeedTestCase extends TestCase
 
 		// make sure there is no next page
 		$list = $this->xpath->query("/atom:feed/atom:link[@rel='next']");
-		$this->assertEquals(0, $list->length);
+		$this->assertEquals(
+			0,
+			$list->length,
+			'Last page in feed contains a next link.'
+		);
 
 		// get prev page
 		$href = $this->xpath->evaluate(
-			"string(/atom:feed/atom:link[@rel='previous']/@href)");
+			"string(/atom:feed/atom:link[@rel='previous']/@href)"
+		);
 
-		$this->assertNotEquals('', $href);
+		$this->assertNotEquals(
+			'',
+			$href,
+			'No prev link present on last page of paginated feed.'
+		);
 
 		// load prev page
 		$this->load($href);
@@ -195,9 +276,14 @@ class FeedTestCase extends TestCase
 
 		// get first page
 		$href = $this->xpath->evaluate(
-			"string(/atom:feed/atom:link[@rel='first']/@href)");
+			"string(/atom:feed/atom:link[@rel='first']/@href)"
+		);
 
-		$this->assertNotEquals('', $href);
+		$this->assertNotEquals(
+			'',
+			$href,
+			'No first link present in paginated feed.'
+		);
 
 		// load first page
 		$this->load($href);
@@ -211,10 +297,18 @@ class FeedTestCase extends TestCase
 	{
 		// make sure there was an exception
 		$list = $this->xpath->query("//html:div[@class='swat-exception']");
-		$this->assertNotEquals(0, $list->length);
+		$this->assertNotEquals(
+			0,
+			$list->length,
+			'Expected "not found" exception was not encountered.'
+		);
 
 		// make sure response code was 404
-		$this->assertEquals(404, $this->request_info['http_code']);
+		$this->assertEquals(
+			404,
+			$this->request_info['http_code'],
+			'Response code of "not found" page was not 404.'
+		);
 	}
 
 	// }}}

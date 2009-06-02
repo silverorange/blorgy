@@ -12,8 +12,12 @@ class TagIndexTestCase extends SeleniumTestCase
 		$this->assertNoExceptions();
 
 		// make sure there are tags displayed
-		$this->assertTrue($this->selenium->isElementPresent(
-			"xpath=//ul[@class='blorg-archive-tags']"));
+		$this->assertTrue(
+			$this->selenium->isElementPresent(
+				"xpath=//ul[@class='blorg-archive-tags']"
+			),
+			'Tag list is not present on tag index page.'
+		);
 	}
 
 	// }}}

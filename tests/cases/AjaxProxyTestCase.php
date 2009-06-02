@@ -10,8 +10,10 @@ class AjaxProxyTestCase extends SeleniumTestCase
 	{
 		$this->selenium->open('ajax/last.fm/gauthierm');
 		$this->assertNoExceptions();
-		$this->assertTrue($this->selenium->isElementPresent(
-			"xpath=/recenttracks"));
+		$this->assertTrue(
+			$this->selenium->isElementPresent("xpath=/recenttracks"),
+			'The recenttracks element is not present in Last.fm AJAX proxy.'
+		);
 	}
 
 	// }}}

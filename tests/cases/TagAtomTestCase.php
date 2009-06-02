@@ -19,13 +19,22 @@ class TagAtomTestCase extends FeedTestCase
 
 		// also check for alternative link
 		$list = $this->xpath->query("/atom:feed/atom:link[@rel='alternate']");
-		$this->assertEquals(1, $list->length);
+		$this->assertEquals(
+			1,
+			$list->length,
+			'Number of alternative links in tag atom feed is not 1.'
+		);
 
 		// make sure subtitle is correct
 		$subtitle = $this->xpath->evaluate(
-			"string(/atom:feed/atom:subtitle/text())");
+			"string(/atom:feed/atom:subtitle/text())"
+		);
 
-		$this->assertContains('Posts Tagged:', $subtitle);
+		$this->assertContains(
+			'Posts Tagged:',
+			$subtitle,
+			'Tag atom subtitle does not contain the string "Posts Tagged:".'
+		);
 
 		$this->assertEntryElementsPresent();
 	}
@@ -72,7 +81,8 @@ class TagAtomTestCase extends FeedTestCase
 		// find tag page links
 		$list = $this->xpath->query(
 			"//html:ul[@class='blorg-archive-tags']/html:li/".
-			"html:h4[@class='blorg-archive-tag-title']/html:a/@href");
+			"html:h4[@class='blorg-archive-tag-title']/html:a/@href"
+		);
 
 		$href = null;
 
@@ -82,7 +92,8 @@ class TagAtomTestCase extends FeedTestCase
 
 		if ($href === null) {
 			$this->markTestSkipped(
-				'No tags feeds are available for this instance.');
+				'No tags feeds are available for this instance.'
+			);
 		}
 
 		// load tag feed
@@ -99,7 +110,8 @@ class TagAtomTestCase extends FeedTestCase
 
 		$list = $this->xpath->query(
 			"//html:ul[@class='blorg-archive-tags']/html:li/".
-			"html:h4[@class='blorg-archive-tag-title']");
+			"html:h4[@class='blorg-archive-tag-title']"
+		);
 
 		$href = null;
 
@@ -109,7 +121,9 @@ class TagAtomTestCase extends FeedTestCase
 			if (preg_match('/\(([0-9]+) posts?\)$/', $text, $matches) === 1) {
 				if (intval($matches[1]) > self::MAX_POSTS) {
 					$href = $this->xpath->evaluate(
-						"string(html:a/@href)", $node);
+						"string(html:a/@href)",
+						$node
+					);
 
 					break;
 				}
@@ -118,7 +132,8 @@ class TagAtomTestCase extends FeedTestCase
 
 		if ($href === null) {
 			$this->markTestSkipped(
-				'No paged tag feeds are available for this instance.');
+				'No paged tag feeds are available for this instance.'
+			);
 		}
 
 		// load paged tag feed

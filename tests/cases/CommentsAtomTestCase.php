@@ -14,9 +14,14 @@ class CommentsAtomTestCase extends FeedTestCase
 
 		// make sure subtitle is correct
 		$subtitle = $this->xpath->evaluate(
-			"string(/atom:feed/atom:subtitle/text())");
+			"string(/atom:feed/atom:subtitle/text())"
+		);
 
-		$this->assertEquals('Recent Comments', $subtitle);
+		$this->assertEquals(
+			'Recent Comments',
+			$subtitle,
+			'Comments Atom feed subtitle is not "Recent Comments".'
+		);
 
 		$this->assertEntryElementsPresent();
 	}
