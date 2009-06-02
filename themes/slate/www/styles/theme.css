@@ -40,13 +40,12 @@ a:hover { color: #eee; }
 	color: #fff;
 }
 
-#hd h1 img {
-	float: left;
-}
-
 #hd .tagline {
 	margin-left: 28px;
+/*	top: -25px;*/
 	margin-bottom: 15px;
+	position: relative;
+	clear: left;
 	font-size: 100%;
 	color: #eee;
 }

@@ -16,7 +16,7 @@ class DtbPostView extends BlorgPostView
 	public function __construct(SiteApplication $app)
 	{
 		parent::__construct($app);
-		$this->setPartMode('author', BlorgView::MODE_NONE);
+		$this->setPartMode('author', SiteView::MODE_NONE);
 	}
 
 	// }}}
@@ -89,14 +89,14 @@ class DtbPostView extends BlorgPostView
 	 */
 	protected function displayPermalink(BlorgPost $post)
 	{
-		if ($this->getMode('permalink') > BlorgView::MODE_NONE) {
+		if ($this->getMode('permalink') > SiteView::MODE_NONE) {
 			$link = $this->getLink('permalink');
 			if ($link === false) {
 				$permalink_tag = new SwatHtmlTag('span');
 			} else {
 				$permalink_tag = new SwatHtmlTag('a');
 				if ($link === true) {
-					$permalink_tag->href = $this->getPostRelativeUri($post);
+					$permalink_tag->href = $this->getRelativeUri($post);
 				} else {
 					$permalink_tag->href = $link;
 				}

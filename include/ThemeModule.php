@@ -1,7 +1,7 @@
 <?php
 
 require_once 'Site/SiteThemeModule.php';
-require_once 'Blorg/BlorgViewFactory.php';
+require_once 'Site/SiteViewFactory.php';
 
 /**
  * Theme module for Blörgy
@@ -47,7 +47,7 @@ class ThemeModule extends SiteThemeModule
 					$class_name));
 			}
 
-			BlorgViewFactory::registerView('author', $class_name);
+			SiteViewFactory::registerView('author', $class_name);
 		}
 	}
 
@@ -74,7 +74,7 @@ class ThemeModule extends SiteThemeModule
 					$class_name));
 			}
 
-			BlorgViewFactory::registerView('post', $class_name);
+			SiteViewFactory::registerView('post', $class_name);
 		}
 	}
 
@@ -101,7 +101,7 @@ class ThemeModule extends SiteThemeModule
 					$class_name));
 			}
 
-			BlorgViewFactory::registerView('comment', $class_name);
+			SiteViewFactory::registerView('comment', $class_name);
 		}
 	}
 
