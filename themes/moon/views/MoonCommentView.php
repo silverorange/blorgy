@@ -43,7 +43,7 @@ class MoonCommentView extends BlorgCommentView
 				$permalink_tag = new SwatHtmlTag('a');
 				if ($link === true) {
 					$permalink_tag->href =
-						$this->getCommentRelativeUri($comment);
+						$this->getRelativeUri($comment);
 				} else {
 					$permalink_tag->href = $link;
 				}
