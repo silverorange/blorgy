@@ -35,7 +35,7 @@ class MoonCommentView extends BlorgCommentView
 
 	protected function displayPermalink(BlorgComment $comment)
 	{
-		if ($this->getMode('permalink') > BlorgView::MODE_NONE) {
+		if ($this->getMode('permalink') > SwatView::MODE_NONE) {
 			$link = $this->getLink('permalink');
 			if ($link === false) {
 				$permalink_tag = new SwatHtmlTag('span');
