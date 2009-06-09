@@ -78,10 +78,10 @@ class BabiesPostView extends BlorgPostView
 		 */
 		$show_comment_count =
 			(strlen($comment_count) > 0 &&
-				(($post->comment_status == BlorgPost::COMMENT_STATUS_LOCKED &&
+				(($post->comment_status == SiteCommentStatus::LOCKED &&
 					count($post->getVisibleComments()) > 0) ||
-				$post->comment_status == BlorgPost::COMMENT_STATUS_OPEN ||
-				$post->comment_status == BlorgPost::COMMENT_STATUS_MODERATED));
+				$post->comment_status == SiteCommentStatus::OPEN ||
+				$post->comment_status == SiteCommentStatus::MODERATED));
 
 		$date = clone $post->publish_date;
 		$date->convertTZ($this->app->default_time_zone);
