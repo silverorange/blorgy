@@ -69,10 +69,10 @@ class StuffPostView extends BlorgPostView
 		 */
 		$show_comment_count =
 			($comment_count != '' &&
-				(($post->comment_status == BlorgPost::COMMENT_STATUS_LOCKED &&
+				(($post->comment_status == SiteCommentStatus::LOCKED &&
 					count($post->getVisibleComments()) > 0) ||
-				$post->comment_status == BlorgPost::COMMENT_STATUS_OPEN ||
-				$post->comment_status == BlorgPost::COMMENT_STATUS_MODERATED));
+				$post->comment_status == SiteCommentStatus::OPEN ||
+				$post->comment_status == SiteCommentStatus::MODERATED));
 
 		if ($author != '') {
 			if ($show_comment_count) {
