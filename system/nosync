@@ -1,6 +1,7 @@
-nosync
-blorgy.ini
-pear
-www/local
-www/images/files
-files
+/system/nosync
+/system/search/custom-wordlist.pws
+/blorgy.ini
+/pear
+/www/local
+/www/images/files
+/files
