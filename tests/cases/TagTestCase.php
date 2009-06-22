@@ -80,7 +80,7 @@ class TagTestCase extends SeleniumTestCase
 		$this->selenium->open('tag');
 		$this->assertNoExceptions();
 
-		$this->selenium->click('pagedtag='.self::MAX_POSTS);
+		$this->selenium->click('pagedtag='.(2 * self::MAX_POSTS));
 
 		$this->selenium->waitForPageToLoad(30000);
 		$this->assertNoExceptions();
