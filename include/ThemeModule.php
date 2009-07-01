@@ -101,7 +101,7 @@ class ThemeModule extends SiteThemeModule
 					$class_name));
 			}
 
-			SiteViewFactory::registerView('comment', $class_name);
+			SiteViewFactory::registerView('post-comment', $class_name);
 		}
 	}
 
