@@ -201,6 +201,11 @@ blockquote {
 	line-height: 1.6;
 }
 
+blockquote.big {
+	font-size: 123.1%;
+	font-style: italic;
+}
+
 /* }}} */
 /* {{{ Post Comments */
 
