@@ -206,6 +206,20 @@ blockquote.big {
 	font-style: italic;
 }
 
+dl {
+	margin-left: 1em;
+}
+
+dl dt {
+	text-transform: uppercase;
+	color: #666;
+}
+
+dl dd {
+	margin-bottom: 0.5em;
+	margin-left: 0.5em;
+}
+
 /* }}} */
 /* {{{ Post Comments */
 
