@@ -5,14 +5,14 @@ INSERT INTO AdminSection (id, title, description, displayorder, visible)
 INSERT INTO AdminComponent (id, shortname, title, description, displayorder, section, enabled, visible)
 	VALUES (11, 'Post', 'Posts', null, 10, 10, true, true);
 
-INSERT INTO AdminSubComponent (id, component, shortname, title, visible, displayorder)
-	VALUES (11, 11, 'Comments', 'Manage Comments', true, 10);
+INSERT INTO AdminComponent (id, shortname, title, description, displayorder, section, enabled, visible)
+	VALUES (11, 'Comment', 'Manage Comments', null, 20, 10, true, true);
 
 INSERT INTO AdminComponent (id, shortname, title, description, displayorder, section, enabled, visible)
-	VALUES (12, 'Tag', 'Tags', null, 20, 10, true, true);
+	VALUES (12, 'Tag', 'Tags', null, 30, 10, true, true);
 
 INSERT INTO AdminComponent (id, shortname, title, description, displayorder, section, enabled, visible)
-	VALUES (13, 'Article', 'Articles', null, 30, 10, true, true);
+	VALUES (13, 'Article', 'Articles', null, 40, 10, true, true);
 
 INSERT INTO AdminSubComponent (id, component, shortname, title, visible, displayorder)
 	VALUES (13, 13, 'Search', 'Search', true, 10);
