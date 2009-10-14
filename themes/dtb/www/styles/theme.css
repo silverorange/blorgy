@@ -691,6 +691,9 @@ dd {
 }
 
 p a:hover,
+.entry dd a:hover,
+.entry blockquote a:hover,
+.entry li a:hover,
 .author a:hover {
 	background: #deff90;
     color: #485e0f;
