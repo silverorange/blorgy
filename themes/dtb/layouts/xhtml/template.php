@@ -61,10 +61,10 @@
             <h2>Contact</h2>
             <p>I'm not currently looking for any kind of work and sometimes I take a long time to respond to email, but if you'd like to contact me please send an email to daniel [at] deltatangobravo [dot] com</p>
             <h2>Elsewhere</h2>
-            <p style="padding-top: 1em;">I tweet when the mood strikes at <a href="http://twitter.com/durka">Twitter</a></p>
+            <p style="padding-top: 1em;">I tweet when the mood strikes at <a href="http://twitter.com/dburka">Twitter</a></p>
             <p>I sometimes review products on <a href="http://stuff.silverorange.com">Silverorange Stuff</a></p>
-            <p>I sell my amateur photography on <a href="http://clustershot.com/durka">Clustershot</a></p>
-            <p>I post some of my personal photos on <a href="http://flickr.com/durka">Flickr</a></p>
+            <p>I sell my amateur photography on <a href="http://clustershot.com/dburka">Clustershot</a></p>
+            <p>I post some of my personal photos on <a href="http://flickr.com/dburka">Flickr</a></p>
             <p>I used to contribute on the <a href="http://blog.digg.com/?author=18">Digg Weblog</a></p>
             <p>I connect with people I actually know in the real world on <a href="http://facebook.com/dburka">Facebook</a></p>
             <h2>This Blog</h2>
