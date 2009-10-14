@@ -55,8 +55,9 @@
 
         <div class="main">
             <h3><span>Summary</span></h3>
-            <p>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, <a href="other.html">sed do eiusmod</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>I'm a web designer living in San Francisco, California. I sometimes get the chance to present lectures and workshops at conferences around the world, where I speak about iterative design strategies, designing for large online communities, and more broadly about interface design for web applications. I've posted many of the slides from past presentations I've done on <a href="http://slideshare.net/dburka">Slideshare</a>.</p>
+            <p>I am currently the director of design at a small gaming startup called <a href="http://tinyspeck.com">Tiny Speck</a>. Until October 2009, I was the creative director at <a href="http://digg.com/">Digg</a>. I was also one of the co-founders of the social conent-sharing site <a href="http://en.wikipedia.org/wiki/Pownce">Pownce</a>, which is now a part (heh heh) of Six Apart. Back in 1999, I helped found <a href="http://silverorange.com/">silverorange</a>, a stellar web development and design firm based in Prince Edward Island, Canada. I continue to work with silverorange, but as an inactive partner.</p>
+            
             <h2>Contact</h2>
             <p>I'm not currently looking for any kind of work and sometimes I take a long time to respond to email, but if you'd like to contact me please send an email to daniel [at] deltatangobravo [dot] com</p>
             <h2>Elsewhere</h2>
@@ -65,6 +66,7 @@
             <p>I sell my amateur photography on <a href="http://clustershot.com/durka">Clustershot</a></p>
             <p>I post some of my personal photos on <a href="http://flickr.com/durka">Flickr</a></p>
             <p>I used to contribute on the <a href="http://blog.digg.com/?author=18">Digg Weblog</a></p>
+            <p>I connect with people I actually know in the real world on <a href="http://facebook.com/dburka">Facebook</a></p>
             <h2>This Blog</h2>
             <p>The technology that powers this blog was built by <a href="http://silverorange.com/">silverorange</a> on their <a href="https://code.silverorange.com/wiki/Swat">Swat</a> open-source web application toolkit. I'm no longer working on day-to-day projects at silverorange, but they're available for hire if you're looking for top-notch interface design or web application development.</p>
         </div>
