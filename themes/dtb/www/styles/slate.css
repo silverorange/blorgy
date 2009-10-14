@@ -1,11 +1,11 @@
 html {
-    min-width: 880px;
+    min-width: 860px;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Lucida Grande", Arial, sans-serif;
   font-size: 11px;
 }
 
@@ -23,6 +23,7 @@ h1 a:hover,
 h2 a:hover,
 h3 a:hover {
   text-decoration: none;
+  margin-top: 1px;
 }
 
 h1,
@@ -60,22 +61,16 @@ h2 span {
 #header h1,
 .container-footer .main h3 {
     font-size: 36px;
+    letter-spacing: -0.05em;
     padding: 0;
     white-space: nowrap;
-    margin: 0;
 }
 
 #header h1 a,
 #header h1 span {
     margin-left: -12px;
-    margin-top: -13px;
-    padding: 0;
-    white-space: nowrap;
-    display: block;
-    text-indent: -2000em;
-    width: 478px;
-    height: 64px;
-    background: #1c232a url(../images/night/plane.png) 0 0 no-repeat;
+    padding: 9px 85px 10px 10px;
+    background: url(../images/slate/plane.png) 100% 0 no-repeat;
 }
 
 .container-footer .main h3 {
@@ -97,8 +92,13 @@ h3 {
 
 .entry h3.entry-title {
     margin-bottom: 0.5em;
-    margin-top: 3em;
-    font-size: 22px;
+    font-size: 18px;
+}
+
+.entry h3.entry-title a {
+    //background: url(../images/media-icons.gif) 0 -450px no-repeat;
+    //padding-left: 42px;
+    //margin-left: -42px;
 }
 
 .entry h3.entry-title a:hover {
@@ -128,12 +128,6 @@ h4 {
     margin-top: 30px;
     padding-bottom: 2em;
     position: relative;
-}
-
-.entry p,
-.container-footer p {
-    font-size: 13px;
-    line-height: 1.5;
 }
 
 .entry p a {
@@ -167,7 +161,7 @@ blockquote {
     padding-left: 30px;
     font-size: 11px;
     line-height: 2;
-    color: #71808e;
+    color: #777c85;
 }
 
 .swat-note {
@@ -182,6 +176,7 @@ blockquote {
 }
 
 .container-footer {
+    border-bottom: 1px solid #fff;
     margin-top: 20px;
 }
 
@@ -191,8 +186,7 @@ blockquote {
 }
 
 .inner-container {
-    background: url(../images/night/shade-light.png);
-    //background: #2c3039;
+    background: url(../images/slate/shade.png);
     padding: 0 20px 20px 20px;
 }
 
@@ -211,7 +205,7 @@ blockquote {
     float: left;
     width: 32%;
     margin-left: 2%;
-    padding-top: 100px;;
+    padding-top: 70px;;
 }
 
 .container-footer .inner-container {
@@ -221,16 +215,12 @@ blockquote {
 
 .container-footer .extra {
     font-size: 11px;
-    padding-top: 60px;
-}
-
-.container-footer .main h3 {
-    margin-bottom: 20px;
+    padding-top: 30px;
 }
 
 .container-footer h3 span {
     position: relative;
-    background: #1f2429;
+    background: #a1b2b9;
     padding: 0 10px;
     left: -10px;
 }
@@ -243,11 +233,11 @@ blockquote {
 
 .extra h3 a {
     display: block;
-    margin-left: -40px;
-    padding-left: 40px;
+    margin-left: -38px;
+    padding-left: 38px;
     min-height: 19px;
     padding-top: 5px;
-    background: url(../images/media-icons.png) 0 0 no-repeat;
+    background: url(../images/media-icons.gif) 0 0 no-repeat;
 }
 
 .extra .blorg-authors-gadget h3 em {
@@ -309,29 +299,21 @@ blockquote {
 
 .swat-pagination a,
 .swat-pagination span {
-    background: #282e37;
+    background: #fff;
     padding: 6px 8px;
-    color: #fff !important;
+    color: #5e0081 !important;
     font-size: 11px;
     border: none;
     margin-right: 2px;
 }
 
-.swat-pagination a:hover {
-    background: #deff90;
-    color: #485e0f !important;
-    text-decoration: none;
-	border-color: #deff90;
-}
-
 .swat-pagination span {
     background: none;
-    color: #414e5e !important;
 }
 
 .swat-pagination span.swat-pagination-current {
-    border-color: #414e5e;
-    color: #fff !important;
+    background: #fff;
+    border-color: #5e0081 !important;
 }
 
 .swat-pagination {
@@ -354,8 +336,8 @@ blockquote {
     margin-bottom: 2em;
 }
 
-.extra .list li {
-    border-top: 1px solid #414e5e;
+.extra .list li, #dopplr-blog-badge-for-dburka li {
+    border-top: 1px solid #deeef9;
     padding: 7px 0 0 0;
     margin-top: 7px;
     position: relative;
@@ -367,7 +349,7 @@ blockquote {
 
 .comment {
 	margin: 0;
-    border-top: 1px solid #414e5e;
+    border-top: 1px solid #deeef9;
     padding: 15px 0 15px 130px;
     position: relative;
     font-size:  11px;
@@ -394,7 +376,7 @@ h3.comments-title {
 }
 
 .comment h4 abbr {
-	color: #71808e;
+	color: #777c85;
 }
 
 .comment p {
@@ -402,7 +384,7 @@ h3.comments-title {
 }
 
 .comment h4 span {
-	color: #71808e !important;
+	color: #4e5259 !important;
 }
 
 .comment h4 a {
@@ -451,25 +433,23 @@ body,
 .container-footer,
 .feature,
 .comment h4 span,
-.comment,
-.extra .blorg-authors-gadget {
-  color: #71808e;
-  border-color: #414e5e;
+.comment {
+  color: #4e5259;
+  border-color: #deeef9;
 }
 
 body {
-    background: #23282e url(../images/night/back3.png) 50% -100px repeat;
+    background: #dae1e2 url(../images/slate/back.png) 50% -100px no-repeat;
 }
 
 .main {
-    background: url(../images/night/shade-dark.png);
+    background: url(../images/slate/shade-darker.png);
 }
 
 a:link,
 a:visited,
 #dopplr-blog-badge-for-dburka a:link,
-#dopplr-blog-badge-for-dburka a:visited,
-.extra .blorg-authors-gadget a {
+#dopplr-blog-badge-for-dburka a:visited {
     color: #fff;
 }
 
@@ -477,14 +457,14 @@ a.comment-count:link,
 a.comment-count:visited,
 a.next,
 a.prev {
-    color: #e3d096 !important;
+    color: #5e0081 !important;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 a.comment-count:hover {
-    background: #deff90;
-    color: #485e0f !important;
+    background: #5e0081;
+    color: #dfc1ea !important;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     padding-right: 4px;
@@ -501,7 +481,7 @@ abbr.published {
 .entry-subtitle abbr:hover {
     cursor: default;
     text-decoration: none;
-    color: #666152 !important;
+    color: #697479;
 }
 
 a:hover,
@@ -518,10 +498,17 @@ h3 a:visited {
   color: #fff;
 }
 
+h1 a:hover,
+h2 a:hover,
+h3 a:hover {
+  text-shadow: 0 1px 0 #646e7c;
+}
+
 h1,
 h2,
 h3 {
   color: #fff;
+  //text-shadow: 1px 1px 0 #a9aeb6;
 }
  
 .feature a,
@@ -532,11 +519,11 @@ h3 {
 .feature a:hover,
 .blorg-flickr-json-gadget div a:hover,
 #lastfmrecords a:hover img {
-    border-color: #deff90;
+    border-color: #5e0081;
 }
 
 .blorg-twitter-gadget ul li {
-    border-top: 1px solid #414e5e;
+    border-top: 1px solid #deeef9;
     padding: 5px 0;
     line-height: 1.4;
     position: relative;
@@ -545,7 +532,7 @@ h3 {
 .blorg-twitter-gadget ul li a:link,
 .blorg-twitter-gadget ul li a:hover,
 .blorg-twitter-gadget ul li a:visited {
-    color: #71808e;
+    color: #fff;
     text-decoration: none;
     display: block;
     padding-right: 80px;
@@ -553,7 +540,7 @@ h3 {
 
 .blorg-twitter-gadget ul li a:before {
     content: "@dburka";
-    color: #fff;
+    color: #4e5259;
     display: block;
     position: absolute;
     right: 0;
@@ -575,7 +562,7 @@ h3 {
 }
 
 .extra .list li {
-    border-color: #414e5e;
+    border-color: #e5f0f6;
 }
 
 dl {
@@ -599,7 +586,7 @@ dd {
 }
 
 .blorg-digg-gadget #digg-widget-container ul li {
-    border-top: 1px solid #414e5e;
+    border-top: 1px solid #deeef9;
     padding: 5px 80px 5px 0;
     position: relative;
     line-height: 1.4;
@@ -614,7 +601,7 @@ dd {
 .blorg-digg-gadget li a.digg-count,
 .blorg-digg-gadget li a.digg-count span {
     text-decoration: none;
-    color: #fff;
+    color: #4e5259;
 }
 
 .blorg-digg-gadget #digg-widget-container ul li a {
@@ -628,7 +615,8 @@ dd {
 
 .blorg-digg-gadget #digg-widget-container ul li h3 a,
 .blorg-digg-gadget #digg-widget-container ul li h3 a:hover {
-        color: #71808e;
+    color: #fff;
+    text-shadow: none;
 }
 
 .extra .blorg-syndication {
@@ -689,10 +677,9 @@ dd {
     display: none;
 }
 
-p a:hover,
-.author a:hover {
-	background: #deff90;
-    color: #485e0f;
+p a:hover {
+    background: #5e0081;
+    color: #dfc1ea;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     padding: 1px 4px;
@@ -701,14 +688,9 @@ p a:hover,
     text-decoration: none;
 }
 
-.container-footer .list a {
-	color: #71808e;
-}
-
 .container-footer .list em {
     float: right;
     font-style: normal;
-    color:  #fff;
 }
 
 .container-footer .main h2 {
@@ -741,47 +723,36 @@ p a:hover,
 	background: #fff;
 }
 
-label {
-    color: #fff !important;
-}
-
 #comment_edit_details label {
 	margin-bottom: 3px;
 	display: block;
 }
 
-#comment_edit_details .swat-form-field-checkbox label {
+#comment_edit_details  .swat-form-field-checkbox label {
 	display: inline;
 	margin: 0;
 	vertical-align: middle;
 }
 
 #comment_edit_frame .swat-form-field .swat-required {
-	color: #414e5e;
+	color: #5e0081;
 }
 
 #comment_edit_frame .swat-form-field .swat-note {
-	color: #71808e;
+	color: #fff;
 	opacity: 1;
 }
 
 #comment_edit_frame .swat-form-field input[type='button'],
 #comment_edit_frame .swat-form-field input[type='submit'] {
-	background: #deff90;
-    color: #485e0f;
-	border-color: #deff90;
+	background: #5e0081;
+	border-color: #5e0081;
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
+	color: #fff;
 	padding: 3px 10px;
 	margin: 30px 10px 30px 0;
-}
-
-#comment_edit_frame .swat-form-field input[type='button']:hover,
-#comment_edit_frame .swat-form-field input[type='submit']:hover {
-    cursor: pointer;
-    color: #000;
-    opacity: 0.6;
 }
 
 #comment_edit_frame h2 span {
@@ -791,7 +762,7 @@ label {
 #comment_edit_frame h2 {
 	color: #fff;
 	font-size: 18px;
-	border-top: 1px solid #414e5e;
+	border-top: 1px solid #deeef9;
 	border-bottom: 0 !important;
 	padding-top: 15px;
 }

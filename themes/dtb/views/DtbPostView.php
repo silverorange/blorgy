@@ -113,7 +113,7 @@ class DtbPostView extends BlorgPostView
 			// display human-readable date in local time
 			$date = clone $post->publish_date;
 			$date->convertTZ($this->app->default_time_zone);
-			$abbr_tag->setContent($date->format('%i:%M %P, %A, %B %e, %Y'));
+			$abbr_tag->setContent($date->format('%i %P, %A, %B %e, %Y'));
 			$abbr_tag->display();
 
 			$permalink_tag->close();
