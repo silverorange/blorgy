@@ -368,16 +368,21 @@ blockquote {
 .comment {
 	margin: 0;
     border-top: 1px solid #414e5e;
-    padding: 15px 0 15px 130px;
+    padding: 12px 0 20px 130px;
     position: relative;
     font-size:  11px;
     min-height: 4.5em;
 }
 
-.comment a.comment-link:link,
-.comment a.comment-link:hover,
-.comment a.comment-link:visited {
-	color:  #fff;
+.comment a.comment-link {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    color: rgb(102, 97, 82);
+}
+
+.comment a.comment-link:before {
+    content: "Personal Link: ";
 }
 
 h3.comments-title {
@@ -802,4 +807,55 @@ label {
 
 .swat-message .swat-message-container a {
     color: #000;
+}
+
+.twtr-doc {
+	width: 100% !important;	
+}
+
+.twtr-hd,
+.twtr-reply,
+.twtr-ft {
+	display: none;
+}
+
+body #twtr-widget-1 .twtr-doc,
+#twtr-widget-1 .twtr-doc .twtr-timeline,
+#twtr-widget-1 .twtr-tweet {
+	background: none !important;
+	border: none !important;
+}
+
+.twtr-doc .twtr-tweet-wrap {
+	border: none !important;
+}
+
+#twtr-widget-1 .twtr-doc .twtr-tweet-wrap {
+	border-top: 1px solid #414e5e !important;
+	border-bottom: none;
+	padding: 8px 90px 8px 0;
+	color: #71808e;
+	font-size: 11px;
+	position: relative;
+}
+
+#twtr-widget-1 .twtr-doc .twtr-tweet-wrap p {
+	line-height: 1.6 !important;
+}
+
+#twtr-widget-1 .twtr-doc .twtr-tweet-wrap i {
+	display: block;
+	position: absolute;
+	top: 8px;
+	right: 0;
+	width: 90px;
+	text-align: right;
+	font-size: 11px;
+}
+
+#twtr-widget-1 .twtr-doc .twtr-tweet-wrap a:link,
+#twtr-widget-1 .twtr-doc .twtr-tweet-wrap a:visited,
+#twtr-widget-1 .twtr-doc .twtr-tweet-wrap a:hover {
+	color:  #fff !important;
+	background: none;
 }
