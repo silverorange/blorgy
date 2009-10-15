@@ -30,7 +30,7 @@
 
             <div id="header">
             <h1><a href="<?= $this->basehref ?>">Delta Tango Bravo</a></h1>
-            <em>Alpha Whiskey Echo Bravo Lima Oscar Golf</em>
+            <em>Alpha: Whiskey Echo Bravo Lima Oscar Golf</em>
             </div>
 
             <?= $this->navbar ?>
@@ -56,7 +56,7 @@
         <div class="main">
             <h3><span>Summary</span></h3>
             <p>I'm a web designer living in San Francisco, California. I sometimes get the chance to present lectures and workshops at conferences around the world, where I speak about iterative design strategies, designing for large online communities, and more broadly about interface design for web applications. I've posted many of the slides from past presentations I've done on <a href="http://slideshare.net/dburka">Slideshare</a>.</p>
-            <p>I am currently the director of design at a small gaming startup called <a href="http://tinyspeck.com">Tiny Speck</a>. Until October 2009, I was the creative director at <a href="http://digg.com/">Digg</a>. I was also one of the co-founders of the social conent-sharing site <a href="http://en.wikipedia.org/wiki/Pownce">Pownce</a>, which is now a part (heh heh) of Six Apart. Back in 1999, I helped found <a href="http://silverorange.com/">silverorange</a>, a stellar web development and design firm based in Prince Edward Island, Canada. I continue to work with silverorange, but as an inactive partner.</p>
+            <p>Currently, I'm the director of design at a small gaming startup called <a href="http://tinyspeck.com">Tiny Speck</a>. Until October 2009, I was the creative director at <a href="http://digg.com/">Digg</a>. I was also one of the co-founders of the social content-sharing site <a href="http://en.wikipedia.org/wiki/Pownce">Pownce</a>, which is now a part (heh heh) of Six Apart. Back in 1999, I helped found <a href="http://silverorange.com/">silverorange</a>, a stellar web development and design firm based in Prince Edward Island, Canada. I continue to work with silverorange, but as an inactive partner.</p>
             
             <h2>Contact</h2>
             <p>I'm not currently looking for any kind of work and sometimes I take a long time to respond to email, but if you'd like to contact me please send an email to daniel [at] deltatangobravo [dot] com</p>
