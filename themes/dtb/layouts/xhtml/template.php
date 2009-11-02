@@ -75,7 +75,6 @@
 
             <h3 class="title-speaking">Speaking</h3>
             <ul class="list">
-                <li><em>Feb 22-23</em> <a href="http://2010.incontrolconference.com/">Orlando / In Control</a></li>
                 <li><em>Nov 16-17, 2010</em> <a href="http://events.carsonified.com/fowd/2009/nyc">NYC / Future of Web Design</a></li>
                 <li><em>Feb 15-19, 2010</em> <a href="http://www.webstock.org.nz/talks/events/">Wellington / Webstock</a></li>
                 <li><em>Tentative May 2010</em> <a href="http://www.aimconference.com/">Halifax / AIM</a></li>
