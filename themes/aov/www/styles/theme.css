@@ -206,6 +206,11 @@ blockquote.big {
 	font-style: italic;
 }
 
+blockquote.medium {
+	font-size: 100%;
+	font-style: italic;
+}
+
 dl {
 	margin-left: 1em;
 }
