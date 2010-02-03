@@ -1,3 +1,5 @@
+/* @override http://www.deltatangobravo.com/themes/dtb/styles/theme.css */
+
 html {
     min-width: 880px;
 }
@@ -841,6 +843,7 @@ body #twtr-widget-1 .twtr-doc,
 
 #twtr-widget-1 .twtr-doc .twtr-tweet-wrap p {
 	line-height: 1.6 !important;
+	color:  #71808e !important;
 }
 
 #twtr-widget-1 .twtr-doc .twtr-tweet-wrap i {
