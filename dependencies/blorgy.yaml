@@ -1,0 +1,12 @@
+##
+## Static Web-resource dependencies for Blorgy
+##
+## Copyright (c) 2010 silverorange
+##
+## TODO: This file is just a skeleton and no dependency or conflicts are
+##       defined yet.
+##
+
+__site__:
+
+# vim: set expandtab tabstop=2 shiftwidth=2 softtabstop=2:
