@@ -26,12 +26,14 @@ class ArticlePageFactory extends SiteArticlePageFactory
 	{
 		// don't try to find articles with invalid UTF-8 in the path
 		if (!SwatString::validateUtf8($path)) {
+			require_once('Site/exceptions/SitePathInvalidUtf8Exception.php');
 			throw new SitePathInvalidUtf8Exception(
 				sprintf('Path is not valid UTF-8: ‘%s’', $path));
 		}
 
 		// don't try to find articles with more than 254 characters in the path
 		if (strlen($path) > 254) {
+			require_once('Site/exceptions/SitePathTooLongException.php');
 			throw new SitePathTooLongException(
 				sprintf('Path is too long: ‘%s’', $path));
 		}
