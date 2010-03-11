@@ -7,7 +7,7 @@ require_once '../include/pages/ArticlePage.php';
  * Instance-aware article page factory
  *
  * @package   Blörgy
- * @copyright 2008 silverorange
+ * @copyright 2008-2010 silverorange
  * @license   http://www.gnu.org/copyleft/lesser.html LGPL License 2.1
  */
 class ArticlePageFactory extends SiteArticlePageFactory
@@ -26,13 +26,15 @@ class ArticlePageFactory extends SiteArticlePageFactory
 	{
 		// don't try to find articles with invalid UTF-8 in the path
 		if (!SwatString::validateUtf8($path)) {
-			throw new SiteException(
+			require_once('Site/exceptions/SitePathInvalidUtf8Exception.php');
+			throw new SitePathInvalidUtf8Exception(
 				sprintf('Path is not valid UTF-8: ‘%s’', $path));
 		}
 
 		// don't try to find articles with more than 254 characters in the path
 		if (strlen($path) > 254) {
-			throw new SiteException(
+			require_once('Site/exceptions/SitePathTooLongException.php');
+			throw new SitePathTooLongException(
 				sprintf('Path is too long: ‘%s’', $path));
 		}
 
