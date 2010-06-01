@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <theme>
  <title>Travel</title>
- <shortname>Travel</shortname>
+ <shortname>travel</shortname>
  <description>A theme travel theme.</description>
  <author>Dan Jämes</author>
  <!-- email field is optional -->

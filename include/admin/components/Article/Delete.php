@@ -57,7 +57,7 @@ class ArticleDelete extends SiteArticleDelete
 		$where_clause = sprintf('id in (%s) and instance %s %s',
 			$item_list,
 			SwatDB::equalityOperator($instance_id),
-			$this->app->db->quote($instance_id, 'intege'));
+			$this->app->db->quote($instance_id, 'integer'));
 
 		$dep = new AdminListDependency();
 		$dep->setTitle(Site::_('article'), Site::_('articles'));
