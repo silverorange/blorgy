@@ -24,15 +24,36 @@ class SearchResultsPage extends BlorgSearchResultsPage
 
 	// }}}
 
+	// init phase
+	// {{{ public function init()
+
+	public function init()
+	{
+		$this->addSearchDataField('type');
+		parent::init();
+	}
+
+	// }}}
+
 	// build phase
 	// {{{ protected function buildResults()
 
 	protected function buildResults()
 	{
 		$searched = false;
+		$fulltext_result = $this->searchFulltext();
 
-		if (count($this->getSearchDataValues()) > 0) {
-			$fulltext_result = $this->searchFulltext();
+		if ($this->hasSearchDataValue('type')) {
+			$type = $this->getSearchDataValue('type');
+
+			if ($type === 'article') {
+				$this->ui->getWidget('article_results_frame')->title = null;
+				$this->buildArticles($fulltext_result);
+			} else {
+				$this->buildPosts($fulltext_result);
+			}
+
+		} elseif (count($this->getSearchDataValues()) > 0) {
 
 			$this->buildArticles($fulltext_result);
 			$this->buildPosts($fulltext_result);
@@ -46,6 +67,19 @@ class SearchResultsPage extends BlorgSearchResultsPage
 		}
 
 		return $searched;
+	}
+
+	// }}}
+	// {{{ protected function buildTitle()
+
+	protected function buildTitle()
+	{
+		if ($this->hasSearchDataValue('type') &&
+			$this->getSearchDataValue('type') === 'article') {
+				$this->layout->data->title = Blorg::_('Article Search Results');
+		} else {
+			parent::buildTitle();
+		}
 	}
 
 	// }}}
