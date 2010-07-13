@@ -12,7 +12,7 @@ class SeleniumTestCase extends TestCase
 		parent::setUp();
 
 		$this->selenium = new Testing_Selenium(
-			'*custom /usr/local/bin/firefox-bin',
+			'*chrome /usr/local/bin/firefox-bin',
 			$this->base_href
 		);
 
