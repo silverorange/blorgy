@@ -1,4 +1,5 @@
 /system/nosync
+/system/mergeable
 /system/search/custom-wordlist.pws
 /blorgy.ini
 /pear
