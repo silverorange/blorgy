@@ -1,10 +1,16 @@
 <?php
 
-require_once 'TestCase.php';
+require_once 'TestConfig.php';
+require_once 'PHPUnit/Framework/TestCase.php';
 
-class FeedTestCase extends TestCase
+class FeedTestCase extends PHPUnit_Framework_TestCase
 {
 	// {{{ protected properties
+
+	/**
+	 * @var TestConfig
+	 */
+	protected $config;
 
 	/**
 	 * @var DOMXPath
@@ -27,12 +33,44 @@ class FeedTestCase extends TestCase
 	protected $location;
 
 	// }}}
+	// {{{ public function __construct()
+
+	public function __construct(
+		$name = null,
+		array $data = array(),
+		$data_name = ''
+	) {
+		parent::__construct($name, $data, $data_name);
+
+		$this->config = new TestConfig(
+			$this,
+			dirname(__FILE__) . '/config.php'
+		);
+	}
+
+	// }}}
+	// {{{ public function setUp()
+
+	public function setUp()
+	{
+		$this->config->setUp();
+	}
+
+	// }}}
+	// {{{ public function tearDown()
+
+	public function tearDown()
+	{
+		$this->config->tearDown();
+	}
+
+	// }}}
 	// {{{ protected function load()
 
 	protected function load($uri)
 	{
 		if (preg_match('/^https?:/i', $uri) === 0) {
-			$uri = $this->base_href.$uri;
+			$uri = $this->config->getBaseHref().$uri;
 		}
 
 		$curl = curl_init($uri);
@@ -58,7 +96,7 @@ class FeedTestCase extends TestCase
 	protected function loadHtml($uri)
 	{
 		if (preg_match('/^https?:/i', $uri) === 0) {
-			$uri = $this->base_href.$uri;
+			$uri = $this->config->getBaseHref().$uri;
 		}
 
 		$curl = curl_init($uri);

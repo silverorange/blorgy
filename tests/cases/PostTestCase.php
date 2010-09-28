@@ -20,7 +20,7 @@ class PostTestCase extends SeleniumTestCase
 
 		// make sure the post is displayed
 		$this->assertTrue(
-			$this->selenium->isElementPresent(
+			$this->isElementPresent(
 				"xpath=//div[contains(@class, 'entry')]/".
 				"h3[@class='entry-title']"
 			),
@@ -28,7 +28,7 @@ class PostTestCase extends SeleniumTestCase
 		);
 
 		$this->assertTrue(
-			$this->selenium->isElementPresent(
+			$this->isElementPresent(
 				"xpath=//div[contains(@class, 'entry')]/".
 				"div[@class='entry-content']"
 			),
@@ -37,14 +37,14 @@ class PostTestCase extends SeleniumTestCase
 
 		// make sure the comments are displayed
 		$this->assertTrue(
-			$this->selenium->isElementPresent(
+			$this->isElementPresent(
 				"xpath=//div[@class='entry-comments']"
 			),
 			'Comments are not present on post page.'
 		);
 
 		$this->assertTrue(
-			$this->selenium->isElementPresent(
+			$this->isElementPresent(
 				"xpath=//div[@class='entry-comments']/".
 				"div[@class='comment']/".
 				"h4[@class='comment-title']"
@@ -54,7 +54,7 @@ class PostTestCase extends SeleniumTestCase
 
 		// make sure the comment form is displayed
 		$this->assertTrue(
-			$this->selenium->isElementPresent(
+			$this->isElementPresent(
 				"xpath=//form[@id='comment_edit_form']"
 			),
 			'Comment submission form is not displayed on post page.'
@@ -67,7 +67,7 @@ class PostTestCase extends SeleniumTestCase
 	public function testNotFound()
 	{
 		// TODO: ensure the year and month are valid for this blorg
-		$this->selenium->open('archive/2006/november/thispostdoesnotexist');
+		$this->open('archive/2006/november/thispostdoesnotexist');
 		$this->assertNotFound();
 	}
 
@@ -82,27 +82,27 @@ class PostTestCase extends SeleniumTestCase
 
 		// make sure the comment form is displayed
 		$this->assertTrue(
-			$this->selenium->isElementPresent(
+			$this->isElementPresent(
 				"xpath=//form[@id='comment_edit_form']"
 			),
 			'Comment submission form is not displayed on post page.'
 		);
 
 		// just enter the link
-		$this->selenium->type('link', self::COMMENT_LINK);
+		$this->type('link', self::COMMENT_LINK);
 
-		$this->selenium->click('post_button');
-		$this->selenium->waitForPageToLoad(30000);
+		$this->click('post_button');
+		$this->waitForPageToLoad(30000);
 
 		$this->assertTrue(
-			$this->selenium->isTextPresent(
+			$this->isTextPresent(
 				'The Name field is required.'
 			),
 			'Comment "fullname" field validation text is not present.'
 		);
 
 		$this->assertTrue(
-			$this->selenium->isTextPresent(
+			$this->isTextPresent(
 				'The Comment field is required.'
 			),
 			'Comment "bodytext" field validation text is not present.'
@@ -110,7 +110,7 @@ class PostTestCase extends SeleniumTestCase
 
 		$this->assertEquals(
 			self::COMMENT_LINK,
-			$this->selenium->getValue('link'),
+			$this->getValue('link'),
 			'Link value is not preserved when comment form is submitted.'
 		);
 	}
@@ -124,17 +124,17 @@ class PostTestCase extends SeleniumTestCase
 
 		$this->enterComment();
 
-		$this->selenium->click('preview_button');
-		$this->selenium->waitForPageToLoad(30000);
+		$this->click('preview_button');
+		$this->waitForPageToLoad(30000);
 		$this->assertTrue(
-			$this->selenium->isTextPresent(
+			$this->isTextPresent(
 				'Your comment has not yet been published.'
 			),
 			'Preview notice is not displayed when previewing comment.'
 		);
 
 		$this->assertTrue(
-			$this->selenium->isElementPresent(
+			$this->isElementPresent(
 				"xpath=//div[@id='comment']"
 			),
 			'Comment preview is not displayed with previewing comment.'
@@ -142,31 +142,31 @@ class PostTestCase extends SeleniumTestCase
 
 		$this->assertEquals(
 			self::COMMENT_FULLNAME,
-			$this->selenium->getValue('fullname'),
+			$this->getValue('fullname'),
 			'Comment "fullname" value is not preserved when previewing.'
 		);
 
 		$this->assertEquals(
 			self::COMMENT_LINK,
-			$this->selenium->getValue('link'),
+			$this->getValue('link'),
 			'Comment "link" value is not preserved when previewing.'
 		);
 
 		$this->assertEquals(
 			self::COMMENT_EMAIL,
-			$this->selenium->getValue('email'),
+			$this->getValue('email'),
 			'Comment "email" value is not preserved when previewing.'
 		);
 
 		$this->assertEquals(
 			self::COMMENT_BODYTEXT,
-			$this->selenium->getValue('bodytext'),
+			$this->getValue('bodytext'),
 			'Comment "bodytext" value is not preserved when previewing.'
 		);
 
 		$this->assertEquals(
 			self::COMMENT_BODYTEXT,
-			$this->selenium->getText(
+			$this->getText(
 				"xpath=//div[@id='comment']/div[@class='comment-content']/p"
 			),
 			'Preview comment bodytext is not the same as submitted bodytext.'
@@ -181,20 +181,20 @@ class PostTestCase extends SeleniumTestCase
 		$this->loadCommentablePost();
 
 		$this->assertNotContains(
-			$this->instance.'_comment_credentials=',
-			$this->selenium->getCookie(),
+			$this->config->getInstance().'_comment_credentials=',
+			$this->getCookie(),
 			'Comment credentials cookie contains data when it should not.'
 		);
 
 		$this->enterComment();
 
-		$this->selenium->check('remember_me');
-		$this->selenium->click('post_button');
-		$this->selenium->waitForPageToLoad(30000);
+		$this->check('remember_me');
+		$this->click('post_button');
+		$this->waitForPageToLoad(30000);
 
 		$this->assertContains(
-			$this->instance.'_comment_credentials=',
-			$this->selenium->getCookie(),
+			$this->config->getInstance().'_comment_credentials=',
+			$this->getCookie(),
 			'Comment credentials cookie does not save properly.'
 		);
 	}
@@ -209,12 +209,12 @@ class PostTestCase extends SeleniumTestCase
 		$this->enterComment();
 
 		// don't remember credentials
-		$this->selenium->uncheck('remember_me');
+		$this->uncheck('remember_me');
 
-		$this->selenium->click('post_button');
-		$this->selenium->waitForPageToLoad(30000);
+		$this->click('post_button');
+		$this->waitForPageToLoad(30000);
 		$this->assertTrue(
-			$this->selenium->isTextPresent(
+			$this->isTextPresent(
 				'Your comment has been published.'
 			),
 			'Comment publication message is not displayed.'
@@ -223,36 +223,36 @@ class PostTestCase extends SeleniumTestCase
 		// make sure form was cleared
 		$this->assertEquals(
 			'',
-			$this->selenium->getValue('fullname'),
+			$this->getValue('fullname'),
 			'Comment "fullname" field is not cleared.'
 		);
 
 		$this->assertEquals(
 			'',
-			$this->selenium->getValue('link'),
+			$this->getValue('link'),
 			'Comment "link" field is not cleared.'
 		);
 
 		$this->assertEquals(
 			'',
-			$this->selenium->getValue('email'),
+			$this->getValue('email'),
 			'Comment "email" field is not cleared.'
 		);
 
 		$this->assertEquals(
 			'',
-			$this->selenium->getValue('bodytext'),
+			$this->getValue('bodytext'),
 			'Comment "bodytext" field is not cleared.'
 		);
 
 		// get new comment id
-		$location = $this->selenium->getLocation();
+		$location = $this->getLocation();
 		$location_exp = explode('#', $location);
 		$comment_id = end($location_exp);
 
 		// make sure new comment exists
 		$this->assertTrue(
-			$this->selenium->isElementPresent(
+			$this->isElementPresent(
 				"xpath=//div[@id='{$comment_id}']"
 			),
 			'New comment is not displayed with post.'
@@ -261,7 +261,7 @@ class PostTestCase extends SeleniumTestCase
 		// make sure new comment bodytext displayed
 		$this->assertEquals(
 			self::COMMENT_BODYTEXT,
-			$this->selenium->getText(
+			$this->getText(
 				"xpath=//div[@id='{$comment_id}']/".
 				"div[@class='comment-content']/p"
 			),
@@ -278,7 +278,7 @@ class PostTestCase extends SeleniumTestCase
 
 		// make sure extended bodytext is displayed
 		$this->assertTrue(
-			$this->selenium->isElementPresent(
+			$this->isElementPresent(
 				"xpath=//div[contains(@class, 'entry-content-extended')]"
 			),
 			'Extended bodytext is not displayed on post page.'
@@ -292,16 +292,16 @@ class PostTestCase extends SeleniumTestCase
 	{
 		// make sure the comment form is displayed
 		$this->assertTrue(
-			$this->selenium->isElementPresent(
+			$this->isElementPresent(
 				"xpath=//form[@id='comment_edit_form']"
 			),
 			'Comment submission form is not displayed on post page.'
 		);
 
-		$this->selenium->type('fullname', self::COMMENT_FULLNAME);
-		$this->selenium->type('link',     self::COMMENT_LINK);
-		$this->selenium->type('email',    self::COMMENT_EMAIL);
-		$this->selenium->type('bodytext', self::COMMENT_BODYTEXT);
+		$this->type('fullname', self::COMMENT_FULLNAME);
+		$this->type('link',     self::COMMENT_LINK);
+		$this->type('email',    self::COMMENT_EMAIL);
+		$this->type('bodytext', self::COMMENT_BODYTEXT);
 	}
 
 	// }}}
@@ -309,7 +309,7 @@ class PostTestCase extends SeleniumTestCase
 
 	protected function loadCommentablePost()
 	{
-		$this->selenium->open('');
+		$this->open('');
 		$this->assertNoExceptions();
 
 		$comment_link_xpath =
@@ -319,17 +319,17 @@ class PostTestCase extends SeleniumTestCase
 				"contains(text(), 'leave a comment') = false]";
 
 		// page through posts until we find a commentable post
-		while (!$this->selenium->isElementPresent($comment_link_xpath)) {
-			$this->selenium->click(
+		while (!$this->isElementPresent($comment_link_xpath)) {
+			$this->click(
 				"xpath=//div[@class='swat-pagination']/a[last()]"
 			);
 
-			$this->selenium->waitForPageToLoad(30000);
+			$this->waitForPageToLoad(30000);
 			$this->assertNoExceptions();
 		}
 
-		$element = $this->selenium->click($comment_link_xpath);
-		$this->selenium->waitForPageToLoad(30000);
+		$element = $this->click($comment_link_xpath);
+		$this->waitForPageToLoad(30000);
 		$this->assertNoExceptions();
 	}
 
@@ -338,7 +338,7 @@ class PostTestCase extends SeleniumTestCase
 
 	protected function loadExtendedPost()
 	{
-		$this->selenium->open('');
+		$this->open('');
 		$this->assertNoExceptions();
 
 		$extended_link_xpath =
@@ -346,17 +346,17 @@ class PostTestCase extends SeleniumTestCase
 			"div[@class='entry-read-more']/a";
 
 		// page through posts until we find a commentable post
-		while (!$this->selenium->isElementPresent($extended_link_xpath)) {
-			$this->selenium->click(
+		while (!$this->isElementPresent($extended_link_xpath)) {
+			$this->click(
 				"xpath=//div[@class='swat-pagination']/a[last()]"
 			);
 
-			$this->selenium->waitForPageToLoad(30000);
+			$this->waitForPageToLoad(30000);
 			$this->assertNoExceptions();
 		}
 
-		$element = $this->selenium->click($extended_link_xpath);
-		$this->selenium->waitForPageToLoad(30000);
+		$element = $this->click($extended_link_xpath);
+		$this->waitForPageToLoad(30000);
 		$this->assertNoExceptions();
 	}
 

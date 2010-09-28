@@ -8,12 +8,12 @@ class TagIndexTestCase extends SeleniumTestCase
 
 	public function testLoad()
 	{
-		$this->selenium->open('tag');
+		$this->open('tag');
 		$this->assertNoExceptions();
 
 		// make sure there are tags displayed
 		$this->assertTrue(
-			$this->selenium->isElementPresent(
+			$this->isElementPresent(
 				"xpath=//ul[@class='blorg-archive-tags']"
 			),
 			'Tag list is not present on tag index page.'

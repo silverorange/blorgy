@@ -12,14 +12,14 @@ class AuthorTestCase extends SeleniumTestCase
 
 		// make sure the author is displayed
 		$this->assertTrue(
-			$this->selenium->isElementPresent(
+			$this->isElementPresent(
 				"xpath=//div[@class='author']/h3[@class='author-name']"
 			),
 			'Author name is not present on author page.'
 		);
 
 		$this->assertTrue(
-			$this->selenium->isElementPresent(
+			$this->isElementPresent(
 				"xpath=//div[@class='author']/div[@class='author-content']"
 			),
 			'Author description is not present on author page.'
@@ -50,7 +50,7 @@ class AuthorTestCase extends SeleniumTestCase
 
 	public function testInvalidAuthor()
 	{
-		$this->selenium->open('author/thisisnotavalidauthor');
+		$this->open('author/thisisnotavalidauthor');
 		$this->assertNotFound();
 	}
 
@@ -59,14 +59,14 @@ class AuthorTestCase extends SeleniumTestCase
 
 	protected function loadAuthor()
 	{
-		$this->selenium->open('author');
+		$this->open('author');
 		$this->assertNoExceptions();
 
-		$this->selenium->click(
+		$this->click(
 			"xpath=//div[@class='author']/h4[@class='author-name']/a"
 		);
 
-		$this->selenium->waitForPageToLoad(30000);
+		$this->waitForPageToLoad(30000);
 		$this->assertNoExceptions();
 	}
 

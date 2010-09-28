@@ -11,7 +11,7 @@ class ArticleTestCase extends SeleniumTestCase
 		$this->loadArticle();
 
 		// make sure the title is displayed
-		$this->assertTrue($this->selenium->isElementPresent(
+		$this->assertTrue($this->isElementPresent(
 			"xpath=//h2[@id='page_title']"));
 	}
 
@@ -20,7 +20,7 @@ class ArticleTestCase extends SeleniumTestCase
 
 	protected function loadArticle()
 	{
-		$this->selenium->open('');
+		$this->open('');
 		$this->assertNoExceptions();
 
 		$article_link_xpath =
@@ -28,13 +28,13 @@ class ArticleTestCase extends SeleniumTestCase
 			"div[@class='site-gadget-content']/ul/li/div[position()=1]/a";
 
 		// check for articles
-		if (!$this->selenium->isElementPresent($article_link_xpath)) {
+		if (!$this->isElementPresent($article_link_xpath)) {
 			$this->markTestSkipped('Test blog has no articles.');
 		}
 
 		// visit first article
-		$this->selenium->click($article_link_xpath);
-		$this->selenium->waitForPageToLoad(30000);
+		$this->click($article_link_xpath);
+		$this->waitForPageToLoad(30000);
 		$this->assertNoExceptions();
 	}
 

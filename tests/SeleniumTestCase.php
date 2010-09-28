@@ -1,22 +1,46 @@
 <?php
 
-require_once 'TestCase.php';
-require_once 'Testing/Selenium.php';
+require_once 'TestConfig.php';
+require_once 'PHPUnit/Extensions/SeleniumTestCase.php';
 
-class SeleniumTestCase extends TestCase
+class SeleniumTestCase extends PHPUnit_Extensions_SeleniumTestCase
 {
+	// {{{ protected properties
+
+	/**
+	 * @var TestConfig
+	 */
+	protected $config;
+
+	// }}}
+	// {{{ public function __construct()
+
+	public function __construct(
+		$name = null,
+		array $data = array(),
+		$data_name = ''
+	) {
+		parent::__construct($name, $data, $data_name);
+
+		$this->config = new TestConfig(
+			$this,
+			dirname(__FILE__) . '/config.php'
+		);
+	}
+
+	// }}}
 	// {{{ public function setUp()
 
 	public function setUp()
 	{
 		parent::setUp();
 
-		$this->selenium = new Testing_Selenium(
-			'*chrome /usr/bin/firefox',
-			$this->base_href
-		);
+		$this->config->setUp();
 
-		$this->selenium->start();
+//		$this->setBrowser('*chrome /usr/bin/firefox');
+		$this->setBrowser('*chrome');
+		$this->setBrowserUrl($this->config->getBaseHref());
+		$this->start();
 	}
 
 	// }}}
@@ -24,8 +48,17 @@ class SeleniumTestCase extends TestCase
 
 	public function tearDown()
 	{
-		$this->selenium->stop();
+//		$this->stop();
 		parent::tearDown();
+		$this->config->tearDown();
+	}
+
+	// }}}
+	// {{{ public function assertPreConditions()
+
+	public function assertPreConditions()
+	{
+		$this->windowMaximize();
 	}
 
 	// }}}
@@ -34,7 +67,7 @@ class SeleniumTestCase extends TestCase
 	protected function assertNoExceptions()
 	{
 		$this->assertFalse(
-			$this->selenium->isElementPresent(
+			$this->isElementPresent(
 				'xpath=//div[@class=\'swat-exception\']'
 			),
 			'One or more exceptions are present on the page.'
@@ -47,7 +80,7 @@ class SeleniumTestCase extends TestCase
 	protected function assertNotFound()
 	{
 		$this->assertTrue(
-			$this->selenium->isTextPresent(
+			$this->isTextPresent(
 				'Sorry, we couldn’t find the page you were looking for.'
 			),
 			'Expected "not found" message not present.'
@@ -61,7 +94,7 @@ class SeleniumTestCase extends TestCase
 	{
 		// make sure there are posts displayed
 		$this->assertTrue(
-			$this->selenium->isElementPresent(
+			$this->isElementPresent(
 				"xpath=//div[contains(@class, 'entry')]/".
 				"div[contains(@class, 'entry-content')]"
 			),

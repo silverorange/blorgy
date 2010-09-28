@@ -8,10 +8,10 @@ class AjaxProxyTestCase extends SeleniumTestCase
 
 	public function testLastFm()
 	{
-		$this->selenium->open('ajax/last.fm/gauthierm');
+		$this->open('ajax/last.fm/gauthierm');
 		$this->assertNoExceptions();
 		$this->assertTrue(
-			$this->selenium->isElementPresent("xpath=/recenttracks"),
+			$this->isElementPresent("xpath=/recenttracks"),
 			'The recenttracks element is not present in Last.fm AJAX proxy.'
 		);
 	}
@@ -21,7 +21,7 @@ class AjaxProxyTestCase extends SeleniumTestCase
 
 	public function testInvalidService()
 	{
-		$this->selenium->open('ajax/invalidservicethattotallydoesnotexist');
+		$this->open('ajax/invalidservicethattotallydoesnotexist');
 		$this->assertNotFound();
 	}
 

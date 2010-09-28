@@ -13,12 +13,12 @@ class YearArchiveTestCase extends SeleniumTestCase
 
 	public function testLoad()
 	{
-		$this->selenium->open('archive/2008');
+		$this->open('archive/2008');
 		$this->assertNoExceptions();
 
 		// make sure there are months displayed
 		$this->assertTrue(
-			$this->selenium->isElementPresent(
+			$this->isElementPresent(
 				"xpath=//ul[@class='blorg-archive-months']"
 			),
 			'Month list is not present on year archive page.'
@@ -26,7 +26,7 @@ class YearArchiveTestCase extends SeleniumTestCase
 
 		// make sure there are posts displayed
 		$this->assertTrue(
-			$this->selenium->isElementPresent(
+			$this->isElementPresent(
 				"xpath=//ul[@class='blorg-archive-months']/li/".
 				"ul[@class='entries']/li/".
 				"div[contains(@class, 'entry')]"
@@ -42,33 +42,33 @@ class YearArchiveTestCase extends SeleniumTestCase
 	{
 		$this->loadPagedYear();
 
-		$year = $this->selenium->getText("xpath=//*[@id='page_title']");
+		$year = $this->getText("xpath=//*[@id='page_title']");
 
 		// make sure footer summary is correct
 		$end = self::MAX_POSTS;
 		$text  = sprintf('posts in %s, displaying 1 to %s', $year, $end);
 		$this->assertTrue(
-			$this->selenium->isTextPresent($text),
+			$this->isTextPresent($text),
 			'Footer text is not present on first page of paginated year '.
 			'archive page.'
 		);
 
 		// open second page
-		$location = $this->selenium->getLocation();
-		$this->selenium->open($location.'/page2');
+		$location = $this->getLocation();
+		$this->open($location.'/page2');
 
 		// make sure footer summary is correct
 		$start = self::MAX_POSTS + 1;
 		$text  = sprintf('posts in %s, displaying %s to', $year, $start);
 		$this->assertTrue(
-			$this->selenium->isTextPresent($text),
+			$this->isTextPresent($text),
 			'Footer text is not present on second page of paginated year '.
 			'archive page.'
 		);
 
 		// make sure there are months displayed
 		$this->assertTrue(
-			$this->selenium->isElementPresent(
+			$this->isElementPresent(
 				"xpath=//ul[@class='blorg-archive-months']"
 			),
 			'Months list is not present on second page of paginated year '.
@@ -77,7 +77,7 @@ class YearArchiveTestCase extends SeleniumTestCase
 
 		// make sure there are posts displayed
 		$this->assertTrue(
-			$this->selenium->isElementPresent(
+			$this->isElementPresent(
 				"xpath=//ul[@class='blorg-archive-months']/li/".
 				"ul[@class='entries']/li/".
 				"div[contains(@class, 'entry')]"
@@ -94,9 +94,9 @@ class YearArchiveTestCase extends SeleniumTestCase
 	{
 		$this->loadPagedYear();
 
-		$location = $this->selenium->getLocation();
+		$location = $this->getLocation();
 
-		$this->selenium->open($location.'/page20000');
+		$this->open($location.'/page20000');
 		$this->assertNotFound();
 	}
 
@@ -105,7 +105,7 @@ class YearArchiveTestCase extends SeleniumTestCase
 
 	public function testNotFound()
 	{
-		$this->selenium->open('archive/1900');
+		$this->open('archive/1900');
 		$this->assertNotFound();
 	}
 
@@ -116,12 +116,12 @@ class YearArchiveTestCase extends SeleniumTestCase
 	{
 		$this->addPagedYearLocator();
 
-		$this->selenium->open('archive');
+		$this->open('archive');
 		$this->assertNoExceptions();
 
-		$this->selenium->click('pagedyear='.self::MAX_POSTS);
+		$this->click('pagedyear='.self::MAX_POSTS);
 
-		$this->selenium->waitForPageToLoad(30000);
+		$this->waitForPageToLoad(30000);
 		$this->assertNoExceptions();
 	}
 
@@ -165,7 +165,7 @@ class YearArchiveTestCase extends SeleniumTestCase
 	return foundNode;
 JAVASCRIPT;
 
-		$this->selenium->addLocationStrategy('pagedyear', $function);
+		$this->addLocationStrategy('pagedyear', $function);
 	}
 
 	// }}}

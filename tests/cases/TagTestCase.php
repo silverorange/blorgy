@@ -20,7 +20,7 @@ class TagTestCase extends SeleniumTestCase
 		// make sure footer summary is there
 		$text = sprintf('posts, displaying 1 to %s', self::MAX_POSTS);
 		$this->assertTrue(
-			$this->selenium->isTextPresent($text),
+			$this->isTextPresent($text),
 			'Footer summary text is not present on tag page.'
 		);
 	}
@@ -32,9 +32,9 @@ class TagTestCase extends SeleniumTestCase
 	{
 		$this->loadPagedTag();
 
-		$location = $this->selenium->getLocation();
+		$location = $this->getLocation();
 
-		$this->selenium->open($location.'/page2');
+		$this->open($location.'/page2');
 		$this->assertNoExceptions();
 		$this->assertHasPosts();
 
@@ -43,7 +43,7 @@ class TagTestCase extends SeleniumTestCase
 		$end   = self::MAX_POSTS * 2;
 		$text  = sprintf('posts, displaying %s to %s', $start, $end);
 		$this->assertTrue(
-			$this->selenium->isTextPresent($text),
+			$this->isTextPresent($text),
 			'Footer summary text is not present on second page of tag page.'
 		);
 	}
@@ -55,9 +55,9 @@ class TagTestCase extends SeleniumTestCase
 	{
 		$this->loadPagedTag();
 
-		$location = $this->selenium->getLocation();
+		$location = $this->getLocation();
 
-		$this->selenium->open($location.'/page20000');
+		$this->open($location.'/page20000');
 		$this->assertNotFound();
 	}
 
@@ -66,7 +66,7 @@ class TagTestCase extends SeleniumTestCase
 
 	public function testInvalidTag()
 	{
-		$this->selenium->open('tag/thistagtotallydoesnotexist');
+		$this->open('tag/thistagtotallydoesnotexist');
 		$this->assertNotFound();
 	}
 
@@ -77,12 +77,12 @@ class TagTestCase extends SeleniumTestCase
 	{
 		$this->addPagedTagLocator();
 
-		$this->selenium->open('tag');
+		$this->open('tag');
 		$this->assertNoExceptions();
 
-		$this->selenium->click('pagedtag='.(2 * self::MAX_POSTS));
+		$this->click('pagedtag='.(2 * self::MAX_POSTS));
 
-		$this->selenium->waitForPageToLoad(30000);
+		$this->waitForPageToLoad(30000);
 		$this->assertNoExceptions();
 	}
 
@@ -126,7 +126,7 @@ class TagTestCase extends SeleniumTestCase
 	return foundNode;
 JAVASCRIPT;
 
-		$this->selenium->addLocationStrategy('pagedtag', $function);
+		$this->addLocationStrategy('pagedtag', $function);
 	}
 
 	// }}}

@@ -9,10 +9,10 @@ class SearchTestCase extends SeleniumTestCase
 
 	public function testResults()
 	{
-		$this->selenium->open('search?keywords=test');
+		$this->open('search?keywords=test');
 		$this->assertNoExceptions();
 		$this->assertFalse(
-			$this->selenium->isTextPresent('No results found for'),
+			$this->isTextPresent('No results found for'),
 			'No results text is incorrectly displayed when there are results.'
 		);
 	}
@@ -22,10 +22,10 @@ class SearchTestCase extends SeleniumTestCase
 
 	public function testNoResults()
 	{
-		$this->selenium->open('search?keywords=qwefoiqewfoiqewoibfoibqewf');
+		$this->open('search?keywords=qwefoiqewfoiqewoibfoibqewf');
 		$this->assertNoExceptions();
 		$this->assertTrue(
-			$this->selenium->isTextPresent('No results found for'),
+			$this->isTextPresent('No results found for'),
 			'No results text is not displayed when there are no results.'
 		);
 	}
@@ -35,10 +35,10 @@ class SearchTestCase extends SeleniumTestCase
 
 	public function testSpellCheckResults()
 	{
-		$this->selenium->open('search?keywords=delicius');
+		$this->open('search?keywords=delicius');
 		$this->assertNoExceptions();
 		$this->assertTrue(
-			$this->selenium->isTextPresent('Did you mean'),
+			$this->isTextPresent('Did you mean'),
 			'Spell checking suggestion text is not displayed for misspellings.'
 		);
 	}
@@ -48,17 +48,17 @@ class SearchTestCase extends SeleniumTestCase
 
 	public function testPostPagination()
 	{
-		$this->selenium->open('search?keywords=test&type=post&page=2');
+		$this->open('search?keywords=test&type=post&page=2');
 		$this->assertNoExceptions();
 
 		$this->assertTrue(
-			$this->selenium->isTextPresent('Page 2'),
+			$this->isTextPresent('Page 2'),
 			'Page number text is not present on second page of post search '.
 			'results.'
 		);
 
 		$this->assertTrue(
-			$this->selenium->isElementPresent(
+			$this->isElementPresent(
 				"xpath=//div[contains(@class, 'entry')]/".
 				"div[contains(@class, 'entry-content')]"
 			),
@@ -66,7 +66,7 @@ class SearchTestCase extends SeleniumTestCase
 		);
 
 		$this->assertFalse(
-			$this->selenium->isTextPresent('Article Search Results'),
+			$this->isTextPresent('Article Search Results'),
 			'Article search results are displayed on second page of post '.
 			'search results.'
 		);
@@ -77,23 +77,23 @@ class SearchTestCase extends SeleniumTestCase
 
 	public function testArticlePagination()
 	{
-		$this->selenium->open('search?keywords=test&type=article&page=2');
+		$this->open('search?keywords=test&type=article&page=2');
 		$this->assertNoExceptions();
 
 		$this->assertTrue(
-			$this->selenium->isTextPresent('Page 2'),
+			$this->isTextPresent('Page 2'),
 			'Page number text is not present on second page of article '.
 			'search results.'
 		);
 
 		$this->assertTrue(
-			$this->selenium->isTextPresent('Article Search Results'),
+			$this->isTextPresent('Article Search Results'),
 			'Article search results title is not present on second page of '.
 			'article search results.'
 		);
 
 		$this->assertFalse(
-			$this->selenium->isElementPresent(
+			$this->isElementPresent(
 				"xpath=//div[contains(@class, 'entry')]/".
 				"div[contains(@class, 'entry-content')]"
 			),
