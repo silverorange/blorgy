@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <theme>
- <title>Brass</title>
+ <title>Horton Brasses</title>
  <shortname>horton</shortname>
- <description>A theme for the Horton Brasses company weblog</description>
+ <description>A theme for the Horton Brasses company weblog.</description>
  <author>Steven Gärrity</author>
  <!-- email field is optional -->
  <email>steven@silverorange.com</email>
- <license>Copyright 2008, Steven Garrity</license>
+ <license>Copyright 2008-2010, silverorange</license>
 </theme>
