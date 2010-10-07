@@ -180,7 +180,7 @@ class Application extends SiteWebApplication
 		$this->setBaseUri($config->uri->base);
 		$this->setSecureBaseUri($config->uri->secure_base);
 		$this->default_time_zone =
-			new Date_TimeZone($config->date->time_zone);
+			new HotDateTimeZone($config->date->time_zone);
 
 		setlocale(LC_ALL, $config->i18n->locale);
 
