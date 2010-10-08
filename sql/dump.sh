@@ -22,8 +22,18 @@ TABLES=`cat persistent-table-list`
 mkdir -p $DATA_DIR
 
 for table in $TABLES; do
-	echo dumping $table
-	pg_dump -i -h $HOST -U php -d $DB -D -a -t $table --disable-triggers > $DATA_DIR/$table.sql
+	if [[ "${table:0:1}" != ";" ]]
+	then
+		echo dumping $table to $DATA_DIR/$table.sql
+		pg_dump \
+			--host $HOST \
+			--username php \
+			--inserts \
+			--data-only \
+			--table $table \
+			--disable-triggers \
+			$DB > $DATA_DIR/$table.sql
+	fi
 done
 
 cd -
