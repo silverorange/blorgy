@@ -126,6 +126,15 @@ class FeedTestCase extends PHPUnit_Framework_TestCase
 	}
 
 	// }}}
+	// {{{ protected function assertNoErrors()
+
+	protected function assertNoErrors()
+	{
+		$this->assertNoExceptions();
+		$this->assertNoXDebugErrors();
+	}
+
+	// }}}
 	// {{{ protected function assertNoExceptions()
 
 	protected function assertNoExceptions()
@@ -135,6 +144,19 @@ class FeedTestCase extends PHPUnit_Framework_TestCase
 			0,
 			$list->length,
 			'One or more exceptions are present in the feed.'
+		);
+	}
+
+	// }}}
+	// {{{ protected function assertNoXDebugErrors()
+
+	protected function assertNoXDebugErrors()
+	{
+		$list = $this->xpath->query("//html:table[@class='xdebug-error']");
+		$this->assertEquals(
+			0,
+			$list->length,
+			'One or more xdebug errors are present in the feed.'
 		);
 	}
 
@@ -272,7 +294,7 @@ class FeedTestCase extends PHPUnit_Framework_TestCase
 
 		// load next page
 		$this->load($href);
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 
 		// get last page
 		$href = $this->xpath->evaluate(
@@ -287,7 +309,7 @@ class FeedTestCase extends PHPUnit_Framework_TestCase
 
 		// load last page
 		$this->load($href);
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 
 		// make sure there is no next page
 		$list = $this->xpath->query("/atom:feed/atom:link[@rel='next']");
@@ -310,7 +332,7 @@ class FeedTestCase extends PHPUnit_Framework_TestCase
 
 		// load prev page
 		$this->load($href);
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 
 		// get first page
 		$href = $this->xpath->evaluate(
@@ -325,7 +347,7 @@ class FeedTestCase extends PHPUnit_Framework_TestCase
 
 		// load first page
 		$this->load($href);
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 	}
 
 	// }}}

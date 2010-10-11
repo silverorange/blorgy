@@ -9,7 +9,7 @@ class AtomTestCase extends FeedTestCase
 	public function testLoad()
 	{
 		$this->load('feed');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 		$this->assertFeedElementsPresent();
 
 		// also check for alternative link
@@ -40,7 +40,7 @@ class AtomTestCase extends FeedTestCase
 	public function testPagination()
 	{
 		$this->load('feed');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 		$this->assertPaginationWorks();
 	}
 

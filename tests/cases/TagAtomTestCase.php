@@ -14,7 +14,7 @@ class TagAtomTestCase extends FeedTestCase
 	public function testLoad()
 	{
 		$this->loadTagFeed();
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 		$this->assertFeedElementsPresent();
 
 		// also check for alternative link
@@ -45,7 +45,7 @@ class TagAtomTestCase extends FeedTestCase
 	public function testPagination()
 	{
 		$this->loadPagedTagFeed();
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 		$this->assertPaginationWorks();
 	}
 
@@ -55,7 +55,7 @@ class TagAtomTestCase extends FeedTestCase
 	public function testInvalidPagination()
 	{
 		$this->loadPagedTagFeed();
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 
 		$this->load($this->location.'/page20000');
 		$this->assertNotFound();
@@ -76,7 +76,7 @@ class TagAtomTestCase extends FeedTestCase
 	protected function loadTagFeed()
 	{
 		$this->load('tag');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 
 		// find tag page links
 		$list = $this->xpath->query(
@@ -106,7 +106,7 @@ class TagAtomTestCase extends FeedTestCase
 	protected function loadPagedTagFeed()
 	{
 		$this->load('tag');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 
 		$list = $this->xpath->query(
 			"//html:ul[@class='blorg-archive-tags']/html:li/".

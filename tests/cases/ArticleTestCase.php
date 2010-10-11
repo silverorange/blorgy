@@ -21,7 +21,7 @@ class ArticleTestCase extends SeleniumTestCase
 	protected function loadArticle()
 	{
 		$this->open('');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 
 		$article_link_xpath =
 			"xpath=//div[contains(@class, 'blorg-article-gadget')]/".
@@ -35,7 +35,7 @@ class ArticleTestCase extends SeleniumTestCase
 		// visit first article
 		$this->click($article_link_xpath);
 		$this->waitForPageToLoad(30000);
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 	}
 
 	// }}}

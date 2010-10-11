@@ -14,7 +14,7 @@ class YearArchiveTestCase extends SeleniumTestCase
 	public function testLoad()
 	{
 		$this->open('archive/2008');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 
 		// make sure there are months displayed
 		$this->assertTrue(
@@ -117,12 +117,12 @@ class YearArchiveTestCase extends SeleniumTestCase
 		$this->addPagedYearLocator();
 
 		$this->open('archive');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 
 		$this->click('pagedyear='.self::MAX_POSTS);
 
 		$this->waitForPageToLoad(30000);
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 	}
 
 	// }}}

@@ -35,7 +35,7 @@ class TagTestCase extends SeleniumTestCase
 		$location = $this->getLocation();
 
 		$this->open($location.'/page2');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 		$this->assertHasPosts();
 
 		// make sure footer summary is correct
@@ -78,12 +78,12 @@ class TagTestCase extends SeleniumTestCase
 		$this->addPagedTagLocator();
 
 		$this->open('tag');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 
 		$this->click('pagedtag='.(2 * self::MAX_POSTS));
 
 		$this->waitForPageToLoad(30000);
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 	}
 
 	// }}}

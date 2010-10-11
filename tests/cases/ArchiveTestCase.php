@@ -9,7 +9,7 @@ class ArchiveTestCase extends SeleniumTestCase
 	public function testLoad()
 	{
 		$this->open('archive');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 
 		// make sure there are years displayed
 		$this->assertTrue(

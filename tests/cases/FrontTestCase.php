@@ -14,7 +14,7 @@ class FrontTestCase extends SeleniumTestCase
 	public function testLoad()
 	{
 		$this->open('');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 		$this->assertHasPosts();
 
 		// make sure footer summary is there
@@ -31,7 +31,7 @@ class FrontTestCase extends SeleniumTestCase
 	public function testPagination()
 	{
 		$this->open('page2');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 		$this->assertHasPosts();
 
 		// make sure footer summary is correct

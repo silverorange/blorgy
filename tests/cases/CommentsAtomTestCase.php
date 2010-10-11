@@ -9,7 +9,7 @@ class CommentsAtomTestCase extends FeedTestCase
 	public function testLoad()
 	{
 		$this->load('feed/comments');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 		$this->assertFeedElementsPresent();
 
 		// make sure subtitle is correct
@@ -32,7 +32,7 @@ class CommentsAtomTestCase extends FeedTestCase
 	public function testPagination()
 	{
 		$this->load('feed/comments');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 		$this->assertPaginationWorks();
 	}
 

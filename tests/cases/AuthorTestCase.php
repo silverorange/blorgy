@@ -60,14 +60,14 @@ class AuthorTestCase extends SeleniumTestCase
 	protected function loadAuthor()
 	{
 		$this->open('author');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 
 		$this->click(
 			"xpath=//div[@class='author']/h4[@class='author-name']/a"
 		);
 
 		$this->waitForPageToLoad(30000);
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 	}
 
 	// }}}

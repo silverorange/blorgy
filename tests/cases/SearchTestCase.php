@@ -10,7 +10,7 @@ class SearchTestCase extends SeleniumTestCase
 	public function testResults()
 	{
 		$this->open('search?keywords=test');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 		$this->assertFalse(
 			$this->isTextPresent('No results found for'),
 			'No results text is incorrectly displayed when there are results.'
@@ -23,7 +23,7 @@ class SearchTestCase extends SeleniumTestCase
 	public function testNoResults()
 	{
 		$this->open('search?keywords=qwefoiqewfoiqewoibfoibqewf');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 		$this->assertTrue(
 			$this->isTextPresent('No results found for'),
 			'No results text is not displayed when there are no results.'
@@ -36,7 +36,7 @@ class SearchTestCase extends SeleniumTestCase
 	public function testSpellCheckResults()
 	{
 		$this->open('search?keywords=delicius');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 		$this->assertTrue(
 			$this->isTextPresent('Did you mean'),
 			'Spell checking suggestion text is not displayed for misspellings.'
@@ -49,7 +49,7 @@ class SearchTestCase extends SeleniumTestCase
 	public function testPostPagination()
 	{
 		$this->open('search?keywords=test&type=post&page=2');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 
 		$this->assertTrue(
 			$this->isTextPresent('Page 2'),
@@ -78,7 +78,7 @@ class SearchTestCase extends SeleniumTestCase
 	public function testArticlePagination()
 	{
 		$this->open('search?keywords=test&type=article&page=2');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 
 		$this->assertTrue(
 			$this->isTextPresent('Page 2'),

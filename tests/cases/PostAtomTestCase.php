@@ -9,7 +9,7 @@ class PostAtomTestCase extends FeedTestCase
 	public function testLoad()
 	{
 		$this->loadCommentsFeed();
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 		$this->assertFeedElementsPresent();
 
 		// also check for alternative link
@@ -57,7 +57,7 @@ class PostAtomTestCase extends FeedTestCase
 	public function testPagination()
 	{
 		$this->loadCommentsFeed(50);
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 		$this->assertPaginationWorks();
 	}
 
@@ -82,7 +82,7 @@ class PostAtomTestCase extends FeedTestCase
 		// page through posts until we find a post with comments
 		while ($more_pages) {
 			$this->loadHtml('page'.$page);
-			$this->assertNoExceptions();
+			$this->assertNoErrors();
 
 			$comment_links = $this->xpath->query(
 				"//html:div[contains(@class, 'entry')]/".

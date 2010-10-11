@@ -9,7 +9,7 @@ class AuthorIndexTestCase extends SeleniumTestCase
 	public function testLoad()
 	{
 		$this->open('author');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 
 		// make sure there are authors displayed
 		$this->assertTrue(

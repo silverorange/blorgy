@@ -9,7 +9,7 @@ class MonthArchiveTestCase extends SeleniumTestCase
 	public function testLoad()
 	{
 		$this->open('archive/2006/november');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 		$this->assertHasPosts();
 	}
 

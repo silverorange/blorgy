@@ -62,6 +62,15 @@ class SeleniumTestCase extends PHPUnit_Extensions_SeleniumTestCase
 	}
 
 	// }}}
+	// {{{ protected function assertNoErrors()
+
+	protected function assertNoErrors()
+	{
+		$this->assertNoExceptions();
+		$this->assertNoXDebugErrors();
+	}
+
+	// }}}
 	// {{{ protected function assertNoExceptions()
 
 	protected function assertNoExceptions()
@@ -71,6 +80,19 @@ class SeleniumTestCase extends PHPUnit_Extensions_SeleniumTestCase
 				'xpath=//div[@class=\'swat-exception\']'
 			),
 			'One or more exceptions are present on the page.'
+		);
+	}
+
+	// }}}
+	// {{{ protected function assertNoXDebugErrors()
+
+	protected function assertNoXDebugErrors()
+	{
+		$this->assertFalse(
+			$this->isElementPresent(
+				'xpath=//table[@class=\'xdebug-error\']'
+			),
+			'One or more xdebug errors are present on the page.'
 		);
 	}
 

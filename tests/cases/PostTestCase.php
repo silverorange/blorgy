@@ -78,7 +78,7 @@ class PostTestCase extends SeleniumTestCase
 	{
 		$this->loadCommentablePost();
 
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 
 		// make sure the comment form is displayed
 		$this->assertTrue(
@@ -310,7 +310,7 @@ class PostTestCase extends SeleniumTestCase
 	protected function loadCommentablePost()
 	{
 		$this->open('');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 
 		$comment_link_xpath =
 			"xpath=//div[contains(@class, 'entry')]/".
@@ -325,12 +325,12 @@ class PostTestCase extends SeleniumTestCase
 			);
 
 			$this->waitForPageToLoad(30000);
-			$this->assertNoExceptions();
+			$this->assertNoErrors();
 		}
 
 		$element = $this->click($comment_link_xpath);
 		$this->waitForPageToLoad(30000);
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 	}
 
 	// }}}
@@ -339,7 +339,7 @@ class PostTestCase extends SeleniumTestCase
 	protected function loadExtendedPost()
 	{
 		$this->open('');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 
 		$extended_link_xpath =
 			"xpath=//div[contains(@class, 'entry')]/".
@@ -352,12 +352,12 @@ class PostTestCase extends SeleniumTestCase
 			);
 
 			$this->waitForPageToLoad(30000);
-			$this->assertNoExceptions();
+			$this->assertNoErrors();
 		}
 
 		$element = $this->click($extended_link_xpath);
 		$this->waitForPageToLoad(30000);
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 	}
 
 	// }}}

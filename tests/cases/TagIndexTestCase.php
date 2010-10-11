@@ -9,7 +9,7 @@ class TagIndexTestCase extends SeleniumTestCase
 	public function testLoad()
 	{
 		$this->open('tag');
-		$this->assertNoExceptions();
+		$this->assertNoErrors();
 
 		// make sure there are tags displayed
 		$this->assertTrue(
