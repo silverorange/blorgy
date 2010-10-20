@@ -21,4 +21,6 @@ class NostalgiaPostView extends BlorgPostView
 	}
 
 	// }}}
-}?>
+}
+
+?>
