@@ -6,6 +6,8 @@ if (class_exists('PackageConfig')) {
 	PackageConfig::addPackage('site');
 	PackageConfig::addPackage('admin');
 	PackageConfig::addPackage('blorg');
+	PackageConfig::addPackage('xml-atom');
+	PackageConfig::addPackage('hot-date');
 	PackageConfig::addPackage('nate-go-search');
 	PackageConfig::addPackage('concentrate');
 }

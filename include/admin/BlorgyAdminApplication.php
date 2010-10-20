@@ -98,7 +98,7 @@ class BlorgyAdminApplication extends AdminApplication
 		$this->setSecureBaseUri($config->uri->secure_base.'admin/');
 		$this->cookie->setSalt($config->cookies->salt);
 		$this->default_time_zone =
-			new Date_TimeZone($config->date->time_zone);
+			new HotDateTimeZone($config->date->time_zone);
 
 		$this->default_locale = $config->i18n->locale;
 		$config->session->name.= '-'.$_GET['instance'];
