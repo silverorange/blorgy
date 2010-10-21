@@ -113,7 +113,7 @@ class DtbPostView extends BlorgPostView
 			$date = clone $post->publish_date;
 			$date->convertTZ($this->app->default_time_zone);
 			$abbr_tag->setContent(
-				$date->formatLikeIntl('h a, eeee, MMMM d, yyyy'));
+				$date->formatLikeIntl('h a, EEEE, MMMM d, yyyy'));
 
 			$abbr_tag->display();
 
