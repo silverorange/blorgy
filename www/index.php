@@ -12,6 +12,7 @@ if (class_exists('PackageConfig')) {
 	PackageConfig::addPackage('concentrate');
 }
 
+/*
 function shutdownDebug() {
 	$usage = getrusage();
 	if ($usage["ru_utime.tv_sec"] >= 29) {
@@ -22,6 +23,7 @@ function shutdownDebug() {
 	}
 }
 register_shutdown_function('shutdownDebug');
+*/
 
 require_once '../include/Application.php';
 
