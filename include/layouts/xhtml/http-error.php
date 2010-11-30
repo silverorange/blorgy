@@ -6,7 +6,6 @@
 	<base href="<?= $this->basehref ?>"></base>
 	<?=$this->html_head_entries?>
 	<title><?= $this->html_title ?></title>
-	<?= $this->google_analytics ?>
 </head>
 
 <body class="http-error">
