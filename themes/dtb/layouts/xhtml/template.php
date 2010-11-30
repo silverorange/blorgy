@@ -18,7 +18,7 @@
 	<title><?= $this->html_title ?></title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 	<meta name="description" content="<?= $this->meta_description ?>" />
-	<?=$this->google_analytics?>
+	<?= $this->analytics ?>
 </head>
 
 <body>

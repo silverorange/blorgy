@@ -128,7 +128,7 @@ class BlorgyLayout extends SiteLayout
 	{
 		parent::build();
 
-		$this->startCapture('google_analytics');
+		$this->startCapture('analytics');
 		$this->displayGoogleAnalytics();
 		$this->endCapture();
 

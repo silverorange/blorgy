@@ -7,7 +7,7 @@
 	<?=$this->html_head_entries?>
 	<title><?= $this->html_title ?></title>
 	<meta name="description" content="<?= $this->meta_description ?>" />
-	<?= $this->google_analytics ?>
+	<?= $this->analytics ?>
 </head>
 
 <body>
