@@ -11,7 +11,7 @@ require_once 'Blorg/dataobjects/BlorgFileImage.php';
 
 /**
  * @package   Blörgy
- * @copyright 2008 silverorange
+ * @copyright 2008-2010 silverorange
  * @license   http://www.gnu.org/copyleft/lesser.html LGPL License 2.1
  */
 class BlorgyLayout extends SiteLayout
@@ -142,25 +142,9 @@ class BlorgyLayout extends SiteLayout
 
 	protected function displayGoogleAnalytics()
 	{
-		$google_account = $this->app->config->analytics->google_account;
-
-		if ($google_account !== null) {
-			$src = ($this->app->isSecure()) ?
-				'https://ssl.google-analytics.com/urchin.js' :
-				'http://www.google-analytics.com/urchin.js';
-
-			$script_tag = new SwatHtmlTag('script');
-			$script_tag->type = 'text/javascript';
-			$script_tag->src = $src;
-			$script_tag->setContent('');
-			$script_tag->display();
-
-			$javascript = sprintf(
-				"_uacct = '%s';\n".
-				"urchinTracker();",
-				$google_account);
-
-			Swat::displayInlineJavaScript($javascript);
+		$js = $this->app->analytics->getGoogleAnalyticsInlineJavascript();
+		if ($js != null) {
+			Swat::displayInlineJavaScript($js);
 		}
 	}
 

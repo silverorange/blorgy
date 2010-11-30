@@ -4,20 +4,21 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<base href="<?= $this->basehref ?>"></base>
-    
+
     <!--[if gte IE 7]><!-->
         <?=$this->html_head_entries?>
 	<!--<![endif]-->
-	
+
     <!--[if lte IE 6]>
         <link rel="stylesheet" type="text/css" href="<?= $this->basehref ?>themes/dtb/styles/ie.css" media="all" />
-    <![endif]-->	      
+    <![endif]-->
 
 	<script type="text/javascript" src="<?= $this->basehref ?>themes/dtb/javascript/last.fm.records.js"></script>
 	<script type="text/javascript" src="<?= $this->basehref ?>themes/dtb/javascript/jquery-1.3.2.min.js"></script>
 	<title><?= $this->html_title ?></title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 	<meta name="description" content="<?= $this->meta_description ?>" />
+	<?=$this->google_analytics?>
 </head>
 
 <body>
@@ -57,7 +58,7 @@
             <h3><span>Summary</span></h3>
             <p>I'm a web designer living in San Francisco, California. I sometimes get the chance to present lectures and workshops at conferences around the world, where I speak about iterative design strategies, designing for large online communities, and more broadly about interface design for web applications. I've posted many of the slides from past presentations I've done on <a href="http://slideshare.net/dburka">Slideshare</a>.</p>
             <p>Currently, I'm the director of design at a small gaming startup called <a href="http://tinyspeck.com">Tiny Speck</a>. Until October 2009, I was the creative director at <a href="http://digg.com/">Digg</a>. I was also one of the co-founders of the social content-sharing site <a href="http://en.wikipedia.org/wiki/Pownce">Pownce</a>, which is now a part (heh heh) of Six Apart. Back in 1999, I helped found <a href="http://silverorange.com/">silverorange</a>, a stellar web development and design firm based in Prince Edward Island, Canada. I continue to work with silverorange, but as an inactive partner.</p>
-            
+
             <h2>Contact</h2>
             <p>I'm not currently looking for any kind of work and sometimes I take a long time to respond to email, but if you'd like to contact me please send an email to daniel [at] deltatangobravo [dot] com</p>
             <h2>Elsewhere</h2>
@@ -100,8 +101,6 @@
         </div>
         <br style="clear: both;" />
     </div></div>
-
-<?= $this->google_analytics ?>
 
 </body>
 </html>
