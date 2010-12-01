@@ -25,7 +25,7 @@ SwatDBClassMap::addPath(dirname(__FILE__).'/dataobjects');
  * Blörgy web application
  *
  * @package   Blörgy
- * @copyright 2008 silverorange
+ * @copyright 2008-2010 silverorange
  * @license   http://www.gnu.org/copyleft/lesser.html LGPL License 2.1
  */
 class Application extends SiteWebApplication
@@ -47,6 +47,8 @@ class Application extends SiteWebApplication
 		}
 
 		$this->theme->set($this->config->site->theme);
+		$this->analytics->setGoogleAccount(
+			$this->config->analytics->google_account);
 	}
 
 	// }}}
@@ -190,8 +192,6 @@ class Application extends SiteWebApplication
 			$this->memcache->server = $config->memcache->server;
 			$this->memcache->app_ns = $config->memcache->app_ns;
 		}
-
-		$this->analytics->setGoogleAccount($config->analytics->google_account);
 	}
 
 	// }}}
