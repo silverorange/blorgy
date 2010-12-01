@@ -12,6 +12,7 @@ require_once 'Site/SiteMultipleInstanceModule.php';
 require_once 'Site/SiteTimerModule.php';
 require_once 'Site/SiteMemcacheModule.php';
 require_once 'Site/SiteMessagesModule.php';
+require_once 'Site/SiteAnalyticsModule.php';
 require_once 'Blorg/Blorg.php';
 require_once 'Blorgy.php';
 require_once '../include/ThemeModule.php';
@@ -135,13 +136,14 @@ class Application extends SiteWebApplication
 	protected function getDefaultModuleList()
 	{
 		return array(
-			'config'   => 'SiteConfigModule',
-			'cookie'   => 'SiteCookieModule',
-			'database' => 'SiteDatabaseModule',
-			'instance' => 'SiteMultipleInstanceModule',
-			'theme'    => 'ThemeModule',
-			'timer'    => 'SiteTimerModule',
-			'memcache' => 'SiteMemcacheModule',
+			'config'    => 'SiteConfigModule',
+			'cookie'    => 'SiteCookieModule',
+			'database'  => 'SiteDatabaseModule',
+			'instance'  => 'SiteMultipleInstanceModule',
+			'theme'     => 'ThemeModule',
+			'timer'     => 'SiteTimerModule',
+			'memcache'  => 'SiteMemcacheModule',
+			'analytics' => 'SiteAnalyticsModule',
 		);
 	}
 
@@ -188,6 +190,8 @@ class Application extends SiteWebApplication
 			$this->memcache->server = $config->memcache->server;
 			$this->memcache->app_ns = $config->memcache->app_ns;
 		}
+
+		$this->analytics->setGoogleAccount($config->analytics->google_account);
 	}
 
 	// }}}

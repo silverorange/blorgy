@@ -7,6 +7,7 @@
 	<?=$this->html_head_entries?>
 	<title><?= $this->html_title ?></title>
 	<meta name="description" content="<?= $this->meta_description ?>" />
+	<?= $this->analytics ?>
 </head>
 
 <body>
@@ -40,8 +41,6 @@
 <div id="ft">
 	<?= $this->sidebar ?>
 </div>
-
-<?= $this->google_analytics ?>
 
 </body>
 </html>
