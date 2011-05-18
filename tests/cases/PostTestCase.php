@@ -6,10 +6,10 @@ class PostTestCase extends SeleniumTestCase
 {
 	// {{{ class constants
 
-	const COMMENT_FULLNAME = 'John Smith';
+	const COMMENT_FULLNAME = 'John Henry';
 	const COMMENT_LINK     = 'http://www.example.com/';
-	const COMMENT_EMAIL    = 'test@example.com';
-	const COMMENT_BODYTEXT = 'This is a test comment left by Selenium.';
+	const COMMENT_EMAIL    = 'john.henry@example.com';
+	const COMMENT_BODYTEXT = 'John Henry is a robot who likes to post on blogs. He is powered by Selenium.';
 
 	// }}}
 	// {{{ public function testLoad()
