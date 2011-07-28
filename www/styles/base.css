@@ -382,7 +382,7 @@ table.data td, table.data th {
 /* handle a regression in YUI */
 
 ol li {
-	list-style-type: decimal outside;
+	list-style: decimal outside;
 	margin: 1em 0;
 }
 
