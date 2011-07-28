@@ -109,8 +109,6 @@ a:active  { color: #333333; }
 	margin-bottom: 4em;
 }
 
-
-
 .entry-content {
 	line-height: 1.5;
 }
@@ -379,6 +377,13 @@ table.data td, table.data th {
 	padding: 0.3em;
 	border: 0;
 	border-bottom: 1px solid #eee;
+}
+
+/* handle a regression in YUI */
+
+ol li {
+	list-style-type: decimal outside;
+	margin: 1em 0;
 }
 
 /* }}} */
