@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<theme>
+ <title>Mooncakes</title>
+ <shortname>mooncakes</shortname>
+ <description>Theme for the Moon Coffee and Cupcakes weblog.</description>
+ <author>Michael Gauthier</author>
+ <!-- email field is optional -->
+ <email>mike@silverorange.com</email>
+ <license>Copyright 2011, Michael Gauthier</license>
+</theme>
