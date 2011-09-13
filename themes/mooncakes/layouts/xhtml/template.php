@@ -9,7 +9,7 @@
 	<meta name="description" content="<?= $this->meta_description ?>" />
 	<?= $this->analytics ?>
 
-	<link href="http://fonts.googleapis.com/css?family=Delius" rel="stylesheet" type="text/css" />
+	<link href="http://fonts.googleapis.com/css?family=Paytone+One|Sorts+Mill+Goudy:400,400italic" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
