@@ -76,11 +76,6 @@ class Application extends SiteWebApplication
 			$page = new HttpErrorPage($this, $layout);
 			break;
 
-		case 'exception':
-			require_once 'pages/ExceptionPage.php';
-			$page = new ExceptionPage($this, $layout);
-			break;
-
 		case 'article':
 			array_shift($path);
 			require_once '../include/ArticlePageFactory.php';
@@ -101,6 +96,32 @@ class Application extends SiteWebApplication
 	}
 
 	// }}}
+	// {{{ protected function resolveExceptionPage()
+
+	/**
+	 * Resolves an exception page for a particular source
+	 *
+	 * Sub-classes are encouraged to override this method to create different
+	 * exception page instances for different sources.
+	 *
+	 * @param string $source the source to use to resolve the exception page.
+	 *
+	 * @return SitePage the exception page corresponding the given source.
+	 */
+	protected function resolveExceptionPage($source)
+	{
+		$path = $this->explodeSource($source);
+		if (count($path) == 0)
+			$tag = 'front';
+		else
+			$tag = $path[0];
+
+		require_once '../include/pages/ExceptionPage.php';
+		$layout = $this->resolveLayout($tag, $source);
+		return new ExceptionPage($this, $layout);
+	}
+
+	// }}}
 	// {{{ protected function resolveLayout()
 
 	/**
@@ -116,7 +137,6 @@ class Application extends SiteWebApplication
 
 			break;
 
-		case 'exception':
 		default:
 			require_once '../include/layouts/BlorgyLayout.php';
 
