@@ -6,7 +6,7 @@ html {
 html,
 body {
 	color: #503b2b;
-	font-family: "Sorts Mill Goudy",serif;
+	font-family: "Varela", sans-serif;
 	font-size: 14px;
 }
 
@@ -116,7 +116,7 @@ a:active  { color: #1f6583; }
 	font-size: 24px;
 	margin: 0 0 0 -32px;
 	background: #f8a5ac;
-	padding: 4px 16px 12px;
+	padding: 3px 16px 12px;
 	color: #fff;
 	text-shadow:
 		0 1px 0 rgba(0,0,0,0.3),
@@ -176,7 +176,7 @@ a:active  { color: #1f6583; }
 
 .entry-content {
 	margin: 24px 16px;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 1.3;
 }
 
@@ -297,7 +297,7 @@ a:active  { color: #1f6583; }
 .swat-entry,
 .swat-textarea {
 	color: #503b2b;
-	font-family: "Sorts Mill Goudy",serif;
+	font-family: "Varela", sans-serif;
 	padding: 4px;
 	background: #faf5f5;
 	border: 1px solid #a09999;
@@ -329,7 +329,7 @@ input.swat-button,
 .swat-button {
 	font-size: 14px;
 	font-weight: bold;
-	font-family: "Sorts Mill Goudy",serif;
+	font-family: "Varela", sans-serif;
 	color: #fff;
 	background: #5cabcd;
 	padding: 3px 12px;
