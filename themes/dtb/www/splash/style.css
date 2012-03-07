@@ -1,0 +1,124 @@
+body {
+	background: rgb(155,175,186) url(back.png);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(grid.png) 50% 50%;
+	text-align: center;
+}
+
+.main h1 {
+	margin: 0 0 43px 0;
+}
+
+.main {
+	word-spacing: 0;
+	letter-spacing: 0;
+	position: absolute;
+	height: 500px;
+	width: 500px;
+	top: 50%;
+	left: 50%;
+	margin: -250px 0 0 -250px;
+}
+
+.main a {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin: 0 3px;
+	border-radius: 100px;
+	background: rgb(255,255,255) url(icons.png) 0 0 no-repeat;
+	box-shadow: 0 2px 0 rgba(0,0,0,0.1);
+	white-space: nowrap;
+	-webkit-transition: all ease-in-out 0.2s;
+	-moz-transition: all ease-in-out 0.2s;
+	-o-transition: all ease-in-out 0.2s;
+	position: relative;
+	text-decoration: none;
+}
+
+.main a em {
+	position: absolute;
+	bottom: 26px;
+	left: -40%;
+	background: #333;
+	color: #ddd;
+	opacity: 0;
+	-webkit-transition: all ease-in-out 0.2s;
+	-webkit-transition-delay: 0.3s;
+	-moz-transition: all ease-in-out 0.2s;
+	-moz-transition-delay: 0.3s;
+	-o-transition: all ease-in-out 0.2s;
+	-o-transition-delay: 0.3s;
+	font-family: sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	font-style: normal;
+	display: block;
+	padding: 4px 10px;
+	border-radius: 3px;
+}
+
+.main a:hover em {
+	opacity: 1;
+	bottom: 36px;
+}
+
+.main a:hover {
+	box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.main a.facebook 	{ background-position: 0 -30px; }
+.main a.gplus 		{ background-position: 0 -60px; }
+.main a.linkedin 	{ background-position: 0 -90px; }
+.main a.instagram 	{ background-position: 0 -120px; }
+.main a.dribbble 	{ background-position: 0 -150px; }
+.main a.flickr	 	{ background-position: 0 -180px; }
+.main a.pinterest 	{ background-position: 0 -210px; }
+.main a.blog	 	{ background-position: 0 -240px; }
+.main a.email	 	{ background-position: 0 -270px; }
+
+@media screen and (max-width: 660px), screen and (max-height: 600px) {
+	body, .cover {
+		background-image: none;
+		padding: 0;
+		margin: 0;
+	}
+	.cover {
+		position: static;
+	}
+	h1 img {
+		width: 200px;
+	}
+	.main a:hover em,
+	.main a em {
+		display: none;
+	}
+	.main a {
+		display: block;
+		width: 200px;
+		margin: 0 auto 20px auto;
+		background-position-x: 50% !important;
+	}
+	.main {
+		width: 100%;
+		height: auto;
+		padding-bottom: 100px;
+		position: static;
+		top: 0;
+		left: 0;
+		margin: 0;
+		padding: 30px 0;
+		background: url(grid.png) 50% 50%;
+	}
+}
