@@ -96,14 +96,14 @@ class PostTestCase extends SeleniumTestCase
 
 		$this->assertTrue(
 			$this->isTextPresent(
-				'The Name field is required.'
+				'Name is required.'
 			),
 			'Comment "fullname" field validation text is not present.'
 		);
 
 		$this->assertTrue(
 			$this->isTextPresent(
-				'The Comment field is required.'
+				'Comment is required.'
 			),
 			'Comment "bodytext" field validation text is not present.'
 		);
