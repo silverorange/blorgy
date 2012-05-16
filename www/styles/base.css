@@ -10,8 +10,11 @@ body {
 
 #doc {
 	margin: 0 5%;
-	_height: 1%;
-	.height: 1%;
+}
+
+.ie6 #doc,
+.ie7 #doc {
+	height: 1%;
 }
 
 #bd {

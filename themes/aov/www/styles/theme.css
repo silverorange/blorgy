@@ -47,9 +47,6 @@ a:active { color: #000; }
 	color: #555;
 	position: relative;
 	line-height: 40px;
-	/* hacks for IE 6 and 7 */
-	_line-height: 50px;
-	.line-height: 50px;
 }
 
 #hd h1 a {
