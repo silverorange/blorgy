@@ -7,6 +7,7 @@ if (class_exists('PackageConfig')) {
 	PackageConfig::addPackage('admin');
 	PackageConfig::addPackage('blorg');
 	PackageConfig::addPackage('hot-date');
+	PackageConfig::addPackage('net-notifier');
 }
 
 require_once '../../include/admin/BlorgyAdminApplication.php';
