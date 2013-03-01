@@ -353,6 +353,15 @@ img.border { border: 1px solid #999; padding: 2px; background: #fff; }
 img.right { float: right; margin: 0.2em 0 1em 1em; }
 img.left  { float: left;  margin: 0.2em 1em 1em 0; }
 img.center { display: block; margin: 1em auto; }
+img.full {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 1em auto;
+	-webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
 
 del {
 	text-decoration: line-through;
