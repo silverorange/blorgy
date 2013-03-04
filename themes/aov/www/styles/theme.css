@@ -1,24 +1,81 @@
 body {
-	font-family: Georgia,serif;
+	font-family: Crimson,serif;
+	font-size: 16px;
 	background: #fff;
 	color: #333;
 }
 
+/* {{{ Fonts */
+
+
+@font-face {
+    font-family: 'Crimson';
+    src: url('../fonts/Crimson-Roman-webfont.eot');
+    src: url('../fonts/Crimson-Roman-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Crimson-Roman-webfont.woff') format('woff'),
+         url('../fonts/Crimson-Roman-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Crimson';
+    src: url('../fonts/Crimson-Bold-webfont.eot');
+    src: url('../fonts/Crimson-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Crimson-Bold-webfont.woff') format('woff'),
+         url('../fonts/Crimson-Bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Crimson';
+    src: url('../fonts/Crimson-BoldItalic-webfont.eot');
+    src: url('../fonts/Crimson-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Crimson-BoldItalic-webfont.woff') format('woff'),
+         url('../fonts/Crimson-BoldItalic-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Crimson';
+    src: url('../fonts/Crimson-Italic-webfont.eot');
+    src: url('../fonts/Crimson-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Crimson-Italic-webfont.woff') format('woff'),
+         url('../fonts/Crimson-Italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+/* }}} */
 /* {{{ Layout */
 
 #doc {
 	width: auto;
-	margin: 4em 8%;
-	min-width: 650px;
+	padding: 0 8%;
+	margin: auto;
+	max-width: 60em;
 	position: relative;
 }
 
 #content {
-	margin-right: 275px;
+	margin-right: 0;
 }
 
 #sidebar {
-	top: 150px;
+	position: static;
+	width: auto;
+	text-align: center;
+}
+
+#bd {
+	padding: 4em 0;
+	border-top: 1px solid #ccc;
 }
 
 /* }}} */
@@ -34,11 +91,7 @@ a:active { color: #000; }
 /* {{{ Header */
 
 #hd {
-	width: 220px;
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 9;
+	text-align: center;
 }
 
 #hd h1 {
@@ -47,6 +100,13 @@ a:active { color: #000; }
 	color: #555;
 	position: relative;
 	line-height: 40px;
+	font-variant: small-caps;
+	font-size: 250%;
+	display: inline-block;
+	background: #fff;
+	z-index: 99;
+	top: 20px;
+	padding: 0 20px;
 }
 
 #hd h1 a {
@@ -55,30 +115,16 @@ a:active { color: #000; }
 }
 
 #hd h1 span.title-1 {
-	font-size: 50px;
 }
 
 #hd h1 span.title-2 {
 	font-style: italic;
-	color: #888;
-	font-size: 35px;
-	margin-left: 10px;
-	position: relative;
-	bottom: 3px;
-	padding-right: 0.5em;
-}
-
-#hd h1 span.title-1 span.first-letter,
-#hd h1 span.title-3 span.first-letter {
-	font-size: 65px;
-	position: relative;
-	top: 10px;
-	letter-spacing: -5px;
+	color: #999;
+	font-size: 75%;
+	font-variant: normal;
 }
 
 #hd h1 span.title-3 {
-	display: block;
-	font-size: 50px;
 }
 
 #hd h1 a:hover span.title-1,
@@ -329,6 +375,10 @@ textarea {
 }
 
 .blorg-active-conversations-gadget ul li.new span { color: #930; }
+
+.blorg-search-gadget .site-gadget-title {
+	display: none;
+}
 
 /* }}} */
 /* {{{ Author */
