@@ -11,6 +11,18 @@ require_once '../include/layouts/BlorgyLayout.php';
  */
 class AovLayout extends BlorgyLayout
 {
+	// init phase
+	// {{{ public function init()
+
+	public function init()
+	{
+		parent::init();
+		$this->data->meta = '<meta name="viewport" content="width=400, maximum-scale=1.0" />';
+	}
+
+	// }}}
+
+
 	// {{{ protected function displayHeaderTitleText()
 
 	protected function displayHeaderTitleText()
