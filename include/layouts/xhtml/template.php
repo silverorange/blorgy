@@ -11,6 +11,7 @@
 	<title><?= $this->html_title ?></title>
 	<meta name="description" content="<?= $this->meta_description ?>" />
 	<?= $this->analytics ?>
+	<?= $this->meta ?>
 </head>
 
 <body>

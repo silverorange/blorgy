@@ -41,6 +41,7 @@ class BlorgyLayout extends SiteLayout
 	public function init()
 	{
 		parent::init();
+		$this->data->meta = '';
 		$this->initNavBar();
 		$this->initSideBar();
 	}
