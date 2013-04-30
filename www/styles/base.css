@@ -502,6 +502,11 @@ dl.sub-articles dd {
 	color: #999;
 }
 
+.swat-pagination a,
+.swat-pagination span {
+	display: inline-block;
+}
+
 /* }}} */
 /* {{{ Clearing Container fix */
 
