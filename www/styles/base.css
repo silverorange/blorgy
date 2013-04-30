@@ -346,6 +346,8 @@ strong { font-style: inherit; }
 img {
 	border: 0;
 	-ms-interpolation-mode: bicubic;
+	max-width: 100%;
+	height: auto;
 }
 
 img.border { border: 1px solid #999; padding: 2px; background: #fff; }
@@ -500,6 +502,11 @@ dl.sub-articles dd {
 
 .swat-note {
 	color: #999;
+}
+
+.swat-pagination a,
+.swat-pagination span {
+	display: inline-block;
 }
 
 /* }}} */
