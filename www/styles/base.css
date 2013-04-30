@@ -363,6 +363,10 @@ img.full {
 	        box-sizing: border-box;
 }
 
+iframe {
+	max-width: 100%;
+}
+
 del {
 	text-decoration: line-through;
 	color: #999;
