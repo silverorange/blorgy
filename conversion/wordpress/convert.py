@@ -29,7 +29,6 @@ from datetime import datetime
 import pytz
 
 shortname = "aov"
-#shortname = "horton"
 WORDPRESS_ROOT_URL = 'http://mysite.example.com'
 XML_FILEPATH = './export.xml'
 local_tz = pytz.timezone("America/New_York")
@@ -180,8 +179,8 @@ for blorg_post in blorg_posts:
 	title = blorg_post['title']
 	body = "%s\n\n%s" % (blorg_post['bodytext'], blorg_post['extended_bodytext'])
 	body = clean_text(body)
-	body = body.replace('="images/files/', '="http://blog.horton-brasses.com/images/files/')
-	body = body.replace('="file/', '="http://blog.horton-brasses.com/file/')
+#	body = body.replace('="images/files/', '="http://www.example.com/images/files/')
+#	body = body.replace('="file/', '="http://www.example.com/file/')
 	url = "%s/?p=%s" % (WORDPRESS_ROOT_URL, blorg_post['id'])
 	post = etree.Element("item")
 	etree.SubElement(post, "title").text = title
