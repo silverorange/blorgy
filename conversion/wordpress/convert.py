@@ -194,6 +194,7 @@ for blorg_post in blorg_posts:
 	etree.SubElement(post, WP + "post_date_gmt").text = blorg_post['createdate'].isoformat(' ')
 	etree.SubElement(post, WP + "status").text = "publish"
 	etree.SubElement(post, WP + "post_type").text = "post"
+	etree.SubElement(post, WP + "post_name").text =  blorg_post['shortname']
 	if blorg_post['comment_status'] == 0:
 		etree.SubElement(post, WP + "comment_status").text = "open"
 	else:
