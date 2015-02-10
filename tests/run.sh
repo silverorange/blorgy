@@ -1,5 +1,11 @@
 #!/bin/sh
 
+current_dir=$(
+	dirname "$(
+		cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd
+	)"
+)
+
 working_dir=$( basename "$current_dir" )
 site=$( basename "$( dirname "$current_dir" )" )
 
