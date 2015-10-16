@@ -404,6 +404,10 @@ ol li {
 	margin: 1em 0;
 }
 
+ul li {
+	list-style: disc outside;
+}
+
 /* }}} */
 /* {{{ Authors */
 
