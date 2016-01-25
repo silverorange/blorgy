@@ -6,7 +6,7 @@ require_once 'Site/SiteArticleSearchEngine.php';
  * Article search engine for Blörgy that does instance-specific search results
  *
  * @package   Blörgy
- * @copyright 2008 silverorange
+ * @copyright 2008-2016 silverorange
  * @license   http://www.gnu.org/copyleft/lesser.html LGPL License 2.1
  */
 class ArticleSearchEngine extends SiteArticleSearchEngine

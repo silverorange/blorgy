@@ -5,7 +5,7 @@ require_once 'Site/pages/SiteXhtmlExceptionPage.php';
 
 /**
  * @package   Blorgy
- * @copyright 2008 silverorange
+ * @copyright 2008-2016 silverorange
  */
 class ExceptionPage extends SiteXhtmlExceptionPage
 {

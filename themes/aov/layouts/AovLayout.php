@@ -6,7 +6,7 @@ require_once '../include/layouts/BlorgyLayout.php';
  * Layout for the AOV theme
  *
  * @package   Blörgy
- * @copyright 2008 silverorange
+ * @copyright 2008-2016 silverorange
  * @license   http://www.gnu.org/copyleft/lesser.html LGPL License 2.1
  */
 class AovLayout extends BlorgyLayout

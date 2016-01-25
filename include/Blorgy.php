@@ -11,7 +11,7 @@ require_once 'Admin/Admin.php';
  * Container for package wide static methods
  *
  * @package   Blörgy
- * @copyright 2008 silverorange
+ * @copyright 2008-2016 silverorange
  * @license   http://www.gnu.org/copyleft/lesser.html LGPL License 2.1
  */
 abstract class Blorgy

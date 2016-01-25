@@ -6,7 +6,7 @@ require_once 'Blorg/BlorgPageFactory.php';
  * Adds custom search results page
  *
  * @package   Blörgy
- * @copyright 2008 silverorange
+ * @copyright 2008-2016 silverorange
  * @license   http://www.gnu.org/copyleft/lesser.html LGPL License 2.1
  */
 class BlorgyBlorgPageFactory extends BlorgPageFactory

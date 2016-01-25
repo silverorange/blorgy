@@ -9,7 +9,7 @@ require_once dirname(__FILE__).'/../ArticleSearchEngine.php';
  * Includes instance-specific article search results.
  *
  * @package   Blörgy
- * @copyright 2008-2010 silverorange
+ * @copyright 2008-2016 silverorange
  * @license   http://www.gnu.org/copyleft/lesser.html LGPL License 2.1
  */
 class SearchResultsPage extends BlorgSearchResultsPage
