@@ -11,7 +11,7 @@ require_once 'Blorg/dataobjects/BlorgFileImage.php';
 
 /**
  * @package   Blörgy
- * @copyright 2008-2010 silverorange
+ * @copyright 2008-2016 silverorange
  * @license   http://www.gnu.org/copyleft/lesser.html LGPL License 2.1
  */
 class BlorgyLayout extends SiteLayout

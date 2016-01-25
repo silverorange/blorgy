@@ -10,7 +10,7 @@ require_once 'Site/admin/components/Article/Edit.php';
  * Edit page for articles with instance support
  *
  * @package   Blörgy
- * @copyright 2008 silverorange
+ * @copyright 2008-2016 silverorange
  * @license   http://www.gnu.org/copyleft/lesser.html LGPL License 2.1
  */
 class ArticleEdit extends SiteArticleEdit

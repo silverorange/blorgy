@@ -6,7 +6,7 @@ require_once 'Site/admin/components/Article/Index.php';
  * Index page for articles with instance support
  *
  * @package   Blörgy
- * @copyright 2008 silverorange
+ * @copyright 2008-2016 silverorange
  * @license   http://www.gnu.org/copyleft/lesser.html LGPL License 2.1
  */
 class ArticleIndex extends SiteArticleIndex

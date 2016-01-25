@@ -25,7 +25,7 @@ SwatDBClassMap::addPath(dirname(__FILE__).'/dataobjects');
  * Blörgy web application
  *
  * @package   Blörgy
- * @copyright 2008-2010 silverorange
+ * @copyright 2008-2016 silverorange
  * @license   http://www.gnu.org/copyleft/lesser.html LGPL License 2.1
  */
 class Application extends SiteWebApplication
