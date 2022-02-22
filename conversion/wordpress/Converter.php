@@ -402,7 +402,7 @@ class Converter
     {
         if ($this->authors === null) {
             $statement = $this->db->prepare(
-                'select id, name, shortname, email from BlorgAuthor '.
+                'select id, name, shortname, email from BlorgAuthor ' .
                 'where instance = :instance'
             );
             $statement->bindValue(
@@ -449,10 +449,10 @@ class Converter
     protected function getPosts()
     {
         $statement = $this->db->prepare(
-            'select id, shortname, title, bodytext, extended_bodytext, '.
-                'createdate, modified_date, publish_date, comment_status, '.
-                'author, enabled '.
-            'from BlorgPost '.
+            'select id, shortname, title, bodytext, extended_bodytext, ' .
+                'createdate, modified_date, publish_date, comment_status, ' .
+                'author, enabled ' .
+            'from BlorgPost ' .
             'where instance = :instance'
         );
         $statement->bindValue(
@@ -467,9 +467,9 @@ class Converter
     protected function getCommentsForPost(string $post_id)
     {
         $statement = $this->db->prepare(
-            'select id, fullname, link, email, bodytext, '.
-                'createdate, ip_address, status '.
-            'from BlorgComment '.
+            'select id, fullname, link, email, bodytext, ' .
+                'createdate, ip_address, status ' .
+            'from BlorgComment ' .
             'where post = :post and spam = false'
         );
         $statement->bindValue('post', $post_id, \PDO::PARAM_INT);
