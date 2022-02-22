@@ -477,7 +477,7 @@ class Converter
         return $statement->fetchAll(\PDO::FETCH_ASSOC);
     }
 
-    protected function BlorgPostTagBinding(string $post_id)
+    protected function getTagsForPost(string $post_id)
     {
         $statement = $this->db->prepare(
             'select tag from BlorgPostTagBinding where post = :post'
