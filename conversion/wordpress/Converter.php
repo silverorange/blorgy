@@ -40,13 +40,13 @@ class Converter
         $this->wordpress_root_url = $wordpress_root_url;
     }
 
-    public function convert()
+    public function convert(): void
     {
         $document = $this->getDocument();
         echo $document->saveXML();
     }
 
-    protected function getDocument()
+    protected function getDocument(): \DOMDocument
     {
         $document = new \DOMDocument('1.0', 'utf-8');
         $rss = $document->createElement('rss');
@@ -83,8 +83,10 @@ class Converter
         return $document;
     }
 
-    protected function getAuthorElement(\DOMDocument $document, array $author)
-    {
+    protected function getAuthorElement(
+        \DOMDocument $document,
+        array $author
+    ): \DOMElement {
         $el = $document->createElementNS(self::NS['wp'], 'wp:wp_author');
 
         $el->appendChild(
@@ -124,8 +126,10 @@ class Converter
         return $el;
     }
 
-    protected function getTagElement(\DOMDocument $document, array $tag)
-    {
+    protected function getTagElement(
+        \DOMDocument $document,
+        array $tag
+    ): \DOMElement {
         $el = $document->createElementNS(self::NS['wp'], 'wp:tag');
 
         $el->appendChild(
@@ -156,8 +160,10 @@ class Converter
         return $el;
     }
 
-    protected function getCommentElement(\DOMDocument $document, $comment)
-    {
+    protected function getCommentElement(
+        \DOMDocument $document,
+        array $comment
+    ): \DOMElement {
         $el = $document->createElementNS(self::NS['wp'], 'wp:comment');
 
         $el->appendChild(
@@ -246,8 +252,10 @@ class Converter
         return $el;
     }
 
-    protected function getPostElement(\DOMDocument $document, array $post)
-    {
+    protected function getPostElement(
+        \DOMDocument $document,
+        array $post
+    ): \DOMElement {
         $el = $document->createElement('item');
 
         $el->appendChild(
@@ -370,14 +378,14 @@ class Converter
         return $el;
     }
 
-    protected function getLocalTime(\DateTime $utc_date)
+    protected function getLocalTime(\DateTime $utc_date): \DateTime
     {
         $local_date = clone $utc_date;
         $local_date->setTimezone($this->time_zone);
         return $local_date;
     }
 
-    protected function getInstance()
+    protected function getInstance(): int
     {
         if ($this->instance === null) {
             $statement = $this->db->prepare(
@@ -398,7 +406,7 @@ class Converter
         return $this->instance;
     }
 
-    protected function getAuthors()
+    protected function getAuthors(): array
     {
         if ($this->authors === null) {
             $statement = $this->db->prepare(
@@ -422,7 +430,7 @@ class Converter
         return $this->authors;
     }
 
-    protected function getTags()
+    protected function getTags(): array
     {
         if ($this->tags === null) {
             $statement = $this->db->prepare(
@@ -446,7 +454,7 @@ class Converter
         return $this->tags;
     }
 
-    protected function getPosts()
+    protected function getPosts(): array
     {
         $statement = $this->db->prepare(
             'select id, shortname, title, bodytext, extended_bodytext, ' .
@@ -464,7 +472,7 @@ class Converter
         return $statement->fetchAll(\PDO::FETCH_ASSOC);
     }
 
-    protected function getCommentsForPost(string $post_id)
+    protected function getCommentsForPost(string $post_id): array
     {
         $statement = $this->db->prepare(
             'select id, fullname, link, email, bodytext, ' .
@@ -477,7 +485,7 @@ class Converter
         return $statement->fetchAll(\PDO::FETCH_ASSOC);
     }
 
-    protected function getTagsForPost(string $post_id)
+    protected function getTagsForPost(string $post_id): array
     {
         $statement = $this->db->prepare(
             'select tag from BlorgPostTagBinding where post = :post'
@@ -487,7 +495,7 @@ class Converter
         return $statement->fetchAll(\PDO::FETCH_ASSOC);
     }
 
-    protected function getPostBody(array $post)
+    protected function getPostBody(array $post): string
     {
         return str_replace(
             "\r\n",
@@ -496,7 +504,7 @@ class Converter
         );
     }
 
-    protected function getPostLink(array $post)
+    protected function getPostLink(array $post): string
     {
         return rtrim($this->wordpress_root_url, '/') . '/?p=' . $post['id'];
     }
